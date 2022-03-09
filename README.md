@@ -8,9 +8,9 @@
         
 
     2. 개발목표
-       - <img src="https://user-images.githubusercontent.com/83229401/157147294-92762f24-dc40-41d1-b269-f5000f062ebe.png" width="300" height="300"></img>
+       - <img src="https://user-images.githubusercontent.com/83229401/157147294-92762f24-dc40-41d1-b269-f5000f062ebe.png" width="300" height=""></img> <img src="https://user-images.githubusercontent.com/83229401/157148167-1799ced7-8899-4c3f-8060-6e9e8a8c0823.png" width="300" height=""></img> 
        - 온도별 의상 추천 서비스 
-       - <img src="https://user-images.githubusercontent.com/83229401/157148167-1799ced7-8899-4c3f-8060-6e9e8a8c0823.png" width="300" height="300"></img>       
+             
        - 다른 사용자의 패션은 어떠한지 포스팅을 통해 공유.
 
     3. 기대효과
