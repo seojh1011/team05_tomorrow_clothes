@@ -12,24 +12,17 @@
        - 온도별 의상 추천 서비스 
        - <img src="https://user-images.githubusercontent.com/83229401/157148167-1799ced7-8899-4c3f-8060-6e9e8a8c0823.png" width="300" height="300"></img>       
        - 다른 사용자의 패션은 어떠한지 포스팅을 통해 공유.
-    3. 기술 소개
-    4. 기술의 특장점
-    5. 서비스 소개
-    6. 기대효과
-* 와이어 프레임 사진
-* 개발해야하는 기능 및 API / Data 구조설계
-* 개발일정
 
-    주의할 점 
-    1. 인공지능 서버 / 앱 서버 모두 AWS (EC2 혹은 Beanstalk) 를 통해 배포해주세요.
-    2. AWS S3 / RDS / Load Balancer 를 사용해주세요.
-    3. 추천 시스템 (유사도 혹은 DNN 기반 추천 등) 을 활용해주세요.
-        - [상단의 예시](https://www.notion.so/2022-03-04-1b095003deea4861bcf6e27541233c31) 혹은 **최근 ‘추천 시스템’**은 어떠한 방법으로 사용되고 있는지를 살펴보신 후 **우리만의 웹 서비스에 필요한 방식을 채택**하여 적용하여 주세요.
-        
-        (최근 추천 서비스는 프론트, 벡엔드, AI 처럼 **독립된 분야로 구분될 수준**이며, **상당히 많은시간 연구**되고 있습니다.)
-        
-    4. HTTPS 보안 연결을 구현해주세요.
-    5. 도메인 구매 후 Load Balancer 에 연결해주세요.
-    6. 배포 후 커뮤니티 등의 홍보를 통해서 실제 사용자를 모아보세요.
-    
-        → 운영팀에서 사용자를 모으는 데 도움이 되도록 기프티콘을 드릴거예요! (추후 공지
+    3. 기대효과
+       -
+* 페이지 구성 및 참고 자료
+*   https://www.figma.com/file/HjZozkk7e49ip7vzAALCdc/%EB%82%B4%EC%9D%BC-%EB%AD%90-%EC%9E%85%EC%A7%80%3F?node-id=0%3A1
+    - <img src="https://user-images.githubusercontent.com/83229401/157348695-19cecceb-9232-4e78-ae72-8ffb8b0c744c.png" width = "200" height=""></img> <img src="https://user-images.githubusercontent.com/83229401/157349996-acd4c1fd-329a-4a51-b0a4-fead1d98fd12.png" width = "500" height=""></img>
+   
+* 개발해야하는 기능 및 API / Data 구조설계
+    ![image](https://user-images.githubusercontent.com/83229401/157353944-c27143bd-3495-47ae-a35c-b9a8212d5469.png) 
+
+    https://www.notion.so/API-f06d993e00d4487c833f6c39d4d4467d
+* 개발일정
+    ![image](https://user-images.githubusercontent.com/83229401/157354086-cedf6f95-89e1-4f09-a7af-e89dd3c4a49e.png)
+ 
