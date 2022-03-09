@@ -14,6 +14,7 @@
        - 다른 사용자의 패션은 어떠한지 포스팅을 통해 공유.
 
     3. 기대효과
+       - 브랜드 인지도 향상 >> 고객 데이터 베이스 구축 >> 마케팅CRM(고객관계관리)도구로 활용가능
 * 페이지 구성 및 참고 자료
 *   https://www.figma.com/file/HjZozkk7e49ip7vzAALCdc/%EB%82%B4%EC%9D%BC-%EB%AD%90-%EC%9E%85%EC%A7%80%3F?node-id=0%3A1
     - <img src="https://user-images.githubusercontent.com/83229401/157348695-19cecceb-9232-4e78-ae72-8ffb8b0c744c.png" width = "200" height=""></img> <img src="https://user-images.githubusercontent.com/83229401/157349996-acd4c1fd-329a-4a51-b0a4-fead1d98fd12.png" width = "500" height=""></img>
@@ -23,5 +24,7 @@
 
     https://www.notion.so/API-f06d993e00d4487c833f6c39d4d4467d
 * 개발일정
+    https://www.notion.so/f8d85f5e55f44fefb9c7d04f0f89fc35?v=14c5de60f21a4d90b6aec3c45426c0bd
     ![image](https://user-images.githubusercontent.com/83229401/157354086-cedf6f95-89e1-4f09-a7af-e89dd3c4a49e.png)
- 
+    작은 단위로 인수테스트를(EC2를 활용한 배포) 거쳐서 모듈을 확장해 가면서 완성할 계획
+    
