@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/add_update/add_update.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/common.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function upload(event) {
+            var reader = new FileReader();
+            reader.onload = function (event) {
+                var img = document.createElement("img");
+                img.setAttribute("src", event.target.result);
+                document.querySelector("div#image").innerHTML = '';
+                document.querySelector("div#image").appendChild(img);
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+
+
+</head>
+
+<body>
+<div id="body_container">
+    <div id="header">
+        <div class="back_allow">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <p>포스트 수정</p>
+
+        <div class="right_icon">
+            <button onclick="myfnc()">수정</button>
+            <i class="fas fa-question-circle"></i>
+        </div>
+    </div>
+
+    <form action="" name="frm">
+        <div class="feed_img">
+            <label for="upload_img">이미지 선택하기</label>
+            <div id="image">
+            </div>
+            <input type="file" id="upload_img" onchange="upload(event)">
+        </div>
+        <div class="feed_comment">
+            <p>코멘트 작성</p>
+            <textarea class="comment" placeholder="글 내용을 입력하세요"></textarea>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

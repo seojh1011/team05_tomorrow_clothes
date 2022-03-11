@@ -1,0 +1,264 @@
+@charset "UTF-8";
+/* 전체영역 */
+body {
+	background-color: darkgray;
+
+}
+#body_container {
+	min-width: 360px;
+	max-width: 360px;
+	height: 640px;
+	margin: 0 auto;
+	overflow-y: auto;
+	position: relative;
+	background-color: white;
+    font-family: 'LeferiBaseType-RegularA';
+}
+
+/* 헤더 */
+#header {
+	position: fixed;
+	background-color: white;
+	max-width: 360px;
+	min-width: 360px;
+	height: 54px;
+	display: flex;
+	/*border-bottom: 1px solid lightgray;*/
+    flex-direction: row;
+    justify-content: start;
+    /*padding-top: 1%;*/
+    /*padding-bottom: 1%;*/
+    z-index: 10;
+}
+#header > div {
+    padding-left: 7%;
+    padding-right: 7%;
+    font-size: 20px;
+}
+#header > p {
+    font-size: 16px;
+    padding-top: 22px;
+}
+.back_allow {
+    display: flex;
+    align-items: center;
+}
+
+
+/*.container {*/
+/*    margin: auto;*/
+/*    max-width: 360px;*/
+/*    height: 640px;*/
+/*}*/
+
+/*header {*/
+/*    height: 82px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+#header .header_back_btn {
+    text-align: left;
+    margin: auto 0;
+}
+
+#header .header_back_btn a i {
+    margin: 0;
+    font-size: 2em;
+}
+
+
+/* 메인부분작성 (가운데) */
+#main {
+	position: absolute;
+	width: 360px;
+	top: 55px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+#main #feed {
+    /*height: 243px;*/
+}
+
+#main #feed > img {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    object-fit: cover;
+}
+
+/*Feed user 정보 container*/
+#pro_auth_article {
+    display: flex;
+    width: 100%;
+    height: 75px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 14px;
+}
+
+/*프로필 이미지 스타일 */
+#pro_auth_article #pro_img {
+    margin: auto 10px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    overflow: hidden;
+}
+
+#pro_auth_article #pro_img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+}
+
+/*유저 정보 스타일 */
+#pro_info_user_at {
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 45px;
+    padding-top: 13px;
+}
+
+#pro_info_user_at .my_name {
+    margin: 0;
+
+}
+#pro_info_user_at .my_name > strong {
+    font-size: 24px;
+}
+.create_at {
+    color: gray;
+    font-size: 12px;
+}
+
+/*스타일 태그*/
+#pro_style_tag {
+    padding: 12px;
+    width: 43%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+#pro_style_tag > span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*스크랩 아이콘*/
+#pro_icon {
+    width: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    font-size: 2em;
+}
+
+#pro_icon > i {
+    cursor: pointer;
+    color: lightgray;
+}
+
+#pro_icon > span {
+    /*font-size: 0.5em;*/
+    font-size: 12px;
+    color: gray;
+}
+.post_comment {
+    padding: 10px 20px;
+}
+.comment_container {
+    width: 100%;
+}
+
+/*코멘트 헤더 스타일*/
+.comment_header {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+.comment_header .speach_bubble_wrapper {
+    cursor: pointer;
+}
+
+.comment_header .share_wrapper {
+    cursor: pointer;
+}
+
+/*코멘트 스타일*/
+.comment_section {
+}
+
+.comment_img_wrapper {
+
+}
+
+.comment_section .comment_img {
+    margin: auto 10px;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.comment_section .comment_img > img {
+    width: 100%;
+    height: 100%;
+}
+
+.comment_section .comment_article {
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.comment_section .comment_article .comment_info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+}
+
+.comment_info > div:nth-child(1) {
+    width: 25%;
+    /*margin: 0 10px;*/
+    font-weight: bold;
+}
+
+.comment_info > div:nth-child(2) {
+    width: 100px;
+    height: 100%;
+    cursor: pointer;
+    flex-grow: 1;
+
+}
+
+.comment_info > div:nth-child(2) > p {
+    margin: 10px 10px 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.comment_detail {
+    margin-left: 15%;
+    cursor: pointer;
+    color: gray;
+    padding-left: 10px;
+}
+
+.comment-detail > div {
+    color: gray;
+    font-size: 13px;
+    padding: 5px 0 0px 10px;
+}
