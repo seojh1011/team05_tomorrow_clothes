@@ -10,8 +10,3 @@ main = Router()
 @main.get("", response=MainResponse)
 def get_main_page(request: HttpRequest) -> HttpResponse:
     return render(request, "main.html")
-
-
-@main.get("/add/", response=MainResponse)
-def get_feeds_page(request: HttpRequest) -> HttpResponse:
-    return render(request, "add.html")

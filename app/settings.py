@@ -34,7 +34,7 @@ ALLOWED_HOSTS: List[str] = []
 
 # Application definition
 
-AUTH_USER_MODEL = 'user_admission.User'
+AUTH_USER_MODEL = "user_admission.User"
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = "user_admission.User"
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 

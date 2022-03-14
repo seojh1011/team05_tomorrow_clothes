@@ -20,9 +20,11 @@ from ninja import NinjaAPI
 from content_post.apis.v1.detail_router import detail as detail_router
 from content_post.apis.v1.main_router import main as main_router
 from user_admission.apis.v1.login_router import login as login_router
+from user_admission.apis.v1.register_router import register as register_router
 
 api = NinjaAPI()
 api.add_router("/login/", login_router)
+api.add_router("/register/", register_router)
 api.add_router("/", main_router)
 api.add_router("/detail/", detail_router)
 
