@@ -14,10 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from ninja import NinjaAPI
+
+from content_post.apis.v1.detail_router import detail as detail_router
+from content_post.apis.v1.main_router import main as main_router
+from user_admission.apis.v1.login_router import login as login_router
+
+api = NinjaAPI()
+api.add_router("/login/", login_router)
+api.add_router("/", main_router)
+api.add_router("/detail/", detail_router)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('user_admission.urls')),
-    path('', include('content_post.urls')),
+    path("admin/", admin.site.urls),
+    path("", api.urls)
+    # path('', include('user_admission.urls')),
+    # path('', include('content_post.urls')),
 ]
