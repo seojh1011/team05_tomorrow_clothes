@@ -2,7 +2,7 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from ninja import Router
 
-from content_post.apis.v1.schemas.DetailResponse import DetailResponse
+from content_post.apis.v1.schemas.detail_response import DetailResponse
 
 detail = Router(tags=["Content_CRUD"])
 
