@@ -4,7 +4,7 @@ from ninja import Router
 
 from content_post.apis.v1.schemas.main_response import MainResponse
 
-main = Router()
+main = Router(tags=["Content_CRUD"])
 
 
 @main.get("", response=MainResponse)

@@ -4,7 +4,7 @@ from ninja import Router
 
 from user_admission.apis.v1.schemas.register_response import RegisterResponse
 
-register = Router()
+register = Router(tags=["MemberManagement"])
 
 
 # register page render router

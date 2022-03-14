@@ -4,7 +4,7 @@ from ninja import Router
 
 from user_admission.apis.v1.schemas.login_response import LoginResponse
 
-login = Router()
+login = Router(tags=["MemberManagement"])
 
 
 # login page render router

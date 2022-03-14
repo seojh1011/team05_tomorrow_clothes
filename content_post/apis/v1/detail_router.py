@@ -4,7 +4,7 @@ from ninja import Router
 
 from content_post.apis.v1.schemas.DetailResponse import DetailResponse
 
-detail = Router()
+detail = Router(tags=["Content_CRUD"])
 
 
 @detail.get("", response=DetailResponse)
