@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+from typing import List
 
 from .local_settings import TEAM5_SECRET
 
@@ -28,9 +29,12 @@ SECRET_KEY = TEAM5_SECRET["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS: list[str] = []
+
+ALLOWED_HOSTS: List[str] = []
 
 # Application definition
+
+AUTH_USER_MODEL = 'user_admission.User'
 
 INSTALLED_APPS = [
     "django.contrib.admin",

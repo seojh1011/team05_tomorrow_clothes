@@ -1,24 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "./base.html" %}
+{% load static %}
+{% block register_head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <link rel="stylesheet" type="text/css" href="../static/css/register/register.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/common.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register/register.css' %}">
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
-    <script defer src="./register.js"></script>
-</head>
-<body>
-<div id="body_container">
+    <script defer src="{% static 'js/register/register.js' %}"></script>
+{% endblock register_head %}
+
+{% block register_header %}
     <div id="header">
         <div class="back_allow"><i class="fas fa-arrow-left"></i></div>
         <p>회원가입</p>
     </div>
+{% endblock register_header %}
+
+
+{% block register_body %}
     <div id="main">
         <section class="body_register">
-          <div class="service_title"><h1>서비스명</h1></div>
+            <div class="service_title"><h1>서비스명</h1></div>
             <form class="input_register" action="">
                 <div class="input_wrapper">
                     <div class="input_data">
@@ -47,6 +50,4 @@
         </section>
     </div>
     <div id="footer"></div>
-</div>
-</body>
-</html>
+{% endblock register_body %}

@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="ko">
 
-<head>
+{% extends './base.html' %}
+{% load static %}
+{% block add_head %}
     <meta charset="UTF-8">
     <title>Title</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <link rel="stylesheet" type="text/css" href="../static/css/add_update/add_update.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/common.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/add_update/add_update.css' %}">
+
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
     <!-- Compiled and minified CSS -->
@@ -29,11 +29,10 @@
         }
     </script>
 
+{% endblock add_head %}
 
-</head>
 
-<body>
-<div id="body_container">
+{% block add_header %}
     <div id="header">
         <div class="back_allow">
             <i class="fas fa-arrow-left"></i>
@@ -45,7 +44,8 @@
             <i class="fas fa-question-circle"></i>
         </div>
     </div>
-
+{% endblock add_header %}
+{% block add_body %}
     <form action="" name="frm">
         <div class="feed_img">
             <label for="upload_img">이미지 선택하기</label>
@@ -58,7 +58,4 @@
             <textarea class="comment" placeholder="글 내용을 입력하세요"></textarea>
         </div>
     </form>
-</div>
-
-</body>
-</html>
+{% endblock add_body %}
