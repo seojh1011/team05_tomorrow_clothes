@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% block login_head %}
+    {% endblock login_head %}
+
+    {% block register_head %}
+    {% endblock register_head %}
+
+    {% block main_head %}
+    {% endblock main_head %}
+
+    {% block detail_head %}
+    {% endblock detail_head %}
+
+    {% block add_head %}
+    {% endblock add_head %}
+     <link rel="stylesheet" type="text/css" href="{% static "css/common.css" %}">
+</head>
+<body>
+<div id="body_container">
+    {% block login_header %}
+    {% endblock login_header %}
+    {% block login_body %}
+    {% endblock login_body %}
+
+    {% block register_header %}
+    {% endblock register_header %}
+    {% block register_body %}
+    {% endblock register_body %}
+
+    {% block main_header %}
+    {% endblock main_header %}
+    {% block main_body %}
+    {% endblock main_body %}
+
+    {% block detail_header %}
+    {% endblock detail_header %}
+    {% block detail_body %}
+    {% endblock detail_body %}
+
+    {% block add_header %}
+    {% endblock add_header %}
+    {% block add_body %}
+    {% endblock add_body %}
+
+</div>
+
+</body>
+</html>
