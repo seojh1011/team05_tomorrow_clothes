@@ -6,7 +6,8 @@ def log_in(username: str, password: str) -> None:
 
 
 def create_user(username: str, password: str) -> None:
-    pass
+    User.objects.create_user(username=username, password=password)
+    # pass
 
 
 # def create_user(username="root4444", password="1234"):
