@@ -9,11 +9,13 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+
+
 import os
 from pathlib import Path
 from typing import List
 
-from .local_settings import TEAM5_SECRET
+from .local_settings import MYSQLRDS, TEAM5_SECRET
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +32,7 @@ SECRET_KEY = TEAM5_SECRET["SECRET_KEY"]
 DEBUG = True
 
 
-ALLOWED_HOSTS: List[str] = []
+ALLOWED_HOSTS: List[str] = ["*"]
 
 # Application definition
 
@@ -46,7 +48,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "content_post.apps.ContentPostConfig",
     "user_admission.apps.UserAdmissionConfig",
-    'ninja'
+    "ninja",  # 필수는 아니지만, ninja를 넣으면 OpenAPI/Swagger UI는 포함된 JavaScript 번들에서 (더 빠르게) 로드됩니다(그렇지 않으면 JavaScript 번들이 CDN에서 제공됨).
 ]
 
 MIDDLEWARE = [
@@ -82,12 +84,13 @@ WSGI_APPLICATION = "app.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+DATABASES = MYSQLRDS
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

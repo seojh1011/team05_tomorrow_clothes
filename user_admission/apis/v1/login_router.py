@@ -4,11 +4,11 @@ from ninja import Router
 
 from user_admission.apis.v1.schemas.login_response import LoginResponse
 
-login = Router(tags=["MemberManagement"])
+account = Router(tags=["MemberManagement"])
 
 
 # login page render router
-@login.get("/", response=LoginResponse)
+@account.get("/", response=LoginResponse)
 def get_login_page(request: HttpRequest) -> HttpResponse:
     return render(request, "login.html")
 

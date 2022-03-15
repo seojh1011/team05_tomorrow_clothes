@@ -103,24 +103,27 @@ body {
 
 .feed_comment {
     /*margin-top: 5%;*/
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .feed_comment p {
     margin-bottom: 1%;
+    margin-right: 180px;
 }
 
 .feed_comment textarea {
 
-    width: 100%;
-    min-height: 150px;
-    /*border: none;*/
+    width: 300px;
+    min-height: 130px;
     resize: none;
+    border: 1px solid lightgray;
 }
 
 ::-webkit-input-placeholder {
     vertical-align: center;
     font-weight: bold;
     text-align: center;
-    line-height: 130px;
+    line-height: 120px;
 }
