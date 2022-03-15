@@ -15,6 +15,7 @@ mypy = "^0.931"
 django-stubs = "^1.9.0"
 PyMySQL = "^1.0.2"
 types-PyMySQL = "^1.0.13"
+mysqlclient = "^2.1.0"
 
 [tool.poetry.dev-dependencies]
 
