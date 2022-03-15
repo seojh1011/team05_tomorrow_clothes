@@ -1,1 +1,1 @@
-from content_post.models.contents import Feeds, Comments
+from content_post.models.contents import Comments, Feeds

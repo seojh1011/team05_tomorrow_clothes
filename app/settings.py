@@ -12,13 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 
 import os
-
 from pathlib import Path
-
 from typing import List
 
-
-from .local_settings import TEAM5_SECRET,MYSQLRDS
+from .local_settings import MYSQLRDS, TEAM5_SECRET
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

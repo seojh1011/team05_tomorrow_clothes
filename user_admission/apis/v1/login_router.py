@@ -11,4 +11,3 @@ account = Router(tags=["MemberManagement"])
 @account.get("/", response=LoginResponse)
 def get_login_page(request: HttpRequest) -> HttpResponse:
     return render(request, "login.html")
-
