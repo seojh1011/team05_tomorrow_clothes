@@ -8,12 +8,12 @@ from user_admission.apis.v1.schemas.register_request import RegisterRequest
 from user_admission.sevices.login_service import create_user
 
 
-register = Router(tags=["MemberManagement"])
+account = Router(tags=["MemberManagement"])
 
 
 # register page render router
-@register.get("/", response=RegisterResponse)
-def get_register_page(request: HttpRequest) -> HttpResponse:
+@account.get("/", response=RegisterResponse)
+def get_register_page(request: HttpRequest) ->HttpResponse:
     return render(request, "register.html")
 
 

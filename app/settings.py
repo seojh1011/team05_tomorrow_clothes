@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "content_post.apps.ContentPostConfig",
     "user_admission.apps.UserAdmissionConfig",
+    "ninja",  # 필수는 아니지만, ninja를 넣으면 OpenAPI/Swagger UI는 포함된 JavaScript 번들에서 (더 빠르게) 로드됩니다(그렇지 않으면 JavaScript 번들이 CDN에서 제공됨).
 ]
 
 MIDDLEWARE = [
