@@ -5,6 +5,7 @@ from ninja import Router
 from user_admission.apis.v1.schemas.register_response import RegisterResponse
 
 register = Router(tags=["MemberManagement"])
+                    # 스웨거에서 쓰는것
 
 
 # register page render router

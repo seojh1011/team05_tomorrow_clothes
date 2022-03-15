@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "content_post.apps.ContentPostConfig",
     "user_admission.apps.UserAdmissionConfig",
+    'ninja'
 ]
 
 MIDDLEWARE = [

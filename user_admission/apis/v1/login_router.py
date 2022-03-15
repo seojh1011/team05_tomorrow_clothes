@@ -11,3 +11,5 @@ login = Router(tags=["MemberManagement"])
 @login.get("/", response=LoginResponse)
 def get_login_page(request: HttpRequest) -> HttpResponse:
     return render(request, "login.html")
+
+# 경로가 ~ login/ 이고(/다음에 아무것도 없을때) get이면 위의 함수를 실행해라
