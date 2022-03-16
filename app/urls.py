@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, reverse
 from ninja import NinjaAPI
 
 from app import settings
@@ -26,7 +26,7 @@ from user_admission.apis.v1.register_router import account as register_router
 from content_post.apis.v1.create_feed_router import content as create_router
 
 api = NinjaAPI()
-api.add_router("/login/", login_router)
+api.add_router("login", login_router)
 api.add_router("/register/", register_router)
 api.add_router("/", main_router)
 api.add_router("/detail/", detail_router)
@@ -38,3 +38,6 @@ urlpatterns = [
     # path('', include('user_admission.urls')),
     # path('', include('content_post.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+reverse('api-1.0.0:login')

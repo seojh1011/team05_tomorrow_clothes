@@ -11,5 +11,5 @@ content = Router(tags=["Content_CRUD"])
 # main page render router
 @content.get("", response=MainResponse)
 def get_main_page(request: HttpRequest) -> HttpResponse:
-    page = get_feed_list(1, 40)
+    page = get_feed_list(1, 10)
     return render(request, "main.html", {"test": page})
