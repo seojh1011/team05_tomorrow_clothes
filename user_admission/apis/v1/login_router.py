@@ -27,8 +27,6 @@ def get_login_page(request: HttpRequest) -> HttpResponse:
 def post_login_page(request: HttpRequest) -> HttpResponse:
     username = request.POST['username']
     password = request.POST['password']
-
-
     user = auth.authenticate(
         request, username=username, password=password
     )
@@ -40,4 +38,3 @@ def post_login_page(request: HttpRequest) -> HttpResponse:
         return render(request, "login.html", {
             'error': 'Username or Password is incorrect.',
         })
-    return render(request, "login.html")

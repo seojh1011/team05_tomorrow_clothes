@@ -3,8 +3,8 @@ from typing import List
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.http import HttpRequest, HttpResponse, JsonResponse
-from django.shortcuts import render, redirect
-from ninja import Router
+from django.shortcuts import render, redirect, get_object_or_404
+from ninja import Router, Form, File, UploadedFile
 
 from content_post.apis.v1.schemas.detail_response import DetailResponse, CommentResponse
 from content_post.models import Feeds, Comments
@@ -86,7 +86,44 @@ def get_detail_page(request: HttpRequest, feed_id: int) -> HttpResponse:
         # 스크랩을 안했다면
         return render(request, "detail.html", {'feed': feed, 'comments': comments})
 
-# # 수정페이지 이동 변경예정
-# @detail.get('/feeds/', response=DetailResponse)
-# def get_update_page(request: HttpRequest):
-#     return render(request, 'add.html')
+
+# # 수정페이지 이동 변경예정 효정님 _______________
+
+# detail/feeds
+@content.get("/feeds/", response=DetailResponse)
+def get_feeds_page(request: HttpRequest) -> HttpResponse:
+    return render(request, "add.html")
+
+
+# detail/feeds/ (추가)
+@content.post('/feeds/', response=DetailResponse)
+@login_required(login_url='/login/')
+def post_feeds_page(
+        request, feeds_comment: str = Form(...),
+        feeds_img_url: UploadedFile = File(...)
+):
+    writer = get_object_or_404(User, id=request.user.id)
+    Feeds.objects.create(feeds_comment=feeds_comment, feeds_img_url=feeds_img_url, writer=writer)
+    feed_id = Feeds.objects.order_by('-id')[0].id
+    return redirect("/detail/" + str(feed_id) + "/")
+
+
+# detail/feeds/<int:feed_id> 수정
+@content.put('/feeds/{feed_id}/', response=DetailResponse)
+def put_feeds_page(request, feed_id: int, feeds_comment: str = Form(...), feeds_img_url: UploadedFile = File(...)):
+    new_feed = Feeds.objects.get_object_or_404(Feeds, id=feed_id)
+    new_feed.feeds_comment = feeds_comment
+    new_feed.feeds_img_url = feeds_img_url
+    new_feed.save()
+    # return redirect("/detail/feeds/" + str(feed_id) + "/")
+    return {"msg": "수정 완료"}
+
+
+# detail/feeds/<int:feed_id> 삭제
+@content.delete('/feeds/{feed_id}', response=DetailResponse)
+def delete_feeds_page(request, feed_id: int):
+    delete_feed = get_object_or_404(Feeds, id=feed_id)
+    delete_feed.delete()
+    return {"msg": "삭제 완료"}
+
+# 수정페이지 이동 변경예정
