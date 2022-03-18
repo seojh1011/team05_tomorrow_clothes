@@ -14,7 +14,8 @@ class Feeds(models.Model):
     # 코멘트 생성
     feeds_comment = models.TextField()
     # main-img 경로
-    feeds_img_url = models.FileField(upload_to="images", blank=True, null=True)
+    # feeds_img_url = models.FileField(upload_to="images", blank=True, null=True)
+    feeds_img_url = models.ImageField(upload_to="images/", blank=True, null=True)
     # 작성자 FK
     writer = models.ForeignKey(User, related_name="user_feed", on_delete=models.CASCADE)
     # tags

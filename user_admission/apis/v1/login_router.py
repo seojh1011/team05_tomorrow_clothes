@@ -1,15 +1,20 @@
+from django.contrib.auth import authenticate, login
 from django.http import HttpRequest
 from django.shortcuts import HttpResponse, render, redirect
-from ninja import Router
+
+from ninja import Router, Form
 from django.contrib.auth.models import User
 from django.contrib import auth
 
+
+# from user_admission.apis.v1.schemas.login_request import LoginRequest
+from user_admission.apis.v1.schemas.login_request import login_request
 from user_admission.apis.v1.schemas.login_response import LoginResponse
+from django.contrib import messages
 
 account = Router(tags=["MemberManagement"])
 
 
-# login page render router
 # @account.get("/", response=LoginResponse)
 # def get_login_page(request: HttpRequest) -> HttpResponse:
 #     return render(request, "login.html")
