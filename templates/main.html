@@ -124,8 +124,21 @@
 {% block main_header %}
     <div id="header">
         <div class="header-icon"><img src="{% static 'img/upload.png' %}"></div>
+<<<<<<< HEAD
         <div class="header-icon" onclick="set_temp()"><img src="{% static 'img/hanger.png' %}"></div>
         <div class="header-icon"><img src="{% static 'img/login.png' %}"></div>
+=======
+        <div class="header-icon"><img src="{% static 'img/hanger.png' %}"></div>
+        {% if user.is_authenticated %}
+            <a href="{% url 'test_1:logout' %}">{{ user.username }}로그아웃</a>
+        {% else %}
+            <div class="header-icon">
+                <a>
+                    <img src="{% static 'img/login.png' %}">
+                </a>
+            </div>
+        {% endif %}
+>>>>>>> 80a84a1a754f660c554a17d92afe67728e3b1244
     </div>
 {% endblock main_header %}
 

@@ -14,7 +14,7 @@ from content_post.apis.v1.schemas.schema_test import UserSchema
 content = Router(tags=["Content_CRUD"])
 
 
-@content.post("/scrap/{feed_id}/", url_name='scrap')
+@content.post("/scrap/{feed_id}/",url_name='scrap')
 def scrap(request: HttpRequest, feed_id: int) -> HttpResponse:
     # 여기부터는 로그인을 위해 잠깐 넣었습니다
     username = 'seo'
@@ -30,30 +30,30 @@ def scrap(request: HttpRequest, feed_id: int) -> HttpResponse:
         feed = Feeds.objects.get(id=feed_id)
         # feed = 스크랩할 피드의 객체
         exist_check = feed.scrape.filter(id=user_id)
-        # scrape필드에 로그인한 유저가있는지 체크
+        #scrape필드에 로그인한 유저가있는지 체크
         if exist_check.exists():
-            # 만약 있다면
+            #만약 있다면
             Feeds.objects.get(id=feed_id).scrape.remove(user)
-            # scrape필드에서 유저를 제거
+            #scrape필드에서 유저를 제거
             feed.scrapes -= 1
-            # 스크랩카운트 -1
+            #스크랩카운트 -1
             feed.save()
-            # 저장
+            #저장
             scrap_count = feed.scrapes
-            # 저장된 스크립카운트
-            ajax = {'scrap_count': scrap_count}
-            # 딕셔너리형태로 제이슨으로 보낸다
+            #저장된 스크립카운트
+            ajax = {'scrap_count':scrap_count}
+            #딕셔너리형태로 제이슨으로 보낸다
             return JsonResponse(ajax)
         else:
-            # 없다면
+            #없다면
             Feeds.objects.get(id=feed_id).scrape.add(user)
-            # scrape필드에 유저를 추가
+            #scrape필드에 유저를 추가
             feed.scrapes += 1
-            # 스크랩카운트+1
+            #스크랩카운트+1
             feed.save()
-            # 저장
+            #저장
             scrap_count = feed.scrapes
-            # 저장된카운트
+            #저장된카운트
             ajax = {'scrap_count': scrap_count}
             # 딕셔너리형태로 제이슨으로 보낸다
             return JsonResponse(ajax)
@@ -80,7 +80,7 @@ def get_detail_page(request: HttpRequest, feed_id: int) -> HttpResponse:
     me = auth.authenticate(request, username=username, password=password)
     if me is not None:
         auth.login(request, me)
-        # 로그인을 위해 잠시입력
+        #로그인을 위해 잠시입력
         user_id = request.user.id
         # 로그인된 유저의 아이디값
         feed = Feeds.objects.get(id=feed_id)
