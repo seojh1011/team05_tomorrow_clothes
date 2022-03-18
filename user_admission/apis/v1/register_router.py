@@ -6,6 +6,10 @@ from user_admission.apis.v1.schemas.register_request import RegisterRequest
 from user_admission.apis.v1.schemas.register_response import RegisterResponse
 from user_admission.sevices.login_service import create_user
 
+# <<<<<<< HEAD
+# register = Router(tags=["MemberManagement"])
+#                     # 스웨거에서 쓰는것
+
 account = Router(tags=["MemberManagement"])
 
 
