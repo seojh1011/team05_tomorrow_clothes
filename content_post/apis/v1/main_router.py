@@ -5,24 +5,30 @@ from ninja import Router
 from content_post.apis.v1.schemas.main_response import MainResponse
 from content_post.services.get_feed_list_service import get_feed_list
 
+from typing import Union, Any
+
 content = Router(tags=["Content_CRUD"])
 
 
 # main page render router
-@content.get("", url_name='main', response=list[MainResponse])
+@content.get("", url_name="main", response=list[MainResponse])
 def get_main_page(request: HttpRequest) -> HttpResponse:
-    page, limit = 1, 10
+    page: int = 1
+    limit: int = 10
     print(request.GET)
     if len(request.GET) > 0:
-        page, limit = request.GET['page'], request.GET['limit']
-        print('page:', page)
-        print('limit :', limit)
+
+        page = request.GET["page"] # type: ignore
+        limit = request.GET["limit"] # type: ignore
+        print("page:", page)
+        print("limit :", limit)
         pages = get_feed_list(page, limit)
 
         if pages is None:
-            return list()
+            return JsonResponse(404)
         print(pages[0].feeds_img_url)
-        return list(pages)
+        print(list(pages))
+        return JsonResponse(list(pages))
 
     # print(limit)
     pages = get_feed_list(page, limit)

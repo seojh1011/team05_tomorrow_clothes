@@ -2,5 +2,5 @@ from ninja import Schema
 
 
 class MainResponse(Schema):
-    HttpResponse: str = None
-    feeds_img_url : str = None
+    HttpResponse: str = ""
+    feeds_img_url: str = ""

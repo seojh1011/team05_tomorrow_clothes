@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import json
 import os
-import json
 from pathlib import Path
 from typing import List
 
@@ -44,10 +43,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "content_post.apps.ContentPostConfig",
     "user_admission.apps.UserAdmissionConfig",
-
     "ninja",
     # 필수는 아니지만, ninja를 넣으면 OpenAPI/Swagger UI는 포함된 JavaScript 번들에서 (더 빠르게) 로드됩니다(그렇지 않으면 JavaScript 번들이 CDN에서 제공됨).
-
     "storages",
 ]
 
@@ -91,8 +88,6 @@ WSGI_APPLICATION = "app.wsgi.application"
 #     }
 # }
 DATABASES = MYSQLRDS
-
-
 
 
 # Password validation
@@ -144,22 +139,20 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # APPEND_SLASH = False
 
 
-with open(os.path.join(BASE_DIR, 'config/aws.json')) as f:
+with open(os.path.join(BASE_DIR, "config/aws.json")) as f:
     secrets = json.loads(f.read())
-AWS_ACCESS_KEY_ID = secrets['AWS']['ACCESS_KEY_ID']  # .csv 파일에 있는 내용을 입력 Access key ID
-AWS_SECRET_ACCESS_KEY = secrets['AWS']['SECRET_ACCESS_KEY']  # .csv 파일에 있는 내용을 입력 Secret access key
-AWS_REGION = 'ap-northeast-2'
+AWS_ACCESS_KEY_ID = secrets["AWS"]["ACCESS_KEY_ID"]  # .csv 파일에 있는 내용을 입력 Access key ID
+AWS_SECRET_ACCESS_KEY = secrets["AWS"][
+    "SECRET_ACCESS_KEY"
+]  # .csv 파일에 있는 내용을 입력 Secret access key
+AWS_REGION = "ap-northeast-2"
 
 ###S3 Storages
-AWS_STORAGE_BUCKET_NAME = secrets['AWS']['STORAGE_BUCKET_NAME']  # 설정한 버킷 이름
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.%s.amazonaws.com' % (AWS_STORAGE_BUCKET_NAME, AWS_REGION)
-AWS_DEFAULT_ACL = 'public-read'  # ACL 권한을 public 으로 바꿔준다.
+AWS_STORAGE_BUCKET_NAME = secrets["AWS"]["STORAGE_BUCKET_NAME"]  # 설정한 버킷 이름
+AWS_S3_CUSTOM_DOMAIN = "%s.s3.%s.amazonaws.com" % (AWS_STORAGE_BUCKET_NAME, AWS_REGION)
+AWS_DEFAULT_ACL = "public-read"  # ACL 권한을 public 으로 바꿔준다.
 AWS_S3_OBJECT_PARAMETERS = {
-    'CacheControl': 'max-age=86400',
+    "CacheControl": "max-age=86400",
 }
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 # STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-
-
-
-

@@ -65,6 +65,7 @@
                     method: 'GET',
                     dataType: "json",
                     success: function (data) {
+
                         {#console.log(data[0]["feeds_img_url"]);#}
                         for (let i = 0; i < data.length; i++) {
                             let img_url = data[i]["feeds_img_url"]
