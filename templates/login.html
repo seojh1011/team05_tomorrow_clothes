@@ -19,44 +19,39 @@
     </div>
 {% endblock login_header %}
 {% block login_body %}
-    <div id="main">
-        <div class="login_container_wrapper">
-
-            <div class="login_title">서비스명</div>
-            <div class="login_main_wrapper">
-
-                <div class="login_input_wrapper">
-                    <div class="login_input_wrapper2">
-                        <span class="login_span_email">이메일</span>
-                        <span>
-                        <input class="login_em_input" type="text" style="border:0 solid black;" name="username">
-                    </span>
+    <form action="/login/" method="post">
+        {% csrf_token %}
+        <div id="main">
+            <div class="login_container_wrapper">
+                <div class="login_title">서비스명</div>
+                <div class="login_main_wrapper">
+                    <div class="login_input_wrapper">
+                        <div class="login_input_wrapper2">
+                            <span class="login_span_email">이메일</span>
+                            <span><input class="login_em_input" type="text" style="border:0 solid black;"
+                                         name="username" required></span>
+                            <div class="login_line"></div>
+                        </div>
+                    </div>
+                    <div class="login_input_wrapper">
+                        <div class="login_input_pw">
+                            <span class="login_pw_wrapper">비밀번호</span>
+                            <input type="password" id="password" class="login_pw_input" name="password" required>
+                            <i class="fas fa-eye"></i>
+                        </div>
                         <div class="login_line"></div>
+                        <div class="login_find_pw">
+                            <div><a href="">비밀번호 찾기</a></div>
+                        </div>
                     </div>
-                </div>
-                <div class="login_input_wrapper">
-                    <div class="login_input_pw">
-                        <span class="login_pw_wrapper">비밀번호</span>
-                        <input type="password" id="password" class="login_pw_input" name="password">
-                        <i class="fas fa-eye"></i>
+                    <button type="submit">LOGIN</button>
+                    <div class="login_social">
+                        <div>카카오톡</div>
+                        <div>페이스북</div>
                     </div>
-                    <div class="login_line"></div>
-                    <div class="login_find_pw">
-                        <div><a href="">비밀번호 찾기</a></div>
-                    </div>
+                    <div><a href="">계정</a>이 없으신가요?</div>
                 </div>
-
-                <button type="submit">
-                    LOGIN
-                </button>
-
-                <div class="login_social">
-                    <div>카카오톡</div>
-                    <div>페이스북</div>
-                </div>
-                <div><a href="">계정</a>이 없으신가요?</div>
             </div>
-
         </div>
-    </div>
+    </form>
 {% endblock login_body %}

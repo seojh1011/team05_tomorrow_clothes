@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 
 import os
+import json
 from pathlib import Path
 from typing import List
 
@@ -24,20 +25,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-
-
 SECRET_KEY = TEAM5_SECRET["SECRET_KEY"]
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-
 ALLOWED_HOSTS: List[str] = ["*"]
 
+
 # Application definition
-
 AUTH_USER_MODEL = "user_admission.User"
-
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -49,6 +46,7 @@ INSTALLED_APPS = [
     "content_post.apps.ContentPostConfig",
     "user_admission.apps.UserAdmissionConfig",
     "ninja",  # 필수는 아니지만, ninja를 넣으면 OpenAPI/Swagger UI는 포함된 JavaScript 번들에서 (더 빠르게) 로드됩니다(그렇지 않으면 JavaScript 번들이 CDN에서 제공됨).
+    "storages",
 ]
 
 MIDDLEWARE = [
@@ -84,13 +82,14 @@ WSGI_APPLICATION = "app.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-DATABASES = MYSQLRDS
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
+
+# DATABASES = MYSQLRDS
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -116,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Seoul"
 
 USE_I18N = True
 
@@ -126,14 +125,30 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = "/static/"
-
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-MEDIA_URL = "/media/"
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+## AWS S3
+MEDIA_URL = "https://s3.console.aws.amazon.com/s3/buckets/team05-tomorrow-clothes?region=ap-northeast-2&tab=objects/"
+# MEDIA_ROOT = os.path.join(BASE_DIR, "/img/upload/")
+# MEDIA_URL = "/media/"
+# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+# STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
+with open(os.path.join(BASE_DIR, 'config/aws.json')) as f:
+    secrets = json.loads(f.read())
+
+AWS_ACCESS_KEY_ID = secrets['AWS']['ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = secrets['AWS']['SECRET_ACCESS_KEY']
+AWS_STORAGE_BUCKET_NAME = secrets['AWS']['STORAGE_BUCKET_NAME']
+AWS_DEFAULT_ACL = "public-read"

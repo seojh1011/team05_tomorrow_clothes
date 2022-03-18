@@ -14,7 +14,8 @@ class Feeds(models.Model):
     # 코멘트 생성
     feeds_comment = models.TextField()
     # main-img 경로
-    feeds_img_url = models.FileField(upload_to="images", blank=True, null=True)
+    # feeds_img_url = models.FileField(upload_to="images", blank=True, null=True)
+    feeds_img_url = models.ImageField(upload_to="images/", blank=True, null=True)
     # 작성자 FK
     writer = models.ForeignKey(User, related_name="user_feed", on_delete=models.CASCADE)
     # tags
@@ -38,10 +39,13 @@ class Comments(models.Model):
     )
     # 코멘트
     comment = models.TextField()
+    # 코멘트 작성자
+    comment_writer = models.ForeignKey(User, related_name="user_comment", on_delete=models.CASCADE)
     # 코멘트의 단계 0 >>코멘트, 1>>코멘트의 답글
     step = models.IntegerField(default=0)
     # 참조하는 코멘트 (대댓글이 어떤 코멘트의 자식인가)
-    comment_num = models.ForeignKey("self", on_delete=models.CASCADE, null=True)  # 생성일
+    comment_num = models.ForeignKey("self", on_delete=models.CASCADE, null=True)
+    # 생성일
     created_at = models.DateTimeField(auto_now_add=True)
     # 수정일
     updated_at = models.DateTimeField(auto_now=True)
