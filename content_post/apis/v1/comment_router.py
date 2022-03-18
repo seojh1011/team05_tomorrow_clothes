@@ -41,8 +41,8 @@ def Write_Reple(request: HttpRequest, comment_id: int, comment:str =Form(...)) -
 @content.post("/{feed_id}/")
 def Write_Comment(request: HttpRequest, feed_id: int, comment:str=Form(...)) -> HttpResponse:
     #로그인을위한 부분
-    username = 'seo'
-    password = '123'
+    username = 'tester1234'
+    password = '1234'
     me = auth.authenticate(request, username=username, password=password)
     if me is not None:
         auth.login(request, me)
