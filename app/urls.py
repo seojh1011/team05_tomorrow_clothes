@@ -17,8 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from ninja import NinjaAPI
 
-from user_admission import views
 
+from user_admission import views
+from content_post.apis.v1.comment_router import content as comment_router
 from content_post.apis.v1.detail_router import content as detail_router
 from content_post.apis.v1.main_router import content as main_router
 from user_admission.apis.v1.login_router import account as login_router
@@ -31,6 +32,7 @@ api.add_router("/logout/", logout_router)
 api.add_router("/register/", register_router)
 api.add_router("/", main_router)
 api.add_router("/detail/", detail_router)
+api.add_router("/comment/", comment_router)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
