@@ -8,6 +8,8 @@ from ninja import Router
 from content_post.apis.v1.schemas.detail_response import DetailResponse, CommentResponse
 from content_post.models import Feeds, Comments
 from user_admission.models import User
+from content_post.apis.v1.schemas.detail_response import DetailResponse
+from content_post.apis.v1.schemas.schema_test import UserSchema
 
 content = Router(tags=["Content_CRUD"])
 
@@ -64,6 +66,10 @@ def scrap_off(request: HttpRequest, feed_id: int, user_id: int) -> HttpResponse:
 
 
 # detail page render router
+@content.get("", response=DetailResponse)
+def get_detail_page(request: HttpRequest) -> HttpResponse:
+    # print(user.id)
+    return render(request, "detail.html")
 @content.get("/{feed_id}/", response=List[DetailResponse])
 def get_detail_page(request: HttpRequest, feed_id: int) -> HttpResponse:
     #로그인을위해 잠시 입력

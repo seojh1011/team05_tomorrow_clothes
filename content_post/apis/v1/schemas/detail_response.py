@@ -19,3 +19,4 @@ class CommentResponse(Schema):
     id: int
     comment_writer: int
     comment: str
+
