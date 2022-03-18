@@ -4,14 +4,23 @@
 
 {% block main_head %}
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+
     <title>Title</title>
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/main/main.css' %}">
+
+    {#    media="print"   onload="this.media='all'"#}
+
     <script type="text/javascript" src="{% static 'js/main/main.js' %}"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script>
         let state = false;
         let timer_state = true;
+        var page_num = 2;
+
         window.addEventListener('load', function () {
             var t = document.getElementsByTagName('div')[0];
             t.addEventListener('scroll', function () {
@@ -20,8 +29,12 @@
                         timer_state = false;
                         setTimeout(function () {
                             scroller_delay();
+                            setTimeout(function (){
+                                translate_att2();
+                            },500)
                             timer_state = true;
-                        }, 1000);
+                        }, 500);
+
                     }
                 }
             )
@@ -40,13 +53,70 @@
                 if (clientHeight + 10 >= actingScroll) {
                     state = true;
                     console.log('state start ~!!!!!! :' + state);
+                    get_page()
                 }
             }
 
+
             function get_page() {
-                $.ajax()
+                $.ajax({
+                    url: "{% url 'test_1:main' %}",
+                    data: {'page': page_num, 'limit': 20},
+                    method: 'GET',
+                    dataType: "json",
+                    success: function (data) {
+                        {#console.log(data[0]["feeds_img_url"]);#}
+                        for (let i = 0; i < data.length; i++) {
+                            let img_url = data[i]["feeds_img_url"]
+                            console.log(img_url);
+                            let temp_img_div = `<div class="image"><img src="${img_url}"></div>`
+                            $('#images_box').append(temp_img_div);
+                        }
+                        page_num++;
+                    }
+                })
             }
         });
+
+        function translate_att2() {
+            console.log("실행 되고 있음22222222222222");
+            let images = document.querySelectorAll(".image");
+            console.log("실행 되고 있음");
+            let imgStack = [0, 0];
+            console.log("실행");
+            let colWidth = 170;
+            for (let i = 0; i < images.length; i++) {
+                let minIndex = imgStack.indexOf(Math.min.apply(0, imgStack));
+                let x = colWidth * minIndex;
+                let y = imgStack[minIndex];
+                imgStack[minIndex] += (images[i].children[0].height + 10);
+                images[i].style.transform = `translateX(${x}px) translateY(${y}px)`;
+                if (i === images.length - 1) {
+                    document.querySelector(".images").style.height = `${Math.max.apply(0, imgStack)}px`;
+                }
+            }
+        }
+
+
+        /*
+                 * 항목값	항목명	단위
+                 * POP	강수확률	 %
+                 * PTY	강수형태	코드값
+                 * R06	6시간 강수량	범주 (1 mm)
+                 * REH	습도	 %
+                 * S06	6시간 신적설	범주(1 cm)
+                 * SKY	하늘상태	코드값
+                 * T3H	3시간 기온	 ℃
+                 * TMN	아침 최저기온	 ℃
+                 * TMX	낮 최고기온	 ℃
+                 * UUU	풍속(동서성분)	 m/s
+                 * VVV	풍속(남북성분)	 m/s
+                 * WAV	파고	 M
+                 * VEC	풍향	 m/s
+                 * WSD	풍속	1
+
+                 */
+
     </script>
 {% endblock main_head %}
 
@@ -54,25 +124,30 @@
 {% block main_header %}
     <div id="header">
         <div class="header-icon"><img src="{% static 'img/upload.png' %}"></div>
-        <div class="header-icon"><img src="{% static 'img/hanger.png' %}"></div>
+        <div class="header-icon" onclick="set_temp()"><img src="{% static 'img/hanger.png' %}"></div>
         <div class="header-icon"><img src="{% static 'img/login.png' %}"></div>
     </div>
 {% endblock main_header %}
 
 
 {% block main_body %}
-      <div id="container">
+    <div id="container">
         <div class="weather">
             <div class="location">서울시 광양구</div>
-            <a href="{% url 'api-1.0.0:login' %}/">aasaaaaaaaaaaa</a>
+
             <div class="weather-icons">
+
                 <div class="weather-icon">12°C</div>
-                <div class="weather-icon">날씨</div>
+                <div class="weather-icon"></div>
                 <div class="weather-icon">강수</div>
                 <div class="weather-icon">미세먼지</div>
+
             </div>
+
         </div>
-        <div class="images">
+
+        <div id="images_box" class="images">
+
             {% for p in test %}
                 <div class="image">
                     <img src="{{ p.feeds_img_url.url }}">

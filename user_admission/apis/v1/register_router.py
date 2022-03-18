@@ -10,7 +10,7 @@ account = Router(tags=["MemberManagement"])
 
 
 # register page render router
-@account.get("/", response=RegisterResponse)
+@account.get("/", url_name='register', response=RegisterResponse)
 def get_register_page(request: HttpRequest) -> HttpResponse:
     return render(request, "register.html")
 

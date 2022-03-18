@@ -10,8 +10,8 @@ content = Router(tags=["Content_CRUD"])
 
 # detail page render router
 @content.get("", response=DetailResponse)
-def get_detail_page(request: HttpRequest, user: UserSchema) -> HttpResponse:
-    print(user.id)
+def get_detail_page(request: HttpRequest) -> HttpResponse:
+    # print(user.id)
     return render(request, "detail.html")
 
 

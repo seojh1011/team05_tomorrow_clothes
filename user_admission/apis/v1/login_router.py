@@ -8,7 +8,7 @@ account = Router(tags=["MemberManagement"])
 
 
 # login page render router
-@account.get("", url_name='login', response=LoginResponse)
+@account.get("/", url_name='login', response=LoginResponse)
 def get_login_page(request: HttpRequest) -> HttpResponse:
-    print("aaaaaaaaaaa")
+
     return render(request, "login.html")

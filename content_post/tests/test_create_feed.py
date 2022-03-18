@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from content_post.services.create_feed_service import create_feed
+from content_post.services.get_feed_list_service import create_feed
 from user_admission.models import User
 
 
