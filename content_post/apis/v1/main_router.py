@@ -25,10 +25,10 @@ def get_main_page(request: HttpRequest) -> HttpResponse:
         pages = get_feed_list(page, limit)
 
         if pages is None:
-            return JsonResponse(404)
+            return list()
         print(pages[0].feeds_img_url)
         print(list(pages))
-        return JsonResponse(list(pages))
+        return list(pages)
 
     # print(limit)
     pages = get_feed_list(page, limit)
