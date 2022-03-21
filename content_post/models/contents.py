@@ -5,7 +5,7 @@ from user_admission.models import User
 
 class Feeds(models.Model):
     class Meta:
-        db_table = "FEED"
+        db_table = "TOMORROW_FEED"
 
     # 생성일자 설정 auto_now_add
     created_at = models.DateTimeField(auto_now_add=True)
@@ -28,7 +28,7 @@ class Feeds(models.Model):
 
 class Comments(models.Model):
     class Meta:
-        db_table = "COMMENT"
+        db_table = "TOMORROW_COMMENT"
 
     # 참조하는 게시글
     feed_id = models.ForeignKey(
