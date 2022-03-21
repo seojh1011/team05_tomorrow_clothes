@@ -15,7 +15,7 @@ import os
 from pathlib import Path
 from typing import List
 
-from .local_settings import MYSQLRDS, TEAM5_SECRET
+from .local_settings import TEAM5_SECRET
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -36,17 +36,36 @@ AUTH_USER_MODEL = "user_admission.User"
 
 INSTALLED_APPS = [
     "django.contrib.admin",
-    "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
-    "django.contrib.messages",
     "django.contrib.staticfiles",
     "content_post.apps.ContentPostConfig",
     "user_admission.apps.UserAdmissionConfig",
     "ninja",
     # 필수는 아니지만, ninja를 넣으면 OpenAPI/Swagger UI는 포함된 JavaScript 번들에서 (더 빠르게) 로드됩니다(그렇지 않으면 JavaScript 번들이 CDN에서 제공됨).
     "storages",
+    # The following apps are required:
+    "django.contrib.auth",
+    "django.contrib.messages",
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # ... include the providers you want to enable:
+    'allauth.socialaccount.providers.kakao',
 ]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/' # 로그인 후 리디렉션할 페이지
+ACCOUNT_LOGOUT_REDIRECT_URL = "/login"  # 로그아웃 후 리디렉션 할 페이지
+ACCOUNT_LOGOUT_ON_GET = True # 로그아웃 버튼 클릭 시 자동 로그아웃
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_SESSION_REMEMBER = None
+SOCIALACCOUNT_LOGIN_ON_GET = True 
+SOCIALACCOUNT_AUTO_SIGNUP = False
+SOCIALACCOUNT_STORE_TOKENS = True 
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -60,6 +79,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "app.urls"
 
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -71,9 +91,17 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                'django.template.context_processors.request', # `allauth` needs this from django
             ],
         },
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 WSGI_APPLICATION = "app.wsgi.application"
@@ -81,13 +109,13 @@ WSGI_APPLICATION = "app.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-DATABASES = MYSQLRDS
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
+# DATABASES = MYSQLRDS
 
 
 # Password validation

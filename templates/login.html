@@ -81,9 +81,9 @@
                     LOGIN
                 </button>
 
+                {% load socialaccount %}
                 <div class="login_social">
-                    <div>카카오톡</div>
-                    <div>페이스북</div>
+                    <a href="{% provider_login_url 'kakao' method='oauth2' %}">카카오톡</a> 
                 </div>
                 <div><a href="">계정</a>이 없으신가요?</div>
             </div>
