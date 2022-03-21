@@ -13,7 +13,7 @@ from user_admission.models.user import User
 
 content = Router(tags=["Content_CRUD"])
 
-
+# 지훈 작업
 @content.post("/scrap/{feed_id}/", url_name="scrap")
 @login_required(login_url="/login/")
 def scrap(request: HttpRequest, feed_id: int) -> HttpResponse:
