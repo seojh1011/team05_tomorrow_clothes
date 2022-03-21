@@ -98,6 +98,11 @@
             }
         }
 
+        navigator.geolocation.getCurrentPosition(function (pos) {
+            var latitude = pos.coords.latitude;
+            var longitude = pos.coords.longitude;
+            alert("현재 위치는 : " + latitude + ", " + longitude);
+        });
 
         /*
                  * 항목값	항목명	단위
