@@ -2,5 +2,6 @@ from ninja import Schema
 
 
 class RegisterRequest(Schema):
-    username: str
+    nick_name: str
+    email: str
     password: str

@@ -1,4 +1,5 @@
 app/local_settings.py
+config/aws.json
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/django,pycharm,visualstudiocode
@@ -12,7 +13,7 @@ __pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-media
+#media
 migrations
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
 # in your Git repository. Update and uncomment the following line accordingly.
@@ -293,6 +294,8 @@ fabric.properties
 # Ignore all local history of files
 .history
 .ionide
+
+
 
 # Support for Project snippet scope
 
