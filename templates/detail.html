@@ -153,6 +153,7 @@
                 },
                 datatype: 'json',
                 success: function (response) {
+                    console.log(response)
                     $('#icon_scraps').html(response.scrap_count)
                 }
             })
@@ -168,7 +169,14 @@
                 },
                 datatype: 'json',
                 success: function (response) {
-                    $('#icon_scraps').html(response.scrap_count)
+                    console.log(response)
+                    if(response == 'error') {
+                        window.location.href = '/login'
+                    }
+                    else{
+                        $('#icon_scraps').html(response.scrap_count)
+                    }
+
                 }
             })
         }
