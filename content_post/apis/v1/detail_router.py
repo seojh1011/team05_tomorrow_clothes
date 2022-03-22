@@ -64,14 +64,14 @@ def post_feeds_page(
 
 
 # detail/feeds/<int:feed_id> 수정
-@content.post("/feeds/update/{feed_id}/", response=DetailResponse)
+@content.post("/feeds/update/{feed_id}/")
 def put_feeds_page(
         request: HttpRequest,
         feed_id: int,
         feeds_comment: str = Form(...),
         feeds_img_url: UploadedFile = File(...),
 ) -> Dict[str, str]:
-    new_feed = Feeds.objects.get_object_or_404(Feeds, id=feed_id)  # type:ignore
+    new_feed = Feeds.objects.get(id=feed_id)  # type:ignore
     new_feed.feeds_comment = feeds_comment
     new_feed.feeds_img_url = feeds_img_url
     new_feed.save()
