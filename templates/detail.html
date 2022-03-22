@@ -154,7 +154,12 @@
                 datatype: 'json',
                 success: function (response) {
                     console.log(response)
-                    $('#icon_scraps').html(response.scrap_count)
+                    if(Object.keys(response) == 'error'){
+                        window.location.href = '/login'
+                    }
+                    else{
+                        $('#icon_scraps').html(response.scrap_count)
+                    }
                 }
             })
         }
@@ -169,8 +174,8 @@
                 },
                 datatype: 'json',
                 success: function (response) {
-                    console.log(response)
-                    if(response == 'error') {
+                    console.log(Object.keys(response))
+                    if(Object.keys(response) == 'error') {
                         window.location.href = '/login'
                     }
                     else{
