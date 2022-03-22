@@ -24,6 +24,7 @@
 
             <div class="login_title">서비스명</div>
             <div class="login_main_wrapper">
+                <div class="login_form_wrapper">
                 <form action="{% url 'test_1:login' %}" method="POST">
                     {% csrf_token %}
                 <div class="login_input_wrapper">
@@ -52,6 +53,7 @@
                     LOGIN
                 </button>
                 </form>
+                    </div>
                 <div class="login_social">
                     <div>카카오톡</div>
                     <div>페이스북</div>
