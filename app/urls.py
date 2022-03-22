@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, reverse, include
+from django.urls import include, path, reverse
 from ninja import NinjaAPI
 
 from content_post.apis.v1.comment_router import content as comment_router
@@ -42,7 +42,7 @@ api.add_router("comment/", comment_router)
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", api.urls),
-    path('accounts/', include('allauth.urls')),
+    path("accounts/", include("allauth.urls")),
     # path('', include('user_admission.urls')),
     # path('', include('content_post.urls')),
     # path("join/", views.create_user, name="create_user"),
