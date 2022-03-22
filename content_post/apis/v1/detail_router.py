@@ -1,4 +1,4 @@
-from typing import List, Any, Dict
+from typing import Any, Dict, List
 
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
@@ -12,6 +12,7 @@ from content_post.models.contents import Comments, Feeds
 from user_admission.models.user import User
 
 content = Router(tags=["Content_CRUD"])
+
 
 # 지훈 작업
 @content.post("/scrap/{feed_id}/", url_name="scrap")
@@ -97,7 +98,9 @@ def get_detail_page(request: HttpRequest, feed_id: int) -> HttpResponse:
 @content.post("/feeds/", response=DetailResponse)
 @login_required(login_url="/login/")
 def post_feeds_page(
-        request: HttpRequest, feeds_comment: str = Form(...), feeds_img_url: UploadedFile = File(...)
+    request: HttpRequest,
+    feeds_comment: str = Form(...),
+    feeds_img_url: UploadedFile = File(...),
 ) -> HttpResponse:
     writer = get_object_or_404(User, id=request.user.id)
     Feeds.objects.create(
@@ -110,10 +113,10 @@ def post_feeds_page(
 # detail/feeds/<int:feed_id> 수정
 @content.put("/feeds/{feed_id}/", response=DetailResponse)
 def put_feeds_page(
-        request: HttpRequest,
-        feed_id: int,
-        feeds_comment: str = Form(...),
-        feeds_img_url: UploadedFile = File(...),
+    request: HttpRequest,
+    feed_id: int,
+    feeds_comment: str = Form(...),
+    feeds_img_url: UploadedFile = File(...),
 ) -> Dict[str, str]:
     new_feed = Feeds.objects.get_object_or_404(Feeds, id=feed_id)#type:ignore
     new_feed.feeds_comment = feeds_comment
@@ -128,6 +131,7 @@ def put_feeds_page(
 def delete_feeds_page(request: HttpRequest, feed_id: int) -> HttpResponse:
     delete_feed = get_object_or_404(Feeds, id=feed_id)
     delete_feed.delete()
-    return redirect('test_1:login')
+    return redirect("test_1:login")
+
 
 # 수정페이지 이동 변경예정
