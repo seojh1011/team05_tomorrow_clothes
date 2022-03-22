@@ -1,8 +1,4 @@
-from typing import Any, Optional, Union
-
-from django.contrib import auth
 from django.contrib.auth.decorators import login_required
-from django.db.models import BigAutoField
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect
 from ninja import Form, Router
@@ -23,7 +19,7 @@ def reple(request: HttpRequest, comment_id: int, comment: str = Form(...)) -> Ht
 
 
 @content.put("/reple/update/{comment_id}/")
-# @login_required(login_url="/login/")
+@login_required(login_url="/login/")
 def reple(request: HttpRequest, comment_id: int, comment: str) -> HttpResponse:
     # 로그인했는지 확인
 
@@ -70,7 +66,7 @@ def comment(
 
 
 @content.put("/update/{comment_id}/")
-# @login_required(login_url="/login/")
+@login_required(login_url="/login/")
 def comment(request: HttpRequest, comment_id: int, comment: str) -> HttpResponse:
     login_user = request.user.id  # type: ignore
     comment_writer = Comments.objects.get(id=comment_id).comment_writer.id
@@ -85,7 +81,7 @@ def comment(request: HttpRequest, comment_id: int, comment: str) -> HttpResponse
 
 
 @content.delete("/delete/{comment_id}/")
-# @login_required(login_url="/login/")
+@login_required(login_url="/login/")
 def comment(request: HttpRequest, comment_id: int) -> HttpResponse:
     # 폼으로 코멘트를 받아온다
     login_user = request.user.id  # type: ignore

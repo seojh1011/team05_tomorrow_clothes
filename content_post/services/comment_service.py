@@ -11,8 +11,8 @@ def write_comment(comment_writer_id, feed_id, comment):
     # 코멘트 생성
 def update_comment(comment,comment_id):
 
-    Comments.objects.filter(id=comment_id).update(
-        comment=comment)
+    Comments.objects.filter(id=comment_id).update(comment=comment)
+    # 필터로 댓글객체를 찾아 코멘트를 새로운 코멘트로 수정
 
 
 def write_reple(comment_writer_id, comment_id, comment):
