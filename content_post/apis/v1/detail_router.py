@@ -118,12 +118,12 @@ def put_feeds_page(
     feeds_comment: str = Form(...),
     feeds_img_url: UploadedFile = File(...),
 ) -> Dict[str, str]:
-    new_feed = Feeds.objects.get_object_or_404(Feeds, id=feed_id)#type:ignore
+    new_feed = get_object_or_404(Feeds, id=feed_id)#type:ignore
     new_feed.feeds_comment = feeds_comment
     new_feed.feeds_img_url = feeds_img_url
     new_feed.save()
-    # return redirect("/detail/feeds/" + str(feed_id) + "/")
-    return {"msg": "수정 완료"}
+    return redirect(f"/detail/{feed_id}")
+    # return {"msg": "수정 완료"}
 
 
 # detail/feeds/<int:feed_id> 삭제

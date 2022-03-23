@@ -48,6 +48,7 @@ navigator.geolocation.getCurrentPosition(function (pos) {
     latitude = pos.coords.latitude;
     longitude = pos.coords.longitude;
     console.log("현재 위치는 : " + latitude + ", " + longitude);
+    change_gps_kweather(latitude, longitude)
 });
 
 //웹 페이지가 준비가 되면 실행하는 이벤트
@@ -134,14 +135,17 @@ function translate_att2() {
 
 function change_gps_kweather(latitude, longitude) {
     $.ajax({
-            url: "k-weather/",
-            data: {'x': longitude, 'y': latitude},
-            method: 'post',
-            dataType: "json",
-            success: function (data) {
-
-
-            }
-        })
+        url: "k-weather/",
+        data: {'x': longitude, 'y': latitude},
+        method: 'post',
+        dataType: "json",
+        success: function (data) {
+            console.log(data)
+            console.log(data['address'])
+            console.log(data['tmp'][0]['fcstValue'])
+            $('.weather-icon').first().text(data['tmp'][0]['fcstValue']);
+            $('.location:eq(0)').text(data['address']);
+        }
+    })
 }
 
