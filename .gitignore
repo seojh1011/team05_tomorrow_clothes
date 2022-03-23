@@ -1,6 +1,6 @@
 app/local_settings.py
 config/aws.json
-
+poetry.lock
 
 # Created by https://www.toptal.com/developers/gitignore/api/django,pycharm,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,pycharm,visualstudiocode
