@@ -11,15 +11,15 @@ from content_post.apis.v1.schemas.schema_test import UserSchema
 from content_post.models.contents import Comments, Feeds
 from user_admission.models.user import User
 
-content = Router(tags=["Content_CRUD"])
+content = Router(tags=["Feeds_CRUD"])
 
 
 
 
 # detail/feeds page render router
-@content.get("/feeds/", response=DetailResponse)
+@content.get("/feed/", response=DetailResponse)
 @login_required(login_url="/login/")
-def get_feeds_page(request: HttpRequest) -> HttpResponse:
+def get_feed_page(request: HttpRequest) -> HttpResponse:
     return render(request, "add.html")
 
 
@@ -52,7 +52,7 @@ def get_detail_page(request: HttpRequest, feed_id: int) -> HttpResponse:
 # detail/feeds/ (추가)
 @content.post("/feeds/", response=DetailResponse)
 @login_required(login_url="/login/")
-def post_feeds_page(
+def post_feed(
         request: HttpRequest,
         feeds_comment: str = Form(...),
         feeds_img_url: UploadedFile = File(...),
@@ -67,7 +67,7 @@ def post_feeds_page(
 
 # detail/feeds/<int:feed_id> 수정
 @content.post("/feeds/update/{feed_id}/")
-def put_feeds_page(
+def update_feed(
         request: HttpRequest,
         feed_id: int,
         feeds_comment: str,
@@ -84,7 +84,7 @@ def put_feeds_page(
 
 # detail/feeds/<int:feed_id> 삭제
 @content.post("/feeds/delete/{feed_id}", response=DetailResponse)
-def delete_feeds_page(request: HttpRequest, feed_id: int) -> HttpResponse:
+def delete_feed(request: HttpRequest, feed_id: int) -> HttpResponse:
     delete_feed = get_object_or_404(Feeds, id=feed_id)
     delete_feed.delete()
     return redirect("test_1:login")

@@ -7,12 +7,12 @@ from ninja import Router
 from content_post.models.contents import Feeds
 from user_admission.models.user import User
 
-content = Router(tags=["Content_CRUD"])
+content = Router(tags=["Scrap"])
 
 
 @content.post("/scrap/{feed_id}/", url_name="scrap")
 # @login_required(login_url="/login/")
-def scrap(request: HttpRequest, feed_id: int) ->Dict[str,int]:
+def post_scrap(request: HttpRequest, feed_id: int) ->Dict[str,int]:
     login_user = request.user.is_authenticated
     if login_user:
         user_id: Any = request.user.id
@@ -53,8 +53,8 @@ def scrap(request: HttpRequest, feed_id: int) ->Dict[str,int]:
         return {"error": 1}
 
 
-@content.delete("/scrap/{feed_id}/")
-@login_required(login_url="/login/")
-def scrap_off(request: HttpRequest, feed_id: int, user_id: int) -> HttpResponse:
-    Feeds.objects.get(id=feed_id).scrape.remove(User.objects.get(id=user_id))
-    return redirect("/")
+# @content.delete("/scrap/{feed_id}/")
+# @login_required(login_url="/login/")
+# def scrap_off(request: HttpRequest, feed_id: int, user_id: int) -> HttpResponse:
+#     Feeds.objects.get(id=feed_id).scrape.remove(User.objects.get(id=user_id))
+#     return redirect("/")

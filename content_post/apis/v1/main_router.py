@@ -7,7 +7,7 @@ from ninja import Router
 from content_post.apis.v1.schemas.main_response import MainResponse
 from content_post.services.get_feed_list_service import get_feed_list
 
-content = Router(tags=["Content_CRUD"])
+content = Router(tags=["Main"])
 
 
 # 김윤서

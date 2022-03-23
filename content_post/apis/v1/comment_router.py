@@ -6,23 +6,22 @@ from ninja import Form, Router
 from content_post.models.contents import Comments, Feeds
 from content_post.services.comment_service import write_comment, write_reple, update_comment
 
-content = Router(tags=["Content_CRUD"])
+content = Router(tags=["Comment_crud"])
 
 
 @content.post("/reple/{comment_id}/")
 @login_required(login_url="/login/")
-def reple_post(request: HttpRequest, comment_id: int, comment: str = Form(...)) -> HttpResponse:
+def post_reple(request: HttpRequest, comment_id: int, comment: str = Form(...)) -> HttpResponse:
     comment_writer_id: int = request.user.id  # type: ignore
     # 로그인한유저의 아이디 = 코멘트 작성자의 아이디
     feed_id = write_reple(comment_writer_id, comment_id, comment)
     return redirect(f"/detail/{feed_id}/")
 
 
-@content.put("/reple/update/{comment_id}/")
+@content.post("/reple/update/{comment_id}/")
 @login_required(login_url="/login/")
-def reple_put(request: HttpRequest, comment_id: int, comment: str) -> HttpResponse:
+def update_reple(request: HttpRequest, comment_id: int, comment: str) -> HttpResponse:
     # 로그인했는지 확인
-
     login_user = request.user.id  # type: ignore
     reple_writer = Comments.objects.get(id=comment_id).comment_writer.id
     if login_user == reple_writer:
@@ -36,7 +35,7 @@ def reple_put(request: HttpRequest, comment_id: int, comment: str) -> HttpRespon
 
 @content.delete("/reple/delete/{comment_id}/")
 @login_required(login_url="/login/")
-def reple_delete(request: HttpRequest, comment_id: int) -> HttpResponse:
+def delete_reple(request: HttpRequest, comment_id: int) -> HttpResponse:
     login_user = request.user.id  # type: ignore
     reple_writer = Comments.objects.get(id=comment_id).comment_writer.id
     if login_user == reple_writer:
@@ -55,7 +54,7 @@ def reple_delete(request: HttpRequest, comment_id: int) -> HttpResponse:
 
 @content.post("/{feed_id}/")
 @login_required(login_url="/login/")
-def comment_post(
+def post_comment(
         request: HttpRequest, feed_id: int, comment: str = Form(...)
 ) -> HttpResponse:
     # 폼으로 코멘트를 받아온다
@@ -65,9 +64,9 @@ def comment_post(
     return redirect(f"/detail/{feed_id}/")
 
 
-@content.put("/update/{comment_id}/")
+@content.post("/update/{comment_id}/")
 @login_required(login_url="/login/")
-def comment_put(request: HttpRequest, comment_id: int, comment: str) -> HttpResponse:
+def update_comment(request: HttpRequest, comment_id: int, comment: str) -> HttpResponse:
     login_user = request.user.id  # type: ignore
     comment_writer = Comments.objects.get(id=comment_id).comment_writer.id
     if login_user == comment_writer:
@@ -82,7 +81,7 @@ def comment_put(request: HttpRequest, comment_id: int, comment: str) -> HttpResp
 
 @content.delete("/delete/{comment_id}/")
 @login_required(login_url="/login/")
-def comment_delete(request: HttpRequest, comment_id: int) -> HttpResponse:
+def delete_comment(request: HttpRequest, comment_id: int) -> HttpResponse:
     # 폼으로 코멘트를 받아온다
     login_user = request.user.id  # type: ignore
     comment_writer = Comments.objects.get(id=comment_id).comment_writer_id
