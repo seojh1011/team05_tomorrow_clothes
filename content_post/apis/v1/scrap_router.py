@@ -11,7 +11,7 @@ content = Router(tags=["Content_CRUD"])
 
 
 @content.post("/scrap/{feed_id}/", url_name="scrap")
-@login_required(login_url="/login/")
+# @login_required(login_url="/login/")
 def scrap(request: HttpRequest, feed_id: int) ->Dict[str,int]:
     login_user = request.user.is_authenticated
     if login_user:
