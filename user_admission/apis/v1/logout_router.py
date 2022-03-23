@@ -9,6 +9,6 @@ account = Router(tags=["MemberManagement"])
 
 
 @account.get("/", url_name="logout", response=LogoutResponse)
-def get_logout_page(request: HttpRequest) -> HttpResponse:
+def get_logout(request: HttpRequest) -> HttpResponse:
     auth_logout(request)
     return redirect("/")

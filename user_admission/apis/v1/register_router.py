@@ -25,7 +25,7 @@ def get_register_page(request: HttpRequest) -> HttpResponse:
 
 
 @account.post("/")
-def register(
+def create_user(
     request: HttpRequest, register_request: RegisterRequest = Form(...)
 ) -> HttpResponse:
     user = create_user(
@@ -39,13 +39,13 @@ def register(
 
 
 @account.post("/reduplication")
-def reduplication(request: HttpRequest, email: str) -> object:
+def post_email_reduplication(request: HttpRequest, email: str) -> object:
     check = email_check(email)
     # print(type(check))
     return check
 
 
 @account.post("/password")
-def password_validity(request: HttpRequest, password: str) -> object:
+def post_password_reduplication(request: HttpRequest, password: str) -> object:
     check = password_check(password)
     return check

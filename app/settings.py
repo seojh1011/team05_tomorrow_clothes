@@ -164,7 +164,7 @@ MEDIA_URL = "https://s3.console.aws.amazon.com/s3/buckets/team05-tomorrow-clothe
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-APPEND_SLASH = False
+# APPEND_SLASH = False
 
 
 with open(os.path.join(BASE_DIR, "config/aws.json")) as f:
