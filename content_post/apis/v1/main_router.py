@@ -28,7 +28,6 @@ def get_main_page(request: HttpRequest) -> HttpResponse:
         if pages is None:
             return list()
         return list(pages)
-
     # print(limit)
     pages = get_feed_list(page, limit)
     return render(request, "main.html", {"pages": pages})
