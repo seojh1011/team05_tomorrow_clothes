@@ -48,6 +48,7 @@ navigator.geolocation.getCurrentPosition(function (pos) {
     latitude = pos.coords.latitude;
     longitude = pos.coords.longitude;
     console.log("현재 위치는 : " + latitude + ", " + longitude);
+    change_gps_kweather(latitude, longitude)
 });
 
 //웹 페이지가 준비가 되면 실행하는 이벤트
@@ -134,14 +135,38 @@ function translate_att2() {
 
 function change_gps_kweather(latitude, longitude) {
     $.ajax({
-            url: "k-weather/",
-            data: {'x': longitude, 'y': latitude},
-            method: 'post',
-            dataType: "json",
-            success: function (data) {
-
-
-            }
-        })
+        url: "k-weather/",
+        data: {'x': longitude, 'y': latitude},
+        method: 'post',
+        dataType: "json",
+        success: function (data) {
+            console.log(data)
+            console.log(data['address'])
+            console.log(data['tmp'][0]['fcstValue'])
+            $('.weather-icon').first().text(data['tmp'][0]['fcstValue']);
+            let temp = temp_recomand(data['tmp'][0]['fcstValue'])
+            $('.weather-icon:eq(2)').text(temp);
+            $('.location:eq(0)').text(data['address']);
+        }
+    })
 }
 
+function temp_recomand(temp) {
+    if (temp < 5) {
+        return '겨울옷,방한용품'
+    } else if (5 <= temp && temp < 10) {
+        return '코트,가죽자켓'
+    } else if (10 <= temp && temp < 12) {
+        return '트렌치 코트, 야상 여러겹 껴입기'
+    } else if (12 <= temp && temp < 17) {
+        return '자켓, 셔츠, 가디건'
+    } else if (17 <= temp && temp < 20) {
+        return '니트,가디건, 후드티, 맨투맨, 청바지, 면바지'
+    } else if (20 <= temp && temp < 23) {
+        return '긴팔, 가디건, 후드티, 면바지, 슬랙스, 스키니'
+    } else if (23 <= temp && temp < 26) {
+        return '반팔, 얇은 셔츠, 긴팔, 반바지, 면바지'
+    } else if (26 <= temp && temp < 27) {
+        return '민소매, 반바지, 원피스'
+    }
+}
