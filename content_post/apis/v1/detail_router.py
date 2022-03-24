@@ -50,7 +50,7 @@ def get_detail_page(request: HttpRequest, feed_id: int) -> HttpResponse:
 
 
 # detail/feeds/ (추가)
-@content.post("/feeds/", response=DetailResponse)
+@content.post("/feed/", response=DetailResponse)
 @login_required(login_url="/login/")
 def post_feed(
         request: HttpRequest,
@@ -66,7 +66,7 @@ def post_feed(
 
 
 # detail/feeds/<int:feed_id> 수정
-@content.post("/feeds/update/{feed_id}/")
+@content.post("/feed/{feed_id}/")
 def update_feed(
         request: HttpRequest,
         feed_id: int,
@@ -83,7 +83,7 @@ def update_feed(
 
 
 # detail/feeds/<int:feed_id> 삭제
-@content.post("/feeds/delete/{feed_id}", response=DetailResponse)
+@content.post("/feed/{feed_id}", response=DetailResponse)
 def delete_feed(request: HttpRequest, feed_id: int) -> HttpResponse:
     delete_feed = get_object_or_404(Feeds, id=feed_id)
     delete_feed.delete()
