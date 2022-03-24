@@ -7,7 +7,7 @@ from ninja import Form, Router
 from user_admission.apis.v1.schemas.register_request import RegisterRequest
 from user_admission.apis.v1.schemas.register_response import RegisterResponse
 from user_admission.sevices.create_user_service import (
-    create_user,
+    create_users,
     email_check,
     password_check,
 )
@@ -28,14 +28,16 @@ def get_register_page(request: HttpRequest) -> HttpResponse:
 def create_user(
     request: HttpRequest, register_request: RegisterRequest = Form(...)
 ) -> HttpResponse:
-    user = create_user(
+    user = create_users(
         register_request.email, register_request.password, register_request.nick_name
     )
-    new_user_msg = str(list(user.keys()))
+    new_user_msg = list(user.keys())[0]
+
     if new_user_msg == "error":
-        return redirect("/login")
-    else:
         return render(request, "register.html")
+    else:
+        return redirect("/login")
+
 
 
 @account.post("/reduplication")
