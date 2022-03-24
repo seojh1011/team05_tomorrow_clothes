@@ -1,6 +1,6 @@
 # import datetime
 # import pytz
-#
+#주석해제 날씨
 # # 지역 서울로 마출것
 # from app.local_settings import SERVICE_KEY
 # from content_post.apps import ContentPostConfig

@@ -39,7 +39,7 @@ def get_weather(request: HttpRequest) -> json:
 #             pre_tmp.append(db)
 #     return {'tmp': pre_tmp, 'address': address}
 
-
+# 주석해제 날씨
 
 
 
