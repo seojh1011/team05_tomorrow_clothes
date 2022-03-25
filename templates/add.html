@@ -38,15 +38,41 @@
         <div class="back_allow">
             <i class="fas fa-arrow-left"></i>
         </div>
+        {% if feed %}
         <p>포스트 수정</p>
+            {% else %}
+        <p>포스트 등록</p>
+        {% endif %}
         <div class="right_icon">
+            {% if feed %}
             <button onclick="form_submit()">수정</button>
             <i class="fas fa-question-circle"></i>
+            {% else %}
+            <button onclick="form_submit()">등록</button>
+            <i class="fas fa-question-circle"></i>
+            {% endif %}
         </div>
     </div>
 {% endblock add_header %}
 {% block add_body %}
-    <form id="add_form" action="/detail/feeds/" method="post" enctype="multipart/form-data">
+    {% if feed %}
+    <form id="add_form" action="/detail/feed/update/{{ feed.id }}/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="feed_img">
+            <label for="upload_img">이미지 선택하기</label>
+            <div id="image">
+                <img src="{{ feed.feeds_img_url.url }}">
+            </div>
+            <input type="file" id="upload_img" onchange="upload(event)" name="feeds_img_url">
+            <input type="hidden" value="{{ feed.feeds_img_url.url }}">
+        </div>
+        <div class="feed_comment">
+            <p>코멘트 작성</p>
+            <textarea class="comment" placeholder="글 내용을 입력하세요" name="feeds_comment">{{ feed.feeds_comment }}</textarea>
+        </div>
+    </form>
+    {% else %}
+    <form id="add_form" action="/detail/feed/" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="feed_img">
             <label for="upload_img">이미지 선택하기</label>
@@ -59,4 +85,5 @@
             <textarea class="comment" placeholder="글 내용을 입력하세요" name="feeds_comment"></textarea>
         </div>
     </form>
+    {% endif %}
 {% endblock add_body %}
