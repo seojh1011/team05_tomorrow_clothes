@@ -6,7 +6,7 @@ from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from ninja import File, Form, Router, UploadedFile
 
-from content_post.apis.v1.schemas.detail_response import CommentResponse, DetailResponse
+from content_post.apis.v1.schemas.detail_response import CommentResponse, DetailResponse, FeedSchema
 from content_post.apis.v1.schemas.schema_test import UserSchema
 from content_post.models.contents import Comments, Feeds
 from user_admission.models.user import User
@@ -28,22 +28,25 @@ def get_feed_page(request: HttpRequest) -> HttpResponse:
 def get_detail_page(request: HttpRequest, feed_id: int) -> HttpResponse:
     user_id = request.user.id
     # 로그인된 유저의 아이디값
-    feed = Feeds.objects.get(id=feed_id)
-    # 디테일 페이지에 뿌려질 피드 객체
-    check = feed.scrape.filter(id=user_id)  # type: ignore
-    # 로그인된 유저의 값으로 피드에 스크랩했는지 체크
-    comments = Comments.objects.filter(feed_id=feed_id).order_by("-created_at")
-    # 피드에 달린 댓글 객체들
-    if check.exists():
-        # 만약 스크랩을 했다면
-        return render(
-            request,
-            "detail.html",
-            {"feed": feed, "comments": comments, "scraped": "scraped"},
-        )
-    else:
-        # 스크랩을 안했다면
-        return render(request, "detail.html", {"feed": feed, "comments": comments})
+    try:
+        feed = Feeds.objects.get(id=feed_id)
+        # 디테일 페이지에 뿌려질 피드 객체
+        check = feed.scrape.filter(id=user_id)  # type: ignore
+        # 로그인된 유저의 값으로 피드에 스크랩했는지 체크
+        comments = Comments.objects.filter(feed_id=feed_id).order_by("-created_at")
+        # 피드에 달린 댓글 객체들
+        if check.exists():
+            # 만약 스크랩을 했다면
+            return render(
+                request,
+                "detail.html",
+                {"feed": feed, "comments": comments, "scraped": "scraped"},
+            )
+        else:
+            # 스크랩을 안했다면
+            return render(request, "detail.html", {"feed": feed, "comments": comments})
+    except:
+        return ('/')
 
 
 # # 수정페이지 이동 변경예정 효정님 _______________
@@ -64,22 +67,39 @@ def post_feed(
     feed_id = Feeds.objects.order_by("-id")[0].id
     return redirect("/detail/" + str(feed_id) + "/")
 
+@content.get("/feed/update/{feed_id}/", response=FeedSchema)
+@login_required(login_url="/login/")
+def get_update_feed_page(request: HttpRequest,feed_id: int):
+    user_id = request.user.id
+    feed_writer = Feeds.objects.get(id=feed_id).writer.id
+    if user_id == feed_writer:
+        feed = Feeds.objects.get(id=feed_id)
+        return render(request, 'add.html',{'feed':feed})
+    else:
+        return redirect(f"/detail/{feed_id}/",{'error':'본인이 작성한 게시물이 아닙니다.'})
+
+
+
 
 # detail/feeds/<int:feed_id> 수정
-@content.post("/feed/{feed_id}/")
+@content.post("/feed/update/{feed_id}/")
 def update_feed(
         request: HttpRequest,
         feed_id: int,
-        feeds_comment: str,
-        feeds_img_url: UploadedFile,
+        feeds_comment: str = Form(...)
 ) -> Dict[str, str]:
-
+    update_file = request.FILES
     new_feed = Feeds.objects.get(id=feed_id)  # type:ignore
     new_feed.feeds_comment = feeds_comment
-    new_feed.feeds_img_url = feeds_img_url
-    new_feed.save()
-    return redirect(f"/detail/{feed_id}/")
-    # return {"msg": "수정 완료"}
+    if len(update_file) <= 0:
+        new_feed.save()
+        return redirect(f"/detail/{feed_id}/")
+        # return {"msg": "수정 완료"}
+    else:
+        print(update_file['feeds_img_url'])
+        new_feed.feeds_img_url = update_file['feeds_img_url']
+        new_feed.save()
+        return redirect(f"/detail/{feed_id}/")
 
 
 # detail/feeds/<int:feed_id> 삭제

@@ -3,6 +3,7 @@ import json
 from django.http import HttpRequest
 from ninja import Router
 import requests
+#주석
 # from content_post.services.get_address_temp_service import DivisionCode,TimeWeather
 
 content = Router(tags=["test"])
@@ -10,8 +11,8 @@ content = Router(tags=["test"])
 @content.post("", url_name="weather")
 def get_weather(request: HttpRequest) -> json:
     return{'tmp': 19, 'address': '서울 어딘가'}
-#
-#
+
+#주석
 # @content.post("", url_name="weather")
 # def get_weather(request: HttpRequest) -> json:
 #     # 37.626656, 127.0222314 지훈님댁

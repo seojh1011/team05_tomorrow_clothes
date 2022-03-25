@@ -8,6 +8,7 @@ class ContentPostConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
     name = "content_post"
     url = "add.xlsx"
+    #주석
     # exel = pd.read_excel(url, engine='openpyxl')
     #
     # @staticmethod
