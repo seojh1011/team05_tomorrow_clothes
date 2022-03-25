@@ -178,7 +178,7 @@
                     <i class="far fa-comment"></i>
                 </div>
                 <form method="post" action="/comment/{{ feed.id }}/">
-                    <input name=comment placeholder="댓글 달아주소">
+                    <input name =comment placeholder="댓글 달아주소">
                     <button type="submit">등록</button>
                 </form>
                 <div class="share_wrapper">
@@ -189,107 +189,113 @@
             {% for comment in comments %}
                 {% if comment.comment_num == null %}
                     <div class="comment_section">
-                    <div class="comment_article">
-                        <div class="comment_img_wrapper">
-                            <div class="comment_img">
-                                <img src="{{ comment.comment_writer.pro_img_url.url }}" alt="">
+                        <div class="comment_article">
+                            <div class="comment_img_wrapper">
+                                <div class="comment_img">
+                                    <img src="{{ comment.comment_writer.pro_img_url.url }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="comment_info">
+
+                                <div>{{ comment.comment_writer }}</div>
+                                <div>
+                                    <p>
+                                        {{ comment.comment }}
+                                    </p>
+
+                                </div>
                             </div>
                         </div>
-
-                        <div class="comment_info">
-
-                            <div>{{ comment.comment_writer }}</div>
-                            <div>
-                                <p>
-                                    {{ comment.comment }}
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                    {#                    서지훈추가#}
+{#                    서지훈추가#}
                     <details>
-                        <summary>리플</summary>
-                        {% for reple in comments %}
-                            {% if comment == reple.comment_num %}
-                                <div class="reple">
-                                    <div class="comment_article" style="margin-left: 25px">
-                                        <div class="comment_img_wrapper">
-                                            <div class="comment_img">
-                                                <img src="{{ reple.comment_writer.pro_img_url.url }}" alt="">
-                                            </div>
+                    <summary>리플</summary>
+                    {% for reple in comments %}
+                        {% if comment == reple.comment_num %}
+                            <div class="reple">
+                                <div class="comment_article" style="margin-left: 25px">
+                                    <div class="comment_img_wrapper">
+                                        <div class="comment_img">
+                                            <img src="{{ reple.comment_writer.pro_img_url.url}}" alt="">
                                         </div>
+                                    </div>
 
-                                        <div class="comment_info">
-                                            <div>{{ reple.comment_writer }}</div>
-                                            <div>
-                                                <p>
-                                                    {{ reple.comment }}
-                                                </p>
-                                            </div>
+                                    <div class="comment_info">
+                                        <div>{{ reple.comment_writer }}</div>
+                                        <div>
+                                            <p>
+                                                {{ reple.comment }}
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-
-
-                            {% endif %}
-                        {% endfor %}
-                        <form method="POST" action="/comment/reple/{{ comment.id }}/" style="display: flex">
-                            {% csrf_token %}
+                            </div>
+                    {% endif %}
+                    {% endfor %}
+                    <form method="POST" action="/comment/reple/{{ comment.id }}/" style="display: flex">
+                        {% csrf_token %}
                             <input name="comment" placeholder="리플을 달아주소" required>
-                            <button type="submit">리플 작성</button>
-                        </form>
+                        <button type="submit">리플 작성</button>
+                    </form>
                     </details>
                 {% endif %}
-                {#                서지훈추가#}
-            {% endfor %}
-            <div class="comment_detail">
-                <div><span>162</span>개의 이전 댓글 보기</div>
-            </div>
+{#                서지훈추가#}
+                {% endfor %}
+                <div class="comment_detail">
+                    <div><span>162</span>개의 이전 댓글 보기</div>
+                </div>
             </div>
         </div>
     </div>
-    <section>
-    </section>
-    <script>
-        function scrap(feed_id) {
-            let scrap = document.getElementById("scrap")
-            if (scrap.style.color === "yellow") {
-                scrap.className = "far fa-star";
-                scrap.style.color = "lightgray";
-                $.ajax({
-                    url: '/detail/scrap/' + feed_id + '/',
-                    type: 'post',
-                    data: {
-                        'feed_id': feed_id
-                    },
-                    datatype: 'json',
-                    success: function (response) {
-                        console.log(response)
+        <section>
+        </section>
+<script>
+    function scrap(feed_id) {
+        let scrap = document.getElementById("scrap")
+        if (scrap.style.color === "yellow") {
+            scrap.className = "far fa-star";
+            scrap.style.color = "lightgray";
+            $.ajax({
+                url: '/detail/scrap/' + feed_id + '/',
+                type: 'post',
+                data: {
+                    'feed_id': feed_id
+                },
+                datatype: 'json',
+                success: function (response) {
+                    console.log(response)
+                    //302를 인식하도록
+                    if(Object.keys(response) == 'error'){
+                        window.location.href = '/login'
+                    }
+                    else{
                         $('#icon_scraps').html(response.scrap_count)
                     }
-                })
-            } else if (scrap.style.color === "" || scrap.style.color === "lightgray") {
-                scrap.className = "fas fa-star";
-                scrap.style.color = "yellow";
-                $.ajax({
-                    url: '/detail/scrap/' + feed_id + '/',
-                    type: 'post',
-                    data: {
-                        'feed_id': feed_id
-                    },
-                    datatype: 'json',
-                    success: function (response) {
-                        console.log(response)
-                        if (response == 'error') {
-                            window.location.href = '/login'
-                        } else {
-                            $('#icon_scraps').html(response.scrap_count)
-                        }
-
-                    }
-                })
-            }
+                }
+            })
         }
-    </script>
+    else if (scrap.style.color === "" || scrap.style.color === "lightgray") {
+        scrap.className = "fas fa-star";
+        scrap.style.color = "yellow";
+        $.ajax({
+                url: '/detail/scrap/' + feed_id + '/',
+                type: 'post',
+                data: {
+                    'feed_id': feed_id
+                },
+                datatype: 'json',
+                success: function (response) {
+                    console.log(Object.keys(response))
+                    if(Object.keys(response) == 'error') {
+                        window.location.href = '/login'
+                    }
+                    else{
+                        $('#icon_scraps').html(response.scrap_count)
+                    }
+
+                }
+            })
+        }
+    }
+</script>
 {% endblock detail_body %}

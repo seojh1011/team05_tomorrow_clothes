@@ -17,93 +17,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
-        let state = false;
-        let timer_state = true;
-        var page_num = 2;
-
-        window.addEventListener('load', function () {
-            var t = document.getElementsByTagName('div')[0];
-            t.addEventListener('scroll', function () {
-                    console.log('timer_state : ' + timer_state)
-                    if (timer_state === true) {
-                        timer_state = false;
-                        setTimeout(function () {
-                            scroller_delay();
-                            setTimeout(function () {
-                                translate_att2();
-                            }, 500)
-                            timer_state = true;
-                        }, 500);
-
-                    }
-                }
-            )
-
-
-            function scroller_delay() {
-                console.log('timer_state2 : ' + timer_state)
-                let currentScrollValue = document.getElementById('body_container').scrollTop;
-                let ScrollHighValue = document.getElementById('body_container').scrollHeight;
-                let actingScroll = ScrollHighValue - currentScrollValue;
-                const clientHeight = document.getElementsByTagName('body')[0].clientHeight;
-                console.log('스크롤 위치는 :' + currentScrollValue);
-                console.log('스크롤 크기는 :' + ScrollHighValue);
-                console.log('전체 크기 : ' + clientHeight);
-                console.log('스크롤 위치 - 스크롤크기 == 전체크기 : ' + actingScroll);
-                if (clientHeight + 10 >= actingScroll) {
-                    state = true;
-                    console.log('state start ~!!!!!! :' + state);
-                    get_page()
-                }
-            }
-
-
-            function get_page() {
-                $.ajax({
-                    url: "{% url 'test_1:main' %}",
-                    data: {'page': page_num, 'limit': 20},
-                    method: 'GET',
-                    dataType: "json",
-                    success: function (data) {
-
-                        {#console.log(data[0]["feeds_img_url"]);#}
-                        for (let i = 0; i < data.length; i++) {
-                            let img_url = data[i]["feeds_img_url"]
-                            console.log(img_url);
-                            let temp_img_div = `<div class="image"><img src="${img_url}"></div>`
-                            $('#images_box').append(temp_img_div);
-                        }
-                        page_num++;
-                    }
-                })
-            }
-        });
-
-        function translate_att2() {
-            console.log("실행 되고 있음22222222222222");
-            let images = document.querySelectorAll(".image");
-            console.log("실행 되고 있음");
-            let imgStack = [0, 0];
-            console.log("실행");
-            let colWidth = 170;
-            for (let i = 0; i < images.length; i++) {
-                let minIndex = imgStack.indexOf(Math.min.apply(0, imgStack));
-                let x = colWidth * minIndex;
-                let y = imgStack[minIndex];
-                imgStack[minIndex] += (images[i].children[0].height + 10);
-                images[i].style.transform = `translateX(${x}px) translateY(${y}px)`;
-                if (i === images.length - 1) {
-                    document.querySelector(".images").style.height = `${Math.max.apply(0, imgStack)}px`;
-                }
-            }
-        }
-
-        navigator.geolocation.getCurrentPosition(function (pos) {
-            var latitude = pos.coords.latitude;
-            var longitude = pos.coords.longitude;
-            alert("현재 위치는 : " + latitude + ", " + longitude);
-        });
-
         /*
                  * 항목값	항목명	단위
                  * POP	강수확률	 %
@@ -122,7 +35,6 @@
                  * WSD	풍속	1
 
                  */
-
     </script>
 {% endblock main_head %}
 
@@ -138,7 +50,6 @@
                 <img src="{% static 'img/login.png' %}">
             </div>
         {% endif %}
-        {% comment %} <a href="{% url 'account_logout' %}">log out</a> {% endcomment %}
     </div>
 {% endblock main_header %}
 
@@ -149,35 +60,21 @@
             <div class="location">서울시 광양구</div>
 
             <div class="weather-icons">
-
                 <div class="weather-icon">12°C</div>
                 <div class="weather-icon"></div>
                 <div class="weather-icon">강수</div>
                 <div class="weather-icon">미세먼지</div>
-
             </div>
 
         </div>
 
         <div id="images_box" class="images">
 
-            {% for p in test %}
+            {% for p in pages %}
                 <div class="image">
                     <img src="{{ p.feeds_img_url.url }}">
                 </div>
             {% endfor %}
-
-            {#            {% for i in "x"|rjust:"10" %}#}
-            {#                <div class="image"><img src="{% static 'img/chu2.jpg' %}"></div>#}
-            {#                <div class="image"><img src="{% static 'img/wonyoung.jpg' %}"></div>#}
-            {#                <div class="image"><img#}
-            {#                        src="https://i.guim.co.uk/img/sia/ac3752eb2a2a5170e2881b9e47f79f5c60d150a0/0_150_4500_2700/master/4500.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=8931e73900fa54622435e86961d7a6cb">#}
-            {#                </div>#}
-            {#                <div class="image"><img src="{% static 'img/chu.jpeg' %}"></div>#}
-            {#                <div class="image"><img#}
-            {#                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7cEjVUtCpQDMdKkIYTB4a17Szz-Gkze0Fjw&usqp=CAU">#}
-            {#                </div>#}
-            {#            {% endfor %}#}
 
         </div>
     </div>

@@ -40,7 +40,7 @@ def email_check(username: str) -> object:
     # 최상위 도메인은 co.kr 처럼 여러 단계일수 있으므로 $ 붙여주어 가장 마지막에 위치하는것 확인
 
 
-def create_user(email: str, password: str, nick_name: str) -> object:
+def create_users(email: str, password: str, nick_name: str) -> object:
     if email == "" or password == "" or nick_name == "":
         msg = {"error": "모두 입력해주세요."}
         return msg
