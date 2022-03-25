@@ -1,4 +1,5 @@
 import re
+from typing import Dict
 
 from user_admission.models import User
 
@@ -20,7 +21,7 @@ def password_check(password: str) ->object:
     # [A-Za-z\d$@$!%*#?&]{8,} > 앞의 값들 중 8개 이상 일치해야함 즉 8글자 이상의 비밀번호 입력해야함.
 
 
-def email_check(username: str) -> object:
+def email_check(username: str) -> Dict:
     email_regex = re.compile("^[a-zA-Z0-9]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
     if not email_regex.match(username):
         msg = {"error": "이메일형식이 아닙니다."}
