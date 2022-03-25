@@ -43,7 +43,7 @@ api.add_router("detail/", detail_router)
 api.add_router("detail/", scrap_router)
 api.add_router("logout/", logout_router)
 api.add_router("comment/", comment_router)
-api.add_router("", mypage_router)
+api.add_router("mypage/", mypage_router)
 
 api.add_router("k-weather/", weather_router)
 

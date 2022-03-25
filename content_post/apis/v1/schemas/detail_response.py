@@ -1,6 +1,9 @@
 from datetime import date
 
 from ninja import Schema
+from ninja.orm import create_schema
+
+from user_admission.models import User
 
 
 class DetailResponse(Schema):
@@ -19,3 +22,5 @@ class CommentResponse(Schema):
     id: int
     comment_writer: int
     comment: str
+
+FeedSchema = create_schema(User)
