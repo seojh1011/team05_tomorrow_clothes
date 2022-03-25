@@ -33,7 +33,7 @@ def update_reple(request: HttpRequest, comment_id: int, comment: str) -> HttpRes
         return msg
 
 
-@content.delete("/reple//delete/{comment_id}/")
+@content.post("/reple/delete/{comment_id}/")
 @login_required(login_url="/login/")
 def delete_reple(request: HttpRequest, comment_id: int) -> HttpResponse:
     login_user = request.user.id  # type: ignore
@@ -79,7 +79,7 @@ def update_comment(request: HttpRequest, comment_id: int, comment: str) -> HttpR
         return msg
 
 
-@content.delete("/delete/{comment_id}/")
+@content.post("/delete/{comment_id}/")
 @login_required(login_url="/login/")
 def delete_comment(request: HttpRequest, comment_id: int) -> HttpResponse:
     # 폼으로 코멘트를 받아온다

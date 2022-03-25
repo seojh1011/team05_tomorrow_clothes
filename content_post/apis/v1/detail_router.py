@@ -102,16 +102,16 @@ def update_feed(
         return redirect(f"/detail/{feed_id}/")
 
 
-# detail/feeds/<int:feed_id> 삭제
-@content.post("/feed/{feed_id}", response=DetailResponse)
+# detail/feeds/delete/<int:feed_id> 삭제
+@content.post("/feed/delete/{feed_id}")
 def delete_feed(request: HttpRequest, feed_id: int) -> HttpResponse:
     user = request.user
-    delete_feed = Feeds.objects.fet(id=feed_id)
+    delete_feed = Feeds.objects.get(id=feed_id)
     delete_feed_user = delete_feed.writer
     if user == delete_feed_user:
         delete_feed.delete()
-        return redirect("/")
+        return {'success':'삭제 완료'}
     else:
-        return redirect((f"/detail/{feed_id}/"),{'error':'본인이 작성한 글이 아닙니다.'})
+        return {'error':'본인이 작성한 글이 아닙니다.'}
 
 # 수정페이지 이동 변경예정
