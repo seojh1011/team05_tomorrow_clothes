@@ -1,10 +1,15 @@
-
 {% extends './base.html' %}
 {% load static %}
-    {% block detail_head %}
+{% block detail_head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <link rel="stylesheet" type="text/css" href="{% static "css/detail/detail.css" %}">
+    {#  Mobile  #}
+    <link rel="stylesheet" type="text/css" href="{% static "css/detail/detail.css" %}"
+          media="screen and (max-width: 360px)">
+    {#  Desktop  #}
+    <link rel="stylesheet" type="text/css" href="{% static "css/detail/desktop_detail.css" %}"
+          media="screen and (min-width: 360px)">
+
 
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
@@ -14,19 +19,126 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static "js/detail/detail.js" %}"></script>
-    {% endblock detail_head %}
+{% endblock detail_head %}
 
-    {% block detail_header %}
 
+
+{% block detail_header %}
+    {#  Desktop - 효정 추가(시작) #}
+    <div id="main-header">
+        <div class="title">
+            <img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}">
+        </div>
+        <div class="nav">
+            <div><a href="">Main</a></div>
+            <div><a href="">Weather</a></div>
+            <div><a href="">My page</a></div>
+            <div><a href="">Upload</a></div>
+        </div>
+    </div>
+    {#  Desktop - 효정 추가(끝) #}
+
+    {#  Mobile  #}
     <div id="header">
         <div class="back_allow">
             <i class="fas fa-arrow-left"></i>
         </div>
         <p>상세페이지</p>
     </div>
-    {% endblock detail_header %}
-    {% block detail_body %}
+{% endblock detail_header %}
 
+{% block detail_body %}
+    {#  Desktop - 효정 추가(시작) #}
+    <div id="main-container">
+        <div class="contents-container">
+            <div class="image-wrapper">
+                <img src="{{ feed.feeds_img_url.url }}">
+            </div>
+            <div class="content-wrapper">
+                <div class="content-icons">
+                    <div class="content-icons-left">
+                        <a href=""><img src="{% static "img/desktop/상세페이지_수정아이콘.png" %}"></a>
+                        <a href=""><img src="{% static "img/desktop/상세페이지_공유아이콘.png" %}"></a>
+                    </div>
+                    <div class="content-icons-right">
+                        <a href=""><img src="{% static "img/desktop/상세페이지_삭제아이콘.png" %}"></a>
+                    </div>
+                </div>
+                <div class="user-info">
+                    <div class="user-info-left">
+                        <div class="user-info-profile">
+                            <img src="{{ feed.writer.pro_img_url.url }}">
+                        </div>
+                        <div class="user-info-names">
+                            <div class="user-info-nickname">{{ feed.writer.nick_name }}</div>
+                            <div class="user-info-date">{{ feed.created_at|date:"Y.m.d" }}</div>
+                        </div>
+                    </div>
+                    <div class="user-info-right">
+                        <div class="user-info-scrap">
+                            {% if scraped %}
+                                <div id="scrap" onclick="scrap({{ feed.id }})" class="fas fa-star" style="color:#042b44; font-size: 40px;"></div>
+                            {% else %}
+                                <div id="scrap" onclick="scrap({{ feed.id }})" class="fas fa-star" style="color:lightgray; font-size: 40px;"></div>
+                            {% endif %}
+                            <div id="icon_scraps" class="user-info-counts">{{ feed.scrapes }}</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="post-comments">{{ feed.feeds_comment }}</p>
+                <div class="content-box">
+                    {% for comment in comments %}
+                        {% if comment.comment_num == null %}
+                            <div class="user-comments">
+                                <span class="user-comments-profile"><img
+                                        src="{{ comment.comment_writer.pro_img_url.url }}"></span>
+                                <span class="user-comments-nickname">{{ comment.comment_writer.nick_name }}</span>
+                                <span class="user-comments-comment">{{ comment.comment }}</span>
+                                <span class="user-comments-date">{{ comment.created_at|date:"Y.m.d" }}</span>
+                            </div>
+                            <details>
+                                <summary>답글달기</summary>
+                                <div class="user-comments-reple">
+                                    <form action="/comment/reple/{{ comment.id }}/" method="POST">
+                                        {% csrf_token %}
+                                        <input type="text" placeholder="댓글을 입력하세요..." name="comments" required>
+                                        <button type="submit">작성</button>
+                                    </form>
+                                    {% for reple in comments %}
+                                        {% if comment == reple.comment_num %}
+                                            <div class="user-comments-reple-list">
+                                            <span class="user-comments-profile"><img
+                                                    src="{{ reple.comment_writer.pro_img_url.url }}"></span>
+                                                <span class="user-comments-nickname">{{ reple.comment_writer.nick_name }}</span>
+                                                <span class="user-comments-comment">{{ reple.comment }}</span>
+                                                <span class="user-comments-date">{{ reple.created_at|date:"Y.m.d" }}</span>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </details>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div>
+                    <form action="/comment/{{ feed.id }}/" method="post">
+                        <div class="input-comment">
+                            <div class="input-comment-left">
+                                <img src="{% static "img/desktop/상세페이지_댓글아이콘.png" %}">
+                            </div>
+                            <div class="input-comment-right">
+                                <input id="input-right" type="text" placeholder="댓글을 입력하세요..." name="comment">
+                                <button type="submit">작성</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {#  Desktop - 효정 추가(끝) #}
+
+    {#  Mobile  #}
     <div id="main">
         <div id="feed">
             <img src="{{ feed.feeds_img_url.url }}" alt="">
@@ -66,7 +178,7 @@
                     <i class="far fa-comment"></i>
                 </div>
                 <form method="post" action="/comment/{{ feed.id }}/">
-                    <input name =comment placeholder="댓글 달아주소">
+                    <input name=comment placeholder="댓글 달아주소">
                     <button type="submit">등록</button>
                 </form>
                 <div class="share_wrapper">
@@ -77,109 +189,107 @@
             {% for comment in comments %}
                 {% if comment.comment_num == null %}
                     <div class="comment_section">
-                        <div class="comment_article">
-                            <div class="comment_img_wrapper">
-                                <div class="comment_img">
-                                    <img src="{{ comment.comment_writer.pro_img_url.url }}" alt="">
-                                </div>
-                            </div>
-
-                            <div class="comment_info">
-
-                                <div>{{ comment.comment_writer }}</div>
-                                <div>
-                                    <p>
-                                        {{ comment.comment }}
-                                    </p>
-
-                                </div>
+                    <div class="comment_article">
+                        <div class="comment_img_wrapper">
+                            <div class="comment_img">
+                                <img src="{{ comment.comment_writer.pro_img_url.url }}" alt="">
                             </div>
                         </div>
-{#                    서지훈추가#}
-                    <details>
-                    <summary>리플</summary>
-                    {% for reple in comments %}
-                        {% if comment == reple.comment_num %}
-                            <div class="reple">
-                                <div class="comment_article" style="margin-left: 25px">
-                                    <div class="comment_img_wrapper">
-                                        <div class="comment_img">
-                                            <img src="{{ reple.comment_writer.pro_img_url.url}}" alt="">
-                                        </div>
-                                    </div>
 
-                                    <div class="comment_info">
-                                        <div>{{ reple.comment_writer }}</div>
-                                        <div>
-                                            <p>
-                                                {{ reple.comment }}
-                                            </p>
+                        <div class="comment_info">
+
+                            <div>{{ comment.comment_writer }}</div>
+                            <div>
+                                <p>
+                                    {{ comment.comment }}
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    {#                    서지훈추가#}
+                    <details>
+                        <summary>리플</summary>
+                        {% for reple in comments %}
+                            {% if comment == reple.comment_num %}
+                                <div class="reple">
+                                    <div class="comment_article" style="margin-left: 25px">
+                                        <div class="comment_img_wrapper">
+                                            <div class="comment_img">
+                                                <img src="{{ reple.comment_writer.pro_img_url.url }}" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="comment_info">
+                                            <div>{{ reple.comment_writer }}</div>
+                                            <div>
+                                                <p>
+                                                    {{ reple.comment }}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
 
-                    {% endif %}
-                    {% endfor %}
-                    <form method="POST" action="/comment/reple/{{ comment.id }}/" style="display: flex">
-                        {% csrf_token %}
+                            {% endif %}
+                        {% endfor %}
+                        <form method="POST" action="/comment/reple/{{ comment.id }}/" style="display: flex">
+                            {% csrf_token %}
                             <input name="comment" placeholder="리플을 달아주소" required>
-                        <button type="submit">리플 작성</button>
-                    </form>
+                            <button type="submit">리플 작성</button>
+                        </form>
                     </details>
                 {% endif %}
-{#                서지훈추가#}
-                {% endfor %}
-                <div class="comment_detail">
-                    <div><span>162</span>개의 이전 댓글 보기</div>
-                </div>
+                {#                서지훈추가#}
+            {% endfor %}
+            <div class="comment_detail">
+                <div><span>162</span>개의 이전 댓글 보기</div>
+            </div>
             </div>
         </div>
     </div>
-        <section>
-        </section>
-<script>
-    function scrap(feed_id) {
-        let scrap = document.getElementById("scrap")
-        if (scrap.style.color === "yellow") {
-            scrap.className = "far fa-star";
-            scrap.style.color = "lightgray";
-            $.ajax({
-                url: '/detail/scrap/' + feed_id + '/',
-                type: 'post',
-                data: {
-                    'feed_id': feed_id
-                },
-                datatype: 'json',
-                success: function (response) {
-                    console.log(response)
-                    $('#icon_scraps').html(response.scrap_count)
-                }
-            })
-        }
-    else if (scrap.style.color === "" || scrap.style.color === "lightgray") {
-        scrap.className = "fas fa-star";
-        scrap.style.color = "yellow";
-        $.ajax({
-                url: '/detail/scrap/' + feed_id + '/',
-                type: 'post',
-                data: {
-                    'feed_id': feed_id
-                },
-                datatype: 'json',
-                success: function (response) {
-                    console.log(response)
-                    if(response == 'error') {
-                        window.location.href = '/login'
-                    }
-                    else{
+    <section>
+    </section>
+    <script>
+        function scrap(feed_id) {
+            let scrap = document.getElementById("scrap")
+            if (scrap.style.color === "yellow") {
+                scrap.className = "far fa-star";
+                scrap.style.color = "lightgray";
+                $.ajax({
+                    url: '/detail/scrap/' + feed_id + '/',
+                    type: 'post',
+                    data: {
+                        'feed_id': feed_id
+                    },
+                    datatype: 'json',
+                    success: function (response) {
+                        console.log(response)
                         $('#icon_scraps').html(response.scrap_count)
                     }
+                })
+            } else if (scrap.style.color === "" || scrap.style.color === "lightgray") {
+                scrap.className = "fas fa-star";
+                scrap.style.color = "yellow";
+                $.ajax({
+                    url: '/detail/scrap/' + feed_id + '/',
+                    type: 'post',
+                    data: {
+                        'feed_id': feed_id
+                    },
+                    datatype: 'json',
+                    success: function (response) {
+                        console.log(response)
+                        if (response == 'error') {
+                            window.location.href = '/login'
+                        } else {
+                            $('#icon_scraps').html(response.scrap_count)
+                        }
 
-                }
-            })
+                    }
+                })
+            }
         }
-    }
-</script>
+    </script>
 {% endblock detail_body %}

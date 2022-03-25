@@ -4,7 +4,11 @@
 {% block login_head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/login/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login/login.css' %}"
+          media="screen and (max-width: 360px)">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login/desktop_login.css' %}"
+          media="screen and (min-width: 360px)">
+
     <title>Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -16,7 +20,7 @@
             let username = document.getElementById('username').value
             let password = document.getElementById('password').value
             let form = document.createElement("form");
-            console.log("password :   "+password)
+            console.log("password :   " + password)
             form.setAttribute("charset", "UTF-8");
             form.setAttribute("method", "post");
             form.setAttribute("action", "{% url 'test_1:login' %}");
@@ -40,6 +44,7 @@
 
 {% endblock login_head %}
 {% block login_header %}
+    {#  Mobile  #}
     <div id="header">
         <div class="back_allow">
             <i class="fas fa-arrow-left"></i>
@@ -48,6 +53,7 @@
     </div>
 {% endblock login_header %}
 {% block login_body %}
+    {#  Mobile  #}
     <div id="main">
         <div class="login_container_wrapper">
 

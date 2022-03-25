@@ -1,4 +1,10 @@
 @charset "UTF-8";
+#main-container{
+    display: none;
+}
+#main-header {
+    display: none;
+}
 /* 전체영역 */
 body {
 	background-color: darkgray;
