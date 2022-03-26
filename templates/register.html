@@ -21,31 +21,39 @@
 {% block register_body %}
     <div id="main">
         <section class="body_register">
-            <div class="service_title"><h1>서비스명</h1></div>
+            <div class="service_title"><img class="register_title_img" src="{% static "img/fiveicon/tomorrow_clothes(흰색).png" %}"></div>
             <form class="input_register" action="{% url 'test_1:register' %}" method="post">
                 <div class="input_wrapper">
                     <div class="input_data">
                         <input type="text" name="nick_name" required/>
                         <div class="underline"></div>
-                        <label>닉네임</label>
+                        <label>Nickname</label>
                     </div>
                     <div class="input_data">
                         <input type="text" name="email" required/>
                         <div class="underline"></div>
-                        <label>이메일</label>
+                        <label>Email</label>
                     </div>
                     <div id="password" class="input_data">
                         <input type="password" id="show_password" name="password" required/>
                         <div class="underline"></div>
-                        <label>비밀번호</label>
+                        <label>Password</label>
                         <i class="fas fa-eye"></i>
                     </div>
-                    <button type="submit">C R E A T E</button>
+                    <div class="find_pw">
+                        <p>
+                            <a>Forget your password?</a>
+                        </p>
+                    </div>
+
+                    <button type="submit">Register</button>
                 </div>
             </form>
-            <span>간편하게 시작하기</span>
             <div class="platform_btn_register">
-                <button>kakao</button>
+                <button class="kakao_regist_btn_wrapper">
+                    <img class="kakao_signin_img"src="{% static "img/fiveicon/loginpage_kakaologo.png" %}">
+                    <p class="kakao_singup_str">Sign up with KaKao</p>
+                </button>
             </div>
         </section>
     </div>

@@ -78,7 +78,7 @@
                 <button class="login_btn"onclick="login_submit()" value="Login">
                     LOGIN
                 </button>
-                <p class="or_str">OR</p>
+                <p class="or_str"><strong>OR</strong></p>
                 {% load socialaccount %}
                 <div class="login_social">
                     <a href="{% provider_login_url 'kakao' method='oauth2' %}">
@@ -87,7 +87,10 @@
                             <p class="kakao_str">Sign in with KaKao</p>
                         </div></a>
                 </div>
-                <div class="go_signin"><p>Don't have an account?</p> <a href="">Sign in</a></div>
+                <div class="go_signin">
+                    <p>Don't have an account?</p>
+                    <a href=""><strong>Sign in</strong></a>
+                </div>
             </div>
 
         </div>
