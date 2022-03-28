@@ -118,8 +118,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
                     {% endif %}
                     {% endfor %}
                     <form class="reple_wrapper" method="POST" action="/comment/reple/{{ comment.id }}/" style="display: flex">
@@ -154,7 +152,13 @@
                 datatype: 'json',
                 success: function (response) {
                     console.log(response)
-                    $('#icon_scraps').html(response.scrap_count)
+                    //302를 인식하도록
+                    if(Object.keys(response) == 'error'){
+                        window.location.href = '/login'
+                    }
+                    else{
+                        $('#icon_scraps').html(response.scrap_count)
+                    }
                 }
             })
         }
@@ -169,8 +173,8 @@
                 },
                 datatype: 'json',
                 success: function (response) {
-                    console.log(response)
-                    if(response == 'error') {
+                    console.log(Object.keys(response))
+                    if(Object.keys(response) == 'error') {
                         window.location.href = '/login'
                     }
                     else{

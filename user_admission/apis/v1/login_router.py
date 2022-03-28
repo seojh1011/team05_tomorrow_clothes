@@ -24,7 +24,7 @@ def get_login_page(request: HttpRequest) -> HttpResponse:
 
 
 @account.post("/", url_name="login", response=LoginResponse)
-def post_login_page(request: HttpRequest) -> HttpResponse:
+def post_login(request: HttpRequest) -> HttpResponse:
     username = request.POST["username"]
     password = request.POST["password"]
     user = auth.authenticate(request, username=username, password=password)
