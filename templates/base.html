@@ -19,6 +19,10 @@
 
     {% block password_head %}
     {% endblock password_head %}
+    {% block weather_head %}
+    {% endblock weather_head %}
+
+
      <link rel="stylesheet" type="text/css" href="{% static "css/common.css" %}">
 </head>
 <body>
@@ -51,6 +55,16 @@
 
     {% block login_body_password %}
     {% endblock login_body_password %}
+
+    {% block mypage_header %}
+    {% endblock mypage_header %}
+    {% block mypage_body %}
+    {% endblock mypage_body %}
+
+    {% block weather_header %}
+    {% endblock weather_header %}
+    {% block weather_body %}
+    {% endblock weather_body %}
 
 </div>
 
