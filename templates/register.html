@@ -3,11 +3,10 @@
 {% block register_head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/register/register.css' %}"
           media="screen and (max-width: 360px)">
     <link rel="stylesheet" type="text/css" href="{% static 'css/register/desktop_register.css' %}"
-          media="screen and (min-width: 360px)">
+          media="screen and (min-width: 361px)">
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
@@ -24,125 +23,54 @@
 
 
 {% block register_body %}
-    {#  Desktop: 효정 추가(시작)  #}
-    <div id="main-container">
+    <div id="main">
         <div class="video-wrapper">
             <div class="content-overlay"></div>
             <video autoplay loop muted>
                 <source src="{% static "img/desktop/clothes_login.mp4" %}">
             </video>
         </div>
-        <div class="image-wrapper">
-            <img src="{% static "img/desktop/tomorrow_clothes(흰색).png" %}">
-        </div>
-        <div class="content-wrapper">
+        <section class="body_register">
+            <div class="service_title">
+                <img src="{% static "img/desktop/tomorrow_clothes(흰색).png" %}">
+            </div>
             <form class="input_register" action="{% url 'test_1:register' %}" method="post">
                 <div class="input_wrapper">
                     <div class="input_data">
                         <img src="{% static 'img/desktop/로그인페이지_닉네임아이콘.png' %}">
-                        <input type="text" name="nick_name" placeholder="Nickname" required/>
-{#                        <div class="underline"></div>#}
-{#                        <label>닉네임</label>#}
+                        <input type="text" name="nick_name" placeholder="닉네임" required/>
+                        <div class="underline"></div>
+                        <label>닉네임</label>
                     </div>
                     <div class="input_data">
                         <img src="{% static 'img/desktop/로그인페이지_이메일아이콘.png' %}">
-                        <input type="text" name="email"  placeholder="Email" required/>
-{#                        <div class="underline"></div>#}
-{#                        <label>이메일</label>#}
+                        <input type="text" name="email" placeholder="이메일" required/>
+                        <div class="underline"></div>
+                        <label>이메일</label>
                     </div>
                     <div id="password" class="input_data">
                         <img src="{% static 'img/desktop/로그인페이지_비밀번호아이콘.png' %}">
-                        <input type="password" id="show_password"  placeholder="Password" name="password" required/>
-{#                        <div class="underline"></div>#}
-{#                        <label>비밀번호</label>#}
+                        <input type="password" id="show_password" name="password"
+                               placeholder="비밀번호" required/>
                         <i class="fas fa-eye"></i>
+                        <div class="underline"></div>
+                        <label>비밀번호</label>
                     </div>
                     <button type="submit">C R E A T E</button>
                 </div>
             </form>
             <span>간편하게 시작하기</span>
-            <div class="platform_btn_register">
-                <button>kakao</button>
+            <div class="selection-or">OR</div>
+            {% load socialaccount %}
+            <div class="login_social">
+                <a href="{% provider_login_url 'kakao' method='oauth2' %}">
+                    <button>Sign in with Kakao</button>
+                </a>
             </div>
-        </div>
-
+            {#            <div class="platform_btn_register">#}
+            {#                <button>kakao</button>#}
+            {#            </div>#}
+        </section>
     </div>
-
-
-
-
-    {#        <div class="contents-container">#}
-    {#            <div class="video-wrapper">#}
-    {#                <video src="{% static "img/desktop/clothes_login.mp4" %}" muted="true"#}
-    {#                       autoplay="true" loop="true"></video>#}
-    {##}
-    {#            </div>#}
-    {#            <div class="content-overlay"></div>#}
-    {##}
-    {#            <div class="image-wrapper">#}
-    {#                <img src="{% static "img/desktop/tomorrow_clothes(흰색).png" %}">#}
-    {#            </div>#}
-    {#            <div class="content-wrapper">#}
-    {#                <form class="input_register" action="{% url 'test_1:register' %}" method="post">#}
-    {#                    <div class="input_wrapper">#}
-    {#                        <div class="input_data">#}
-    {#                            <input type="text" name="nick_name" required/>#}
-    {#                            <div class="underline"></div>#}
-    {#                            <label>닉네임</label>#}
-    {#                        </div>#}
-    {#                        <div class="input_data">#}
-    {#                            <input type="text" name="email" required/>#}
-    {#                            <div class="underline"></div>#}
-    {#                            <label>이메일</label>#}
-    {#                        </div>#}
-    {#                        <div id="password" class="input_data">#}
-    {#                            <input type="password" id="show_password" name="password" required/>#}
-    {#                            <div class="underline"></div>#}
-    {#                            <label>비밀번호</label>#}
-    {#                            <i class="fas fa-eye"></i>#}
-    {#                        </div>#}
-    {#                        <button type="submit">C R E A T E</button>#}
-    {#                    </div>#}
-    {#                </form>#}
-    {#                <span>간편하게 시작하기</span>#}
-    {#                <div class="platform_btn_register">#}
-    {#                    <button>kakao</button>#}
-    {#                </div>#}
-    {#            </div>#}
-    {#        </div>#}
-    {#    </div>#}
-    {#  Desktop: 효정 추가(끝)  #}
-    {##}
-    {#  Mobile  #}
-    {#    <div id="main">#}
-    {#        <section class="body_register">#}
-    {#            <div class="service_title"><h1>서비스명</h1></div>#}
-    {#            <form class="input_register" action="{% url 'test_1:register' %}" method="post">#}
-    {#                <div class="input_wrapper">#}
-    {#                    <div class="input_data">#}
-    {#                        <input type="text" name="nick_name" required/>#}
-    {#                        <div class="underline"></div>#}
-    {#                        <label>닉네임</label>#}
-    {#                    </div>#}
-    {#                    <div class="input_data">#}
-    {#                        <input type="text" name="email" required/>#}
-    {#                        <div class="underline"></div>#}
-    {#                        <label>이메일</label>#}
-    {#                    </div>#}
-    {#                    <div id="password" class="input_data">#}
-    {#                        <input type="password" id="show_password" name="password" required/>#}
-    {#                        <div class="underline"></div>#}
-    {#                        <label>비밀번호</label>#}
-    {#                        <i class="fas fa-eye"></i>#}
-    {#                    </div>#}
-    {#                    <button type="submit">C R E A T E</button>#}
-    {#                </div>#}
-    {#            </form>#}
-    {#            <span>간편하게 시작하기</span>#}
-    {#            <div class="platform_btn_register">#}
-    {#                <button>kakao</button>#}
-    {#            </div>#}
-    {#        </section>#}
-    {#    </div>#}
-    {#    <div id="footer"></div>#}
+    <div id="footer"></div>
 {% endblock register_body %}

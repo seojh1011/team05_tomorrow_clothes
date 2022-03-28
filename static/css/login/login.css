@@ -1,8 +1,30 @@
 @charset "UTF-8";
 /* 미디어쿼리 */
-#main-container{
+.video-wrapper {
     display: none;
 }
+
+.login_input_wrapper2 img {
+    display: none;
+}
+
+.login_input_wrapper2 i {
+    display: none;
+}
+
+.login_input_pw img {
+    display: none;
+}
+
+.desktop_login_social {
+    display: none;
+}
+
+.selection-or {
+    display: none;
+}
+
+
 
 /* 전체영역 */
 body {
@@ -104,7 +126,7 @@ input:focus {
     width: 100%;
 }
 .login_pw_input {
-    width: 45%;
+    width: 87%;
 }
 button {
     width: 100%;
@@ -117,6 +139,10 @@ button {
     margin-top: 10%;
     margin-bottom: 10%;
 }
+.login_title img {
+    width: 20px;
+}
+
 .login_line {
     margin-top: 3%;
     margin-bottom: 3%;

@@ -14,8 +14,6 @@ from user_admission.models.user import User
 content = Router(tags=["Feeds_CRUD"])
 
 
-
-
 # detail/feeds page render router
 @content.get("/feed/", response=DetailResponse)
 @login_required(login_url="/login/")
@@ -67,18 +65,17 @@ def post_feed(
     feed_id = Feeds.objects.order_by("-id")[0].id
     return redirect("/detail/" + str(feed_id) + "/")
 
+
 @content.get("/feed/update/{feed_id}/", response=FeedSchema)
 @login_required(login_url="/login/")
-def get_update_feed_page(request: HttpRequest,feed_id: int):
+def get_update_feed_page(request: HttpRequest, feed_id: int):
     user_id = request.user.id
     feed_writer = Feeds.objects.get(id=feed_id).writer.id
     if user_id == feed_writer:
         feed = Feeds.objects.get(id=feed_id)
-        return render(request, 'add.html',{'feed':feed})
+        return render(request, 'add.html', {'feed': feed})
     else:
-        return redirect(f"/detail/{feed_id}/",{'error':'본인이 작성한 게시물이 아닙니다.'})
-
-
+        return redirect(f"/detail/{feed_id}/", {'error': '본인이 작성한 게시물이 아닙니다.'})
 
 
 # detail/feeds/<int:feed_id> 수정

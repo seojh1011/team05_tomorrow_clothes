@@ -1,13 +1,18 @@
+@charset "UTF-8";
 /* 미디어쿼리: 모바일 화면 지우기 */
 #header {
     display: none;
 }
 
-#main {
+.mobile_hr {
     display: none;
 }
 
-#body-container {
+#pro_style_tag {
+    display: none;
+}
+
+.share_wrapper {
     display: none;
 }
 
@@ -25,8 +30,11 @@
 /* 헤더: 전체 */
 #main-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
+    width: 1050px;
+    margin: 0 auto;
+    padding-left: 30px;
 }
 
 /* 헤더: 타이틀 */
@@ -44,7 +52,7 @@
 #main-header .nav {
     display: flex;
     justify-content: space-between;
-    height: 70px;
+    height: 90px;
     width: 400px;
     font-size: 20px;
     padding-top: 60px;
@@ -66,7 +74,7 @@
 
 /* 내용 영역 */
 /* 내용: 전체 */
-.contents-container {
+#main {
     width: 1100px;
     height: 450px;
     /*border: 1px solid darkgray;*/
@@ -77,9 +85,9 @@
 }
 
 /* 내용 > 왼쪽 이미지 */
-.image-wrapper > img {
+#feed > img {
     /*width: 450px;*/
-    height: 500px;
+    height: 450px;
     border: 1px solid lightgray;
     border-right: none;
     border-radius: 10px 0 0 10px;
@@ -89,7 +97,7 @@
 /* 내용 > 오른쪽 컨텐츠 */
 .content-wrapper {
     /*width: 450px;*/
-    height: 500px;
+    height: 450px;
     border: 1px solid lightgray;
     border-radius: 0 10px 10px 0;
     /*overflow-y: auto;*/
@@ -112,7 +120,7 @@
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 */
-.user-info {
+#pro_auth_article {
     width: 300px;
     display: flex;
     justify-content: space-between;
@@ -121,12 +129,12 @@
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 왼쪽(유저프로필, 유저닉네임) */
-.user-info .user-info-left {
-    display: flex;
-}
+/*.user-info .user-info-left {*/
+/*    display: flex;*/
+/*}*/
 
 /* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 왼쪽(유저프로필) */
-.user-info-left .user-info-profile > img {
+#pro_auth_article #pro_img img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -134,41 +142,46 @@
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 왼쪽(유저닉네임, 작성일) */
-.user-info-left > .user-info-names {
+#pro_auth_article #pro_info_user_at {
     padding: 10px 10px 10px 15px;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 왼쪽(유저닉네임) */
-.user-info-left > .user-info-names > .user-info-nickname {
+#pro_auth_article #pro_info_user_at .my_name {
     font-size: 20px;
     font-weight: bold;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 왼쪽(작성일) */
-.user-info-left > .user-info-names > .user-info-date {
+#pro_auth_article #pro_info_user_at .create_at {
     font-weight: lighter;
     color: darkgray;
     padding-top: 5px;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 오른쪽(별표, 스크랩수) */
-.user-info-right {
+#pro_auth_article #pro_icon {
     padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
 }
 
-/*!* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 오른쪽(별표) *!*/
-/*.user-info-right .user-info-scrap .user-info-star {*/
-/*    font-size: 30px;*/
-/*    color: #042b44;*/
-/*}*/
+
+/* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 오른쪽(별표) */
+#pro_auth_article #pro_icon #scrap {
+    font-size: 30px;
+    color: #042b44;
+}
 
 /*!* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 오른쪽(별표):hover *!*/
 /*.user-info-right .user-info-scrap .user-info-star:hover {*/
 /*    color: #ffdb58;*/
 /*}*/
 
+
 /* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 오른쪽(스크랩수) */
-.user-info-right .user-info-scrap .user-info-counts {
+#pro_auth_article #pro_icon #icon_scraps {
     text-align: center;
     color: darkgray;
     font-weight: lighter;
@@ -176,7 +189,7 @@
     font-size: 13px;
 }
 
-.content-box {
+.comment_container {
     width: 300px;
     height: 250px;
     margin: 0 auto;
@@ -184,7 +197,7 @@
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 컨텐츠 내용 */
-.post-comments {
+.post_comment {
     margin: 0 auto;
     width: 320px;
     padding: 20px;
@@ -199,7 +212,7 @@
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 댓글(프로필사진) */
-.user-comments-profile img {
+.comment_img_wrapper .comment_img img {
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -207,11 +220,11 @@
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 댓글(닉네임) */
-.user-comments-nickname {
+.comment_info .user-nickname {
     font-weight: bold;
 }
 
-/* 내용 > 오른쪽 컨텐츠 > 유저 댓글(작성일) */
+/* //// 내용 > 오른쪽 컨텐츠 > 유저 댓글(작성일) */
 .user-comments-date {
     color: darkgray;
     font-size: 13px;
@@ -219,7 +232,7 @@
 
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 댓글(댓글내용) */
-.user-comments-reple {
+.comment_info p {
     width: 300px;
     margin: 10px auto;
 }
@@ -235,7 +248,7 @@ details summary {
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 자식댓글(form 태그) */
-.user-comments-reple form {
+details form {
     display: flex;
     justify-content: space-between;
     width: 260px;
@@ -243,7 +256,7 @@ details summary {
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 자식댓글(input 태그) */
-.user-comments-reple form input:nth-child(2) {
+details form input:nth-child(2) {
     /*width: 230px;*/
     /*outline: none;*/
     /*border: none;*/
@@ -256,7 +269,7 @@ details summary {
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 자식댓글(제출버튼) */
-.user-comments-reple button {
+details form button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -269,33 +282,34 @@ details summary {
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 자식댓글(리스트) */
-.user-comments-reple-list {
+details .reple {
     padding-left: 25px;
     padding-top: 10px;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글입력 전체영역(제일 하단) */
-.input-comment {
+.comment_header {
     display: flex;
     justify-content: space-between;
     padding: 10px 15px 5px;
     border-top: 1px solid lightgray;
-    margin-top: 20px;
+    border-bottom: 1px solid lightgray;
+    margin: 20px 0;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글 입력(왼쪽 말풍선 아이콘) */
-.input-comment-left img {
+.speech_bubble_wrapper {
     width: 25px;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글(입력, 제출버튼) */
-.input-comment-right {
+.comment_header form {
     display: flex;
     justify-content: space-between;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글(입력) */
-#input-right {
+.comment_header form input {
     width: 200px;
     outline: none;
     border: none;
@@ -303,7 +317,7 @@ details summary {
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글(제출버튼) */
-.input-comment-right button {
+.comment_header form button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -318,7 +332,7 @@ details summary {
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글(제출버튼):hover */
-.input-comment-right button:hover {
+.comment_header form button:hover {
     /*background-color: #096b90;*/
     background-color: #71b7d5;
     cursor: pointer;
