@@ -1,6 +1,6 @@
 {% extends './base.html' %}
 {% load static %}
-{% block mypage_head %}
+{% block weather_head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
 
@@ -57,9 +57,9 @@
             });
         });
     </script>
-{% endblock mypage_head %}
+{% endblock weather_head %}
 
-{% block mypage_header %}
+{% block weather_header %}
     {#  Desktop - 효정 추가(시작) #}
     <div id="main-header">
         <div class="title">
@@ -73,37 +73,14 @@
         </div>
     </div>
     {#  Desktop - 효정 추가(끝) #}
-{% endblock mypage_header %}
+{% endblock weather_header %}
 
-{% block mypage_body %}
+{% block weather_body %}
     <div id="main">
         <div class="top-container">
             <div class="weather-box">
                 <div class="today-weather">
                     <div class="title">오늘의 날씨</div>
-                    <div class="location">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>서울특별시 서초구</p>
-                    </div>
-                </div>
-                <div class="weather-contents">
-                    <div class="weather-content">
-                        <div class="info"></div>
-                        <p>날씨</p>
-                    </div>
-                    <div class="weather-content">
-                        <div class="info"></div>
-                        <p>강수</p>
-                    </div>
-                    <div class="weather-content">
-                        <div class="info"></div>
-                        <p>기온</p>
-                    </div>
-                </div>
-            </div>
-            <div class="weather-box">
-                <div class="today-weather">
-                    <div class="title">내일의 날씨</div>
                     <div class="location">
                         <i class="fa-solid fa-location-dot"></i>
                         <p>서울특별시 서초구</p>
@@ -135,4 +112,4 @@
             </div>
         </div>
     </div>
-{% endblock mypage_body %}
+{% endblock weather_body %}

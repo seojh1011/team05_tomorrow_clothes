@@ -17,11 +17,9 @@
     {% block add_head %}
     {% endblock add_head %}
 
-    {% block profile_head %}
-    {% endblock profile_head %}
+    {% block weather_head %}
+    {% endblock weather_head %}
 
-    {% block mypage_head %}
-    {% endblock mypage_head %}
 
      <link rel="stylesheet" type="text/css" href="{% static "css/common.css" %}">
 </head>
@@ -61,6 +59,12 @@
     {% endblock mypage_header %}
     {% block mypage_body %}
     {% endblock mypage_body %}
+
+    {% block weather_header %}
+    {% endblock weather_header %}
+    {% block weather_body %}
+    {% endblock weather_body %}
+
 </div>
 
 </body>
