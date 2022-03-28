@@ -4,6 +4,7 @@ from django.http import HttpRequest
 from ninja import Router
 import requests
 #주석
+
 # from content_post.services.get_address_temp_service import DivisionCode,TimeWeather
 
 content = Router(tags=["test"])
@@ -39,6 +40,7 @@ def get_weather(request: HttpRequest) -> json:
 #         if db.get('fcstTime') == k_weather.now and db.get('category') == 'TMP':
 #             pre_tmp.append(db)
 #     return {'tmp': pre_tmp, 'address': address}
+
 
 # 주석해제 날씨
 

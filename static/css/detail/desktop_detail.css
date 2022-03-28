@@ -1,0 +1,339 @@
+@charset "UTF-8";
+/* 미디어쿼리: 모바일 화면 지우기 */
+#header {
+    display: none;
+}
+
+.mobile_hr {
+    display: none;
+}
+
+#pro_style_tag {
+    display: none;
+}
+
+.share_wrapper {
+    display: none;
+}
+
+
+/* 전체 영역 */
+#main-container {
+    position: relative;
+    /*width: 1440px;*/
+    /*height: 1024px;*/
+    background: #FFFFFF;
+}
+
+
+/* 헤더 영역 */
+/* 헤더: 전체 */
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 1050px;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+/* 헤더: 타이틀 */
+#main-header .title {
+    margin-top: 40px;
+}
+
+/* 헤더: 타이틀 > 로고이미지 */
+#main-header .title img {
+    width: 300px;
+    height: 70px;
+}
+
+/* 헤더: 오른쪽 상단 메뉴들 */
+#main-header .nav {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    width: 400px;
+    font-size: 20px;
+    padding-top: 60px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* 헤더 > 오른쪽 상단 메뉴 링크 */
+#main-header .nav div a {
+    text-decoration-line: none;
+    color: #042B44;
+}
+
+/* 헤더 > 오른쪽 상단 메뉴(hover 하면 색상변경) */
+#main-header .nav div a:hover {
+    color: #096B90;
+}
+
+
+/* 내용 영역 */
+/* 내용: 전체 */
+#main {
+    width: 1100px;
+    height: 450px;
+    /*border: 1px solid darkgray;*/
+    margin: 55px auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 내용 > 왼쪽 이미지 */
+#feed > img {
+    /*width: 450px;*/
+    height: 450px;
+    border: 1px solid lightgray;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    object-fit: contain;
+}
+
+/* 내용 > 오른쪽 컨텐츠 */
+.content-wrapper {
+    /*width: 450px;*/
+    height: 450px;
+    border: 1px solid lightgray;
+    border-radius: 0 10px 10px 0;
+    /*overflow-y: auto;*/
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 상단 아이콘(3개: 수정, 공유, 삭제) */
+.content-icons {
+    /*width: 450px;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 상단 아이콘(각각의 크기) */
+.content-icons img {
+    width: 25px;
+
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 */
+#pro_auth_article {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 왼쪽(유저프로필, 유저닉네임) */
+/*.user-info .user-info-left {*/
+/*    display: flex;*/
+/*}*/
+
+/* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 왼쪽(유저프로필) */
+#pro_auth_article #pro_img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 왼쪽(유저닉네임, 작성일) */
+#pro_auth_article #pro_info_user_at {
+    padding: 10px 10px 10px 15px;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 왼쪽(유저닉네임) */
+#pro_auth_article #pro_info_user_at .my_name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 왼쪽(작성일) */
+#pro_auth_article #pro_info_user_at .create_at {
+    font-weight: lighter;
+    color: darkgray;
+    padding-top: 5px;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 오른쪽(별표, 스크랩수) */
+#pro_auth_article #pro_icon {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+}
+
+
+/* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 오른쪽(별표) */
+#pro_auth_article #pro_icon #scrap {
+    font-size: 30px;
+    color: #042b44;
+}
+
+/*!* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 오른쪽(별표):hover *!*/
+/*.user-info-right .user-info-scrap .user-info-star:hover {*/
+/*    color: #ffdb58;*/
+/*}*/
+
+
+/* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 오른쪽(스크랩수) */
+#pro_auth_article #pro_icon #icon_scraps {
+    text-align: center;
+    color: darkgray;
+    font-weight: lighter;
+    padding-top: 3px;
+    font-size: 13px;
+}
+
+.comment_container {
+    width: 300px;
+    height: 250px;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 컨텐츠 내용 */
+.post_comment {
+    margin: 0 auto;
+    width: 320px;
+    padding: 20px;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 댓글 */
+.user-comments {
+    width: 300px;
+    /*display: flex;*/
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 댓글(프로필사진) */
+.comment_img_wrapper .comment_img img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 댓글(닉네임) */
+.comment_info .user-nickname {
+    font-weight: bold;
+}
+
+/* //// 내용 > 오른쪽 컨텐츠 > 유저 댓글(작성일) */
+.user-comments-date {
+    color: darkgray;
+    font-size: 13px;
+}
+
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 댓글(댓글내용) */
+.comment_info p {
+    width: 300px;
+    margin: 10px auto;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 자식댓글(답글달기) */
+details summary {
+    color: darkgray;
+    font-size: 14px;
+    padding: 15px 10px 10px 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 자식댓글(form 태그) */
+details form {
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    margin: 0 auto;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 자식댓글(input 태그) */
+details form input:nth-child(2) {
+    /*width: 230px;*/
+    /*outline: none;*/
+    /*border: none;*/
+    /*padding-left: 10px;*/
+    /*margin-left: 5px;*/
+    width: 200px;
+    height: 20px;
+    outline: none;
+    border: none;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 자식댓글(제출버튼) */
+details form button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 50px;
+    color: #096b90;
+    font-weight: bolder;
+    height: 20px;
+    background-color: transparent;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 자식댓글(리스트) */
+details .reple {
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글입력 전체영역(제일 하단) */
+.comment_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px 5px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    margin: 20px 0;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글 입력(왼쪽 말풍선 아이콘) */
+.speech_bubble_wrapper {
+    width: 25px;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글(입력, 제출버튼) */
+.comment_header form {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글(입력) */
+.comment_header form input {
+    width: 200px;
+    outline: none;
+    border: none;
+    height: 20px;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글(제출버튼) */
+.comment_header form button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 45px;
+    color: white;
+    font-weight: bolder;
+    height: 25px;
+    background-color: #042b44;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+/* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글(제출버튼):hover */
+.comment_header form button:hover {
+    /*background-color: #096b90;*/
+    background-color: #71b7d5;
+    cursor: pointer;
+}
