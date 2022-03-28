@@ -274,16 +274,16 @@ body {
 
 .reple_btn {
     font-size: 10px;
-    width: 20%;
-    height: 10%;
+    width: 17%;
+    height: 14%;
     background-colorcolor: white;
     border: solid 1px gray;
 }
 
 .reple_btn:hover {
     font-size: 10px;
-    width: 20%;
-    height: 10%;
+    width: 17%;
+    height: 14%;
     background-color: lightseagreen;
     color: white;
     border: solid 1px lightgray;
