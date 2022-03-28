@@ -33,6 +33,7 @@ def get_main_page(request: HttpRequest) -> HttpResponse:
     return render(request, "main.html", {"pages": pages})
 
 
+
 @content.get("/weather/")
 def get_weather_page(request: HttpRequest) -> HttpResponse:
     return render(request, "weather.html")

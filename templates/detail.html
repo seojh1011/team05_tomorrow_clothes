@@ -149,6 +149,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 {% endif %}
                             {% endfor %}
                             <form method="POST" action="/comment/reple/{{ comment.id }}/" style="display: flex">
@@ -157,6 +158,7 @@
                                 <button type="submit">리플 작성</button>
                             </form>
                         </details>
+
                     {% endif %}
                     {#                서지훈추가#}
                 {% endfor %}
@@ -167,6 +169,7 @@
             </div>
         </div>
     </div>
+<!-- <<<<<<< test_hyo
     <section>
     </section>
     <script>
@@ -190,6 +193,51 @@
                         } else {
                             $('#icon_scraps').html(response.scrap_count)
                         }
+======= -->
+        <section>
+        </section>
+<script>
+    function scrap(feed_id) {
+        let scrap = document.getElementById("scrap")
+        if (scrap.style.color === "yellow") {
+            scrap.className = "far fa-star";
+            scrap.style.color = "lightgray";
+            $.ajax({
+                url: '/detail/scrap/' + feed_id + '/',
+                type: 'post',
+                data: {
+                    'feed_id': feed_id
+                },
+                datatype: 'json',
+                success: function (response) {
+                    console.log(response)
+                    //302를 인식하도록
+                    if(Object.keys(response) == 'error'){
+                        window.location.href = '/login'
+                    }
+                    else{
+                        $('#icon_scraps').html(response.scrap_count)
+                    }
+                }
+            })
+        }
+    else if (scrap.style.color === "" || scrap.style.color === "lightgray") {
+        scrap.className = "fas fa-star";
+        scrap.style.color = "yellow";
+        $.ajax({
+                url: '/detail/scrap/' + feed_id + '/',
+                type: 'post',
+                data: {
+                    'feed_id': feed_id
+                },
+                datatype: 'json',
+                success: function (response) {
+                    console.log(Object.keys(response))
+                    if(Object.keys(response) == 'error') {
+                        window.location.href = '/login'
+                    }
+                    else{
+                        $('#icon_scraps').html(response.scrap_count)
                     }
                 })
             } else if (scrap.style.color === "" || scrap.style.color === "lightgray") {

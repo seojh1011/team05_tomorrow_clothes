@@ -9,9 +9,10 @@ class ContentPostConfig(AppConfig):
     name = "content_post"
     url = "add.xlsx"
     #주석
-    exel = pd.read_excel(url, engine='openpyxl')
 
-    @staticmethod
-    def get_exel(self) -> DataFrame:
-        url = "add.xlsx"
-        return pd.read_excel(url, engine='openpyxl')
+    # exel = pd.read_excel(url, engine='openpyxl')
+    #
+    # @staticmethod
+    # def get_exel(self) -> DataFrame:
+    #     url = "add.xlsx"
+    #     return pd.read_excel(url, engine='openpyxl')

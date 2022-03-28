@@ -58,15 +58,15 @@
             <i class="fas fa-arrow-left"></i>
         </div>
         {% if feed %}
-            <p>포스트 수정</p>
-        {% else %}
-            <p>포스트 등록</p>
+        <p>포스트 수정</p>
+            {% else %}
+        <p>포스트 등록</p>
         {% endif %}
         <div class="right_icon">
             {% if feed %}
-                <button onclick="form_submit()">수정</button>
+            <button onclick="form_submit()">수정</button>
             {% else %}
-                <button onclick="form_submit()">등록</button>
+            <button onclick="form_submit()">등록</button>
             {% endif %}
         </div>
     </div>
