@@ -127,6 +127,7 @@
                     <i class="far fa-comment"></i>
                 </div>
                 <form method="post" action="/comment/{{ feed.id }}/">
+                     {% csrf_token %}
                     <input name =comment placeholder="댓글 달아주소">
                     <button type="submit">등록</button>
                 </form>

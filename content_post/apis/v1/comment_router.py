@@ -14,8 +14,13 @@ content = Router(tags=["Comment_crud"])
 def post_reple(request: HttpRequest, comment_id: int, comment: str = Form(...)) -> HttpResponse:
     comment_writer_id: int = request.user.id  # type: ignore
     # 로그인한유저의 아이디 = 코멘트 작성자의 아이디
-    feed_id = write_reple(comment_writer_id, comment_id, comment)
-    return redirect(f"/detail/{feed_id}/")
+    try:
+        feed_id = write_reple(comment_writer_id, comment_id, comment)
+        return redirect(f"/detail/{feed_id}/")
+    except TypeError:
+        return redirect('/')
+    except:
+        return redirect('/')
 
 
 @content.post("/reple/update/{comment_id}/")
@@ -23,14 +28,20 @@ def post_reple(request: HttpRequest, comment_id: int, comment: str = Form(...)) 
 def update_reple(request: HttpRequest, comment_id: int, comment: str) -> HttpResponse:
     # 로그인했는지 확인
     login_user = request.user.id  # type: ignore
-    reple_writer = Comments.objects.get(id=comment_id).comment_writer.id
-    if login_user == reple_writer:
-        comment_update(comment, comment_id)
-        msg = {'success': comment}
-        return msg
-    else:
-        msg = {'error': '본인이 작성한 코멘트가 아닙니다.'}
-        return msg
+    try:
+        reple_writer = Comments.objects.get(id=comment_id).comment_writer.id
+        if login_user == reple_writer:
+            comment_update(comment, comment_id)
+            msg = {'success': comment}
+            return msg
+        else:
+            msg = {'error': '본인이 작성한 코멘트가 아닙니다.'}
+            return msg
+    except TypeError:
+        return redirect('/')
+
+    except:
+        return redirect('/')
 
 
 @content.post("/reple/delete/{comment_id}/")
