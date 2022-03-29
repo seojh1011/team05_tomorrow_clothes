@@ -90,7 +90,11 @@
                     <div class="login_find_pw">
                         <div><a href="/password_reset/">비밀번호 찾기</a></div>
                     </div>
+
                 </div>
+                {% if error %}
+                            <p>{{ error }}</p>
+                    {% endif %}
                 <button class="login-button" onclick="login_submit()" value="Login">
                     LOGIN
                 </button>

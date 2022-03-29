@@ -13,17 +13,17 @@
     <script defer src="{% static 'js/register/register.js' %}"></script>
     <script>
         function email_reduplication(email) {
-            {#console.log(email)#}
+            {#let test = {"email": "asd", "eee": "123123"};#}
+            {#console.log(typeof test);#}
             $.ajax({
                 url: '/register/reduplication',
-                type: 'post',
+                type: 'POST',
                 data: JSON.stringify({'email': email}),
-                {#data: {'email':email},#}
+                {#data: test,#}
                 datatype: 'json',
-                {#contentType: "application/json",#}
                 success: function (response) {
-                    {#console.log(response)#}
-                    if (Object.keys(response) == 'error') {
+                    console.log(response)
+                    if (String(Object.keys(response)) === 'error') {
                         $('#emailerror').html(response.error)
                         {#alert(response.error)#}
                     } else {
@@ -43,7 +43,7 @@
 
                 success: function (response) {
                     console.log(response)
-                    if (Object.keys(response) == 'error') {
+                    if (String(Object.keys(response)) === 'error') {
                         $('#passworderror').html(response.error)
                         {#alert(response.error)#}
                     } else {
@@ -86,7 +86,7 @@
                     </div>
                     <div class="input_data">
                         <img src="{% static 'img/desktop/로그인페이지_이메일아이콘.png' %}">
-                        <input type="text" name="email" placeholder="이메일" onkeyup="email_reduplication(value)"
+                        <input type="text" name="email" placeholder="이메일" onchange="email_reduplication(value)"
                                required/>
                         <div class="underline"></div>
                         <label>이메일</label>

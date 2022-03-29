@@ -3,7 +3,7 @@ from typing import Dict
 
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
-from ninja import Form, Router
+from ninja import Form, Router, Schema
 
 from user_admission.apis.v1.schemas.register_request import RegisterRequest
 from user_admission.apis.v1.schemas.register_response import RegisterResponse
@@ -27,7 +27,7 @@ def get_register_page(request: HttpRequest) -> HttpResponse:
 
 @account.post("/")
 def create_user(
-    request: HttpRequest, register_request: RegisterRequest = Form(...)
+        request: HttpRequest, register_request: RegisterRequest = Form(...)
 ) -> HttpResponse:
     email = email_check(register_request.email)
     password = password_check(register_request.password)
@@ -46,17 +46,22 @@ def create_user(
         return render(request, "register.html")
 
 
+class Email123(Schema):
+    email: str
+
+
 
 @account.post("/reduplication")
-def post_email_reduplication(request: HttpRequest):
-    # print(request)
-
+def post_email_reduplication(request: HttpRequest, email: Email123):
+    # print(asd)
+    # print(email.email)
     # print(request.body)
-    email = json.loads(request.body)['email']
+    # email = json.loads(request.body)['email']
 
-    check = email_check(email)
+    check = email_check(email.email)
     # # print(type(check))
     return check
+
 
 
 @account.post("/password")
