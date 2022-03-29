@@ -24,52 +24,41 @@
 
 {% block register_body %}
     <div id="main">
-        <div class="video-wrapper">
-            <div class="content-overlay"></div>
-            <video autoplay loop muted>
-                <source src="{% static "img/desktop/clothes_login.mp4" %}">
-            </video>
-        </div>
         <section class="body_register">
-            <div class="service_title">
-                <img src="{% static "img/desktop/tomorrow_clothes(흰색).png" %}">
-            </div>
+            <div class="service_title"><img class="register_title_img" src="{% static "img/fiveicon/tomorrow_clothes(흰색).png" %}"></div>
             <form class="input_register" action="{% url 'test_1:register' %}" method="post">
                 <div class="input_wrapper">
                     <div class="input_data">
-                        <img src="{% static 'img/desktop/로그인페이지_닉네임아이콘.png' %}">
-                        <input type="text" name="nick_name" placeholder="닉네임" required/>
+                        <input type="text" name="nick_name" required/>
                         <div class="underline"></div>
-                        <label>닉네임</label>
+                        <label>Nickname</label>
                     </div>
                     <div class="input_data">
-                        <img src="{% static 'img/desktop/로그인페이지_이메일아이콘.png' %}">
-                        <input type="text" name="email" placeholder="이메일" required/>
+                        <input type="text" name="email" required/>
                         <div class="underline"></div>
-                        <label>이메일</label>
+                        <label>Email</label>
                     </div>
                     <div id="password" class="input_data">
-                        <img src="{% static 'img/desktop/로그인페이지_비밀번호아이콘.png' %}">
-                        <input type="password" id="show_password" name="password"
-                               placeholder="비밀번호" required/>
-                        <i class="fas fa-eye"></i>
+                        <input type="password" id="show_password" name="password" required/>
                         <div class="underline"></div>
-                        <label>비밀번호</label>
+                        <label>Password</label>
+                        <i class="fas fa-eye"></i>
                     </div>
-                    <button type="submit">C R E A T E</button>
+                    <div class="find_pw">
+                        <p>
+                            <a>Forget your password?</a>
+                        </p>
+                    </div>
+
+                    <button type="submit">Register</button>
                 </div>
             </form>
-            <span>간편하게 시작하기</span>
-            <div class="selection-or">OR</div>
-            {% load socialaccount %}
-            <div class="login_social">
-                <a href="{% provider_login_url 'kakao' method='oauth2' %}">
-                    <button>Sign in with Kakao</button>
-                </a>
+            <div class="platform_btn_register">
+                <button class="kakao_regist_btn_wrapper">
+                    <img class="kakao_signin_img"src="{% static "img/fiveicon/loginpage_kakaologo.png" %}">
+                    <p class="kakao_singup_str">Sign up with KaKao</p>
+                </button>
             </div>
-            {#            <div class="platform_btn_register">#}
-            {#                <button>kakao</button>#}
-            {#            </div>#}
         </section>
     </div>
     <div id="footer"></div>
