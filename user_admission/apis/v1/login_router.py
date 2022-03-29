@@ -28,15 +28,9 @@ def post_login(request: HttpRequest) -> HttpResponse:
     username = request.POST["username"]
     password = request.POST["password"]
     user = auth.authenticate(request, username=username, password=password)
-
     if user is not None:
         auth.login(request, user)
         return redirect("/")
     else:
-        return render(
-            request,
-            "login.html",
-            {
-                "error": "Username or Password is incorrect.",
-            },
-        )
+        error = {"error": "이메일 또는 비밀번호를 확인해주세요."}
+        return render(request,"login.html",error)

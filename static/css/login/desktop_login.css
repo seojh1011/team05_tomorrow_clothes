@@ -4,9 +4,9 @@
     display: none;
 }
 
-.login_social {
-    display: none;
-}
+/*.login_social {*/
+/*    display: none;*/
+/*}*/
 
 .kakao_login_img {
     display: none;
@@ -112,7 +112,6 @@
     color: rgba(255, 255, 255, 0.7);
     text-align: right;
     text-decoration: none;
-    padding-left: 50px;
 }
 
 .login-button {
@@ -158,7 +157,7 @@
     z-index: 10;
 }
 
-.desktop_login_social button {
+.login_social button {
     width: 220px;
     height: 40px;
     margin: 0 auto;
