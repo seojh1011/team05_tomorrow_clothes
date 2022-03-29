@@ -104,7 +104,7 @@ function translate_att2() {
     let images = document.querySelectorAll(".image");
     console.log("실행 되고 있음");
     let imgStack = [0, 0, 0, 0, 0, 0];
-    if (innerWidth >= 400) {
+    if (innerWidth >= 500) {
         imgStack = [0, 0, 0, 0, 0, 0];
         console.log('들어옴(큰창)')
     } else {
@@ -174,7 +174,7 @@ function translate_att() {
     console.log('innerWidth' + innerWidth)
     console.log('type innerWidth' + typeof innerWidth)
 
-    if (innerWidth >= 400) {
+    if (innerWidth >= 500) {
         imgStack = [0, 0, 0, 0, 0, 0];
         console.log('들어옴(큰창)')
     } else {

@@ -13,7 +13,6 @@
 }
 
 
-
 /* Header */
 #main-header {
     display: flex;
@@ -49,10 +48,9 @@
     color: #042B44;
 }
 
-#main-header .nav div a:hover {
-    color: #096B90;
-}
-
+/*#main-header .nav div a:hover {*/
+/*    color: #096B90;*/
+/*}*/
 
 
 /* Body */
@@ -69,8 +67,9 @@
     height: 400px;
     border-right: none;
     border-radius: 10px 0 0 10px;
-    object-fit: contain;
+    object-fit: cover;
     min-width: 300px;
+    max-width: 700px;
 }
 
 .feed_img input {
@@ -79,8 +78,9 @@
 
 .feed_comment {
     height: 400px;
-    border: 1px solid lightgray;
+    border: 1px solid darkgray;
     border-radius: 0 10px 10px 0;
+    border-left: none;
 }
 
 .top_icon {
@@ -113,7 +113,7 @@
 }
 
 .feed_img {
-    background: #042b44;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
     display: flex;
     flex-direction: column;
     justify-content: center;

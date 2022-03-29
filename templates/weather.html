@@ -35,19 +35,28 @@
                 autoplaySpeed: 3000,
                 {#variableWidth: true,#}
                 responsive: [
-                    {breakpoint: 1250,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3}},
-                    {breakpoint: 930,
+                    {
+                        breakpoint: 1250,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 930,
                         settings: {
                             slidesToShow: 2,
-                            slidesToScroll: 2}},
-                    {breakpoint: 616,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 616,
                         settings: {
                             slidesToShow: 1,
-                            slidesToScroll: 1}},
-                    ]
+                            slidesToScroll: 1
+                        }
+                    },
+                ]
             });
         });
     </script>
@@ -62,10 +71,21 @@
             <img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}">
         </div>
         <div class="nav">
-            <div><a href="">Main</a></div>
-            <div><a href="">Weather</a></div>
-            <div><a href="">My page</a></div>
-            <div><a href="">Upload</a></div>
+            <div><a class="nav-main" href="/" style="
+                    padding-top: 3px;display: inline-block;">Main</a></div>
+            <div><a class="nav-weather" href="/weather/"
+                    style="padding-top: 3px;display: inline-block; color: #0067a3;">Weather</a></div>
+            {% if user.is_authenticated %}
+                <div><a class="nav-upload" href="/detail/feed/"
+                        style="padding-top: 3px;display: inline-block;">Upload</a></div>
+                <div><a href="{% url 'test_1:logout' %}"
+                        style="color: white; background-color: #042b44; border-radius: 8px;
+                        width: 80px; display: inline-block; height: 30px; padding-top: 3px;">Logout</a></div>
+            {% else %}
+                <div><a href="/register/" style="padding-top: 3px;display: inline-block;">Sign in</a></div>
+                <div><a href="/login/" style="color: white; background-color: #0067a3; border-radius: 8px;
+                         width: 80px; display: inline-block; height: 30px; padding-top: 3px;">Log in</a></div>
+            {% endif %}
         </div>
     </div>
     {#  Desktop - 효정 추가(끝) #}
@@ -106,7 +126,8 @@
                 <div><img src="{% static "img/chu.jpeg" %}"></div>
                 <div><img src="{% static "img/chu2.jpg" %}"></div>
                 <div><img src="{% static "img/chu.jpeg" %}"></div>
-                <div><img src="https://team05-tomorrow-clothes.s3.ap-northeast-2.amazonaws.com/temp_img/2/man/m-13.jpg"></div>
+                <div><img src="https://team05-tomorrow-clothes.s3.ap-northeast-2.amazonaws.com/temp_img/2/man/m-13.jpg">
+                </div>
             </div>
         </div>
     </div>

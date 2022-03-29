@@ -67,9 +67,9 @@
 }
 
 /* 헤더 > 오른쪽 상단 메뉴(hover 하면 색상변경) */
-#main-header .nav div a:hover {
-    color: #096B90;
-}
+/*#main-header .nav div a:hover {*/
+/*    color: #096B90;*/
+/*}*/
 
 
 /* 내용 영역 */
@@ -368,4 +368,12 @@ details .reple {
     /*background-color: #096b90;*/
     background-color: #71b7d5;
     cursor: pointer;
+}
+
+.comment_info  i {
+    color: darkgray;
+}
+
+.comment_info  i:hover {
+    color: #096B90;
 }
