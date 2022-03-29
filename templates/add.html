@@ -75,10 +75,11 @@
     <form id="add_form" action="/detail/feed/" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="feed_img">
-            <label for="upload_img">이미지 선택하기</label>
+
             <div id="image">
             </div>
-            <input type="file" id="upload_img" onchange="upload(event)" name="feeds_img_url">
+            <input class="img_box" type="file" id="upload_img" onchange="upload(event)" name="feeds_img_url">
+            <label for="upload_img">이미지 선택하기</label>
         </div>
         <div class="feed_comment">
             <p>코멘트 작성</p>
