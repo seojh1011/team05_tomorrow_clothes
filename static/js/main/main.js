@@ -85,11 +85,13 @@ window.addEventListener('load', function () {
             method: 'GET',
             dataType: "json",
             success: function (data) {
+                console.log(data)
 
                 for (let i = 0; i < data.length; i++) {
                     let img_url = data[i]["feeds_img_url"]
+                    let id = data[i]["id"]
                     console.log(img_url);
-                    let temp_img_div = `<div class="image"><img src="${img_url}"></div>`
+                    let temp_img_div = `<div class="image" onclick="location.href='/detail/${id}/'"><img src="${img_url}"></div>`
                     $('#images_box').append(temp_img_div);
                 }
                 page_num++;
