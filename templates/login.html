@@ -77,7 +77,7 @@
                     <div class="login_input_wrapper2">
                         <img src="{% static 'img/desktop/로그인페이지_이메일아이콘.png' %}">
                         {#                        <span class="login_span_email">이메일</span>#}
-                        <input class="login_em_input" type="text" style="border:0 solid black;" name="username"
+                        <input class="login_em_input" type="email" style="border:0 solid black;" name="username"
                                id="username" value="{{ form.username.value|default_if_none:'' }}"
                                placeholder="Email">
                         <i class="fas fa-eye"></i>
@@ -99,6 +99,10 @@
                     </div>
                 </div>
                 <button class="login-button login_btn" onclick="login_submit()" value="Login">
+                {% if error %}
+                            <p>{{ error }}</p>
+                    {% endif %}
+                <button class="login-button" onclick="login_submit()" value="Login">
                     LOGIN
                 </button>
                 <div class="selection-or">OR</div>
