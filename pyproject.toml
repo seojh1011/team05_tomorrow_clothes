@@ -16,6 +16,13 @@ django-stubs = "^1.9.0"
 PyMySQL = "^1.0.2"
 types-PyMySQL = "^1.0.13"
 mysqlclient = "^2.1.0"
+boto3 = "^1.21.21"
+django-storages = "^1.12.3"
+Pillow = "^9.0.1"
+requests = "^2.27.1"
+django-allauth = "^0.49.0"
+pandas = "^1.4.1"
+openpyxl = "^3.0.9"
 
 [tool.poetry.dev-dependencies]
 

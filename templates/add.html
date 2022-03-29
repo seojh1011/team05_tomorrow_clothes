@@ -1,4 +1,3 @@
-
 {% extends './base.html' %}
 {% load static %}
 {% block add_head %}
@@ -7,7 +6,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/add_update/add_update.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/add_update/add_update.css' %}"
+          media="screen and (max-width: 360px)">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/add_update/desktop_add_update.css' %}"
+          media="screen and (min-width: 361px)">
 
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
@@ -27,35 +30,96 @@
             };
             reader.readAsDataURL(event.target.files[0]);
         }
-    </script>
 
+        function form_submit() {
+            document.getElementById('add_form').submit()
+        }
+    </script>
 {% endblock add_head %}
 
-
 {% block add_header %}
+    {#  Desktop - 효정 추가(시작) #}
+    <div id="main-header">
+        <div class="title">
+            <img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}">
+        </div>
+        <div class="nav">
+            <div><a href="/">Main</a></div>
+            <div><a href="/weather">Weather</a></div>
+            <div><a href="">My page</a></div>
+            <div><a href="/detail/feed/">Upload</a></div>
+        </div>
+    </div>
+    {#  Desktop - 효정 추가(끝) #}
+
+    {#  Mobile  #}
     <div id="header">
-        <div class="back_allow">
+        <div class="back_allow" onclick="window.history.back()">
             <i class="fas fa-arrow-left"></i>
         </div>
+        {% if feed %}
         <p>포스트 수정</p>
-
+            {% else %}
+        <p>포스트 등록</p>
+        {% endif %}
         <div class="right_icon">
-            <button onclick="myfnc()">수정</button>
-            <i class="fas fa-question-circle"></i>
+            {% if feed %}
+            <button onclick="form_submit()">수정</button>
+            {% else %}
+            <button onclick="form_submit()">등록</button>
+            {% endif %}
         </div>
     </div>
 {% endblock add_header %}
+
 {% block add_body %}
-    <form action="" name="frm">
-        <div class="feed_img">
-            <label for="upload_img">이미지 선택하기</label>
-            <div id="image">
+    {% if feed %}
+        <form id="add_form" action="/detail/feed/update/{{ feed.id }}/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="feed_img">
+                <label class="mobile_label" for="upload_img">이미지 선택하기</label>
+                <div id="image">
+                    <img src="{{ feed.feeds_img_url.url }}">
+                </div>
+                <input type="file" id="upload_img" onchange="upload(event)" name="feeds_img_url">
+                <input type="hidden" value="{{ feed.feeds_img_url.url }}">
             </div>
-            <input type="file" id="upload_img" onchange="upload(event)">
-        </div>
-        <div class="feed_comment">
-            <p>코멘트 작성</p>
-            <textarea class="comment" placeholder="글 내용을 입력하세요"></textarea>
-        </div>
-    </form>
+            <div class="feed_comment">
+                <div class="top_icon">
+                    {% if feed %}
+                        <button type="submit">수정</button>
+                    {% else %}
+                        <button type="submit">등록</button>
+                    {% endif %}
+                </div>
+                <p>코멘트 작성</p>
+                <textarea class="comment" placeholder="글 내용을 입력하세요"
+                          name="feeds_comment">{{ feed.feeds_comment }}</textarea>
+            </div>
+        </form>
+    {% else %}
+        <form id="add_form" action="/detail/feed/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="feed_img">
+
+                <div id="image"></div>
+                <input type="file" id="upload_img" onchange="upload(event)" name="feeds_img_url">
+                <label class="mobile_label" for="upload_img">이미지 선택하기</label>
+            </div>
+            <div class="feed_comment">
+                <div class="top_icon">
+                    {% if feed %}
+                        <button type="submit">수정</button>
+                    {% else %}
+                        <button type="submit">등록</button>
+                    {% endif %}
+                </div>
+                <div class="desktop_label">
+                    <label for="upload_img">이미지 선택하기</label>
+                </div>
+                <p>코멘트 작성</p>
+                <textarea class="comment" placeholder="글 내용을 입력하세요" name="feeds_comment"></textarea>
+            </div>
+        </form>
+    {% endif %}
 {% endblock add_body %}

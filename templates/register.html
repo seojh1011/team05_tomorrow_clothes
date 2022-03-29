@@ -3,7 +3,10 @@
 {% block register_head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/register/register.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register/register.css' %}"
+          media="screen and (max-width: 360px)">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register/desktop_register.css' %}"
+          media="screen and (min-width: 361px)">
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
@@ -11,8 +14,9 @@
 {% endblock register_head %}
 
 {% block register_header %}
+    {#  Mobile  #}
     <div id="header">
-        <div class="back_allow"><i class="fas fa-arrow-left"></i></div>
+        <div class="back_allow" onclick="window.history.back()"><i class="fas fa-arrow-left"></i></div>
         <p>회원가입</p>
     </div>
 {% endblock register_header %}
@@ -21,31 +25,39 @@
 {% block register_body %}
     <div id="main">
         <section class="body_register">
-            <div class="service_title"><h1>서비스명</h1></div>
-            <form class="input_register" action="">
+            <div class="service_title"><img class="register_title_img" src="{% static "img/fiveicon/tomorrow_clothes(흰색).png" %}"></div>
+            <form class="input_register" action="{% url 'test_1:register' %}" method="post">
                 <div class="input_wrapper">
                     <div class="input_data">
-                        <input type="text" required/>
+                        <input type="text" name="nick_name" required/>
                         <div class="underline"></div>
-                        <label>닉네임</label>
+                        <label>Nickname</label>
                     </div>
                     <div class="input_data">
-                        <input type="text" required/>
+                        <input type="text" name="email" required/>
                         <div class="underline"></div>
-                        <label>이메일</label>
+                        <label>Email</label>
                     </div>
                     <div id="password" class="input_data">
-                        <input id="show_password" type="password" required/>
+                        <input type="password" id="show_password" name="password" required/>
                         <div class="underline"></div>
-                        <label>비밀번호</label>
+                        <label>Password</label>
                         <i class="fas fa-eye"></i>
                     </div>
-                    <button type="submit">C R E A T E</button>
+                    <div class="find_pw">
+                        <p>
+                            <a>Forget your password?</a>
+                        </p>
+                    </div>
+
+                    <button type="submit">Register</button>
                 </div>
             </form>
-            <span>간편하게 시작하기</span>
             <div class="platform_btn_register">
-                <button>kakao</button>
+                <button class="kakao_regist_btn_wrapper">
+                    <img class="kakao_signin_img"src="{% static "img/fiveicon/loginpage_kakaologo.png" %}">
+                    <p class="kakao_singup_str">Sign up with KaKao</p>
+                </button>
             </div>
         </section>
     </div>
