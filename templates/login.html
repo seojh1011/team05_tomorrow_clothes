@@ -47,7 +47,7 @@
 {% block login_header %}
     {#  Mobile  #}
     <div id="header">
-        <div class="back_allow">
+        <div class="back_allow" onclick="window.history.back()">
             <i class="fas fa-arrow-left"></i>
         </div>
         <p>로그인</p>
@@ -56,44 +56,49 @@
 {% block login_body %}
     <div id="main">
         <div class="login_container_wrapper">
-
-            <div class="login_title"><img class="login_img"src="{% static "img/fiveicon/tomorrow_clothes(흰색).png" %}"></div>
+            <div class="video-wrapper">
+                <div class="content-overlay"></div>
+                <video autoplay loop muted>
+                    <source src="{% static "img/desktop/clothes_login.mp4" %}">
+                </video>
+            </div>
+            <div class="login_title">
+                <img src="{% static "img/desktop/tomorrow_clothes(흰색).png" %}">
+            </div>
             <div class="login_main_wrapper">
-
                 <div class="login_input_wrapper">
                     <div class="login_input_wrapper2">
-                        <span class="login_span_email">Email</span>
-                        <span>
+                        <img src="{% static 'img/desktop/로그인페이지_이메일아이콘.png' %}">
+                        {#                        <span class="login_span_email">이메일</span>#}
                         <input class="login_em_input" type="text" style="border:0 solid black;" name="username"
-                               id="username" value="{{ form.username.value|default_if_none:'' }}">
-                    </span>
-                        <div class="login_line"></div>
-                    </div>
-                </div>
-                <div class="login_input_wrapper">
-                    <div class="login_input_pw">
-                        <span class="login_pw_wrapper">Password</span>
-                        <input type="password" id="password" class="login_pw_input" name="password"
-                               value="{{ form.password.value|default_if_none:'' }}">
+                               id="username" value="{{ form.username.value|default_if_none:'' }}"
+                               placeholder="이메일">
                         <i class="fas fa-eye"></i>
                     </div>
                     <div class="login_line"></div>
-
-                    <div class="login_find_pw">
-                        <div><a href="">비밀번호 찾기</a></div>
-                    </div>
-
                 </div>
-
-                <button class="login_btn"onclick="login_submit()" value="Login">
+                <div class="login_input_wrapper">
+                    <div class="login_input_pw">
+                        <img src="{% static 'img/desktop/로그인페이지_비밀번호아이콘.png' %}">
+                        {#                        <span class="login_pw_wrapper">비밀번호</span>#}
+                        <input type="password" id="password" class="login_pw_input" name="password"
+                               value="{{ form.password.value|default_if_none:'' }}"
+                               placeholder="비밀번호">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="login_line"></div>
+                    <div class="login_find_pw">
+                        <div><a href="/password_reset/">비밀번호 찾기</a></div>
+                    </div>
+                </div>
+                <button class="login-button login_btn" onclick="login_submit()" value="Login">
                     LOGIN
                 </button>
-                <p class="or_str"><strong>OR</strong></p>
+                <div class="selection-or">OR</div>
                 {% load socialaccount %}
                 <div class="login_social">
-                    <a href="{% provider_login_url 'kakao' method='oauth2' %}">
-                        <div class="kakao_login_wrapper">
-                            <img class="kakao_login_img"src="{% static "img/fiveicon/loginpage_kakaologo.png" %}">
+                    <a href="{% provider_login_url 'kakao' method='oauth2' %}">카카오톡</a>
+                       <img class="kakao_login_img"src="{% static "img/fiveicon/loginpage_kakaologo.png" %}">
                             <p class="kakao_str">Sign in with KaKao</p>
                         </div></a>
                 </div>
@@ -101,11 +106,13 @@
                     <p>Don't have an account?</p>
                     <a href=""><strong>Sign in</strong></a>
                 </div>
-
-                <div class="link-register"><a href="">계정</a>이 없으신가요?</div>
-
+                <div class="desktop_login_social">
+                    <a href="{% provider_login_url 'kakao' method='oauth2' %}">
+                        <button>Sign in with Kakao</button>
+                    </a>
+                </div>
+                <div class="link-register"><a href="/register/">계정</a>이 없으신가요?</div>
             </div>
-
         </div>
     </div>
 {% endblock login_body %}

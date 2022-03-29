@@ -12,6 +12,10 @@
     display: none;
 }
 
+.platform_btn_register {
+    display: none;
+}
+
 
 /* 전체영역 */
 #main {

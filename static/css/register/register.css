@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* 미디어쿼리 */
 #main-container {
     display: none;
@@ -268,4 +269,3 @@ header.header_register{
 .kakao_signin_img {
     width: 30px;
     height: 30px;
-}
