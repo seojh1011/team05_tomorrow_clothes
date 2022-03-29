@@ -30,10 +30,21 @@
             <img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}">
         </div>
         <div class="nav">
-            <div><a href="/">Main</a></div>
-            <div><a href="/weather">Weather</a></div>
-            <div><a href="">My page</a></div>
-            <div><a href="/detail/feed/">Upload</a></div>
+            <div><a class="nav-main" href="/" style="
+                    padding-top: 3px;display: inline-block;">Main</a></div>
+            <div><a class="nav-weather" href="/weather/"
+                    style="padding-top: 3px;display: inline-block;">Weather</a></div>
+            {% if user.is_authenticated %}
+                <div><a class="nav-upload" href="/detail/feed/"
+                        style="padding-top: 3px;display: inline-block;">Upload</a></div>
+                <div><a href="{% url 'test_1:logout' %}"
+                        style="color: white; background-color: #042b44; border-radius: 8px;
+                        width: 80px; display: inline-block; height: 30px; padding-top: 3px;">Logout</a></div>
+            {% else %}
+                <div><a href="/register/" style="padding-top: 3px;display: inline-block;">Sign in</a></div>
+                <div><a href="/login/" style="color: white; background-color: #0067a3; border-radius: 8px;
+                         width: 80px; display: inline-block; height: 30px; padding-top: 3px;">Log in</a></div>
+            {% endif %}
         </div>
     </div>
     {#  Desktop - 효정 추가(끝) #}
@@ -59,6 +70,9 @@
                 <div class="content-icons-left">
                     <a href="/detail/feed/update/{{ feed.id }}"><img src="{% static "img/desktop/상세페이지_수정아이콘.png" %}"></a>
 {#                    <a href=""><img src="{% static "img/desktop/상세페이지_공유아이콘.png" %}"></a>#}
+                    <a href="/detail/feed/update/{{ feed.id }}"><img
+                            src="{% static "img/desktop/상세페이지_수정아이콘.png" %}"></a>
+                    {#                    <a href=""><img src="{% static "img/desktop/상세페이지_공유아이콘.png" %}"></a>#}
                 </div>
                 <div class="content-icons-right">
                     <a href=""><img src="{% static "img/desktop/상세페이지_삭제아이콘.png" %}"></a>
@@ -72,6 +86,9 @@
                     <div class="my_name"><strong>{{ feed.writer.nick_name }}</strong></div>
                     <div class="my_name create_at">{{ feed.created_at|date:"Y.m.d" }}</div>
                 </div>
+                {#                <div id="pro_style_tag">#}
+                {#                    <span>#스타일명</span>#}
+                {#                </div>#}
 {#                <div id="pro_style_tag">#}
 {#                    <span>#스타일명</span>#}
 {#                </div>#}
@@ -146,13 +163,16 @@
                                                         {{ reple.comment }}
                                                     </p>
                                                     <span class="user-comments-date">{{ reple.created_at|date:"Y.m.d" }}</span>
+                                                    <i class="fa-solid fa-eraser"></i>
+                                                    <i class="fa-solid fa-trash-can"></i>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 {% endif %}
                             {% endfor %}
-                            <form class="reple_wrapper" method="POST" action="/comment/reple/{{ comment.id }}/" style="display: flex">
+                            <form class="reple_wrapper" method="POST" action="/comment/reple/{{ comment.id }}/"
+                                  style="display: flex">
                                 {% csrf_token %}
                                 <input class="reple_input" name="comment" placeholder="리플을 입력하세요." required>
                                 <button class="reple_btn" type="submit">등록</button>
@@ -162,57 +182,54 @@
                     {#                서지훈추가#}
                 {% endfor %}
                 <div class="comment_detail">
-{#                    <div><span>162</span>개의 이전 댓글 보기</div>#}
+                    {#                    <div><span>162</span>개의 이전 댓글 보기</div>#}
                 </div>
                 </div>
             </div>
         </div>
     </div>
-        <section>
-        </section>
-<script>
-    function scrap(feed_id) {
-        let scrap = document.getElementById("scrap")
-        if (scrap.style.color === "yellow") {
-            scrap.className = "far fa-star";
-            scrap.style.color = "lightgray";
-            $.ajax({
-                url: '/detail/scrap/' + feed_id + '/',
-                type: 'post',
-                data: {
-                    'feed_id': feed_id
-                },
-                datatype: 'json',
-                success: function (response) {
-                    console.log(response)
-                    //302를 인식하도록
-                    if(Object.keys(response) == 'error'){
-                        window.location.href = '/login'
+    <section>
+    </section>
+    <script>
+        function scrap(feed_id) {
+            let scrap = document.getElementById("scrap")
+            if (scrap.style.color === "yellow") {
+                scrap.className = "far fa-star";
+                scrap.style.color = "lightgray";
+                $.ajax({
+                    url: '/detail/scrap/' + feed_id + '/',
+                    type: 'post',
+                    data: {
+                        'feed_id': feed_id
+                    },
+                    datatype: 'json',
+                    success: function (response) {
+                        console.log(response)
+                        //302를 인식하도록
+                        if (Object.keys(response) == 'error') {
+                            window.location.href = '/login'
+                        } else {
+                            $('#icon_scraps').html(response.scrap_count)
+                        }
                     }
-                    else{
-                        $('#icon_scraps').html(response.scrap_count)
-                    }
-                }
-            })
-        }
-    else if (scrap.style.color === "" || scrap.style.color === "lightgray") {
-        scrap.className = "fas fa-star";
-        scrap.style.color = "yellow";
-        $.ajax({
-                url: '/detail/scrap/' + feed_id + '/',
-                type: 'post',
-                data: {
-                    'feed_id': feed_id
-                },
-                datatype: 'json',
-                success: function (response) {
-                    console.log(Object.keys(response))
-                    if(Object.keys(response) == 'error') {
-                        window.location.href = '/login'
-                    }
-                    else{
-                        $('#icon_scraps').html(response.scrap_count)
-                    }
+                })
+            } else if (scrap.style.color === "" || scrap.style.color === "lightgray") {
+                scrap.className = "fas fa-star";
+                scrap.style.color = "yellow";
+                $.ajax({
+                    url: '/detail/scrap/' + feed_id + '/',
+                    type: 'post',
+                    data: {
+                        'feed_id': feed_id
+                    },
+                    datatype: 'json',
+                    success: function (response) {
+                        console.log(Object.keys(response))
+                        if (Object.keys(response) == 'error') {
+                            window.location.href = '/login'
+                        } else {
+                            $('#icon_scraps').html(response.scrap_count)
+                        }
                     }
                 })
             }
