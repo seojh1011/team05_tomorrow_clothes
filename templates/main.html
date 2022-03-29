@@ -1,21 +1,19 @@
 {% extends "./base.html" %}
 {% load static %}
-
-
 {% block main_head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Tomorrow Clothes</title>
 
-    <title>Title</title>
-
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main/main.css' %}">
-
-    {#    media="print"   onload="this.media='all'"#}
+    {#  Mobile  #}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main/main.css' %}"
+          media="screen and (max-width: 800px)">
+    {#  Desktop  #}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main/desktop_main.css' %}"
+          media="screen and (min-width: 801px)">
 
     <script type="text/javascript" src="{% static 'js/main/main.js' %}"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
     <script>
                 /*
                  * 항목값	항목명	단위
@@ -38,10 +36,25 @@
 {% endblock main_head %}
 
 
+
 {% block main_header %}
+    {#      Desktop - 효정 추가(시작) #}
+    <div id="main-header">
+        <div class="title">
+            <img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}">
+        </div>
+        <div class="nav">
+            <div><a href="">Main</a></div>
+            <div><a href="">Weather</a></div>
+            <div><a href="">Sign in</a></div>
+            <div><a href="">Log in</a></div>
+        </div>
+    </div>
+    {#      Desktop - 효정 추가(끝) #}
+    {#  Mobile  #}
     <div id="header" class="none">
         <div class="header-icon"><img src="{% static 'img/upload.png' %}"></div>
-        <div class="header-icon" onclick="set_temp()"><img src="{% static 'img/hanger.png' %}"></div>
+        <div class="header-icon"><img src="{% static 'img/hanger.png' %}"></div>
         {% if user.is_authenticated %}
             <a href="{% url 'test_1:logout' %}">{{ user.username }}로그아웃</a>
         {% else %}
@@ -53,28 +66,24 @@
 {% endblock main_header %}
 
 
+
 {% block main_body %}
     <div id="container">
         <div class="weather">
             <div class="location">서울시 광양구</div>
-
             <div class="weather-icons">
                 <div class="weather-icon">12°C</div>
                 <div class="weather-icon"></div>
                 <div class="weather-icon">강수</div>
                 <div class="weather-icon">미세먼지</div>
             </div>
-
         </div>
-
         <div id="images_box" class="images">
-
             {% for p in pages %}
-                <div class="image">
+                <div class="image" onclick="location.href='/detail/{{ p.id }}/'">
                     <img src="{{ p.feeds_img_url.url }}">
                 </div>
             {% endfor %}
-
         </div>
     </div>
     <div id="footer"></div>

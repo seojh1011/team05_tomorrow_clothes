@@ -34,6 +34,7 @@ from django.contrib.auth import views as auth_views
 
 # version 1.0.0 >> 중요한 변경 / 중간 변경 / 최소 변경
 
+
 api = NinjaAPI(urls_namespace="test_1", version="1.0.0")
 
 api.add_router("login/", login_router)
@@ -43,8 +44,8 @@ api.add_router("detail/", detail_router)
 api.add_router("detail/", scrap_router)
 api.add_router("logout/", logout_router)
 api.add_router("comment/", comment_router)
+# api.add_router("weather/", mypage_router)
 api.add_router("mypage/", mypage_router)
-
 api.add_router("k-weather/", weather_router)
 
 urlpatterns = [

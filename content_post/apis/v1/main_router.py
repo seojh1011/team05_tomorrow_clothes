@@ -31,3 +31,9 @@ def get_main_page(request: HttpRequest) -> HttpResponse:
     # print(limit)
     pages = get_feed_list(page, limit)
     return render(request, "main.html", {"pages": pages})
+
+
+
+@content.get("/weather/")
+def get_weather_page(request: HttpRequest) -> HttpResponse:
+    return render(request, "weather.html")

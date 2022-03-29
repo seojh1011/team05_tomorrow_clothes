@@ -1,22 +1,66 @@
 @charset "UTF-8";
+
+/* 미디어쿼리 */
+.video-wrapper {
+    display: none;
+}
+
+.login_input_wrapper2 img {
+    display: none;
+}
+
+.login_input_wrapper2 i {
+    display: none;
+}
+
+.login_input_pw img {
+    display: none;
+}
+
+.desktop_login_social {
+    display: none;
+}
+
+.selection-or {
+    display: none;
+}
+
+.desktop_login_social {
+    display: none;
+}
+
+.link-register {
+    display: none;
+}
+
+
+
 /* 전체영역 */
 body {
-	background-color: darkgray;
+	background-color: white;
+    color: white;
 
 }
+
+
 #body_container {
 	min-width: 360px;
 	max-width: 360px;
-	height: 640px;
+	height: 800px;
 	margin: 0 auto;
 	overflow-y: auto;
 	position: relative;
-	background-color: white;
-    font-family: 'LeferiBaseType-RegularA';
+	background-color: transparent;
+    font-size: 17px;
+    font-family: "Roboto"
+    /*font-family: 'LeferiBaseType-RegularA';*/
+
 }
 
 /* 헤더 */
 #header {
+    color: black;
+    z-index: 1;
 	position: fixed;
 	background-color: white;
 	max-width: 360px;
@@ -35,8 +79,13 @@ body {
     font-size: 20px;
 }
 #header > p {
+    color: black;
     font-size: 16px;
     padding-top: 22px;
+}
+.back_allow {
+    display: flex;
+    align-items: center;
 }
 
 
@@ -50,6 +99,8 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    background-size:cover;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../../img/fiveicon/clothbackground.png");
 }
 .login_container {
     width : 360px;
@@ -57,6 +108,8 @@ body {
     outline: 1px solid;
     margin: auto;
 }
+
+
 .back_allow {
     display: flex;
     align-items: center;
@@ -69,6 +122,7 @@ body {
     justify-content: start;
     align-items: center;
     margin-top: 8%;
+
 }
 .login_main_wrapper {
     width: 55%;
@@ -92,26 +146,36 @@ input:focus {
 }
 .login_line {
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid white;
+
 }
 
 .login_input_wrapper {
     width: 100%;
 }
 .login_pw_input {
+    background: transparent;
     width: 45%;
+    color: white;
 }
 button {
     width: 100%;
-    height: 12.2%;
-    font-size: 18px;
-    background-color: white;
+    height: 11%;
+    font-size: 16px;
 }
 .login_title {
-    font-size: 48px;
+    width: 300px;
     margin-top: 10%;
     margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
 }
+.login_img {
+    width: 85%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
 .login_line {
     margin-top: 3%;
     margin-bottom: 3%;
@@ -124,6 +188,8 @@ button {
 }
 .login_em_input {
     width: 55%;
+    background: transparent;
+    color: white;
 }
 a {
     color: black;
@@ -136,4 +202,56 @@ a {
 /* 푸터 */
 #footer {
 
+}
+
+.login_form_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.login_btn {
+    color: white;
+    background-color: rgba( 142, 201, 217, 0.8 );
+    border-radius: 10px;
+    border: none;
+}
+
+.kakao_login_wrapper {
+    width: 200px;
+    height: 40px;
+    background-color: rgba( 244, 217, 46, 0.8 );
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify_content: center;
+    align-items: center;
+    padding-left: 10px;
+
+}
+
+.kakao_str {
+    padding-left: 5px;
+    color: white;
+}
+
+.go_signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.go_signin > a {
+    padding-top: 7%;
+    color: white;
+}
+
+.go_signin > p {
+    padding-top: 7%;
+}
+
+.kakao_login_img {
+    width: 30px;
+    height: 30px;
 }

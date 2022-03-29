@@ -1,3 +1,7 @@
+window.onresize = function (event) {
+    translate_att();
+}
+
 window.onload = () => {
     translate_att();
 
@@ -18,23 +22,6 @@ window.onload = () => {
             $('.weather-icon:eq(2)').text(response['clouds']);
         }
     })
-
-
-    function translate_att() {
-        let images = document.querySelectorAll(".image");
-        let imgStack = [0, 0];
-        let colWidth = 170;
-        for (let i = 0; i < images.length; i++) {
-            let minIndex = imgStack.indexOf(Math.min.apply(0, imgStack));
-            let x = colWidth * minIndex;
-            let y = imgStack[minIndex];
-            imgStack[minIndex] += (images[i].children[0].height + 10);
-            images[i].style.transform = `translateX(${x}px) translateY(${y}px)`;
-            if (i === images.length - 1) {
-                document.querySelector(".images").style.height = `${Math.max.apply(0, imgStack)}px`;
-            }
-        }
-    }
 }
 
 
@@ -67,7 +54,6 @@ window.addEventListener('load', function () {
                     }, 500)
                     timer_state = true;
                 }, 500);
-
             }
         }
     )
@@ -117,7 +103,15 @@ function translate_att2() {
     console.log("실행 되고 있음22222222222222");
     let images = document.querySelectorAll(".image");
     console.log("실행 되고 있음");
-    let imgStack = [0, 0];
+    let imgStack = [0, 0, 0, 0, 0, 0];
+    if (innerWidth >= 400) {
+        imgStack = [0, 0, 0, 0, 0, 0];
+        console.log('들어옴(큰창)')
+    } else {
+        imgStack = [0, 0];
+        console.log('들어옴(작은창)')
+    }
+
     console.log("실행");
     let colWidth = 170;
     for (let i = 0; i < images.length; i++) {
@@ -168,5 +162,35 @@ function temp_recomand(temp) {
         return '반팔, 얇은 셔츠, 긴팔, 반바지, 면바지'
     } else if (26 <= temp && temp < 27) {
         return '민소매, 반바지, 원피스'
+    }
+}
+
+
+function translate_att() {
+    let images = document.querySelectorAll(".image");
+    let imgStack = [0, 0, 0, 0, 0, 0];
+    let innerWidth = window.innerWidth;
+
+    console.log('innerWidth' + innerWidth)
+    console.log('type innerWidth' + typeof innerWidth)
+
+    if (innerWidth >= 400) {
+        imgStack = [0, 0, 0, 0, 0, 0];
+        console.log('들어옴(큰창)')
+    } else {
+        imgStack = [0, 0];
+        console.log('들어옴(작은창)')
+    }
+
+    let colWidth = 170;
+    for (let i = 0; i < images.length; i++) {
+        let minIndex = imgStack.indexOf(Math.min.apply(0, imgStack));
+        let x = colWidth * minIndex;
+        let y = imgStack[minIndex];
+        imgStack[minIndex] += (images[i].children[0].height + 10);
+        images[i].style.transform = `translateX(${x}px) translateY(${y}px)`;
+        if (i === images.length - 1) {
+            document.querySelector(".images").style.height = `${Math.max.apply(0, imgStack)}px`;
+        }
     }
 }

@@ -1,17 +1,33 @@
 @charset "UTF-8";
+/* 미디어 쿼리 */
+#main-header {
+    display: none;
+}
+
+.top_icon {
+    display: none;
+}
+
+.desktop_label {
+    display: none;
+}
+
+
+/* 시작 */
 body {
-    background-color: darkgray;
+    background-color: white;
 }
 
 #body_container {
+
     min-width: 360px;
     max-width: 360px;
-    height: 640px;
+    height: 800px;
     margin: 0 auto;
     overflow-y: auto;
     position: relative;
-    background-color: white;
     font-family: 'LeferiBaseType-RegularA';
+    background-color: white;
 }
 
 #header {
@@ -68,6 +84,8 @@ body {
     border: 0px;
 }
 
+
+
 .feed_img {
     margin: 59px auto;
     max-width: 315px;
@@ -79,6 +97,7 @@ body {
     align-items: center;
     /*background-image:url("test_img.png");*/
     background-size: 100%;
+    background-color: dodgerblue;
 
 
 }
@@ -126,4 +145,8 @@ body {
     font-weight: bold;
     text-align: center;
     line-height: 120px;
+}
+
+.img_box {
+    background-color: dodgerblue;
 }
