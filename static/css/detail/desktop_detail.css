@@ -167,7 +167,6 @@
     padding-left: 60px;
 }
 
-
 /* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 오른쪽(별표) */
 #pro_auth_article #pro_icon #scrap {
     font-size: 30px;
@@ -189,10 +188,14 @@
     font-size: 13px;
 }
 
+.comment_article {
+    line-height: 23px;
+}
+
 .comment_container {
     width: 300px;
     height: 250px;
-    margin: 0 auto;
+    margin: 0 20px;
     overflow-y: auto;
 }
 
@@ -211,17 +214,42 @@
     margin: 0 auto;
 }
 
+.comment_img_wrapper {
+    display: inline;
+}
+
+.comment_img {
+    display: inline;
+}
+
 /* 내용 > 오른쪽 컨텐츠 > 유저 댓글(프로필사진) */
 .comment_img_wrapper .comment_img img {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     object-fit: cover;
+    display: inline;
+}
+
+.comment_info {
+    display: inline;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 댓글(닉네임) */
 .comment_info .user-nickname {
     font-weight: bold;
+}
+
+.user-comments {
+    margin-bottom: 10px;
+}
+
+.user-comments-box > i {
+    color: darkgray;
+}
+
+.user-comments-box > i:hover {
+    color: #096B90;
 }
 
 /* //// 내용 > 오른쪽 컨텐츠 > 유저 댓글(작성일) */
@@ -230,11 +258,15 @@
     font-size: 13px;
 }
 
+.comment_info > div {
+    display: inline;
+}
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 댓글(댓글내용) */
 .comment_info p {
     width: 300px;
     margin: 10px auto;
+    display: inline;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 자식댓글(답글달기) */
@@ -252,7 +284,7 @@ details form {
     display: flex;
     justify-content: space-between;
     width: 260px;
-    margin: 0 auto;
+    margin: 20px auto 0;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 자식댓글(input 태그) */
@@ -310,7 +342,7 @@ details .reple {
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글(입력) */
 .comment_header form input {
-    width: 200px;
+    width: 195px;
     outline: none;
     border: none;
     height: 20px;

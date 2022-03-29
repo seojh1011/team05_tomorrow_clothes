@@ -2,10 +2,9 @@
 {% load static %}
 {% block add_head %}
     <meta charset="UTF-8">
-    <title>Title</title>
-
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>Tomorrow Clothes</title>
+
     {#  Mobile  #}
     <link rel="stylesheet" type="text/css" href="{% static 'css/add_update/add_update.css' %}"
           media="screen and (max-width: 360px)">
@@ -13,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/add_update/desktop_add_update.css' %}"
           media="screen and (min-width: 361px)">
 
-    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -37,6 +35,8 @@
         }
     </script>
 {% endblock add_head %}
+
+
 
 {% block add_header %}
     {#  Desktop - 효정 추가(시작) #}
@@ -73,6 +73,8 @@
     </div>
 {% endblock add_header %}
 
+
+
 {% block add_body %}
     {% if feed %}
         <form id="add_form" action="/detail/feed/update/{{ feed.id }}/" method="post" enctype="multipart/form-data">
@@ -102,7 +104,6 @@
         <form id="add_form" action="/detail/feed/" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="feed_img">
-
                 <div id="image"></div>
                 <input class=img_box type="file" id="upload_img" onchange="upload(event)" name="feeds_img_url">
                 <label class="mobile_label" for="upload_img">이미지 선택하기</label>

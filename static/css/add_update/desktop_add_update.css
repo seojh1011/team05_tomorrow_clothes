@@ -13,8 +13,8 @@
 }
 
 
-/* 헤더 영역 */
-/* 헤더: 전체 */
+
+/* Header */
 #main-header {
     display: flex;
     justify-content: space-between;
@@ -53,6 +53,9 @@
     color: #096B90;
 }
 
+
+
+/* Body */
 #add_form {
     width: 1100px;
     height: 450px;
@@ -70,15 +73,14 @@
     min-width: 300px;
 }
 
+.feed_img input {
+    visibility: hidden;
+}
+
 .feed_comment {
     height: 400px;
     border: 1px solid lightgray;
     border-radius: 0 10px 10px 0;
-}
-
-
-.feed_img input {
-    visibility: hidden;
 }
 
 .top_icon {
@@ -110,15 +112,6 @@
     font-weight: bold;
 }
 
-.feed_comment .comment {
-    width: 250px;
-    height: 260px;
-    padding: 10px;
-    margin: 35px 15px 10px;
-    border: 1px solid lightgray;
-    resize: none;
-}
-
 .feed_img {
     background: #042b44;
     display: flex;
@@ -129,3 +122,11 @@
     border-radius: 10px 0 0 10px;
 }
 
+.feed_comment .comment {
+    width: 250px;
+    height: 260px;
+    padding: 10px;
+    margin: 35px 15px 10px;
+    border: 1px solid lightgray;
+    resize: none;
+}

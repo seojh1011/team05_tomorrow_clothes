@@ -3,35 +3,29 @@
 {% block weather_head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>Tomorrow Clothes</title>
 
     {#  Desktop  #}
     <link rel="stylesheet" type="text/css" href="{% static "css/weather/desktop_weather.css" %}"
           media="screen and (min-width: 360px)">
 
-    <title>Document</title>
+    <!-- 제이쿼리 불러오기 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     {#  Font Awesome  #}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    {#  Materialize  #}
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     {#  Slick-Slider  #}
-    <!-- 제이쿼리 불러오기 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <!-- slick 불러오기 -->
-    {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>#}
-    {#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">#}
-    {#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">#}
     <link rel="stylesheet" type="text/css" href="{% static "css/weather/slick/slick.css" %}"/>
     <link rel="stylesheet" type="text/css" href="{% static "css/weather/slick/slick-theme.css" %}"/>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{% static "css/weather/slick/slick.min.js" %}"></script>
-
-
     <script>
         $(document).ready(function () {
             $('.fashion-slider').slick({
@@ -59,6 +53,8 @@
     </script>
 {% endblock weather_head %}
 
+
+
 {% block weather_header %}
     {#  Desktop - 효정 추가(시작) #}
     <div id="main-header">
@@ -74,6 +70,8 @@
     </div>
     {#  Desktop - 효정 추가(끝) #}
 {% endblock weather_header %}
+
+
 
 {% block weather_body %}
     <div id="main">
@@ -108,7 +106,7 @@
                 <div><img src="{% static "img/chu.jpeg" %}"></div>
                 <div><img src="{% static "img/chu2.jpg" %}"></div>
                 <div><img src="{% static "img/chu.jpeg" %}"></div>
-                <div><img src="{% static "img/chu2.jpg" %}"></div>
+                <div><img src="https://team05-tomorrow-clothes.s3.ap-northeast-2.amazonaws.com/temp_img/2/man/m-13.jpg"></div>
             </div>
         </div>
     </div>
