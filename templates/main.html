@@ -1,49 +1,87 @@
 {% extends "./base.html" %}
 {% load static %}
-
-
 {% block main_head %}
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main/main.css' %}">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Tomorrow Clothes</title>
+
+    {#  Mobile  #}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main/main.css' %}"
+          media="screen and (max-width: 800px)">
+    {#  Desktop  #}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main/desktop_main.css' %}"
+          media="screen and (min-width: 801px)">
+
     <script type="text/javascript" src="{% static 'js/main/main.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+                /*
+                 * 항목값	항목명	단위
+                 * POP	강수확률	 %
+                 * PTY	강수형태	코드값
+                 * R06	6시간 강수량	범주 (1 mm)
+                 * REH	습도	 %
+                 * S06	6시간 신적설	범주(1 cm)
+                 * SKY	하늘상태	코드값
+                 * T3H	3시간 기온	 ℃
+                 * TMN	아침 최저기온	 ℃
+                 * TMX	낮 최고기온	 ℃
+                 * UUU	풍속(동서성분)	 m/s
+                 * VVV	풍속(남북성분)	 m/s
+                 * WAV	파고	 M
+                 * VEC	풍향	 m/s
+                 * WSD	풍속	1
+                 */
+    </script>
 {% endblock main_head %}
 
 
 
 {% block main_header %}
-    <div id="header">
+    {#      Desktop - 효정 추가(시작) #}
+    <div id="main-header">
+        <div class="title">
+            <img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}">
+        </div>
+        <div class="nav">
+            <div><a href="">Main</a></div>
+            <div><a href="">Weather</a></div>
+            <div><a href="">Sign in</a></div>
+            <div><a href="">Log in</a></div>
+        </div>
+    </div>
+    {#      Desktop - 효정 추가(끝) #}
+    {#  Mobile  #}
+    <div id="header" class="none">
         <div class="header-icon"><img src="{% static 'img/upload.png' %}"></div>
         <div class="header-icon"><img src="{% static 'img/hanger.png' %}"></div>
-        <div class="header-icon"><img src="{% static 'img/login.png' %}"></div>
+        {% if user.is_authenticated %}
+            <a href="{% url 'test_1:logout' %}">{{ user.username }}로그아웃</a>
+        {% else %}
+            <div class="header-icon">
+                <img src="{% static 'img/login.png' %}">
+            </div>
+        {% endif %}
     </div>
 {% endblock main_header %}
 
 
 
 {% block main_body %}
-
     <div id="container">
         <div class="weather">
             <div class="location">서울시 광양구</div>
             <div class="weather-icons">
                 <div class="weather-icon">12°C</div>
-                <div class="weather-icon">날씨</div>
+                <div class="weather-icon"></div>
                 <div class="weather-icon">강수</div>
                 <div class="weather-icon">미세먼지</div>
             </div>
         </div>
-        <div class="images">
-            {% for i in "x"|rjust:"10" %}
-                <div class="image"><img src="{% static 'img/chu2.jpg' %}"></div>
-                <div class="image"><img src="{% static 'img/wonyoung.jpg' %}"></div>
-                <div class="image"><img
-                        src="https://i.guim.co.uk/img/media/ac3752eb2a2a5170e2881b9e47f79f5c60d150a0/0_150_4500_2700/master/4500.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=8931e73900fa54622435e86961d7a6cb">
-                </div>
-                <div class="image"><img src="{% static 'img/chu.jpeg' %}"></div>
-                <div class="image"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7cEjVUtCpQDMdKkIYTB4a17Szz-Gkze0Fjw&usqp=CAU">
+        <div id="images_box" class="images">
+            {% for p in pages %}
+                <div class="image" onclick="location.href='/detail/{{ p.id }}/'">
+                    <img src="{{ p.feeds_img_url.url }}">
                 </div>
             {% endfor %}
         </div>
