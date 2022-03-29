@@ -1,4 +1,40 @@
 @charset "UTF-8";
+
+/* 미디어쿼리 */
+.video-wrapper {
+    display: none;
+}
+
+.login_input_wrapper2 img {
+    display: none;
+}
+
+.login_input_wrapper2 i {
+    display: none;
+}
+
+.login_input_pw img {
+    display: none;
+}
+
+.desktop_login_social {
+    display: none;
+}
+
+.selection-or {
+    display: none;
+}
+
+.desktop_login_social {
+    display: none;
+}
+
+.link-register {
+    display: none;
+}
+
+
+
 /* 전체영역 */
 body {
 	background-color: white;

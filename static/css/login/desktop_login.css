@@ -8,6 +8,13 @@
     display: none;
 }
 
+.kakao_login_img {
+    display: none;
+}
+
+.go_signin {
+    display: none;
+}
 
 /* 전체 영역 */
 .login_container_wrapper {
