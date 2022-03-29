@@ -83,7 +83,7 @@
         </div>
         <div id="images_box" class="images">
             {% for p in pages %}
-                <div class="image" onclick="location.href='/detail/{{ p.id }}/'">
+                <div class="image">
                     <img src="{{ p.feeds_img_url.url }}">
                 </div>
             {% endfor %}
