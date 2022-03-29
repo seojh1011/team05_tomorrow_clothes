@@ -1,3 +1,4 @@
+import json
 from typing import Dict
 
 from django.http import HttpRequest, HttpResponse
@@ -28,26 +29,39 @@ def get_register_page(request: HttpRequest) -> HttpResponse:
 def create_user(
     request: HttpRequest, register_request: RegisterRequest = Form(...)
 ) -> HttpResponse:
-    user = create_users(
-        register_request.email, register_request.password, register_request.nick_name
-    )
-    new_user_msg = list(user.keys())[0]
-
-    if new_user_msg == "error":
-        return render(request, "register.html")
+    email = email_check(register_request.email)
+    password = password_check(register_request.password)
+    email = list(email.keys())[0]
+    password = list(password.keys())[0]
+    if email == 'success' and password == 'success':
+        user = create_users(
+            register_request.email, register_request.password, register_request.nick_name
+        )
+        new_user_msg = list(user.keys())[0]
+        if new_user_msg == "error":
+            return render(request, "register.html")
+        else:
+            return redirect("/login")
     else:
-        return redirect("/login")
+        return render(request, "register.html")
 
 
 
 @account.post("/reduplication")
-def post_email_reduplication(request: HttpRequest, email: str) -> object:
+def post_email_reduplication(request: HttpRequest):
+    # print(request)
+
+    # print(request.body)
+    email = json.loads(request.body)['email']
+
     check = email_check(email)
-    # print(type(check))
+    # # print(type(check))
     return check
 
 
 @account.post("/password")
-def post_password_reduplication(request: HttpRequest, password: str) -> object:
+def post_password_reduplication(request: HttpRequest) -> object:
+    password = json.loads(request.body)['password']
+
     check = password_check(password)
     return check
