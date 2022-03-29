@@ -115,10 +115,6 @@ WSGI_APPLICATION = "app.wsgi.application"
 #     }
 # }
 
-import pymysql
-
-pymysql.install_as_MySQLdb()
-
 DATABASES = MYSQLRDS
 
 # Password validation
