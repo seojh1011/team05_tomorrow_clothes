@@ -15,7 +15,7 @@ import os
 from pathlib import Path
 from typing import List
 
-from .local_settings import MYSQLRDS, TEAM5_SECRET
+from local_settings import MYSQLRDS, TEAM5_SECRET
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -114,7 +114,7 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-# 123
+
 
 # DATABASES = MYSQLRDS
 
