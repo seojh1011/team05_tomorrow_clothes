@@ -22,7 +22,32 @@ window.onload = () => {
 
     function translate_att() {
         let images = document.querySelectorAll(".image");
-        let imgStack = [0, 0];
+        let imgStack = [0,0,0,0,0,0];
+
+        // let innerWidth = window.innerWidth;
+        // let imgStack;
+        // if (innerWidth >= 361) {
+        //     imgStack = [0, 0, 0, 0, 0, 0];
+        // } else {
+        //     imgStack = [0, 0];
+        // }
+
+        // let imgStack = (window.innerWidth >= 361) ? [0, 0, 0, 0, 0, 0]: [0, 0];
+        // let imgStack = (window.innerWidth >= "360") ? [0, 0]:
+        //      imgStack = [0, 0, 0, 0, 0, 0];
+
+        // window.onresize = function (event) {
+        //     let innerWidth = window.innerWidth;
+        //     let imgStack = (innerWidth >= "360") ? [0, 0]:
+        //      imgStack = [0, 0, 0, 0, 0, 0];
+        // }
+
+        // let imgStack = (window.innerWidth <= "360") ? [0, 0]: [0, 0, 0, 0, 0, 0];
+        // window.onresize = function (event) {
+        //     let innerWidth = window.innerWidth;
+        //     innerWidth <= "360" ? imgStack = [0, 0] :
+        //         innerWidth > "360" ? imgStack = [0, 0, 0, 0, 0, 0];
+        // }
         let colWidth = 170;
         for (let i = 0; i < images.length; i++) {
             let minIndex = imgStack.indexOf(Math.min.apply(0, imgStack));
@@ -118,7 +143,23 @@ function translate_att2() {
     console.log("실행 되고 있음22222222222222");
     let images = document.querySelectorAll(".image");
     console.log("실행 되고 있음");
-    let imgStack = [0, 0];
+    let imgStack = [0,0,0,0,0,0];
+    // let imgStack = (window.innerWidth >= "361") ? [0, 0, 0, 0, 0, 0]: [0, 0];
+    // window.onresize = function (event) {
+    //         let innerWidth = window.innerWidth;
+    //         let imgStack = (innerWidth >= "360") ? [0, 0]:
+    //          imgStack = [0, 0, 0, 0, 0, 0];
+    //     }
+    // window.onresize = function (event) {
+    //     let innerWidth = window.innerWidth;
+    //     let imgStack = [0, 0];
+    //     innerWidth >= "360" ? imgStack = [0, 0, 0, 0, 0, 0]:
+    // }
+    // let imgStack = [0, 0, 0, 0, 0, 0];
+    // window.onresize = function (event) {
+    //     let innerWidth = window.innerWidth;
+    //     innerWidth <= "360" ? imgStack = [0, 0] : imgStack = [0, 0, 0, 0, 0, 0];
+    // }
     console.log("실행");
     let colWidth = 170;
     for (let i = 0; i < images.length; i++) {
