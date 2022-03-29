@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/* 미디어쿼리 */
+#main-header .title{
+	display: none;
+}
+#main-header .nav{
+	display: none;
+}
+
+
+
 /* 코드작성 시작 */
 /* 전체 영역 */
 body {
@@ -13,6 +23,7 @@ body {
 	position: relative;
 	background-color: white;
 }
+
 
 /* 헤더 */
 #header {

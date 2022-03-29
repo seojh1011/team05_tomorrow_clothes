@@ -1,4 +1,19 @@
 @charset "UTF-8";
+/* 미디어 쿼리 */
+#main-header {
+    display: none;
+}
+
+.top_icon {
+    display: none;
+}
+
+.desktop_label {
+    display: none;
+}
+
+
+/* 시작 */
 body {
     background-color: white;
 }

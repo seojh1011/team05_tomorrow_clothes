@@ -1,4 +1,25 @@
 @charset "UTF-8";
+/* 미디어쿼리 */
+#main-container {
+    display: none;
+}
+video {
+    display: none;
+}
+.selection-or {
+    display: none;
+}
+.input_data img {
+    display: none;
+}
+.service_title img {
+    display: none;
+}
+.input_data input::placeholder {
+    display: none;
+}
+
+
 /* 전체영역 */
 body {
 	background-color: white;
