@@ -1,12 +1,10 @@
 {% extends "./base.html" %}
 {% load static %}
-
-
 {% block main_head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Tomorrow Clothes</title>
 
-    <title>Title</title>
     {#  Mobile  #}
     <link rel="stylesheet" type="text/css" href="{% static 'css/main/main.css' %}"
           media="screen and (max-width: 800px)">
@@ -33,10 +31,10 @@
                  * WAV	파고	 M
                  * VEC	풍향	 m/s
                  * WSD	풍속	1
-
                  */
     </script>
 {% endblock main_head %}
+
 
 
 {% block main_header %}
@@ -53,8 +51,6 @@
         </div>
     </div>
     {#      Desktop - 효정 추가(끝) #}
-
-
     {#  Mobile  #}
     <div id="header" class="none">
         <div class="header-icon"><img src="{% static 'img/upload.png' %}"></div>
@@ -70,6 +66,7 @@
 {% endblock main_header %}
 
 
+
 {% block main_body %}
     <div id="container">
         <div class="weather">
@@ -83,7 +80,7 @@
         </div>
         <div id="images_box" class="images">
             {% for p in pages %}
-                <div class="image">
+                <div class="image" onclick="location.href='/detail/{{ p.id }}/'">
                     <img src="{{ p.feeds_img_url.url }}">
                 </div>
             {% endfor %}
