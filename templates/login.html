@@ -91,13 +91,20 @@
                         <div><a href="/password_reset/">비밀번호 찾기</a></div>
                     </div>
                 </div>
-                <button class="login-button" onclick="login_submit()" value="Login">
+                <button class="login-button login_btn" onclick="login_submit()" value="Login">
                     LOGIN
                 </button>
                 <div class="selection-or">OR</div>
                 {% load socialaccount %}
                 <div class="login_social">
                     <a href="{% provider_login_url 'kakao' method='oauth2' %}">카카오톡</a>
+                       <img class="kakao_login_img"src="{% static "img/fiveicon/loginpage_kakaologo.png" %}">
+                            <p class="kakao_str">Sign in with KaKao</p>
+                        </div></a>
+                </div>
+                <div class="go_signin">
+                    <p>Don't have an account?</p>
+                    <a href=""><strong>Sign in</strong></a>
                 </div>
                 <div class="desktop_login_social">
                     <a href="{% provider_login_url 'kakao' method='oauth2' %}">

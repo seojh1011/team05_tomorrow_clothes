@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* 미디어쿼리 */
 #main-container {
     display: none;
@@ -22,18 +23,20 @@ video {
 
 /* 전체영역 */
 body {
-	background-color: darkgray;
+	background-color: white;
+
 
 }
 #body_container {
 	min-width: 360px;
 	max-width: 360px;
-	height: 640px;
+	height: 800px;
 	margin: 0 auto;
 	overflow-y: auto;
 	position: relative;
 	background-color: white;
     font-family: 'LeferiBaseType-RegularA';
+
 }
 
 
@@ -41,10 +44,12 @@ body {
     display: flex;
     justify-content: center;
     /* align-items: center; */
+
 }
 
 /* 헤더 */
 #header {
+    z-index: 1;
 	position: fixed;
 	background-color: white;
 	max-width: 360px;
@@ -74,6 +79,7 @@ body {
 
 /* 메인부분작성 (가운데) */
 #main {
+    margin : 0 auto;
 	position: absolute;
 	width: 360px;
 	top: 55px;
@@ -82,6 +88,8 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    background-size:cover;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../../img/fiveicon/clothbackground.png");
 }
 .body__inner{
     /* border: dashed blue; */
@@ -121,8 +129,15 @@ header.header_register{
     /*font-size: xx-large;*/
     /*color: silver;*/
     font-size: 48px;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.register_title_img {
+    width: 85%;
+    height: 100%;
+    object-fit: scale-down;
 }
 
 .input_wrapper{
@@ -142,7 +157,7 @@ header.header_register{
     width: 100%;
     border: none;
     font-size: 17px;
-
+    background: transparent;
     outline: none;
 }
 .input_data input:focus ~ label,
@@ -155,7 +170,7 @@ header.header_register{
     position: absolute;
     bottom: 10px;
     left: 0;
-    color: gray;
+    color: white;
     pointer-events: none;
     transition: all 0.3s ease;
 }
@@ -165,7 +180,7 @@ header.header_register{
     bottom: 0px;
     height: 2px;
     width: 100%;
-    background: silver;
+    background: white;
 }
 
 .input_data .underline:before{
@@ -198,14 +213,14 @@ header.header_register{
 }
 
 .input_wrapper button{
-    margin-top: 20px;
+    margin-top: 40px;
     border: 2px solid silver;
-    border-radius: 10px;
-    background-color: white;
-    color: silver;
-    padding: 14px 28px;
+    padding: 7px 28px;
     font-size: 16px;
     cursor: pointer;
+    color: white;
+    background-color: rgba( 142, 201, 217, 0.8 );
+    border-radius: 10px;
 
 }
 .input_wrapper button:hover{
@@ -214,19 +229,44 @@ header.header_register{
     border-color: #4158d0;
 }
 
+.find_pw {
+    text-align: right;
+    font-size: 12px;
+    color: white;
+}
+
 .platform_btn_register button{
     margin-top: 10px;
     border: 2px solid silver;
-    border-radius: 10px;
-    background-color: white;
-    color: silver;
-    padding: 14px 28px;
+    padding: 18px 28px;
     font-size: 16px;
     cursor: pointer;
     line-height: 0;
+    color: white;
+    background-color: rgba( 244, 217, 46, 0.8 );
+    border-radius: 10px;
 }
 .platform_btn_register button:hover{
     background-color: yellow;
     color: black;
     border-color: yellow;
+}
+
+.kakao_regist_btn_wrapper {
+    width: 205px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify_content: center;
+    align-items: center;
+}
+
+.kakao_regist_btn_wrapper > p {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.kakao_signin_img {
+    width: 30px;
+    height: 30px;
 }

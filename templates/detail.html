@@ -83,7 +83,7 @@
                     <span id="icon_scraps">{{ feed.scrapes }}</span>
                 </div>
             </div>
-            <hr class="mobile_hr">
+            <hr class="mobile_hr second_hr">
             <div class="post_comment">
                 <article>
                     <p>
@@ -96,15 +96,15 @@
                     <div class="speach_bubble_wrapper">
                         <i class="far fa-comment"></i>
                     </div>
-                    <form method="post" action="/comment/{{ feed.id }}/">
-                        <input name=comment placeholder="댓글 달아주소">
+                    <form class="cmt_wrapper" method="post" action="/comment/{{ feed.id }}/">
+                        <input name="comment" placeholder="댓글 달아주소">
                         <button type="submit">등록</button>
                     </form>
                     <div class="share_wrapper">
                         <i class="fas fa-share-alt"></i>
                     </div>
                 </div>
-                <hr class="mobile_hr">
+                <hr class="mobile_hr second_hr">
                 {% for comment in comments %}
                     {% if comment.comment_num == null %}
                         <div class="comment_section">
@@ -117,7 +117,7 @@
 
                             <div class="comment_info">
 
-                                <div class="user-nickname">{{ comment.comment_writer.nick_name }}</div>
+                                <div class="user-nickname cmt_writer">{{ comment.comment_writer.nick_name }}</div>
                                 <div>
                                     <p>
                                         {{ comment.comment }}
@@ -128,7 +128,7 @@
                         </div>
                         {#                    서지훈추가#}
                         <details>
-                            <summary>리플</summary>
+                            <summary class="sum_rp">리플</summary>
                             {% for reple in comments %}
                                 {% if comment == reple.comment_num %}
                                     <div class="reple">
@@ -152,10 +152,10 @@
 
                                 {% endif %}
                             {% endfor %}
-                            <form method="POST" action="/comment/reple/{{ comment.id }}/" style="display: flex">
+                            <form class="reple_wrapper" method="POST" action="/comment/reple/{{ comment.id }}/" style="display: flex">
                                 {% csrf_token %}
-                                <input name="comment" placeholder="리플을 달아주소" required>
-                                <button type="submit">리플 작성</button>
+                                <input class="reple_input" name="comment" placeholder="리플을 달아주소" required>
+                                <button class="reple_btn" type="submit">리플 작성</button>
                             </form>
                         </details>
 

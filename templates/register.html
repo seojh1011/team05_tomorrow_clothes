@@ -3,8 +3,10 @@
 {% block register_head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    {#  Mobile  #}
     <link rel="stylesheet" type="text/css" href="{% static 'css/register/register.css' %}"
           media="screen and (max-width: 360px)">
+    {#  Desktop  #}
     <link rel="stylesheet" type="text/css" href="{% static 'css/register/desktop_register.css' %}"
           media="screen and (min-width: 361px)">
     <title>Title</title>
@@ -56,7 +58,7 @@
                         <div class="underline"></div>
                         <label>비밀번호</label>
                     </div>
-                    <button type="submit">C R E A T E</button>
+                    <button type="submit">Register</button>
                 </div>
             </form>
             <span>간편하게 시작하기</span>

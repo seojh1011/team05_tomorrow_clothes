@@ -6,9 +6,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+    {#  Mobile  #}
     <link rel="stylesheet" type="text/css" href="{% static 'css/add_update/add_update.css' %}"
           media="screen and (max-width: 360px)">
+    {#  Desktop  #}
     <link rel="stylesheet" type="text/css" href="{% static 'css/add_update/desktop_add_update.css' %}"
           media="screen and (min-width: 361px)">
 
@@ -77,7 +78,7 @@
         <form id="add_form" action="/detail/feed/update/{{ feed.id }}/" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="feed_img">
-                <label class="mobile_label" for="upload_img">이미지 선택하기</label>
+                <label class="mobile_label upload_img" for="upload_img">이미지 선택하기</label>
                 <div id="image">
                     <img src="{{ feed.feeds_img_url.url }}">
                 </div>
@@ -103,7 +104,7 @@
             <div class="feed_img">
 
                 <div id="image"></div>
-                <input type="file" id="upload_img" onchange="upload(event)" name="feeds_img_url">
+                <input class=img_box type="file" id="upload_img" onchange="upload(event)" name="feeds_img_url">
                 <label class="mobile_label" for="upload_img">이미지 선택하기</label>
             </div>
             <div class="feed_comment">
