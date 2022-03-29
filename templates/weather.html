@@ -3,35 +3,29 @@
 {% block weather_head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>Tomorrow Clothes</title>
 
     {#  Desktop  #}
     <link rel="stylesheet" type="text/css" href="{% static "css/weather/desktop_weather.css" %}"
           media="screen and (min-width: 360px)">
 
-    <title>Document</title>
+    <!-- 제이쿼리 불러오기 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     {#  Font Awesome  #}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    {#  Materialize  #}
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     {#  Slick-Slider  #}
-    <!-- 제이쿼리 불러오기 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <!-- slick 불러오기 -->
-    {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>#}
-    {#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">#}
-    {#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">#}
     <link rel="stylesheet" type="text/css" href="{% static "css/weather/slick/slick.css" %}"/>
     <link rel="stylesheet" type="text/css" href="{% static "css/weather/slick/slick-theme.css" %}"/>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{% static "css/weather/slick/slick.min.js" %}"></script>
-
-
     <script>
         $(document).ready(function () {
             $('.fashion-slider').slick({
@@ -41,23 +35,34 @@
                 autoplaySpeed: 3000,
                 {#variableWidth: true,#}
                 responsive: [
-                    {breakpoint: 1250,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3}},
-                    {breakpoint: 930,
+                    {
+                        breakpoint: 1250,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 930,
                         settings: {
                             slidesToShow: 2,
-                            slidesToScroll: 2}},
-                    {breakpoint: 616,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 616,
                         settings: {
                             slidesToShow: 1,
-                            slidesToScroll: 1}},
-                    ]
+                            slidesToScroll: 1
+                        }
+                    },
+                ]
             });
         });
     </script>
 {% endblock weather_head %}
+
+
 
 {% block weather_header %}
     {#  Desktop - 효정 추가(시작) #}
@@ -66,14 +71,27 @@
             <img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}">
         </div>
         <div class="nav">
-            <div><a href="">Main</a></div>
-            <div><a href="">Weather</a></div>
-            <div><a href="">My page</a></div>
-            <div><a href="">Upload</a></div>
+            <div><a class="nav-main" href="/" style="
+                    padding-top: 3px;display: inline-block;">Main</a></div>
+            <div><a class="nav-weather" href="/weather/"
+                    style="padding-top: 3px;display: inline-block; color: #0067a3;">Weather</a></div>
+            {% if user.is_authenticated %}
+                <div><a class="nav-upload" href="/detail/feed/"
+                        style="padding-top: 3px;display: inline-block;">Upload</a></div>
+                <div><a href="{% url 'test_1:logout' %}"
+                        style="color: white; background-color: #042b44; border-radius: 8px;
+                        width: 80px; display: inline-block; height: 30px; padding-top: 3px;">Logout</a></div>
+            {% else %}
+                <div><a href="/register/" style="padding-top: 3px;display: inline-block;">Sign in</a></div>
+                <div><a href="/login/" style="color: white; background-color: #0067a3; border-radius: 8px;
+                         width: 80px; display: inline-block; height: 30px; padding-top: 3px;">Log in</a></div>
+            {% endif %}
         </div>
     </div>
     {#  Desktop - 효정 추가(끝) #}
 {% endblock weather_header %}
+
+
 
 {% block weather_body %}
     <div id="main">
@@ -108,7 +126,8 @@
                 <div><img src="{% static "img/chu.jpeg" %}"></div>
                 <div><img src="{% static "img/chu2.jpg" %}"></div>
                 <div><img src="{% static "img/chu.jpeg" %}"></div>
-                <div><img src="{% static "img/chu2.jpg" %}"></div>
+                <div><img src="https://team05-tomorrow-clothes.s3.ap-northeast-2.amazonaws.com/temp_img/2/man/m-13.jpg">
+                </div>
             </div>
         </div>
     </div>
