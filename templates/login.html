@@ -47,7 +47,7 @@
 {% block login_header %}
     {#  Mobile  #}
     <div id="header">
-        <div class="back_allow" onclick="window.history.back()">
+        <div class="back_allow">
             <i class="fas fa-arrow-left"></i>
         </div>
         <p>로그인</p>
@@ -79,6 +79,10 @@
                     </div>
                     <div class="login_line"></div>
 
+                    <div class="login_find_pw">
+                        <div><a href="">비밀번호 찾기</a></div>
+                    </div>
+
                 </div>
 
                 <button class="login_btn"onclick="login_submit()" value="Login">
@@ -97,6 +101,9 @@
                     <p>Don't have an account?</p>
                     <a href=""><strong>Sign in</strong></a>
                 </div>
+
+                <div class="link-register"><a href="">계정</a>이 없으신가요?</div>
+
             </div>
 
         </div>

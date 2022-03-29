@@ -31,10 +31,10 @@
             <img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}">
         </div>
         <div class="nav">
-            <div><a href="/">Main</a></div>
-            <div><a href="/weather">Weather</a></div>
+            <div><a href="">Main</a></div>
+            <div><a href="">Weather</a></div>
             <div><a href="">My page</a></div>
-            <div><a href="/detail/feed/">Upload</a></div>
+            <div><a href="">Upload</a></div>
         </div>
     </div>
     {#  Desktop - 효정 추가(끝) #}
@@ -57,7 +57,7 @@
         <div class="content-wrapper">
             <div class="content-icons">
                 <div class="content-icons-left">
-                    <a href="/detail/feed/update/{{ feed.id }}"><img src="{% static "img/desktop/상세페이지_수정아이콘.png" %}"></a>
+                    <a href=""><img src="{% static "img/desktop/상세페이지_수정아이콘.png" %}"></a>
                     <a href=""><img src="{% static "img/desktop/상세페이지_공유아이콘.png" %}"></a>
                 </div>
                 <div class="content-icons-right">
@@ -170,6 +170,31 @@
             </div>
         </div>
     </div>
+<!-- <<<<<<< test_hyo
+    <section>
+    </section>
+    <script>
+        function scrap(feed_id) {
+            let scrap = document.getElementById("scrap")
+            if (scrap.style.color === "yellow") {
+                scrap.className = "far fa-star";
+                scrap.style.color = "lightgray";
+                $.ajax({
+                    url: '/detail/scrap/' + feed_id + '/',
+                    type: 'post',
+                    data: {
+                        'feed_id': feed_id
+                    },
+                    datatype: 'json',
+                    success: function (response) {
+                        console.log(response)
+                        //302를 인식하도록
+                        if (Object.keys(response) == 'error') {
+                            window.location.href = '/login'
+                        } else {
+                            $('#icon_scraps').html(response.scrap_count)
+                        }
+======= -->
         <section>
         </section>
 <script>
@@ -215,10 +240,29 @@
                     else{
                         $('#icon_scraps').html(response.scrap_count)
                     }
+                })
+            } else if (scrap.style.color === "" || scrap.style.color === "lightgray") {
+                scrap.className = "fas fa-star";
+                scrap.style.color = "yellow";
+                $.ajax({
+                    url: '/detail/scrap/' + feed_id + '/',
+                    type: 'post',
+                    data: {
+                        'feed_id': feed_id
+                    },
+                    datatype: 'json',
+                    success: function (response) {
+                        console.log(Object.keys(response))
+                        if (Object.keys(response) == 'error') {
+                            window.location.href = '/login'
+                        } else {
+                            $('#icon_scraps').html(response.scrap_count)
+                        }
 
                 }
             })
         }
-    }
-</script>
+
+    </script>
 {% endblock detail_body %}
+
