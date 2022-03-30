@@ -102,7 +102,7 @@
                     <span id="icon_scraps">{{ feed.scrapes }}</span>
                 </div>
             </div>
-            <hr class="mobile_hr second_hr">
+
             <div class="post_comment">
                 <article>
                     <p>
@@ -117,7 +117,7 @@
                     </div>
                     <form class="cmt_wrapper" method="post" action="/comment/{{ feed.id }}/">
                         <input name="comment" placeholder="댓글을 입력해주세요.">
-                        <button type="submit">등록</button>
+                        <button class="cmt_btn" type="submit">등록</button>
                     </form>
                     <div class="share_wrapper">
                         <i class="fas fa-share-alt"></i>

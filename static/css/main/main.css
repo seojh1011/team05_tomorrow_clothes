@@ -34,6 +34,7 @@ body {
 	height: 54px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding: 1% 5% 2% 5%;
 	border-bottom: 1px solid lightgray;
 	z-index: 10;
@@ -43,6 +44,11 @@ body {
 }
 .header-icon > img{
 	width: 23px;
+}
+
+.logout_btn {
+	text-decoration-line : none;
+	color: black;
 }
 
 /* 컨테이너 작성 */

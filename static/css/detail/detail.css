@@ -104,7 +104,11 @@ body {
 
 /*Feed user 정보 container*/
 #pro_auth_article {
+
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: 75px;
     border-bottom: 1px solid lightgray;

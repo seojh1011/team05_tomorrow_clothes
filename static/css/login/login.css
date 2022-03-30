@@ -100,7 +100,7 @@ body {
     justify-content: start;
     align-items: center;
     background-size:cover;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../../img/fiveicon/clothbackground.png");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/fiveicon/clothbackground.png");
 }
 .login_container {
     width : 360px;
@@ -135,6 +135,19 @@ body {
 .login_find_pw {
     display: flex;
     justify-content: right;
+}
+
+.find_pw {
+    margin-top: 5%;
+    color: gray;
+}
+
+.fa-eye {
+    margin-left: 40%;
+}
+
+.fa-eye-slash {
+    margin-left: 40%;
 }
 .login_social {
     display: flex;
@@ -215,6 +228,11 @@ a {
     background-color: rgba( 142, 201, 217, 0.8 );
     border-radius: 10px;
     border: none;
+    height: 40px;
+}
+
+.or_str {
+    color: gray;
 }
 
 .kakao_login_wrapper {
@@ -233,6 +251,8 @@ a {
 .kakao_str {
     padding-left: 5px;
     color: white;
+    border: none;
+    background-color: transparent;
 }
 
 .go_signin {
