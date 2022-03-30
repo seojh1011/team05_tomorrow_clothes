@@ -7,7 +7,7 @@
 
     {# Mobile #}
 
-     <link rel="stylesheet" type="text/css" href="{% static "css/weather/weather.css" %}"
+    <link rel="stylesheet" type="text/css" href="{% static "css/weather/weather.css" %}"
           media="screen and (max-width: 450px)">
 
     {#  Desktop  #}
@@ -31,6 +31,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{% static "css/weather/slick/slick.min.js" %}"></script>
+    {#    <script type="text/javascript" src="{% static 'js/main/main.js' %}"></script>#}
     <script>
         $(document).ready(function () {
             $('.fashion-slider').slick({
@@ -63,8 +64,62 @@
                     },
                 ]
             });
+            let latitude = 0;
+            let longitude = 0;
+            var tmp = 0;
+//현재 위치 가져오는 기능
+            navigator.geolocation.getCurrentPosition(function (pos) {
+                latitude = pos.coords.latitude;
+                longitude = pos.coords.longitude;
+                console.log("현재 위치는 : " + latitude + ", " + longitude);
+                change_gps_kweather(latitude, longitude)
+            });
+
+            function change_gps_kweather(latitude, longitude) {
+                $.ajax({
+                    url: "/k-weather/",
+                    data: {'x': longitude, 'y': latitude},
+                    method: 'post',
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data)
+                        console.log(data['address'])
+                        console.log(data['tmp'][0]['fcstValue'])
+                        {#$('.weather-icon').first().text(data['tmp'][0]['fcstValue']);#}
+                        {#let temp = temp_recomand(data['tmp'][0]['fcstValue'])#}
+                        $('#temp').text(data['tmp'][0]['fcstValue']);
+                        $('#address').text(data['address']);
+                        tmp = data['tmp'][0]['fcstValue'];
+                        img()
+
+                    }
+                })
+            }
+
+            function img() {
+
+                $.ajax({
+                    type: "get",
+                    url: "/k-weather/plz/",
+                    data: {"temp": tmp},
+                    dataType: "json",
+                    success: function (response) {
+                        {#console.log(response['man']['1']);#}
+                        $(".a1").attr('src',response['man']['1'])
+                        $(".a2").attr('src',response['man']['2'])
+                        $(".a3").attr('src',response['man']['3'])
+                        $(".a4").attr('src',response['man']['4'])
+                        $(".a5").attr('src',response['woman']['1'])
+                        $(".a6").attr('src',response['woman']['2'])
+                        $(".a7").attr('src',response['woman']['3'])
+                        $(".a8").attr('src',response['woman']['4'])
+                    }
+                })
+            }
         });
     </script>
+
+    {#http://ec2-15-164-94-71.ap-northeast-2.compute.amazonaws.com:8000/#}
 {% endblock weather_head %}
 
 
@@ -115,7 +170,7 @@
                     <div class="title">오늘의 날씨</div>
                     <div class="location">
                         <i class="fa-solid fa-location-dot"></i>
-                        <p>서울특별시 서초구</p>
+                        <p id="address">서울특별시 서초구</p>
                     </div>
                 </div>
                 <div class="weather-contents">
@@ -128,32 +183,39 @@
                         <p>강수</p>
                     </div>
                     <div class="weather-content">
-                        <div class="info"></div>
+                        <div id="temp" class="info" style="font-size: 3rem; color: white">12</div>
                         <p>기온</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="bottom-container">
-            <div class="fashion-slider">
-                <div><img src="{% static "img/chu.jpeg" %}"></div>
-                <div><img src="{% static "img/chu.jpeg" %}"></div>
-                <div><img src="{% static "img/chu2.jpg" %}"></div>
-                <div><img src="{% static "img/chu.jpeg" %}"></div>
-                <div><img src="https://team05-tomorrow-clothes.s3.ap-northeast-2.amazonaws.com/temp_img/2/man/m-13.jpg">
-                </div>
-            </div>
-        </div>
+            <div class="fashion-slider" id="img-box1">
+                <div><img class="a1" src="{% static "img/chu.jpeg" %}"></div>
+                <div><img class="a2" src="{% static "img/chu.jpeg" %}"></div>
+                <div><img class="a3" src="{% static "img/chu.jpeg" %}"></div>
+                <div><img class="a4" src="{% static "img/chu.jpeg" %}"></div>
+                <div><img class="a5" src="{% static "img/chu.jpeg" %}"></div>
+                <div><img class="a6" src="{% static "img/chu.jpeg" %}"></div>
+                <div><img class="a7" src="{% static "img/chu.jpeg" %}"></div>
+                <div><img class="a8" src="{% static "img/chu.jpeg" %}"></div>
 
-        <div class="mobile-bottom-container">
-            <div class="mobile-bottom-wrapper">
-                <div><img src="{% static "img/chu.jpeg" %}"></div>
-                <div><img src="{% static "img/chu.jpeg" %}"></div>
-                <div><img src="{% static "img/chu2.jpg" %}"></div>
-                <div><img src="{% static "img/chu.jpeg" %}"></div>
-                <div><img src="https://team05-tomorrow-clothes.s3.ap-northeast-2.amazonaws.com/temp_img/2/man/m-13.jpg">
-                </div>
             </div>
         </div>
+    </div>
+
+    <div class="mobile-bottom-container">
+        <div class="mobile-bottom-wrapper" id="img-box2">
+            <div><img class="a1" src="{% static "img/chu.jpeg" %}"></div>
+            <div><img class="a2" src="{% static "img/chu.jpeg" %}"></div>
+            <div><img class="a3" src="{% static "img/chu.jpeg" %}"></div>
+            <div><img class="a4" src="{% static "img/chu.jpeg" %}"></div>
+            <div><img class="a5" src="{% static "img/chu.jpeg" %}"></div>
+            <div><img class="a6" src="{% static "img/chu.jpeg" %}"></div>
+            <div><img class="a7" src="{% static "img/chu.jpeg" %}"></div>
+            <div><img class="a8" src="{% static "img/chu.jpeg" %}"></div>
+        </div>
+    </div>
+    </div>
     </div>
 {% endblock weather_body %}
