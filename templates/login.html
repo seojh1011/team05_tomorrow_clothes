@@ -99,24 +99,25 @@
                     </div>
                 </div>
                 {% if error %}
-                            <p>{{ error }}</p>
-                    {% endif %}
+                    <p class="login-error">{{ error }}</p>
+                {% endif %}
                 <button class="login-button login_btn" onclick="login_submit()" value="Login">
                     LOGIN
                 </button>
-                <div class="selection-or">OR</div>
-                {% load socialaccount %}
-                <div class="login_social">
-                    <a href="{% provider_login_url 'kakao' method='oauth2' %}">
-                        <button>Sign in with Kakao</button>
-                    </a>
-                </div>
-                <div class="link-register"><a href="/register/">계정</a>이 없으신가요?</div>
+
             </div>
-            <div class="go_signin">
-                <p>Don't have an account?</p>
-                <a href=""><strong>Sign in</strong></a>
+            <div class="selection-or">OR</div>
+            {% load socialaccount %}
+            <div class="login_social">
+                <a href="{% provider_login_url 'kakao' method='oauth2' %}">
+                    <button>Sign in with Kakao</button>
+                </a>
             </div>
+            <div class="link-register"><a href="/register/">계정</a>이 없으신가요?</div>
+            {#            <div class="go_signin">#}
+            {#                <p>Don't have an account?</p>#}
+            {#                <a href=""><strong>Sign in</strong></a>#}
+            {#            </div>#}
         </div>
     </div>
 {% endblock login_body %}

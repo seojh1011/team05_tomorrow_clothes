@@ -194,7 +194,7 @@
 
 .comment_container {
     width: 300px;
-    height: 250px;
+    height: 275px;
     margin: 0 20px;
     overflow-y: auto;
 }
@@ -238,18 +238,35 @@
 /* 내용 > 오른쪽 컨텐츠 > 유저 댓글(닉네임) */
 .comment_info .user-nickname {
     font-weight: bold;
+    display: inline-block;
 }
 
 .user-comments {
     margin-bottom: 10px;
 }
 
-.user-comments-box > i {
-    color: darkgray;
+.user-comments-box {
+    display: inline;
 }
 
-.user-comments-box > i:hover {
-    color: #096B90;
+.user-comments-box .comment-button {
+    display: block;
+    text-align: left;
+    /*padding: 10px 0 0 20px;*/
+    padding-top: 10px;
+}
+
+.user-comments-box .comment-button > div {
+    display: inline-block;
+}
+
+.user-comments-box .comment-button button {
+    background: #096B90;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    height: 23px;
+    font-weight: bold;
 }
 
 /* //// 내용 > 오른쪽 컨텐츠 > 유저 댓글(작성일) */
@@ -260,6 +277,25 @@
 
 .comment_info > div {
     display: inline;
+}
+
+.comment_info .reple-button {
+    display: block;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.comment_info .reple-button > div {
+    display: inline-block;
+}
+
+.comment_info .reple-button > div > button {
+    background: #71b7d5;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    height: 23px;
+    font-weight: bold;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 댓글(댓글내용) */
@@ -370,10 +406,10 @@ details .reple {
     cursor: pointer;
 }
 
-.comment_info  i {
+.comment_info i {
     color: darkgray;
 }
 
-.comment_info  i:hover {
+.comment_info i:hover {
     color: #096B90;
 }
