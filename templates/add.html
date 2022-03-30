@@ -116,7 +116,7 @@
             {% csrf_token %}
             <div class="feed_img">
                 <div id="image"></div>
-                <input class=img_box type="file" id="upload_img" onchange="upload(event)" name="feeds_img_url">
+                <input class=img_box type="file" id="upload_img" onchange="upload(event)" name="feeds_img_url" required>
                 <label class="mobile_label" for="upload_img">이미지 선택하기</label>
             </div>
             <div class="feed_comment">
@@ -131,7 +131,7 @@
                     <label for="upload_img">이미지 선택하기</label>
                 </div>
                 <p>코멘트 작성</p>
-                <textarea class="comment" placeholder="글 내용을 입력하세요" name="feeds_comment"></textarea>
+                <textarea class="comment" maxlength="100" placeholder="글 내용을 입력하세요" name="feeds_comment" required></textarea>
             </div>
         </form>
     {% endif %}

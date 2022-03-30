@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect
-from ninja import Form, Router
+from ninja import Form, Router, Schema
 
 from content_post.models.contents import Comments, Feeds
 from content_post.services.comment_service import write_comment, write_reple, comment_update
@@ -18,22 +18,25 @@ def post_reple(request: HttpRequest, comment_id: int, comment: str = Form(...)) 
     return redirect(f"/detail/{feed_id}/")
 
 
+class Comment(Schema):
+    comment: str
+
 @content.post("/reple/update/{comment_id}/")
 @login_required(login_url="/login/")
-def update_reple(request: HttpRequest, comment_id: int, comment: str) -> HttpResponse:
+def update_reple(request: HttpRequest, comment_id: int, comment: Comment) -> HttpResponse:
     # 로그인했는지 확인
     login_user = request.user.id  # type: ignore
     reple_writer = Comments.objects.get(id=comment_id).comment_writer.id
     if login_user == reple_writer:
-        comment_update(comment, comment_id)
-        msg = {'success': comment}
+        comment_update(comment.comment, comment_id)
+        msg = {'success': comment.comment}
         return msg
     else:
         msg = {'error': '본인이 작성한 코멘트가 아닙니다.'}
         return msg
 
 
-@content.delete("/reple//delete/{comment_id}/")
+@content.delete("/reple/delete/{comment_id}/")
 @login_required(login_url="/login/")
 def delete_reple(request: HttpRequest, comment_id: int) -> HttpResponse:
     login_user = request.user.id  # type: ignore
@@ -66,13 +69,13 @@ def post_comment(
 
 @content.post("/update/{comment_id}/")
 @login_required(login_url="/login/")
-def update_comment(request: HttpRequest, comment_id: int, comment: str) -> HttpResponse:
+def update_comment(request: HttpRequest, comment_id: int, comment: Comment) -> HttpResponse:
     login_user = request.user.id  # type: ignore
     comment_writer = Comments.objects.get(id=comment_id).comment_writer.id
     if login_user == comment_writer:
         # 로그인한 유저 = 댓글 작성자가 맞는지 확인
-        comment_update(comment, comment_id)
-        msg = {'success': comment}
+        comment_update(comment.comment, comment_id)
+        msg = {'success': comment.comment}
         return msg
     else:
         msg = {'error': '본인이 작성한 코멘트가 아닙니다.'}
