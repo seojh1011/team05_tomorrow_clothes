@@ -23,7 +23,7 @@ def get_feed_page(request: HttpRequest) -> HttpResponse:
 
 # 상세 FEED페이지로 이동
 @content.get("/{feed_id}/", response=List[DetailResponse])
-def get_detail_page(request: HttpRequest, feed_id:int) -> HttpResponse:
+def get_detail_page(request: HttpRequest, feed_id: int) -> HttpResponse:
     user_id = request.user.id
     # 로그인된 유저의 아이디값
     print('스타트')
@@ -117,23 +117,21 @@ def update_feed(
         new_feed.save()
         return redirect(f"/detail/{feed_id}/")
 
+
 class Delete1(Schema):
-    success:str
+    abc: str
 
 
 # detail/feeds/<int:feed_id> 삭제
-@content.post("/feed/delete/{feed_id}",response=Delete1)
+@content.post("/feed/delete/{feed_id}", response=Delete1)
 def delete_feed(request: HttpRequest, feed_id: int) -> Dict[str,str]:
     user = request.user
     delete_feed = Feeds.objects.get(id=feed_id)
     delete_feed_user = delete_feed.writer
     if user == delete_feed_user:
         delete_feed.delete()
-        msg = {'success': '삭제 완료'}
-        print(msg)
-        return msg
+        return {'abc': '삭제 완료'}
     else:
-        msg = {'success': '본인이 작성한 글이 아닙니다.'}
-        return msg
+        return {'abc': '본인이 작성한 글이 아닙니다.'}
 
 # 수정페이지 이동 변경예정
