@@ -44,8 +44,8 @@ body {
 
 
 #body_container {
-	min-width: 360px;
-	max-width: 360px;
+	min-width: 450px;
+	max-width: 450px;
 	height: 800px;
 	margin: 0 auto;
 	overflow-y: auto;
@@ -63,8 +63,8 @@ body {
     z-index: 1;
 	position: fixed;
 	background-color: white;
-	max-width: 360px;
-	min-width: 360px;
+	max-width: 450px;
+	min-width: 450px;
 	height: 54px;
 	display: flex;
 	border-bottom: 1px solid lightgray;
@@ -92,7 +92,7 @@ body {
 /* 메인부분작성 (가운데) */
 #main {
 	position: absolute;
-	width: 360px;
+	width: 450px;
 	top: 55px;
     height: 90%;
     display: flex;
@@ -103,7 +103,7 @@ body {
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/fiveicon/clothbackground.png");
 }
 .login_container {
-    width : 360px;
+    width : 450px;
     height : 640px;
     outline: 1px solid;
     margin: auto;
