@@ -46,13 +46,13 @@ def create_user(
         return render(request, "register.html")
 
 
-class Email123(Schema):
+class Email(Schema):
     email: str
 
 
 
 @account.post("/reduplication")
-def post_email_reduplication(request: HttpRequest, email: Email123):
+def post_email_reduplication(request: HttpRequest, email: Email):
     # print(asd)
     # print(email.email)
     # print(request.body)
