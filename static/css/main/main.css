@@ -16,8 +16,8 @@ body {
 	background-color: white;
 }
 #body_container {
-	min-width: 360px;
-	max-width: 360px;
+	min-width: 450px;
+	max-width: 450px;
 	height: 800px;
 	margin: 0 auto;
 	overflow-y: auto;
@@ -29,8 +29,8 @@ body {
 #header {
 	position: fixed;
 	background-color: white;
-	max-width: 360px;
-	min-width: 360px;
+	max-width: 450px;
+	min-width: 450px;
 	height: 54px;
 	display: flex;
 	justify-content: space-between;
@@ -54,7 +54,7 @@ body {
 /* 컨테이너 작성 */
 #container {
 	position: absolute;
-	width: 360px;
+	width: 450px;
 	top: 55px;
 }
 .weather {
@@ -88,7 +88,7 @@ body {
 
 }
 .images {
-    min-width: 360px;
+    min-width: 450px;
 	overflow-y: auto;
 	padding: 15px;
 }
