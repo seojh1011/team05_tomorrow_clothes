@@ -7,10 +7,10 @@
 
     {#  Mobile  #}
     <link rel="stylesheet" type="text/css" href="{% static "css/detail/detail.css" %}"
-          media="screen and (max-width: 360px)">
+          media="screen and (max-width: 450px)">
     {#  Desktop  #}
     <link rel="stylesheet" type="text/css" href="{% static "css/detail/desktop_detail.css" %}"
-          media="screen and (min-width: 361px)">
+          media="screen and (min-width: 451px)">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <!-- Compiled and minified CSS -->
@@ -19,6 +19,57 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static "js/detail/detail.js" %}"></script>
+    <script>
+        {#$(function () {#}
+        {#    $(document).on('click', '.btn', function () {#}
+        {#        var text = $(".editform").text();#}
+        {#        $(".editform").html("<input type='text' value='" + text + "' class='editDo'>");#}
+        {#        $(".editbtn").html("<button type='button' id='btnDo'>수정하기</button>");#}
+        {#    })#}
+        {##}
+        {#    $(document).on('click', '#btnDo', function () {#}
+        {#        $("#editform").text($("#editDo").val());#}
+        {#        $("#editbtn").html("<button type='button' id='btn'>수정</button>");#}
+        {#    });#}
+
+        {#function myfnc(a) {#}
+        {#    console.log('a',a)#}
+        {#    var text = $(a).text();#}
+        {#    console.log('text',text)#}
+        {#console.log($(this).parent().parent().parent().prev().css('color', 'red'));#}
+        {#    $(this).parent().parent().parent().prev().css('color', 'red');#}
+        {#$(".editbtn").html("<button type='button' id='btnDo'>수정하기</button>");#}
+
+        {#$('.comment-button').click(function () {#}
+        {#    console.log($(this))#}
+        {#    $(this).text('저만 클릭 하셨군요 ^ㅡ^');#}
+
+        $(function () {
+            $('.btn').click(function () {
+                let p_tag = $(this).parent().parent().prev().prev();
+                let text = p_tag.text();
+                {#let test2 = test.html("<input type='text' value='" + text + "' class='editDo'>")#}
+
+
+                $(p_tag).html("<input type='text' value='" + text + "' class='editDo'>");
+                $(this).html("<button type='button' class='btnDo'>수정하기</button>");
+            });
+
+            $('.btnDo').click(function () {
+                {#p태그#}
+                let p_tag = $(this).parent().parent().prev().prev();
+                {#Input 태그#}
+                let p_input = $(this).parent().parent().prev().prev().children();
+                {#let text = p_tag.text();#}
+
+                $(p_tag).text($(p_input).val());
+                $(this).html("<button type='button' class='btn'>수정</button>");
+
+                {#$(test).html("<input type='text' value='" + text + "' class='editDo'>");#}
+                {#$(".btn").html("<button type='button' class='btnDo'>수정하기</button>");#}
+            });
+        });
+    </script>
 {% endblock detail_head %}
 
 
@@ -27,7 +78,7 @@
     {#  Desktop - 효정 추가(시작) #}
     <div id="main-header">
         <div class="title">
-            <img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}">
+            <a href="/"><img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}"></a>
         </div>
         <div class="nav">
             <div><a class="nav-main" href="/" style="
@@ -103,12 +154,10 @@
                     <span id="icon_scraps">{{ feed.scrapes }}</span>
                 </div>
             </div>
-            <hr class="mobile_hr second_hr">
+
             <div class="post_comment">
                 <article>
-                    <p>
-                        {{ feed.feeds_comment }}
-                    </p>
+                    <p>{{ feed.feeds_comment }}</p>
                 </article>
             </div>
             <div class="comment_container">
@@ -118,7 +167,7 @@
                     </div>
                     <form class="cmt_wrapper" method="post" action="/comment/{{ feed.id }}/">
                         <input name="comment" maxlength="30" placeholder="댓글을 입력해주세요.">
-                        <button type="submit">등록</button>
+                        <button class="cmt_btn" type="submit">등록</button>
                     </form>
                     <div class="share_wrapper">
                         <i class="fas fa-share-alt"></i>
@@ -137,14 +186,23 @@
                             <div class="comment_info">
                                 <div class="user-nickname cmt_writer">{{ comment.comment_writer.nick_name }}</div>
                                 <div class="user-comments-box">
-                                    <p>
-                                        {{ comment.comment }}
-                                    </p>
+                                    <p class="editform">{{ comment.comment }}</p>
                                     <span class="user-comments-date">{{ comment.created_at|date:"Y.m.d" }}</span>
-                                    {% if request.user == comment.comment_writer %}
-
-                                        <i class="fa-solid fa-eraser"></i>
-                                        <i class="fa-solid fa-trash-can" onclick="delete_comment_button({{ comment.id }},{{ feed.id }})"></i>
+{#                                    {% if request.user == comment.comment_writer %}#}
+{##}
+{#                                        <i class="fa-solid fa-eraser"></i>#}
+{#                                        <i class="fa-solid fa-trash-can" onclick="delete_comment_button({{ comment.id }},{{ feed.id }})"></i>#}
+{#                                    {% endif %}#}
+                        {% if request.user == comment.comment_writer %}
+                                        <div class="comment-button">
+                                            {#                                            <div id="editbtn"><button type="button" id="btn">수정</button></div>#}
+                                            <div class="editbtn">
+                                                <button type="button" class="btn">수정</button>
+                                            </div>
+                                            <div>
+                                                <button type="button">삭제</button>
+                                            </div>
+                                        </div>
                                     {% endif %}
                                 </div>
                             </div>
@@ -164,13 +222,21 @@
                                             <div class="comment_info">
                                                 <div class="user-nickname">{{ reple.comment_writer.nick_name }}</div>
                                                 <div>
-                                                    <p>
-                                                        {{ reple.comment }}
-                                                    </p>
+                                                    <p id="editform">{{ reple.comment }}</p>
                                                     <span class="user-comments-date">{{ reple.created_at|date:"Y.m.d" }}</span>
-                                                    {% if request.user == reple.comment_writer %}
-                                                        <i class="fa-solid fa-eraser"></i>
-                                                        <i class="fa-solid fa-trash-can" onclick="delete_reple_button({{ reple.id }},{{ feed.id }})"></i>
+{#                                                    {% if request.user == reple.comment_writer %}#}
+{#                                                        <i class="fa-solid fa-eraser"></i>#}
+{#                                                        <i class="fa-solid fa-trash-can" onclick="delete_reple_button({{ reple.id }},{{ feed.id }})"></i>#}
+{#                                                        {% endif %}#}
+                                                        {% if request.user == reple.comment_writer %}
+                                                        <div class="reple-button">
+                                                            <div id="editbtn">
+                                                                <button type="button" id="btn">수정</button>
+                                                            </div>
+                                                            <div>
+                                                                <button type="button">삭제</button>
+                                                            </div>
+                                                        </div>
                                                     {% endif %}
                                                 </div>
                                             </div>

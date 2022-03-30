@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <title>Tomorrow Clothes</title>
 
+    {# Mobile #}
+
+     <link rel="stylesheet" type="text/css" href="{% static "css/weather/weather.css" %}"
+          media="screen and (max-width: 450px)">
+
     {#  Desktop  #}
     <link rel="stylesheet" type="text/css" href="{% static "css/weather/desktop_weather.css" %}"
-          media="screen and (min-width: 360px)">
+          media="screen and (min-width: 451px)">
 
     <!-- 제이쿼리 불러오기 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -29,31 +34,31 @@
     <script>
         $(document).ready(function () {
             $('.fashion-slider').slick({
-                slidesToShow: 4,
-                slidesToScroll: 4,
+                slidesToShow: 6,
+                slidesToScroll: 6,
                 autoplay: true,
-                autoplaySpeed: 3000,
+                autoplaySpeed: 4000,
                 {#variableWidth: true,#}
                 responsive: [
                     {
                         breakpoint: 1250,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                    },
+                    {
+                        breakpoint: 930,
                         settings: {
                             slidesToShow: 3,
                             slidesToScroll: 3
                         }
                     },
                     {
-                        breakpoint: 930,
+                        breakpoint: 616,
                         settings: {
                             slidesToShow: 2,
                             slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 616,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
                         }
                     },
                 ]
@@ -65,10 +70,19 @@
 
 
 {% block weather_header %}
+    {#  Mobile #}
+
+    <div id="mobile-header">
+        <div class="back_allow" onclick="window.history.back()">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <p>Weather</p>
+    </div>
+
     {#  Desktop - 효정 추가(시작) #}
     <div id="main-header">
         <div class="title">
-            <img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}">
+            <a href="/"><img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}"></a>
         </div>
         <div class="nav">
             <div><a class="nav-main" href="/" style="
@@ -122,6 +136,19 @@
         </div>
         <div class="bottom-container">
             <div class="fashion-slider">
+                <div><img src="{% static "img/chu.jpeg" %}"></div>
+                <div><img src="{% static "img/chu.jpeg" %}"></div>
+                <div><img src="{% static "img/chu.jpeg" %}"></div>
+                <div><img src="https://team05-tomorrow-clothes.s3.ap-northeast-2.amazonaws.com/temp_img/2/man/m-13.jpg"></div>
+                <div><img src="{% static "img/chu.jpeg" %}"></div>
+                <div><img src="{% static "img/chu.jpeg" %}"></div>
+                <div><img src="https://team05-tomorrow-clothes.s3.ap-northeast-2.amazonaws.com/temp_img/2/man/m-13.jpg"></div>
+                <div><img src="{% static "img/chu.jpeg" %}"></div>
+            </div>
+        </div>
+
+        <div class="mobile-bottom-container">
+            <div class="mobile-bottom-wrapper">
                 <div><img src="{% static "img/chu.jpeg" %}"></div>
                 <div><img src="{% static "img/chu.jpeg" %}"></div>
                 <div><img src="{% static "img/chu2.jpg" %}"></div>

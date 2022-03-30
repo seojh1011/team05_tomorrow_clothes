@@ -7,10 +7,10 @@
 
     {#  Mobile  #}
     <link rel="stylesheet" type="text/css" href="{% static 'css/register/register.css' %}"
-          media="screen and (max-width: 360px)">
+          media="screen and (max-width: 450px)">
     {#  Desktop  #}
     <link rel="stylesheet" type="text/css" href="{% static 'css/register/desktop_register.css' %}"
-          media="screen and (min-width: 361px)">
+          media="screen and (min-width: 451px)">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -82,7 +82,7 @@
         </div>
         <section class="body_register">
             <div class="service_title">
-                <img src="{% static "img/desktop/tomorrow_clothes(흰색).png" %}">
+                <img class="register_title_img" src="{% static "img/desktop/tomorrow_clothes(흰색).png" %}">
             </div>
             <form class="input_register" action="{% url 'test_1:register' %}" method="post">
                 <div class="input_wrapper">
@@ -90,14 +90,14 @@
                         <img src="{% static 'img/desktop/로그인페이지_닉네임아이콘.png' %}">
                         <input type="text" name="nick_name" placeholder="Nickname" required/>
                         <div class="underline"></div>
-                        <label>닉네임</label>
+
                     </div>
                     <div class="input_data">
                         <img src="{% static 'img/desktop/로그인페이지_이메일아이콘.png' %}">
                         <input type="text" name="email" placeholder="Email" onchange="email_reduplication(value)"
                                required/>
                         <div class="underline"></div>
-                        <label>이메일</label>
+
 
                         <p id="emailerror"></p>
 
@@ -108,7 +108,6 @@
                                placeholder="Password" onchange="password_reduplication(value)" required/>
                         <i class="fas fa-eye"></i>
                         <div class="underline"></div>
-                        <label>비밀번호</label>
                         <p id="passworderror"></p>
                     </div>
                     <button type="submit">Register</button>
@@ -117,9 +116,9 @@
             <span>간편하게 시작하기</span>
             <div class="selection-or">OR</div>
             {% load socialaccount %}
-            <div class="login_social">
+            <div class="login_social kakao_regist_btn_wrapper">
                 <a href="{% provider_login_url 'kakao' method='oauth2' %}">
-                    <button>Sign in with Kakao</button>
+                    <button class="kakao_singup_str" >Sign in with Kakao</button>
                 </a>
             </div>
             {#            <div class="platform_btn_register">#}
