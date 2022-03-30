@@ -68,14 +68,15 @@
         <div class="content-wrapper">
             <div class="content-icons">
                 <div class="content-icons-left">
+                    {% if request.user == feed.writer %}
                     <a href="/detail/feed/update/{{ feed.id }}"><img src="{% static "img/desktop/상세페이지_수정아이콘.png" %}"></a>
 {#                    <a href=""><img src="{% static "img/desktop/상세페이지_공유아이콘.png" %}"></a>#}
-                    <a href="/detail/feed/update/{{ feed.id }}"><img
-                            src="{% static "img/desktop/상세페이지_수정아이콘.png" %}"></a>
-                    {#                    <a href=""><img src="{% static "img/desktop/상세페이지_공유아이콘.png" %}"></a>#}
+                    {% endif %}
                 </div>
                 <div class="content-icons-right">
+                    {% if request.user == feed.writer %}
                     <a href=""><img src="{% static "img/desktop/상세페이지_삭제아이콘.png" %}"></a>
+                    {% endif %}
                 </div>
             </div>
             <div id="pro_auth_article">
@@ -139,9 +140,11 @@
                                         {{ comment.comment }}
                                     </p>
                                     <span class="user-comments-date">{{ comment.created_at|date:"Y.m.d" }}</span>
+                                    {% if request.user == comment.comment_writer %}
 
                                     <i class="fa-solid fa-eraser"></i>
                                     <i class="fa-solid fa-trash-can"></i>
+                                        {% endif %}
                                 </div>
                             </div>
                         </div>
@@ -164,8 +167,10 @@
                                                         {{ reple.comment }}
                                                     </p>
                                                     <span class="user-comments-date">{{ reple.created_at|date:"Y.m.d" }}</span>
+                                                    {% if request.user == reple.comment_writer %}
                                                     <i class="fa-solid fa-eraser"></i>
                                                     <i class="fa-solid fa-trash-can"></i>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
