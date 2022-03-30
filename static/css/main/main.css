@@ -87,6 +87,9 @@ body {
 	width: 20px;
 
 }
+ #images_box{
+	 padding-left: 58px;
+ }
 .images {
     min-width: 450px;
 	overflow-y: auto;
