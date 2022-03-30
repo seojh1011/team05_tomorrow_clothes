@@ -7,10 +7,10 @@
 
     {#  Mobile  #}
     <link rel="stylesheet" type="text/css" href="{% static 'css/login/login.css' %}"
-          media="screen and (max-width: 360px)">
+          media="screen and (max-width: 450px)">
     {#  Desktop  #}
     <link rel="stylesheet" type="text/css" href="{% static 'css/login/desktop_login.css' %}"
-          media="screen and (min-width: 361px)">
+          media="screen and (min-width: 451px)">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -70,7 +70,7 @@
                 </video>
             </div>
             <div class="login_title">
-                <img src="{% static "img/desktop/tomorrow_clothes(흰색).png" %}">
+                <img class="login_img" src="{% static "img/desktop/tomorrow_clothes(흰색).png" %}">
             </div>
             <div class="login_main_wrapper">
                 <div class="login_input_wrapper">
@@ -95,7 +95,7 @@
                     </div>
                     <div class="login_line"></div>
                     <div class="login_find_pw">
-                        <div><a href="/password_reset/">Forget your password?</a></div>
+                        <div><a class="find_pw" href="/password_reset/">Forget your password?</a></div>
                     </div>
                 </div>
                 {% if error %}
@@ -104,11 +104,11 @@
                 <button class="login-button login_btn" onclick="login_submit()" value="Login">
                     LOGIN
                 </button>
-                <div class="selection-or">OR</div>
+                <div class="selection-or or_str">OR</div>
                 {% load socialaccount %}
-                <div class="login_social">
+                <div class="login_social kakao_login_wrapper">
                     <a href="{% provider_login_url 'kakao' method='oauth2' %}">
-                        <button>Sign in with Kakao</button>
+                        <button class="kakao_str">Sign in with Kakao</button>
                     </a>
                 </div>
                 <div class="link-register"><a href="/register/">계정</a>이 없으신가요?</div>
