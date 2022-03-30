@@ -122,6 +122,18 @@ body {
 
 
 .bottom-container {
-    margin-top: 50px;
+    display: none;
 }
 
+.mobile_bottom-container {
+	margin-top: 30px;
+}
+
+.mobile-bottom-wrapper > div > img {
+	width: 200px;
+	height: 200px;
+	float:left;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}

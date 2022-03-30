@@ -4,6 +4,8 @@
 
 /* 헤더 영역 */
 /* 헤더: 전체 */
+
+
 #mobile-header {
     display: none;
 }
@@ -126,4 +128,8 @@
 
 .bottom-container {
     margin-top: 50px;
+}
+
+.mobile-bottom-container {
+    display: none;
 }
