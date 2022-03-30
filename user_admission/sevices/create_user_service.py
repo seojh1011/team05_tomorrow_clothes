@@ -8,7 +8,7 @@ def password_check(password: str) ->object:
         "^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}"
     )
     if not password_regex.match(password):
-        msg = {"error": "8자 이상의 알파벳,숫자,특수문자를 사용하세요."}
+        msg = {"error": "8자 이상의 알파벳, 숫자, 특수문자를 사용하세요."}
         return msg
     else:
         msg = {"success": "올바른 형식입니다."}
@@ -23,7 +23,7 @@ def password_check(password: str) ->object:
 def email_check(username: str) -> object:
     email_regex = re.compile("^[a-zA-Z0-9]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
     if not email_regex.match(username):
-        msg = {"error": "이메일형식이 아닙니다."}
+        msg = {"error": "이메일 형식이 아닙니다."}
         return msg
     else:
         exist_check = User.objects.filter(username=username)
@@ -51,7 +51,7 @@ def create_users(email: str, password: str, nick_name: str) -> object:
             return msg
         else:
             User.objects.create_user(
-                username=email, password=password, nick_name=nick_name, email=email
+                username=email, password=password, nick_name=nick_name, email=email,pro_img_url='images/cat01.jpg'
             )
             msg = {"success": "가입에 성공하셨습니다."}
             return msg

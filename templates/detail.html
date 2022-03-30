@@ -7,10 +7,10 @@
 
     {#  Mobile  #}
     <link rel="stylesheet" type="text/css" href="{% static "css/detail/detail.css" %}"
-          media="screen and (max-width: 360px)">
+          media="screen and (max-width: 450px)">
     {#  Desktop  #}
     <link rel="stylesheet" type="text/css" href="{% static "css/detail/desktop_detail.css" %}"
-          media="screen and (min-width: 361px)">
+          media="screen and (min-width: 451px)">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <!-- Compiled and minified CSS -->
@@ -19,6 +19,130 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static "js/detail/detail.js" %}"></script>
+    <script>
+        {#$(function () {#}
+        {#    $(document).on('click', '.btn', function () {#}
+        {#        var text = $(".editform").text();#}
+        {#        $(".editform").html("<input type='text' value='" + text + "' class='editDo'>");#}
+        {#        $(".editbtn").html("<button type='button' id='btnDo'>수정하기</button>");#}
+        {#    })#}
+        {##}
+        {#    $(document).on('click', '#btnDo', function () {#}
+        {#        $("#editform").text($("#editDo").val());#}
+        {#        $("#editbtn").html("<button type='button' id='btn'>수정</button>");#}
+        {#    });#}
+
+        {#function myfnc(a) {#}
+        {#    console.log('a',a)#}
+        {#    var text = $(a).text();#}
+        {#    console.log('text',text)#}
+        {#console.log($(this).parent().parent().parent().prev().css('color', 'red'));#}
+        {#    $(this).parent().parent().parent().prev().css('color', 'red');#}
+        {#$(".editbtn").html("<button type='button' id='btnDo'>수정하기</button>");#}
+
+        {#$('.comment-button').click(function () {#}
+        {#    console.log($(this))#}
+        {#    $(this).text('저만 클릭 하셨군요 ^ㅡ^');#}
+        {##}
+
+        var state = 0
+        $(function () {
+            $('.update_btn').click(function () {
+                let id = $(this).attr('id')
+                console.log(id)
+                if (state == 0) {
+
+                    let p_tag = $(this).prev().prev();
+                    let text = p_tag.text();
+                    {#console.log(text)#}
+                    let test2 = p_tag.html("<input type='text' value='" + text + "' class='editDo'>");
+                    var comment = $('.editDo').val()
+                    state = 1
+                    {#console.log(comment)#}
+
+                } else if (state == 1) {
+                    var comment = $('.editDo').val()
+                    console.log(comment)
+                    $.ajax({
+                        url: '/comment/update/' + id + '/',
+                        type: 'post',
+                        data: JSON.stringify({"comment": comment}),
+                        datatype: 'json',
+                        success: function (response) {
+                            console.log(response)
+                            if (String(Object.keys(response)) === 'error') {
+                                window.location.href = '/detail/' + {{ feed.id }} +'/'
+                            } else {
+                                window.location.href = '/detail/' + {{ feed.id }} +'/'
+                            }
+
+                        }
+                    })
+
+                    console.log('수정완료');
+                    state = 0
+                }
+
+
+            });
+        })
+
+
+        var reple_state = 0
+        $(function () {
+            $('.update_reple_btn').click(function () {
+                let id = $(this).attr('id')
+                if (reple_state == 0) {
+
+                    let p_tag = $(this).prev().prev();
+                    let text = p_tag.text();
+                    {#console.log(text)#}
+                    let test2 = p_tag.html("<input type='text' value='" + text + "' class='editDo'>");
+                    var comment = $('.editDo').val()
+                    reple_state = 1
+                    {#console.log(comment)#}
+
+                } else if (reple_state == 1) {
+                    var comment = $('.editDo').val()
+                    console.log(comment)
+                    $.ajax({
+                        url: '/comment/reple/update/' + id + '/',
+                        type: 'post',
+                        data: JSON.stringify({"comment": comment}),
+                        datatype: 'json',
+                        success: function (response) {
+                            console.log(response)
+                            if (String(Object.keys(response)) === 'error') {
+                                window.location.href = '/detail/' + {{ feed.id }} +'/'
+                            } else {
+                                window.location.href = '/detail/' + {{ feed.id }} +'/'
+                            }
+
+                        }
+                    })
+
+                    console.log('수정완료');
+                    reple_state = 0
+                }
+
+
+            });
+        })
+
+
+        {#            $('.btnDo').click(function () {#}
+        {#p태그#}
+        {#                let p_tag = $(this).parent().parent().prev().prev();#}
+        {#Input 태그#}
+        {#                let p_input = $(this).parent().parent().prev().prev().children();#}
+        {#let text = p_tag.text();#}
+        {##}
+        {#                $(p_tag).text($(p_input).val());#}
+        {#                $(this).html("<button type='button' class='btn'>수정</button>");#}
+
+        {#$(test).html("<input type='text' value='" + text + "' class='editDo'>");#}
+        {#$(".btn").html("<button type='button' class='btnDo'>수정하기</button>");});});#}
+    </script>
 {% endblock detail_head %}
 
 
@@ -27,7 +151,7 @@
     {#  Desktop - 효정 추가(시작) #}
     <div id="main-header">
         <div class="title">
-            <img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}">
+            <a href="/"><img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}"></a>
         </div>
         <div class="nav">
             <div><a class="nav-main" href="/" style="
@@ -68,14 +192,16 @@
         <div class="content-wrapper">
             <div class="content-icons">
                 <div class="content-icons-left">
-                    <a href="/detail/feed/update/{{ feed.id }}"><img src="{% static "img/desktop/상세페이지_수정아이콘.png" %}"></a>
-{#                    <a href=""><img src="{% static "img/desktop/상세페이지_공유아이콘.png" %}"></a>#}
-                    <a href="/detail/feed/update/{{ feed.id }}"><img
-                            src="{% static "img/desktop/상세페이지_수정아이콘.png" %}"></a>
-                    {#                    <a href=""><img src="{% static "img/desktop/상세페이지_공유아이콘.png" %}"></a>#}
+                    {% if request.user == feed.writer %}
+                        <a href="/detail/feed/update/{{ feed.id }}"><img
+                                src="{% static "img/desktop/상세페이지_수정아이콘.png" %}"></a>
+                        {#                    <a href=""><img src="{% static "img/desktop/상세페이지_공유아이콘.png" %}"></a>#}
+                    {% endif %}
                 </div>
-                <div class="content-icons-right">
-                    <a href=""><img src="{% static "img/desktop/상세페이지_삭제아이콘.png" %}"></a>
+                <div class="content-icons-right" onclick="delete_button({{ feed.id }})">
+                    {% if request.user == feed.writer %}
+                        <a href=""><img src="{% static "img/desktop/상세페이지_삭제아이콘.png" %}"></a>
+                    {% endif %}
                 </div>
             </div>
             <div id="pro_auth_article">
@@ -89,9 +215,9 @@
                 {#                <div id="pro_style_tag">#}
                 {#                    <span>#스타일명</span>#}
                 {#                </div>#}
-{#                <div id="pro_style_tag">#}
-{#                    <span>#스타일명</span>#}
-{#                </div>#}
+                {#                <div id="pro_style_tag">#}
+                {#                    <span>#스타일명</span>#}
+                {#                </div>#}
                 <div id="pro_icon">
                     {% if scraped %}
                         <i id="scrap" class="fas fa-star" onclick="scrap({{ feed.id }})" style="color:yellow"></i>
@@ -101,12 +227,10 @@
                     <span id="icon_scraps">{{ feed.scrapes }}</span>
                 </div>
             </div>
-            <hr class="mobile_hr second_hr">
+
             <div class="post_comment">
                 <article>
-                    <p>
-                        {{ feed.feeds_comment }}
-                    </p>
+                    <p>{{ feed.feeds_comment }}</p>
                 </article>
             </div>
             <div class="comment_container">
@@ -115,8 +239,8 @@
                         <i class="far fa-comment"></i>
                     </div>
                     <form class="cmt_wrapper" method="post" action="/comment/{{ feed.id }}/">
-                        <input name="comment" placeholder="댓글을 입력해주세요.">
-                        <button type="submit">등록</button>
+                        <input name="comment" maxlength="30" placeholder="댓글을 입력해주세요.">
+                        <button class="cmt_btn" type="submit">등록</button>
                     </form>
                     <div class="share_wrapper">
                         <i class="fas fa-share-alt"></i>
@@ -135,13 +259,26 @@
                             <div class="comment_info">
                                 <div class="user-nickname cmt_writer">{{ comment.comment_writer.nick_name }}</div>
                                 <div class="user-comments-box">
-                                    <p>
-                                        {{ comment.comment }}
-                                    </p>
+                                    <p id="editform">{{ comment.comment }}</p>
                                     <span class="user-comments-date">{{ comment.created_at|date:"Y.m.d" }}</span>
+                                    {% if request.user == comment.comment_writer %}
 
-                                    <i class="fa-solid fa-eraser"></i>
-                                    <i class="fa-solid fa-trash-can"></i>
+                                        {#                                        <i class="fa-solid fa-eraser" id='test11'></i>#}
+                                        <i class="fa-solid fa-eraser update_btn" id="{{ comment.id }}"></i>
+                                        <i class="fa-solid fa-trash-can"
+                                           onclick="delete_comment_button({{ comment.id }},{{ feed.id }})"></i>
+                                    {% endif %}
+                                    {#                        {% if request.user == comment.comment_writer %}#}
+                                    {#                                        <div class="comment-button">#}
+                                    {#                                            <div id="editbtn"><button type="button" id="btn">수정</button></div>#}
+                                    {#                                            <div class="editbtn">#}
+                                    {#                                                <button type="button" class="btn">수정</button>#}
+                                    {#                                            </div>#}
+                                    {#                                            <div>#}
+                                    {#                                                <button type="button">삭제</button>#}
+                                    {#                                            </div>#}
+                                    {#                                        </div>#}
+                                    {#                                    {% endif %}#}
                                 </div>
                             </div>
                         </div>
@@ -160,12 +297,24 @@
                                             <div class="comment_info">
                                                 <div class="user-nickname">{{ reple.comment_writer.nick_name }}</div>
                                                 <div>
-                                                    <p>
-                                                        {{ reple.comment }}
-                                                    </p>
+                                                    <p class="editform">{{ reple.comment }}</p>
                                                     <span class="user-comments-date">{{ reple.created_at|date:"Y.m.d" }}</span>
-                                                    <i class="fa-solid fa-eraser"></i>
-                                                    <i class="fa-solid fa-trash-can"></i>
+                                                    {% if request.user == reple.comment_writer %}
+                                                        <i class="fa-solid fa-eraser update_reple_btn"
+                                                           id="{{ reple.id }}"></i>
+                                                        <i class="fa-solid fa-trash-can"
+                                                           onclick="delete_reple_button({{ reple.id }},{{ feed.id }})"></i>
+                                                    {% endif %}
+                                                    {#                                                        {% if request.user == reple.comment_writer %}#}
+                                                    {#                                                        <div class="reple-button">#}
+                                                    {#                                                            <div id="editbtn">#}
+                                                    {#                                                                <button type="button" id="btn">수정</button>#}
+                                                    {#                                                            </div>#}
+                                                    {#                                                            <div>#}
+                                                    {#                                                                <button type="button">삭제</button>#}
+                                                    {#                                                            </div>#}
+                                                    {#                                                        </div>#}
+                                                    {#                                                    {% endif %}#}
                                                 </div>
                                             </div>
                                         </div>
@@ -175,7 +324,8 @@
                             <form class="reple_wrapper" method="POST" action="/comment/reple/{{ comment.id }}/"
                                   style="display: flex">
                                 {% csrf_token %}
-                                <input class="reple_input" name="comment" placeholder="리플을 입력하세요." required>
+                                <input class="reple_input" maxlength="30" name="comment" placeholder="리플을 입력하세요."
+                                       required>
                                 <button class="reple_btn" type="submit">등록</button>
                             </form>
                         </details>
@@ -235,5 +385,112 @@
                 })
             }
         }
+
+        function delete_button(feed_id) {
+            $.ajax({
+                url: '/detail/feed/delete/' + feed_id,
+                type: 'POST',
+                data: {},
+                datatype: 'json',
+                success: function (response) {
+                    console.log(response)
+                    if (String(Object.keys(response)) === 'error') {
+                        alert('에러')
+                        window.location.href = '/detail/' + feed_id + '/'
+                    } else {
+                        alert(response)
+                        window.location.href = '/'
+                    }
+
+                }
+
+            })
+        }
+
+        function delete_reple_button(reple_id, feed_id) {
+            $.ajax({
+                url: '/comment/reple/delete/' + reple_id + '/',
+                type: 'delete',
+                data: {},
+                datatype: 'json',
+                success: function (response) {
+                    console.log(response)
+                    if (Object.keys(response) == 'error') {
+                        window.location.href = '/detail/' + feed_id + '/'
+                    } else {
+                        window.location.href = '/detail/' + feed_id + '/'
+                    }
+
+                }
+            })
+
+        }
+
+        function delete_comment_button(comment_id, feed_id) {
+            $.ajax({
+                url: '/comment/delete/' + comment_id + '/',
+                type: 'delete',
+                data: {},
+                datatype: 'json',
+                success: function (response) {
+                    console.log(response)
+                    if (Object.keys(response) == 'error') {
+                        window.location.href = '/detail/' + feed_id + '/'
+                    } else {
+                        window.location.href = '/detail/' + feed_id + '/'
+                    }
+
+                }
+            })
+        }
+
+        function update_comment_button(comment_id, feed_id) {
+            let comment = $("#update_comment").val();
+            console.log(comment)
+            $.ajax({
+                url: '/comment/update/' + comment_id + '/',
+                type: 'post',
+                data: JSON.stringify({"comment": comment}),
+                datatype: 'json',
+                success: function (response) {
+                    console.log(response)
+                    if (String(Object.keys(response)) === 'error') {
+                        window.location.href = '/detail/' + feed_id + '/'
+                    } else {
+                        window.location.href = '/detail/' + feed_id + '/'
+                    }
+
+                }
+            })
+        }
+
+        function update_reple_button(comment_id, feed_id) {
+            let comment = $("#update_reple").val()
+            $.ajax({
+                url: '/comment/reple/update/' + comment_id + '/',
+                type: 'post',
+                data: JSON.stringify({"comment": comment}),
+                datatype: 'json',
+                success: function (response) {
+                    console.log(response)
+                    if (String(Object.keys(response)) === 'error') {
+                        window.location.href = '/detail/' + feed_id + '/'
+                    } else {
+                        window.location.href = '/detail/' + feed_id + '/'
+                    }
+
+                }
+            })
+        }
+
+        {#function update_comment(comment_id){#}
+        {#    var commentid = comment_id#}
+        {#    var text = $("#editform").text();#}
+        {#    document.getElementById("test11").style.display = "none";#}
+        {#    document.getElementById("test12").style.display = "block";#}
+        {#    $("#editform").html("<input type='text' value='"+text+"' id='update_comment'>");#}
+        {##}
+        {##}
+
     </script>
 {% endblock detail_body %}

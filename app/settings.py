@@ -35,6 +35,7 @@ ALLOWED_HOSTS: List[str] = ["*"]
 AUTH_USER_MODEL = "user_admission.User"
 
 INSTALLED_APPS = [
+    "corsheaders",
     "django.contrib.admin",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -68,6 +69,7 @@ SOCIALACCOUNT_AUTO_SIGNUP = False
 SOCIALACCOUNT_STORE_TOKENS = True
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -76,7 +78,29 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+)
+
+CORS_ALLOW_HEADERS = (
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+)
 ROOT_URLCONF = "app.urls"
 
 TEMPLATES = [
@@ -203,3 +227,8 @@ EMAIL_USE_TLS = True
 # TLS 보안 방법
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # 사이트와 관련한 자동응답을 받을 이메일 주소,'webmaster@localhost'
+
+# CORS_ORIGIN_ALLOW_ALL = True  # <- 모든 호스트 허용
+# # CORS_ORIGIN_WHITELIST = ['http://ec2-15-164-94-71.ap-northeast-2.compute.amazonaws.com:8000','http://15.164.94.71:8000']
+# CORS_ALLOW_CREDENTIALS = True
+

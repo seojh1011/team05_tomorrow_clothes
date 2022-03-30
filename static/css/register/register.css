@@ -14,7 +14,10 @@ video {
     display: none;
 }
 .service_title img {
-    display: none;
+    font-size: 48px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
 }
 .input_data input::placeholder {
     display: none;
@@ -28,8 +31,8 @@ body {
 
 }
 #body_container {
-	min-width: 360px;
-	max-width: 360px;
+	min-width: 450px;
+	max-width: 450px;
 	height: 800px;
 	margin: 0 auto;
 	overflow-y: auto;
@@ -52,8 +55,8 @@ body {
     z-index: 1;
 	position: fixed;
 	background-color: white;
-	max-width: 360px;
-	min-width: 360px;
+	max-width: 450px;
+	min-width: 450px;
 	height: 54px;
 	display: flex;
 	border-bottom: 1px solid lightgray;
@@ -81,7 +84,7 @@ body {
 #main {
     margin : 0 auto;
 	position: absolute;
-	width: 360px;
+	width: 450px;
 	top: 55px;
     height: 90%;
     display: flex;
@@ -89,11 +92,11 @@ body {
     justify-content: start;
     align-items: center;
     background-size:cover;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../../img/fiveicon/clothbackground.png");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/fiveicon/clothbackground.png");
 }
 .body__inner{
     /* border: dashed blue; */
-    max-width: 360px;
+    max-width: 450px;
     height: 640px;
     width: 100%;
     background-color: #fff;
@@ -235,35 +238,26 @@ header.header_register{
     color: white;
 }
 
-.platform_btn_register button{
-    margin-top: 10px;
-    border: 2px solid silver;
-    padding: 18px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    line-height: 0;
-    color: white;
-    background-color: rgba( 244, 217, 46, 0.8 );
-    border-radius: 10px;
-}
-.platform_btn_register button:hover{
-    background-color: yellow;
-    color: black;
-    border-color: yellow;
-}
+
 
 .kakao_regist_btn_wrapper {
     width: 205px;
-    height: 30px;
+    height: 40px;
     display: flex;
-    flex-direction: row;
     justify_content: center;
     align-items: center;
+    background-color: rgba(254, 229, 0, 0.7);
+    opacity: 80%;
+    border-radius: 10px;
+
 }
 
-.kakao_regist_btn_wrapper > p {
-    padding-left: 10px;
-    font-size: 12px;
+.kakao_singup_str {
+    margin-left: 25px;
+    font-size: 17px;
+    border: none;
+    background-color: transparent;
+    color: white;
 }
 
 .kakao_signin_img {
