@@ -139,7 +139,6 @@ WSGI_APPLICATION = "app.wsgi.application"
 #     }
 # }
 
-
 import pymysql
 
 pymysql.install_as_MySQLdb()
@@ -232,3 +231,4 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # CORS_ORIGIN_ALLOW_ALL = True  # <- 모든 호스트 허용
 # # CORS_ORIGIN_WHITELIST = ['http://ec2-15-164-94-71.ap-northeast-2.compute.amazonaws.com:8000','http://15.164.94.71:8000']
 # CORS_ALLOW_CREDENTIALS = True
+
