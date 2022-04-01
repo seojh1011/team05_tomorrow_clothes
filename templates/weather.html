@@ -104,14 +104,14 @@
                     dataType: "json",
                     success: function (response) {
                         {#console.log(response['man']['1']);#}
-                        $(".a1").attr('src',response['man']['1'])
-                        $(".a2").attr('src',response['man']['2'])
-                        $(".a3").attr('src',response['man']['3'])
-                        $(".a4").attr('src',response['man']['4'])
-                        $(".a5").attr('src',response['woman']['1'])
-                        $(".a6").attr('src',response['woman']['2'])
-                        $(".a7").attr('src',response['woman']['3'])
-                        $(".a8").attr('src',response['woman']['4'])
+                        $(".a1").attr('src', response['man']['1'])
+                        $(".a2").attr('src', response['man']['2'])
+                        $(".a3").attr('src', response['man']['3'])
+                        $(".a4").attr('src', response['man']['4'])
+                        $(".a5").attr('src', response['woman']['1'])
+                        $(".a6").attr('src', response['woman']['2'])
+                        $(".a7").attr('src', response['woman']['3'])
+                        $(".a8").attr('src', response['woman']['4'])
                     }
                 })
             }
@@ -214,7 +214,5 @@
             <div><img class="a7" src="{% static "img/chu.jpeg" %}"></div>
             <div><img class="a8" src="{% static "img/chu.jpeg" %}"></div>
         </div>
-    </div>
-    </div>
     </div>
 {% endblock weather_body %}

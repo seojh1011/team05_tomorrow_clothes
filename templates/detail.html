@@ -197,11 +197,14 @@
                                 src="{% static "img/desktop/상세페이지_수정아이콘.png" %}"></a>
                         {#                    <a href=""><img src="{% static "img/desktop/상세페이지_공유아이콘.png" %}"></a>#}
                     {% endif %}
+
                 </div>
                 <div class="content-icons-right" onclick="delete_button({{ feed.id }})">
+
                     {% if request.user == feed.writer %}
                         <a href=""><img src="{% static "img/desktop/상세페이지_삭제아이콘.png" %}"></a>
                     {% endif %}
+
                 </div>
             </div>
             <div id="pro_auth_article">
