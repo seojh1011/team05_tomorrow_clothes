@@ -106,3 +106,10 @@ body {
 	width: 100%;
 	border-radius: 10px;
 }
+
+.temperature {
+	width: 50px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
