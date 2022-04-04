@@ -16,7 +16,7 @@ content = Router(tags=["Main"])
 def get_main_page(request: HttpRequest) -> HttpResponse:
     # 가져올 페이지와 리스트 갯수
     page: int = 1
-    limit: int = 10
+    limit: int = 25
     # 무한 스크롤했을때 get에 리스트가 있으면 실행
     if len(request.GET) > 0:
 
