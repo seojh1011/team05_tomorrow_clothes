@@ -2,6 +2,9 @@
 	display: none;
 }
 
+.bottom-container {
+    display: none;
+}
 
 body {
 	background-color: white;
@@ -47,11 +50,12 @@ body {
 
 .top-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     /* font-size: 22px; */
-    /* height: 100px; */
+    height: 400px;
     margin: 0px auto;
     width: 450px;
+    align-items: center;
 }
 
 
@@ -62,24 +66,25 @@ body {
 
 .weather-box {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 15px;
     height: 100px;
-    margin: 80px auto 20px;
+    margin: 130px auto 100px;
     width: 400px;
 }
 
 .today-weather {
+    margin-top: 20%;
     text-align: center;
-    border-top: 5px double darkgray;
-    border-bottom: 5px double darkgray;
     padding: 10px 10px 10px;
     width: 100%;
 }
 
 .today-weather .title {
     padding-bottom: 7%;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .today-weather .location {
@@ -88,6 +93,9 @@ body {
     font-size: 20px;
     font-weight: bold;
     width: 100%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    font-family: 'LeferiPoint-WhiteA';
 }
 
 .location i {
@@ -98,7 +106,9 @@ body {
 .weather-contents {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 250px;
+    margin-bottom: 20%;
 }
 
 .weather-content {
@@ -112,33 +122,14 @@ body {
 }
 
 .weather-content .info {
-    border-radius: 50%;
-    background-color: #042b44;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #0067a3;
+    font-family: 'LeferiPoint-WhiteA';
+    font-size: 40px;
 }
 
 
 
-
-
-
-.bottom-container {
-    display: none;
+.mobile-bottom-container {
+    margin: 0 20px 50px 0;
 }
 
-.mobile_bottom-container {
-	margin-top: 30px;
-}
-
-.mobile-bottom-wrapper > div > img {
-	width: 200px;
-	height: 200px;
-	float:left;
-	margin-right: 10px;
-	margin-left: 10px;
-	margin-bottom: 10px;
-}

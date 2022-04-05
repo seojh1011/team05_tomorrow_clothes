@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/* 미디어쿼리 */
+
+
+/* 폰트 */
+@font-face {
+    font-family: '국립박물관문화재단클래식B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eulyoo1945-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/Eulyoo1945-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#main-header {
+    display: none;
+}
+
+.posts-container {
+    display: none;
+}
+
+.scraps-container {
+    display: none;
+}
+
+
+#mobile-header {
+    z-index: 1;
+	position: fixed;
+	background-color: white;
+	max-width: 500px;
+	min-width: 500px;
+	height: 54px;
+	display: flex;
+	border-bottom: 1px solid lightgray;
+    flex-direction: row;
+    justify-content: start;
+    top: 0px;
+}
+
+#mobile-header > div {
+    padding-left: 7%;
+    padding-right: 7%;
+    font-size: 20px;
+}
+#mobile-header > p {
+    font-size: 16px;
+    padding-top: 22px;
+}
+.back_allow {
+    display: flex;
+    align-items: center;
+}
+
+.mypage-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:500px;
+    margin: 70px auto;
+}
+
+.profile-text {
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 70px; */
+    /* font-family: 'Eulyoo1945-SemiBold'; */
+    font-family: 'LeferiBaseType-RegularA';
+}
+
+.profile-info {
+    color: #096B90;
+    /* font-weight: bold; */
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.profile-update {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    /* width: 300px; */
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.profile-update a {
+    color: darkgray;
+    /* font-family: 'Eulyoo1945-SemiBold';
+
+     */
+}
+
+.profile-img {
+    margin-right: 5%;
+}
+
+.profile-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mobile-posts-container {
+
+}
+
+.mobile-posts-container-title {
+
+}
+
+.mobile-posts-container-title > div {
+    font-size: 20px;
+    margin: 0 0 20px 30px;
+    display: inline-block;
+    font-family: '국립박물관문화재단클래식B';
+}
+
+.mobile-posts-container-slider {
+
+}
+
+.mobile-scraps-container {
+    margin: 70px 0 50px 0;
+
+}
+
+.mobile-scraps-container-title {
+
+}
+
+.mobile-scraps-container-title > div {
+    font-size: 20px;
+    margin: 0 0 20px 30px;
+    display: inline-block;
+    font-family: '국립박물관문화재단클래식B';
+}
+
+.mobile-scraps-container-slider {
+
+}
+/*잘모르겠음*/
+.mobile-contents-slider > div > img {
+    width: 200px;
+    height: 250px;
+}

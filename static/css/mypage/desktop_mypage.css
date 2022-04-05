@@ -17,6 +17,17 @@
     font-style: normal;
 }
 
+.mobile-posts-container {
+    display: none;
+}
+
+.mobile-scraps-container {
+    display: none;
+}
+
+#mobile-header {
+    display: none;
+}
 
 /* 헤더 영역 */
 /* 헤더: 전체 */
