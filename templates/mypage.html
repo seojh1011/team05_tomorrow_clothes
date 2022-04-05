@@ -11,6 +11,9 @@
     {#  Desktop  #}
     <link rel="stylesheet" type="text/css" href="{% static 'css/mypage/desktop_mypage.css' %}"
           media="screen and (min-width: 501px)">
+    {#  Mobile  #}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mypage/mypage.css' %}"
+          media="screen and (max-width: 500px)">
 
     <!-- 제이쿼리 불러오기 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -62,11 +65,39 @@
             })
         })
     </script>
+
+{#    mobile#}
+    <script>
+        $(document).ready(function () {
+            $('.mobile-contents-slider').slick({
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 500,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },]
+            })
+        })
+    </script>
 {% endblock mypage_head %}
 
 
 
 {% block mypage_header %}
+    {#      Mobile - 현영 추가 #}
+
+    <div id="mobile-header">
+        <div class="back_allow" onclick="window.history.back()"><i class="fas fa-arrow-left"></i></div>
+        <p>마이페이지</p>
+    </div>
+
     {#      Desktop - 효정 추가(시작) #}
     <div id="main-header">
         <div class="profile-container">
@@ -98,16 +129,16 @@
         <div class="mypage-container">
             <div class="profile-text">
                 <div class="profile-info">
-                    <div>안녕하세요. Nickname님!</div>
-                    <div>Tomorrow_clothes@naver.com</div>
+                    <div>안녕하세요. {{ user_information.nick_name }}님!</div>
+                    <div>{{ user_information }}</div>
                 </div>
                 <div class="profile-update">
-                    <div><a href="/mypage/user/profile/">프로필 사진/닉네임 변경</a></div>
-                    <div><a href="">비밀번호 변경</a></div>
+                    <div><a href="/mypage/profile/">프로필 사진/닉네임 변경</a></div>
+                    <div><a href="/password_reset/">비밀번호 변경</a></div>
                 </div>
             </div>
             <div class="profile-img">
-                <img src="{% static "img/wonyoung.jpg" %}">
+                <img src="{{ user_information.pro_img_url.url }}">
             </div>
         </div>
         <div class="posts-container">
@@ -116,16 +147,9 @@
             </div>
             <div class="posts-container-slider">
                 <div class="contents-slider">
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    {% for user_feed in user_feeds %}
+                    <div><img onclick="location.href='/detail/{{ user_feed.id }}/'" src="{{ user_feed.feeds_img_url.url }}"></div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -135,6 +159,39 @@
             </div>
             <div class="scraps-container-slider">
                 <div class="contents-slider">
+                    {% for scrap_feed in scrap_feeds%}
+                    <div><img onclick="location.href='/detail/{{ scrap_feed.id }}/'" src="{{ scrap_feed.feeds_img_url.url }}"></div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+{#    mobile#}
+     <div class="mobile-posts-container">
+            <div class="mobile-posts-container-title">
+                <div>내가 작성한 게시물</div>
+            </div>
+            <div class="mobile-posts-container-slider">
+                <div class="mobile-contents-slider">
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-scraps-container">
+            <div class="mobile-scraps-container-title">
+                <div>내가 스크랩한 게시물</div>
+            </div>
+            <div class="mobile-scraps-container-slider">
+                <div class="mobile-contents-slider">
                     <div><img src="{% static "img/fashion.jpg" %}"></div>
                     <div><img src="{% static "img/fashion.jpg" %}"></div>
                     <div><img src="{% static "img/fashion.jpg" %}"></div>

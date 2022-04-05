@@ -32,12 +32,32 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{% static "css/weather/slick/slick.min.js" %}"></script>
     <script>
+{#    모바일 slick#}
+$(document).ready(function () {
+            $('.mobile-fashion-slider').slick({
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                {#variableWidth: true,#}
+                responsive: [
+                    {
+                        breakpoint: 450,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },]
+            })
+        })
+        {#데스크탑 slick#}
         $(document).ready(function () {
             $('.fashion-slider').slick({
                 slidesToShow: 6,
                 slidesToScroll: 6,
                 autoplay: true,
                 autoplaySpeed: 4000,
+                {#variableWidth: true,#}
                 responsive: [
                     {
                         breakpoint: 1800,
@@ -156,7 +176,7 @@
                 <div><a class="nav-weather" href="/weather/"
                         style="color: #0067a3;">WEATHER</a></div>
                 {% if user.is_authenticated %}
-                    <div><a class="nav-mypage" href="/mypage/user/">MYPAGE</a></div>
+                    <div><a class="nav-mypage" href="/mypage/">MYPAGE</a></div>
                     <div><a class="nav-upload" href="/detail/feed/">UPLOAD</a></div>
                     <div><a href="{% url 'test_1:logout' %}" class="nav-logout" style="color: darkred;">LOGOUT</a>
                     </div>
@@ -185,18 +205,9 @@
                     </div>
                 </div>
                 <div class="weather-contents">
-                    {#                    <div class="weather-content">#}
-                    {#                        <div class="info"></div>#}
-                    {#                        <p>날씨</p>#}
-                    {#                    </div>#}
-                    {#                    <div class="weather-content">#}
-                    {#                        <div class="info"></div>#}
-                    {#                        <p>강수</p>#}
-                    {#                    </div>#}
                     <div class="weather-content">
-                        {#                        <div id="temp" class="info" style="font-size: 3rem; color: white">12</div>#}
                         <div class="info"><span id="temp" class="info">00</span>°C</div>
-                        {#                        <p>기온</p>#}
+{#                        <p>기온</p>#}
                     </div>
                 </div>
             </div>
@@ -216,15 +227,15 @@
     </div>
 
     <div class="mobile-bottom-container">
-        <div class="mobile-bottom-wrapper" id="img-box2">
-            <div><img class="a1" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
-            <div><img class="a2" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
-            <div><img class="a3" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
-            <div><img class="a4" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
-            <div><img class="a5" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
-            <div><img class="a6" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
-            <div><img class="a7" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
-            <div><img class="a8" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
-        </div>
+            <div class="mobile-fashion-slider" id="img-box1">
+                <div><img class="a1" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a2" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a3" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a4" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a5" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a6" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a7" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a8" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+            </div>
     </div>
 {% endblock weather_body %}

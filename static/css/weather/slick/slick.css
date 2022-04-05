@@ -85,13 +85,26 @@
     float: right;
 }
 
-.slick-slide img {
-    display: block;
-    height: 400px;
-    width: 280px;
-    object-fit: cover;
-    margin: 0 auto;
-    transition: all 0.4s linear;
+@media(min-width: 501px) {
+    .slick-slide img {
+        display: block;
+        height: 400px;
+        width: 280px;
+        object-fit: cover;
+        margin: 0 auto;
+        transition: all 0.4s linear;
+    }
+}
+
+@media(max-width: 500px) {
+    .slick-slide img {
+        display: block;
+        height: 300px;
+        width: 210px;
+        object-fit: cover;
+        margin: 0 auto;
+        transition: all 0.4s linear;
+}
 
 }
 
