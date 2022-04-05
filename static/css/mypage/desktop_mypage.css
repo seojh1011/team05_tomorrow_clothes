@@ -37,7 +37,7 @@
     text-align: center;
     /*width: 1050px;*/
     margin: 0 auto;
-    padding-left: 30px;
+    /*padding-left: 30px;*/
 }
 
 /* 헤더: 타이틀 */
@@ -156,6 +156,10 @@
     text-align: center;
     /*width: 300px;*/
     margin-top: 15px;
+}
+
+.profile-update > div:nth-child(1) {
+    padding-right: 30px;
 }
 
 .profile-update a {
