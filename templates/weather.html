@@ -38,84 +38,97 @@
                 slidesToScroll: 6,
                 autoplay: true,
                 autoplaySpeed: 4000,
-                {#variableWidth: true,#}
                 responsive: [
                     {
-                        breakpoint: 1250,
+                        breakpoint: 1800,
+                        settings: {
+                            slidesToShow: 5,
+                            slidesToScroll: 5
+                        }
+                    },
+                    {
+                        breakpoint: 1500,
                         settings: {
                             slidesToShow: 4,
                             slidesToScroll: 4
                         }
                     },
                     {
-                        breakpoint: 930,
+                        breakpoint: 1200,
                         settings: {
                             slidesToShow: 3,
                             slidesToScroll: 3
                         }
                     },
                     {
-                        breakpoint: 616,
+                        breakpoint: 900,
                         settings: {
                             slidesToShow: 2,
                             slidesToScroll: 2
                         }
+
                     },
-                ]
-            });
-            let latitude = 0;
-            let longitude = 0;
-            var tmp = 0;
-//현재 위치 가져오는 기능
-            navigator.geolocation.getCurrentPosition(function (pos) {
-                latitude = pos.coords.latitude;
-                longitude = pos.coords.longitude;
-                console.log("현재 위치는 : " + latitude + ", " + longitude);
-                change_gps_kweather(latitude, longitude)
-            });
-
-            function change_gps_kweather(latitude, longitude) {
-                $.ajax({
-                    url: "/k-weather/",
-                    data: {'x': longitude, 'y': latitude},
-                    method: 'post',
-                    dataType: "json",
-                    success: function (data) {
-                        console.log(data)
-                        console.log(data['address'])
-                        console.log(data['tmp'][0]['fcstValue'])
-                        {#$('.weather-icon').first().text(data['tmp'][0]['fcstValue']);#}
-                        {#let temp = temp_recomand(data['tmp'][0]['fcstValue'])#}
-                        $('#temp').text(data['tmp'][0]['fcstValue']);
-                        $('#address').text(data['address']);
-                        tmp = data['tmp'][0]['fcstValue'];
-                        img()
-
-                    }
-                })
-            }
-
-            function img() {
-
-                $.ajax({
-                    type: "get",
-                    url: "/k-weather/plz/",
-                    data: {"temp": tmp},
-                    dataType: "json",
-                    success: function (response) {
-                        {#console.log(response['man']['1']);#}
-                        $(".a1").attr('src', response['man']['1'])
-                        $(".a2").attr('src', response['man']['2'])
-                        $(".a3").attr('src', response['man']['3'])
-                        $(".a4").attr('src', response['man']['4'])
-                        $(".a5").attr('src', response['woman']['1'])
-                        $(".a6").attr('src', response['woman']['2'])
-                        $(".a7").attr('src', response['woman']['3'])
-                        $(".a8").attr('src', response['woman']['4'])
-                    }
-                })
-            }
+                    {
+                        breakpoint: 630,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },]
+            })
+        })
+        let latitude = 0;
+        let longitude = 0;
+        var tmp = 0;
+        //현재 위치 가져오는 기능
+        navigator.geolocation.getCurrentPosition(function (pos) {
+            latitude = pos.coords.latitude;
+            longitude = pos.coords.longitude;
+            console.log("현재 위치는 : " + latitude + ", " + longitude);
+            change_gps_kweather(latitude, longitude)
         });
+
+        function change_gps_kweather(latitude, longitude) {
+            $.ajax({
+                url: "/k-weather/",
+                data: {'x': longitude, 'y': latitude},
+                method: 'post',
+                dataType: "json",
+                success: function (data) {
+                    console.log(data)
+                    console.log(data['address'])
+                    console.log(data['tmp'][0]['fcstValue'])
+                    {#$('.weather-icon').first().text(data['tmp'][0]['fcstValue']);#}
+                    {#let temp = temp_recomand(data['tmp'][0]['fcstValue'])#}
+                    $('#temp').text(data['tmp'][0]['fcstValue']);
+                    $('#address').text(data['address']);
+                    tmp = data['tmp'][0]['fcstValue'];
+                    img()
+
+                }
+            })
+        }
+
+        function img() {
+
+            $.ajax({
+                type: "get",
+                url: "/k-weather/plz/",
+                data: {"temp": tmp},
+                dataType: "json",
+                success: function (response) {
+                    {#console.log(response['man']['1']);#}
+                    $(".a1").attr('src', response['man']['1'])
+                    $(".a2").attr('src', response['man']['2'])
+                    $(".a3").attr('src', response['man']['3'])
+                    $(".a4").attr('src', response['man']['4'])
+                    $(".a5").attr('src', response['woman']['1'])
+                    $(".a6").attr('src', response['woman']['2'])
+                    $(".a7").attr('src', response['woman']['3'])
+                    $(".a8").attr('src', response['woman']['4'])
+                }
+            })
+        };
     </script>
 
     {#http://ec2-15-164-94-71.ap-northeast-2.compute.amazonaws.com:8000/#}
@@ -125,7 +138,6 @@
 
 {% block weather_header %}
     {#  Mobile #}
-
     <div id="mobile-header">
         <div class="back_allow" onclick="window.history.back()">
             <i class="fas fa-arrow-left"></i>
@@ -133,30 +145,30 @@
         <p>Weather</p>
     </div>
 
-    {#  Desktop - 효정 추가(시작) #}
+    {#      Desktop - 효정 추가(시작) #}
     <div id="main-header">
-        <div class="title">
-            <a href="/"><img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}"></a>
-        </div>
-        <div class="nav">
-            <div><a class="nav-main" href="/" style="
-                    padding-top: 3px;display: inline-block;">Main</a></div>
-            <div><a class="nav-weather" href="/weather/"
-                    style="padding-top: 3px;display: inline-block; color: #0067a3;">Weather</a></div>
-            {% if user.is_authenticated %}
-                <div><a class="nav-upload" href="/detail/feed/"
-                        style="padding-top: 3px;display: inline-block;">Upload</a></div>
-                <div><a href="{% url 'test_1:logout' %}"
-                        style="color: white; background-color: #042b44; border-radius: 8px;
-                        width: 80px; display: inline-block; height: 30px; padding-top: 3px;">Logout</a></div>
-            {% else %}
-                <div><a href="/register/" style="padding-top: 3px;display: inline-block;">Sign in</a></div>
-                <div><a href="/login/" style="color: white; background-color: #0067a3; border-radius: 8px;
-                         width: 80px; display: inline-block; height: 30px; padding-top: 3px;">Log in</a></div>
-            {% endif %}
+        <div class="profile-container">
+            <div class="title">
+                <a href="/"><img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}"></a>
+            </div>
+            <div class="nav">
+                <div><a class="nav-main" href="/">MAIN</a></div>
+                <div><a class="nav-weather" href="/weather/"
+                        style="color: #0067a3;">WEATHER</a></div>
+                {% if user.is_authenticated %}
+                    <div><a class="nav-mypage" href="/mypage/user/">MYPAGE</a></div>
+                    <div><a class="nav-upload" href="/detail/feed/">UPLOAD</a></div>
+                    <div><a href="{% url 'test_1:logout' %}" class="nav-logout" style="color: darkred;">LOGOUT</a>
+                    </div>
+                {% else %}
+                    <div><a href="/register/" class="nav-signin">SIGN IN</a></div>
+                    <div><a href="/login/" class="nav-login" style="color: brown;">LOGIN</a></div>
+                {% endif %}
+            </div>
         </div>
     </div>
-    {#  Desktop - 효정 추가(끝) #}
+    {#      Desktop - 효정 추가(끝) #}
+
 {% endblock weather_header %}
 
 
@@ -169,50 +181,50 @@
                     <div class="title">오늘의 날씨</div>
                     <div class="location">
                         <i class="fa-solid fa-location-dot"></i>
-                        <p id="address">서울특별시 서초구</p>
+                        <p id="address">위치 액세스를 허용해주세요.</p>
                     </div>
                 </div>
                 <div class="weather-contents">
+                    {#                    <div class="weather-content">#}
+                    {#                        <div class="info"></div>#}
+                    {#                        <p>날씨</p>#}
+                    {#                    </div>#}
+                    {#                    <div class="weather-content">#}
+                    {#                        <div class="info"></div>#}
+                    {#                        <p>강수</p>#}
+                    {#                    </div>#}
                     <div class="weather-content">
-                        <div class="info"></div>
-                        <p>날씨</p>
-                    </div>
-                    <div class="weather-content">
-                        <div class="info"></div>
-                        <p>강수</p>
-                    </div>
-                    <div class="weather-content">
-                        <div id="temp" class="info" style="font-size: 3rem; color: white">12</div>
-                        <p>기온</p>
+                        {#                        <div id="temp" class="info" style="font-size: 3rem; color: white">12</div>#}
+                        <div class="info"><span id="temp" class="info">00</span>°C</div>
+                        {#                        <p>기온</p>#}
                     </div>
                 </div>
             </div>
         </div>
         <div class="bottom-container">
             <div class="fashion-slider" id="img-box1">
-                <div><img class="a1" src="{% static "img/chu.jpeg" %}"></div>
-                <div><img class="a2" src="{% static "img/chu.jpeg" %}"></div>
-                <div><img class="a3" src="{% static "img/chu.jpeg" %}"></div>
-                <div><img class="a4" src="{% static "img/chu.jpeg" %}"></div>
-                <div><img class="a5" src="{% static "img/chu.jpeg" %}"></div>
-                <div><img class="a6" src="{% static "img/chu.jpeg" %}"></div>
-                <div><img class="a7" src="{% static "img/chu.jpeg" %}"></div>
-                <div><img class="a8" src="{% static "img/chu.jpeg" %}"></div>
-
+                <div><img class="a1" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a2" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a3" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a4" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a5" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a6" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a7" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+                <div><img class="a8" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
             </div>
         </div>
     </div>
 
     <div class="mobile-bottom-container">
         <div class="mobile-bottom-wrapper" id="img-box2">
-            <div><img class="a1" src="{% static "img/chu.jpeg" %}"></div>
-            <div><img class="a2" src="{% static "img/chu.jpeg" %}"></div>
-            <div><img class="a3" src="{% static "img/chu.jpeg" %}"></div>
-            <div><img class="a4" src="{% static "img/chu.jpeg" %}"></div>
-            <div><img class="a5" src="{% static "img/chu.jpeg" %}"></div>
-            <div><img class="a6" src="{% static "img/chu.jpeg" %}"></div>
-            <div><img class="a7" src="{% static "img/chu.jpeg" %}"></div>
-            <div><img class="a8" src="{% static "img/chu.jpeg" %}"></div>
+            <div><img class="a1" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+            <div><img class="a2" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+            <div><img class="a3" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+            <div><img class="a4" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+            <div><img class="a5" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+            <div><img class="a6" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+            <div><img class="a7" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
+            <div><img class="a8" src="{% static "img/desktop/날씨페이지_로딩이미지.gif" %}"></div>
         </div>
     </div>
 {% endblock weather_body %}

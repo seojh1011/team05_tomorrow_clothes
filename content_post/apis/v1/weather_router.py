@@ -18,7 +18,7 @@ content = Router(tags=["test"])
 @content.get("plz/", url_name="plz")
 def get_img(request: HttpRequest,temp: int) -> json:
     print(temp)
-    url = "http://ec2-15-164-94-71.ap-northeast-2.compute.amazonaws.com:8000/img/"
+    url = "http://13.209.50.234:8000/img/"
     params = {"temp": temp}
     res = requests.get(url, params)
     return res.json()

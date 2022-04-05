@@ -1,0 +1,60 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block profile_head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Tomorrow Clothes</title>
+
+    {#      Mobile  #}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/profile/profile.css' %}"
+          media="screen and (max-width: 500px)">
+    {#  Desktop  #}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/profile/desktop_profile.css' %}"
+          media="screen and (min-width: 501px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+{% endblock profile_head %}
+
+
+
+{% block profile_header %}
+    {#      Desktop - 효정 추가(시작) #}
+    <div id="main-header">
+        <div class="profile-container">
+            <div class="title">
+                <a href="/"><img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}"></a>
+            </div>
+            <div class="nav">
+                <div><a class="nav-main" href="/">MAIN</a></div>
+                <div><a class="nav-weather" href="/weather/">WEATHER</a></div>
+                {% if user.is_authenticated %}
+                    <div><a class="nav-mypage" href="/mypage/user/">MYPAGE</a></div>
+                    <div><a class="nav-upload" href="/detail/feed/" style="color: #0067a3;">UPLOAD</a></div>
+                    <div><a href="{% url 'test_1:logout' %}" class="nav-logout" style="color: darkred;">LOGOUT</a>
+                    </div>
+                {% else %}
+                    <div><a href="/register/" class="nav-signin">SIGN IN</a></div>
+                    <div><a href="/login/" class="nav-login" style="color: brown;">LOGIN</a></div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {#      Desktop - 효정 추가(끝) #}
+{% endblock profile_header %}
+
+
+
+{% block profile_body %}
+    <div id="main">
+        <div class="profile-img">
+            <img src="{% static "img/wonyoung.jpg" %}">
+        </div>
+        <div class="profile-nickname">
+            <div>Nickname</div>
+            <i class="fa-solid fa-pen-to-square"></i>
+        </div>
+        <button type="submit">사진 업로드</button>
+        <a href="/mypage/user/">
+            <button>프로필 수정완료</button>
+        </a>
+    </div>
+{% endblock profile_body %}
