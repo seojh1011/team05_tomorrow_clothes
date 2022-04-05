@@ -80,13 +80,12 @@
 
 {% block main_body %}
     <div id="container">
-        <div class="weather">
+        <div class="weather" onclick="window.location.href = '/weather'">
             <div class="location">서울시 광양구</div>
             <div class="weather-icons">
-                <div class="weather-icon">12°C</div>
+                <div class="temperature"><div class="weather-icon">12</div><span>°C</span></div>
                 <div class="weather-icon"></div>
                 <div class="weather-icon">강수</div>
-                <div class="weather-icon">미세먼지</div>
             </div>
         </div>
         <div id="images_box" class="images">
