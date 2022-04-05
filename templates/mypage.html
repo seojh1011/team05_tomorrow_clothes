@@ -129,16 +129,16 @@
         <div class="mypage-container">
             <div class="profile-text">
                 <div class="profile-info">
-                    <div>안녕하세요. Nickname님!</div>
-                    <div>Tomorrow_clothes@naver.com</div>
+                    <div>안녕하세요. {{ user_information.nick_name }}님!</div>
+                    <div>{{ user_information }}</div>
                 </div>
                 <div class="profile-update">
-                    <div><a href="/mypage/user/profile/">프로필 사진/닉네임 변경</a></div>
-                    <div><a href="">비밀번호 변경</a></div>
+                    <div><a href="/mypage/profile/">프로필 사진/닉네임 변경</a></div>
+                    <div><a href="/password_reset/">비밀번호 변경</a></div>
                 </div>
             </div>
             <div class="profile-img">
-                <img src="{% static "img/wonyoung.jpg" %}">
+                <img src="{{ user_information.pro_img_url.url }}">
             </div>
         </div>
         <div class="posts-container">
@@ -147,16 +147,9 @@
             </div>
             <div class="posts-container-slider">
                 <div class="contents-slider">
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    {% for user_feed in user_feeds %}
+                    <div><img onclick="location.href='/detail/{{ user_feed.id }}/'" src="{{ user_feed.feeds_img_url.url }}"></div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -166,16 +159,9 @@
             </div>
             <div class="scraps-container-slider">
                 <div class="contents-slider">
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
-                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    {% for scrap_feed in scrap_feeds%}
+                    <div><img onclick="location.href='/detail/{{ scrap_feed.id }}/'" src="{{ scrap_feed.feeds_img_url.url }}"></div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

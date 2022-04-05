@@ -1,6 +1,7 @@
 from typing import Any, Dict
 
 from django.contrib.auth.decorators import login_required
+from django.db import transaction
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect
 from ninja import Router
@@ -12,6 +13,7 @@ content = Router(tags=["Scrap"])
 
 @content.post("/scrap/{feed_id}/", url_name="scrap")
 # @login_required(login_url="/login/")
+@transaction.atomic
 def post_scrap(request: HttpRequest, feed_id: int) ->Dict[str,int]:
     login_user = request.user.is_authenticated
     if login_user:
@@ -19,13 +21,14 @@ def post_scrap(request: HttpRequest, feed_id: int) ->Dict[str,int]:
         # 로그인한 유저의 정보가져오기
         user: User = User.objects.get(id=user_id)
         # user = 로그인한 객체
-        feed: Feeds = Feeds.objects.get(id=feed_id)
+        feed: Feeds = Feeds.objects.select_for_update().get(id=feed_id)
         # feed = 스크랩할 피드의 객체
-        exist_check = feed.scrape.filter(id=user_id)  # type : ignore
+        # exist_check = feed.scrape.filter(id=user_id)  # type : ignore
+        exist_check = feed.scrape.select_for_update().filter(id=user_id)
         # scrape필드에 로그인한 유저가있는지 체크
         if exist_check.exists():
             # 만약 있다면
-            Feeds.objects.get(id=feed_id).scrape.remove(user)
+            feed.scrape.remove(user)
             # scrape필드에서 유저를 제거
             feed.scrapes -= 1
             # 스크랩카운트 -1
@@ -38,7 +41,7 @@ def post_scrap(request: HttpRequest, feed_id: int) ->Dict[str,int]:
             return ajax
         else:
             # 없다면
-            Feeds.objects.get(id=feed_id).scrape.add(user)
+            feed.scrape.add(user)
             # scrape필드에 유저를 추가
             feed.scrapes += 1
             # 스크랩카운트+1

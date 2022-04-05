@@ -48,7 +48,7 @@
                 <div><a class="nav-main" href="/" style="color: #0067a3;">MAIN</a></div>
                 <div><a class="nav-weather" href="/weather/">WEATHER</a></div>
                 {% if user.is_authenticated %}
-                    <div><a class="nav-mypage" href="/mypage/user/">MYPAGE</a></div>
+                    <div><a class="nav-mypage" href="/mypage/">MYPAGE</a></div>
                     <div><a class="nav-upload" href="/detail/feed/">UPLOAD</a></div>
                     <div><a href="{% url 'test_1:logout' %}" class="nav-logout" style="color: darkred;">LOGOUT</a>
                     </div>

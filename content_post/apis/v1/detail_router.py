@@ -21,38 +21,6 @@ def get_feed_page(request: HttpRequest) -> HttpResponse:
     return render(request, "add.html")
 
 
-# 상세 FEED페이지로 이동
-@content.get("/{feed_id}/", response=List[DetailResponse])
-def get_detail_page(request: HttpRequest, feed_id: int) -> HttpResponse:
-    user_id = request.user.id
-    # 로그인된 유저의 아이디값
-    print('스타트')
-    try:
-        feed = Feeds.objects.get(id=feed_id)
-        # 디테일 페이지에 뿌려질 피드 객체
-        check = feed.scrape.filter(id=user_id)  # type: ignore
-        # 로그인된 유저의 값으로 피드에 스크랩했는지 체크
-        comments = Comments.objects.filter(feed_id=feed_id).order_by("-created_at")
-        print('시작')
-        # 피드에 달린 댓글 객체들
-        if check.exists():
-            # 만약 스크랩을 했다면
-            print('이프')
-            return render(
-                request,
-                "detail.html",
-                {"feed": feed, "comments": comments, "scraped": "scraped"},
-            )
-        else:
-            print('엘스')
-            # 스크랩을 안했다면
-            return render(request, "detail.html", {"feed": feed, "comments": comments})
-    except ValueError:
-        return redirect('/')
-    except TypeError:
-        return redirect('/')
-    except:
-        return redirect('/')
 
 
 # # 수정페이지 이동 변경예정 효정님 _______________
@@ -135,3 +103,36 @@ def delete_feed(request: HttpRequest, feed_id: int) -> Dict[str,str]:
         return {'abc': '본인이 작성한 글이 아닙니다.'}
 
 # 수정페이지 이동 변경예정
+
+# 상세 FEED페이지로 이동
+@content.get("/{feed_id}/", response=List[DetailResponse])
+def get_detail_page(request: HttpRequest, feed_id: int) -> HttpResponse:
+    user_id = request.user.id
+    # 로그인된 유저의 아이디값
+    print('스타트')
+    try:
+        feed = Feeds.objects.get(id=feed_id)
+        # 디테일 페이지에 뿌려질 피드 객체
+        check = feed.scrape.filter(id=user_id)  # type: ignore
+        # 로그인된 유저의 값으로 피드에 스크랩했는지 체크
+        comments = Comments.objects.filter(feed_id=feed_id).order_by("-created_at")
+        print('시작')
+        # 피드에 달린 댓글 객체들
+        if check.exists():
+            # 만약 스크랩을 했다면
+            print('이프')
+            return render(
+                request,
+                "detail.html",
+                {"feed": feed, "comments": comments, "scraped": "scraped"},
+            )
+        else:
+            print('엘스')
+            # 스크랩을 안했다면
+            return render(request, "detail.html", {"feed": feed, "comments": comments})
+    except ValueError:
+        return redirect('/')
+    except TypeError:
+        return redirect('/')
+    except:
+        return redirect('/')
