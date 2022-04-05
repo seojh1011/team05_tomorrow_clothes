@@ -13,51 +13,103 @@
 }
 
 
-/* Header */
+/* 헤더 영역 */
+/* 헤더: 전체 */
 #main-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
-    width: 1050px;
+    /*width: 1050px;*/
     margin: 0 auto;
     padding-left: 30px;
 }
 
+/* 헤더: 타이틀 */
 #main-header .title {
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
+/* 헤더: 타이틀 > 로고이미지 */
 #main-header .title img {
     width: 300px;
-    height: 70px;
+    /*height: 70px;*/
 }
 
+/* 헤더: 오른쪽 상단 메뉴들 */
 #main-header .nav {
     display: flex;
     justify-content: space-between;
-    height: 90px;
-    width: 400px;
+    /*height: 90px;*/
+    width: 550px;
     font-size: 20px;
-    padding-top: 60px;
+    padding-top: 35px;
     font-style: normal;
-    font-weight: 600;
+    /*font-weight: 600;*/
+    font-family: 'ChosunGu';
 }
 
+/* 헤더 > 오른쪽 상단 메뉴 링크 */
 #main-header .nav div a {
     text-decoration-line: none;
     color: #042B44;
 }
 
-/*#main-header .nav div a:hover {*/
-/*    color: #096B90;*/
-/*}*/
+/* 헤더 > 오른쪽 상단 메뉴(hover 하면 색상변경) */
+#main-header .nav div a:hover {
+    color: #096B90;
+}
+
+.nav-main {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-weather {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-mypage {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-upload {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-logout {
+    /*color: white;*/
+    /*background-color: #042b44;*/
+    border-radius: 8px;
+    width: 80px;
+    display: inline-block;
+    height: 30px;
+    padding-top: 3px;
+}
+
+.nav-signin {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-login {
+    color: white;
+    /*background-color: #0067a3;*/
+    border-radius: 8px;
+    width: 80px;
+    display: inline-block;
+    height: 30px;
+    padding-top: 3px;
+}
 
 
 /* Body */
 #add_form {
     width: 1100px;
     height: 450px;
-    margin: 80px auto 0;
+    margin: 55px auto 0;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -98,6 +150,7 @@
     border-radius: 10px;
     background-color: white;
     color: #096b90;
+    cursor: pointer;
 }
 
 .desktop_label {
@@ -111,6 +164,7 @@
     color: white;
     border-radius: 10px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .feed_img {
