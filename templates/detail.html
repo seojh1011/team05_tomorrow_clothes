@@ -148,30 +148,28 @@
 
 
 {% block detail_header %}
-    {#  Desktop - 효정 추가(시작) #}
+    {#      Desktop - 효정 추가(시작) #}
     <div id="main-header">
-        <div class="title">
-            <a href="/"><img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}"></a>
-        </div>
-        <div class="nav">
-            <div><a class="nav-main" href="/" style="
-                    padding-top: 3px;display: inline-block;">Main</a></div>
-            <div><a class="nav-weather" href="/weather/"
-                    style="padding-top: 3px;display: inline-block;">Weather</a></div>
-            {% if user.is_authenticated %}
-                <div><a class="nav-upload" href="/detail/feed/"
-                        style="padding-top: 3px;display: inline-block;">Upload</a></div>
-                <div><a href="{% url 'test_1:logout' %}"
-                        style="color: white; background-color: #042b44; border-radius: 8px;
-                        width: 80px; display: inline-block; height: 30px; padding-top: 3px;">Logout</a></div>
-            {% else %}
-                <div><a href="/register/" style="padding-top: 3px;display: inline-block;">Sign in</a></div>
-                <div><a href="/login/" style="color: white; background-color: #0067a3; border-radius: 8px;
-                         width: 80px; display: inline-block; height: 30px; padding-top: 3px;">Log in</a></div>
-            {% endif %}
+        <div class="profile-container">
+            <div class="title">
+                <a href="/"><img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}"></a>
+            </div>
+            <div class="nav">
+                <div><a class="nav-main" href="/">MAIN</a></div>
+                <div><a class="nav-weather" href="/weather/">WEATHER</a></div>
+                {% if user.is_authenticated %}
+                    <div><a class="nav-mypage" href="/mypage/user/">MYPAGE</a></div>
+                    <div><a class="nav-upload" href="/detail/feed/">UPLOAD</a></div>
+                    <div><a href="{% url 'test_1:logout' %}" class="nav-logout" style="color: darkred;">LOGOUT</a>
+                    </div>
+                {% else %}
+                    <div><a href="/register/" class="nav-signin">SIGN IN</a></div>
+                    <div><a href="/login/" class="nav-login" style="color: brown;">LOGIN</a></div>
+                {% endif %}
+            </div>
         </div>
     </div>
-    {#  Desktop - 효정 추가(끝) #}
+    {#      Desktop - 효정 추가(끝) #}
     {#  Mobile  #}
     <div id="header">
         <div class="back_allow">

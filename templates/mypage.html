@@ -1,0 +1,152 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block mypage_head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Tomorrow Clothes</title>
+
+    {#  Mobile  #}
+    {#    <link rel="stylesheet" type="text/css" href="{% static 'css/mypage/mypage.css' %}"#}
+    {#          media="screen and (max-width: 500px)">#}
+    {#  Desktop  #}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mypage/desktop_mypage.css' %}"
+          media="screen and (min-width: 501px)">
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {#  Font Awesome  #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    {#  Materialize  #}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {#  Slick-Slider  #}
+    <!-- slick 불러오기 -->
+    <link rel="stylesheet" type="text/css" href="{% static "css/weather/slick/slick.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/weather/slick/slick-theme.css" %}"/>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="{% static "css/weather/slick/slick.min.js" %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('.contents-slider').slick({
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 1415,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                    },
+                    {
+                        breakpoint: 1135,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 850,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },]
+            })
+        })
+    </script>
+{% endblock mypage_head %}
+
+
+
+{% block mypage_header %}
+    {#      Desktop - 효정 추가(시작) #}
+    <div id="main-header">
+        <div class="profile-container">
+            <div class="title">
+                <a href="/"><img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}"></a>
+            </div>
+            <div class="nav">
+                <div><a class="nav-main" href="/">MAIN</a></div>
+                <div><a class="nav-weather" href="/weather/">WEATHER</a></div>
+                {% if user.is_authenticated %}
+                    <div><a class="nav-mypage" href="/mypage/user/" style="color: #0067a3;">MYPAGE</a></div>
+                    <div><a class="nav-upload" href="/detail/feed/">UPLOAD</a></div>
+                    <div><a href="{% url 'test_1:logout' %}" class="nav-logout" style="color: darkred;">LOGOUT</a>
+                    </div>
+                {% else %}
+                    <div><a href="/register/" class="nav-signin">SIGN IN</a></div>
+                    <div><a href="/login/" class="nav-login" style="color: brown;">LOGIN</a></div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {#      Desktop - 효정 추가(끝) #}
+{% endblock mypage_header %}
+
+
+
+{% block mypage_body %}
+    <div id="main">
+        <div class="mypage-container">
+            <div class="profile-text">
+                <div class="profile-info">
+                    <div>안녕하세요. Nickname님!</div>
+                    <div>Tomorrow_clothes@naver.com</div>
+                </div>
+                <div class="profile-update">
+                    <div><a href="/mypage/user/profile/">프로필 사진/닉네임 변경</a></div>
+                    <div><a href="">비밀번호 변경</a></div>
+                </div>
+            </div>
+            <div class="profile-img">
+                <img src="{% static "img/wonyoung.jpg" %}">
+            </div>
+        </div>
+        <div class="posts-container">
+            <div class="posts-container-title">
+                <div>내가 작성한 게시물</div>
+            </div>
+            <div class="posts-container-slider">
+                <div class="contents-slider">
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scraps-container">
+            <div class="scraps-container-title">
+                <div>내가 스크랩한 게시물</div>
+            </div>
+            <div class="scraps-container-slider">
+                <div class="contents-slider">
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                    <div><img src="{% static "img/fashion.jpg" %}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock mypage_body %}

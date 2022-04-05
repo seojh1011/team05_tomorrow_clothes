@@ -17,11 +17,17 @@
     {% block add_head %}
     {% endblock add_head %}
 
+    {% block mypage_head %}
+    {% endblock mypage_head %}
+
     {% block weather_head %}
     {% endblock weather_head %}
 
+    {% block profile_head %}
+    {% endblock profile_head %}
 
-     <link rel="stylesheet" type="text/css" href="{% static "css/common.css" %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static "css/common.css" %}">
 </head>
 <body>
 <div id="body_container">
@@ -66,6 +72,5 @@
     {% endblock weather_body %}
 
 </div>
-
 </body>
 </html>

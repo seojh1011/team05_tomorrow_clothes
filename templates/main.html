@@ -15,23 +15,23 @@
     <script type="text/javascript" src="{% static 'js/main/main.js' %}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-                /*
-                 * 항목값	항목명	단위
-                 * POP	강수확률	 %
-                 * PTY	강수형태	코드값
-                 * R06	6시간 강수량	범주 (1 mm)
-                 * REH	습도	 %
-                 * S06	6시간 신적설	범주(1 cm)
-                 * SKY	하늘상태	코드값
-                 * T3H	3시간 기온	 ℃
-                 * TMN	아침 최저기온	 ℃
-                 * TMX	낮 최고기온	 ℃
-                 * UUU	풍속(동서성분)	 m/s
-                 * VVV	풍속(남북성분)	 m/s
-                 * WAV	파고	 M
-                 * VEC	풍향	 m/s
-                 * WSD	풍속	1
-                 */
+        /*
+         * 항목값	항목명	단위
+         * POP	강수확률	 %
+         * PTY	강수형태	코드값
+         * R06	6시간 강수량	범주 (1 mm)
+         * REH	습도	 %
+         * S06	6시간 신적설	범주(1 cm)
+         * SKY	하늘상태	코드값
+         * T3H	3시간 기온	 ℃
+         * TMN	아침 최저기온	 ℃
+         * TMX	낮 최고기온	 ℃
+         * UUU	풍속(동서성분)	 m/s
+         * VVV	풍속(남북성분)	 m/s
+         * WAV	파고	 M
+         * VEC	풍향	 m/s
+         * WSD	풍속	1
+         */
     </script>
 {% endblock main_head %}
 
@@ -40,32 +40,32 @@
 {% block main_header %}
     {#      Desktop - 효정 추가(시작) #}
     <div id="main-header">
-        <div class="title">
-            <a href="/"><img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}"></a>
-        </div>
-        <div class="nav">
-            <div><a class="nav-main" href="/" style="color: #0067a3;
-                    padding-top: 3px;display: inline-block;">Main</a></div>
-            <div><a class="nav-weather" href="/weather/"
-                    style="padding-top: 3px;display: inline-block;">Weather</a></div>
-            {% if user.is_authenticated %}
-                <div><a class="nav-upload" href="/detail/feed/"
-                        style="padding-top: 3px;display: inline-block;">Upload</a></div>
-                <div><a href="{% url 'test_1:logout' %}"
-                        style="color: white; background-color: #042b44; border-radius: 8px;
-                        width: 80px; display: inline-block; height: 30px; padding-top: 3px;">Logout</a></div>
-            {% else %}
-                <div><a href="/register/" style="padding-top: 3px;display: inline-block;">Sign in</a></div>
-                <div><a href="/login/" style="color: white; background-color: #0067a3; border-radius: 8px;
-                         width: 80px; display: inline-block; height: 30px; padding-top: 3px;">Log in</a></div>
-            {% endif %}
+        <div class="profile-container">
+            <div class="title">
+                <a href="/"><img src="{% static "img/desktop/tomorrow_clothes(검정).png" %}"></a>
+            </div>
+            <div class="nav">
+                <div><a class="nav-main" href="/" style="color: #0067a3;">MAIN</a></div>
+                <div><a class="nav-weather" href="/weather/">WEATHER</a></div>
+                {% if user.is_authenticated %}
+                    <div><a class="nav-mypage" href="/mypage/user/">MYPAGE</a></div>
+                    <div><a class="nav-upload" href="/detail/feed/">UPLOAD</a></div>
+                    <div><a href="{% url 'test_1:logout' %}" class="nav-logout" style="color: darkred;">LOGOUT</a>
+                    </div>
+                {% else %}
+                    <div><a href="/register/" class="nav-signin">SIGN IN</a></div>
+                    <div><a href="/login/" class="nav-login" style="color: brown;">LOGIN</a></div>
+                {% endif %}
+            </div>
         </div>
     </div>
     {#      Desktop - 효정 추가(끝) #}
     {#  Mobile  #}
     <div id="header" class="none">
-        <div class="header-icon" onclick="window.location.href = '/detail/feed'"><img src="{% static 'img/upload.png' %}"></div>
-        <div class="header-icon" onclick="window.location.href = '/weather'"><img src="{% static 'img/hanger.png' %}"></div>
+        <div class="header-icon" onclick="window.location.href = '/detail/feed'"><img
+                src="{% static 'img/프로필변경페이지_업로드아이콘.png' %}"></div>
+        <div class="header-icon" onclick="window.location.href = '/weather'"><img src="{% static 'img/hanger.png' %}">
+        </div>
         {% if user.is_authenticated %}
             <a class="logout_btn" href="{% url 'test_1:logout' %}">{{ user.nick_name }}님 Logout</a>
         {% else %}
