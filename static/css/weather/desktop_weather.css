@@ -176,12 +176,12 @@
     /*width: 70px;*/
     /*height: 70px;*/
     color: #0067a3;
-    font-size: 90px;
     font-family: 'LeferiPoint-WhiteA';
+    font-size: 40px;
 }
 
 .weather-content .info > span {
-    font-size: 40px;
+    font-size: 90px;
 }
 
 .bottom-container {
