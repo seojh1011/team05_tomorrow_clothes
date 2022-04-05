@@ -124,6 +124,9 @@
     background-color: #042b44;
     width: 70px;
     height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottom-container {
