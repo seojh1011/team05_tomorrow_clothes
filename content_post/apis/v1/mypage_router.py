@@ -10,6 +10,7 @@ from user_admission.models import User
 content = Router(tags=["MyPage"])
 
 
+
 @content.get("/")
 def get_my_page(request: HttpRequest) -> HttpResponse:
     user_id = '18'
@@ -19,6 +20,16 @@ def get_my_page(request: HttpRequest) -> HttpResponse:
     scrap_feeds = Feeds.objects.filter(scrape=user_id)
     return render(request, 'add.html',
                   {'user_information': user_information, 'user_feeds': user_feeds, 'scrap_feeds': scrap_feeds})
+
+
+@content.get("/user/")
+def get_my_user_page(request: HttpRequest) -> HttpResponse:
+    return render(request, "mypage.html")
+
+
+@content.get("/user/profile/")
+def get_my_user_page(request: HttpRequest) -> HttpResponse:
+    return render(request, "profile.html")
 
 
 @content.get("/update/")

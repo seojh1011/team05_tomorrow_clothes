@@ -70,7 +70,7 @@
                 </video>
             </div>
             <div class="login_title">
-                <img class="login_img" src="{% static "img/desktop/tomorrow_clothes(흰색).png" %}">
+                <a href="/"><img class="login_img" src="{% static "img/desktop/tomorrow_clothes(흰색).png" %}"></a>
             </div>
             <div class="login_main_wrapper">
                 <div class="login_input_wrapper">
@@ -105,15 +105,15 @@
                     LOGIN
                 </button>
             </div>
-{#            <div class="selection-or">OR</div>#}
-{#            {% load socialaccount %}#}
-{#            <div class="login_social">#}
-{#                <a href="{% provider_login_url 'kakao' method='oauth2' %}">#}
-{#                    <button>Sign in with Kakao</button>#}
-{#                </a>#}
-{#            </div>#}
+            {#            <div class="selection-or">OR</div>#}
+            {#            {% load socialaccount %}#}
+            {#            <div class="login_social">#}
+            {#                <a href="{% provider_login_url 'kakao' method='oauth2' %}">#}
+            {#                    <button>Sign in with Kakao</button>#}
+            {#                </a>#}
+            {#            </div>#}
 
-{#            <div class="link-register"><a href="/register/">계정</a>이 없으신가요?</div>#}
+            {#            <div class="link-register"><a href="/register/">계정</a>이 없으신가요?</div>#}
             <div class="selection-or or_str">OR</div>
             {% load socialaccount %}
             <div class="login_social kakao_login_wrapper">

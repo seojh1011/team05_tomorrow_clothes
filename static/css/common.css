@@ -14,6 +14,28 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeferiPoint-WhiteA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeferiBaseType-RegularA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /* 스크롤바 */
 ::-webkit-scrollbar {
 	display: none;
@@ -66,14 +88,3 @@ table {
 * {
 	box-sizing: border-box;
 }
-
-
-
-/*!* 766 이하의 작은 화면에서 적용할 내용을 적습니다. *!*/
-/*@media all and (min-width: 767px) and (max-width: 1023px) {*/
-/*  !*767 이상부터 작동하는 내용(태블릿) *!*/
-/*}*/
-
-/*@media all and (min-width: 1023px) {*/
-/*  !*1024 이상부터 작동하는 내용 (데스크탑)*!*/
-/*}*/
