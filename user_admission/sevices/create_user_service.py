@@ -51,7 +51,7 @@ def create_users(email: str, password: str, nick_name: str) -> object:
             return msg
         else:
             User.objects.create_user(
-                username=email, password=password, nick_name=nick_name, email=email,pro_img_url='images/cat01.jpg'
+                username=email, password=password, nick_name=nick_name, email=email,pro_img_url='images/프로필이미지4.jpeg'
             )
             msg = {"success": "가입에 성공하셨습니다."}
             return msg

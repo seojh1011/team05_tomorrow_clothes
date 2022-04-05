@@ -54,11 +54,11 @@
 
                     let p_tag = $(this).prev().prev();
                     let text = p_tag.text();
-                    {#console.log(text)#}
+                    console.log(text)
                     let test2 = p_tag.html("<input type='text' value='" + text + "' class='editDo'>");
                     var comment = $('.editDo').val()
                     state = 1
-                    {#console.log(comment)#}
+                    console.log(comment)
 
                 } else if (state == 1) {
                     var comment = $('.editDo').val()
@@ -96,11 +96,11 @@
 
                     let p_tag = $(this).prev().prev();
                     let text = p_tag.text();
-                    {#console.log(text)#}
+                    console.log(text)
                     let test2 = p_tag.html("<input type='text' value='" + text + "' class='editDo'>");
                     var comment = $('.editDo').val()
                     reple_state = 1
-                    {#console.log(comment)#}
+                    console.log(comment)
 
                 } else if (reple_state == 1) {
                     var comment = $('.editDo').val()
@@ -129,19 +129,6 @@
             });
         })
 
-
-        {#            $('.btnDo').click(function () {#}
-        {#p태그#}
-        {#                let p_tag = $(this).parent().parent().prev().prev();#}
-        {#Input 태그#}
-        {#                let p_input = $(this).parent().parent().prev().prev().children();#}
-        {#let text = p_tag.text();#}
-        {##}
-        {#                $(p_tag).text($(p_input).val());#}
-        {#                $(this).html("<button type='button' class='btn'>수정</button>");#}
-
-        {#$(test).html("<input type='text' value='" + text + "' class='editDo'>");#}
-        {#$(".btn").html("<button type='button' class='btnDo'>수정하기</button>");});});#}
     </script>
 {% endblock detail_head %}
 
@@ -172,7 +159,7 @@
     {#      Desktop - 효정 추가(끝) #}
     {#  Mobile  #}
     <div id="header">
-        <div class="back_allow">
+        <div class="back_allow" onclick="window.history.back()">
             <i class="fas fa-arrow-left"></i>
         </div>
         <p>상세페이지</p>
@@ -200,7 +187,7 @@
                 <div class="content-icons-right" onclick="delete_button({{ feed.id }})">
 
                     {% if request.user == feed.writer %}
-                        <a href=""><img src="{% static "img/desktop/상세페이지_삭제아이콘.png" %}"></a>
+                        <img src="{% static "img/desktop/상세페이지_삭제아이콘.png" %}">
                     {% endif %}
 
                 </div>
@@ -384,10 +371,11 @@
                         }
                     }
                 })
-            }
-        }
+            }}
 
         function delete_button(feed_id) {
+            console.log(feed_id)
+            console.log('/detail/feed/delete/' + feed_id)
             $.ajax({
                 url: '/detail/feed/delete/' + feed_id,
                 type: 'POST',
@@ -397,10 +385,11 @@
                     console.log(response)
                     if (String(Object.keys(response)) === 'error') {
                         alert('에러')
-                        window.location.href = '/detail/' + feed_id + '/'
+
                     } else {
-                        alert(response)
                         window.location.href = '/'
+
+
                     }
 
                 }
@@ -445,53 +434,6 @@
             })
         }
 
-        function update_comment_button(comment_id, feed_id) {
-            let comment = $("#update_comment").val();
-            console.log(comment)
-            $.ajax({
-                url: '/comment/update/' + comment_id + '/',
-                type: 'post',
-                data: JSON.stringify({"comment": comment}),
-                datatype: 'json',
-                success: function (response) {
-                    console.log(response)
-                    if (String(Object.keys(response)) === 'error') {
-                        window.location.href = '/detail/' + feed_id + '/'
-                    } else {
-                        window.location.href = '/detail/' + feed_id + '/'
-                    }
-
-                }
-            })
-        }
-
-        function update_reple_button(comment_id, feed_id) {
-            let comment = $("#update_reple").val()
-            $.ajax({
-                url: '/comment/reple/update/' + comment_id + '/',
-                type: 'post',
-                data: JSON.stringify({"comment": comment}),
-                datatype: 'json',
-                success: function (response) {
-                    console.log(response)
-                    if (String(Object.keys(response)) === 'error') {
-                        window.location.href = '/detail/' + feed_id + '/'
-                    } else {
-                        window.location.href = '/detail/' + feed_id + '/'
-                    }
-
-                }
-            })
-        }
-
-        {#function update_comment(comment_id){#}
-        {#    var commentid = comment_id#}
-        {#    var text = $("#editform").text();#}
-        {#    document.getElementById("test11").style.display = "none";#}
-        {#    document.getElementById("test12").style.display = "block";#}
-        {#    $("#editform").html("<input type='text' value='"+text+"' id='update_comment'>");#}
-        {##}
-        {##}
 
     </script>
 {% endblock detail_body %}
