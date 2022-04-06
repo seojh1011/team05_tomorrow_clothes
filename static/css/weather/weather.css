@@ -6,6 +6,10 @@
     display: none;
 }
 
+html {
+    width: 450px;
+}
+
 body {
 	background-color: white;
     color: black;
