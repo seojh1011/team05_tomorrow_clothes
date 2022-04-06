@@ -80,12 +80,13 @@
 
 {% block profile_body %}
     <form action="/mypage/update/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
         <div id="main">
             <div class="profile-img" id="image">
                 <img src="{{ user.pro_img_url.url }}">
             </div>
             <div class="profile-nickname">
-                <div class="nick"><input name="nick_name" value="{{ user.nick_name }}" required></div>
+                <div class="nick"><input name="nick_name"  value="{{ user.nick_name }}" required></div>
                 {#            <i class="fa-solid fa-pen-to-square nick_btn"></i>#}
             </div>
             <input class=img_box type="file" id="file"  style="display: none" id="upload_img" onchange="upload(event)"
