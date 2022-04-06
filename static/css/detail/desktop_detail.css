@@ -17,7 +17,6 @@
 }
 
 
-
 /* 전체 영역 */
 #main-container {
     position: relative;
@@ -25,7 +24,6 @@
     /*height: 1024px;*/
     background: #FFFFFF;
 }
-
 
 
 /* 헤더 영역 */
@@ -36,7 +34,7 @@
     text-align: center;
     /*width: 1050px;*/
     margin: 0 auto;
-    padding-left: 30px;
+    /*padding-left: 30px;*/
 }
 
 /* 헤더: 타이틀 */
@@ -120,7 +118,6 @@
 }
 
 
-
 /* 내용 영역 */
 /* 내용: 전체 */
 #main {
@@ -135,12 +132,12 @@
 
 /* 내용 > 왼쪽 이미지 */
 #feed > img {
-    /*width: 450px;*/
+    min-width: 250px;
     height: 450px;
     border: 1px solid lightgray;
     border-right: none;
     border-radius: 10px 0 0 10px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 /* 내용 > 오른쪽 컨텐츠 */
@@ -149,7 +146,16 @@
     height: 450px;
     border: 1px solid lightgray;
     border-radius: 0 10px 10px 0;
-    /*overflow-y: auto;*/
+    overflow-y: auto;
+    font-family: 'SUIT-Regular';
+}
+
+.content-wrapper input {
+    font-family: 'SUIT-Regular';
+}
+
+.content-wrapper button {
+    font-family: 'SUIT-Regular';
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 상단 아이콘(3개: 수정, 공유, 삭제) */
@@ -192,12 +198,14 @@
 
 /* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 왼쪽(유저닉네임, 작성일) */
 #pro_auth_article #pro_info_user_at {
-    padding: 10px 10px 10px 15px;
+    /*padding: 10px 10px 10px 15px;*/
+    padding: 10px 0;
+    width: 155px;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 왼쪽(유저닉네임) */
 #pro_auth_article #pro_info_user_at .my_name {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -213,7 +221,7 @@
     padding-top: 5px;
     display: flex;
     flex-direction: column;
-    padding-left: 60px;
+    /*padding-left: 60px;*/
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저정보&스크랩 > 오른쪽(별표) */
@@ -239,20 +247,23 @@
 
 .comment_article {
     line-height: 23px;
+    padding: 0 10px;
 }
 
 .comment_container {
     width: 300px;
-    height: 275px;
+    height: 260px;
     margin: 0 20px;
     overflow-y: auto;
+    margin: 0 20px 10px;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 컨텐츠 내용 */
 .post_comment {
     margin: 0 auto;
     width: 320px;
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
+    line-height: 20px;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 댓글 */
@@ -288,6 +299,7 @@
 .comment_info .user-nickname {
     font-weight: bold;
     display: inline-block;
+    padding-right: 5px;
 }
 
 .user-comments {
@@ -431,6 +443,7 @@ details .reple {
     outline: none;
     border: none;
     height: 20px;
+    margin: 0;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글(제출버튼) */
@@ -441,7 +454,7 @@ details .reple {
     border: none;
     width: 45px;
     color: white;
-    font-weight: bolder;
+    /*font-weight: bolder;*/
     height: 25px;
     background-color: #042b44;
     border-radius: 10px;
