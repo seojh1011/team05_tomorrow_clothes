@@ -2,9 +2,10 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from django.http import HttpRequest
 from django.shortcuts import HttpResponse, redirect, render
-from ninja import Router
+from ninja import Router, Form
 
 from user_admission.apis.v1.schemas.login_response import LoginResponse
+from user_admission.apis.v1.schemas.login_request import LoginRequest
 
 account = Router(tags=["MemberManagement"])
 
@@ -24,9 +25,11 @@ def get_login_page(request: HttpRequest) -> HttpResponse:
 
 
 @account.post("/", url_name="login", response=LoginResponse)
-def post_login(request: HttpRequest) -> HttpResponse:
-    username = request.POST["username"]
-    password = request.POST["password"]
+def post_login(request: HttpRequest,loginrequest:LoginRequest = Form(...)) -> HttpResponse:
+    # username = request.POST["username"]
+    # password = request.POST["password"]
+    username = loginrequest.username
+    password = loginrequest.password
     user = auth.authenticate(request, username=username, password=password)
     if user is not None:
         auth.login(request, user)

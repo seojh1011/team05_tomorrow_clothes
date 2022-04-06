@@ -87,6 +87,7 @@
 
 {% block profile_body %}
     <form action="/mypage/update/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
         <div id="main">
             <div class="profile-img" id="image">
                 <img src="{{ user.pro_img_url.url }}">

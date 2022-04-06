@@ -1,11 +1,7 @@
-# from ninja import Schema
-#
-#
-# class LoginRequest(Schema):
-#     username: str
-#     password: str
-from ninja.orm import create_schema
+from ninja import Schema
 
-from user_admission.models import User
 
-login_request = create_schema(User, fields=["username", "password"])
+class LoginRequest(Schema):
+    username: str
+    password: str
+    csrfmiddlewaretoken:str

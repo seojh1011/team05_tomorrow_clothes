@@ -104,7 +104,7 @@ $(document).ready(function () {
         navigator.geolocation.getCurrentPosition(function (pos) {
             latitude = pos.coords.latitude;
             longitude = pos.coords.longitude;
-            console.log("현재 위치는 : " + latitude + ", " + longitude);
+
             change_gps_kweather(latitude, longitude)
         });
 
@@ -115,9 +115,6 @@ $(document).ready(function () {
                 method: 'post',
                 dataType: "json",
                 success: function (data) {
-                    console.log(data)
-                    console.log(data['address'])
-                    console.log(data['tmp'][0]['fcstValue'])
                     {#$('.weather-icon').first().text(data['tmp'][0]['fcstValue']);#}
                     {#let temp = temp_recomand(data['tmp'][0]['fcstValue'])#}
                     $('#temp').text(data['tmp'][0]['fcstValue']);
@@ -137,7 +134,7 @@ $(document).ready(function () {
                 data: {"temp": tmp},
                 dataType: "json",
                 success: function (response) {
-                    {#console.log(response['man']['1']);#}
+
                     $(".a1").attr('src', response['man']['1'])
                     $(".a2").attr('src', response['man']['2'])
                     $(".a3").attr('src', response['man']['3'])
