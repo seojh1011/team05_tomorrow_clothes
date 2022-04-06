@@ -48,7 +48,7 @@ api.add_router("mypage/", mypage_router)
 api.add_router("k-weather/", weather_router)
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path("tomorrow/weather/admin/", admin.site.urls),
     path("", api.urls),
     path("accounts/", include("allauth.urls")),
     path('password_reset/', auth_views.PasswordResetView.as_view(template_name='password/password_reset.html'),
