@@ -183,6 +183,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
+# STATIC_ROOT = "/home/ubuntu/team05_tomorrow_clothes/static"
 # print(STATIC_ROOT)
 
 MEDIA_URL = "https://s3.console.aws.amazon.com/s3/buckets/team05-tomorrow-clothes?region=ap-northeast-2&tab=objects/"
