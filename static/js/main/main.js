@@ -12,7 +12,7 @@ window.onload = () => {
         url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
         data: {},
         success: function (response) {
-            console.log(response)
+            // console.log(response)
             $('.location:eq(0)').text(response['city']);
             $('.weather-icon').first().text(response['temp']);
             //해당 객체 지우고 실행
@@ -34,7 +34,7 @@ let longitude = 0;
 navigator.geolocation.getCurrentPosition(function (pos) {
     latitude = pos.coords.latitude;
     longitude = pos.coords.longitude;
-    console.log("현재 위치는 : " + latitude + ", " + longitude);
+    // console.log("현재 위치는 : " + latitude + ", " + longitude);
     change_gps_kweather(latitude, longitude)
 });
 
@@ -44,7 +44,7 @@ window.addEventListener('load', function () {
     let feed = document.getElementsByTagName('div')[0];
     //feed 스크롤이 움직이면 실행하는 이벤트
     feed.addEventListener('scroll', function () {
-            console.log('timer_state : ' + timer_state)
+            // console.log('timer_state : ' + timer_state)
             if (timer_state === true) {
                 timer_state = false;
                 setTimeout(function () {
@@ -60,7 +60,7 @@ window.addEventListener('load', function () {
 
     //스크롤 위치를 감지해서 delay를 주고 페이지를 가져오는 함수
     function scroller_delay() {
-        console.log('timer_state2 : ' + timer_state)
+        // console.log('timer_state2 : ' + timer_state)
         let currentScrollValue = document.getElementById('body_container').scrollTop;
         let ScrollHighValue = document.getElementById('body_container').scrollHeight;
         let actingScroll = ScrollHighValue - currentScrollValue;
@@ -85,12 +85,12 @@ window.addEventListener('load', function () {
             method: 'GET',
             dataType: "json",
             success: function (data) {
-                console.log(data)
+
 
                 for (let i = 0; i < data.length; i++) {
                     let img_url = data[i]["feeds_img_url"]
                     let id = data[i]["id"]
-                    console.log(img_url);
+
                     let temp_img_div = `<div class="image" onclick="location.href='/detail/${id}/'"><img src="${img_url}"></div>`
                     $('#images_box').append(temp_img_div);
                 }
@@ -102,19 +102,19 @@ window.addEventListener('load', function () {
 
 // 불러온 FEED위에 스타일 적용하는 태그
 function translate_att2() {
-    console.log("실행 되고 있음22222222222222");
+
     let images = document.querySelectorAll(".image");
-    console.log("실행 되고 있음");
+    // console.log("실행 되고 있음");
     let imgStack = [0, 0, 0, 0, 0, 0];
     if (innerWidth >= 500) {
         imgStack = [0, 0, 0, 0, 0, 0];
-        console.log('들어옴(큰창)')
+
     } else {
         imgStack = [0, 0];
-        console.log('들어옴(작은창)')
+
     }
 
-    console.log("실행");
+
     let colWidth = 170;
     for (let i = 0; i < images.length; i++) {
         let minIndex = imgStack.indexOf(Math.min.apply(0, imgStack));
@@ -136,9 +136,9 @@ function change_gps_kweather(latitude, longitude) {
         method: 'post',
         dataType: "json",
         success: function (data) {
-            console.log(data)
-            console.log(data['address'])
-            console.log(data['tmp'][0]['fcstValue'])
+            // console.log(data)
+            // console.log(data['address'])
+            // console.log(data['tmp'][0]['fcstValue'])
             $('.weather-icon').first().text(data['tmp'][0]['fcstValue']);
             let temp = temp_recomand(data['tmp'][0]['fcstValue'])
             $('.weather-icon:eq(2)').text(temp);
@@ -173,15 +173,15 @@ function translate_att() {
     let imgStack = [0, 0, 0, 0, 0, 0];
     let innerWidth = window.innerWidth;
 
-    console.log('innerWidth' + innerWidth)
-    console.log('type innerWidth' + typeof innerWidth)
+    // console.log('innerWidth' + innerWidth)
+    // console.log('type innerWidth' + typeof innerWidth)
 
     if (innerWidth >= 500) {
         imgStack = [0, 0, 0, 0, 0, 0];
-        console.log('들어옴(큰창)')
+
     } else {
         imgStack = [0, 0];
-        console.log('들어옴(작은창)')
+
     }
 
     let colWidth = 170;
