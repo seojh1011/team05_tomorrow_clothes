@@ -27,7 +27,7 @@
                 {#data: test,#}
                 datatype: 'json',
                 success: function (response) {
-                    console.log(response)
+
                     if (String(Object.keys(response)) === 'error') {
                         $('#emailerror').html(response.error)
                         {#alert(response.error)#}
@@ -47,7 +47,7 @@
                 datatype: 'json',
 
                 success: function (response) {
-                    console.log(response)
+
                     if (String(Object.keys(response)) === 'error') {
                         $('#passworderror').html(response.error)
                         {#alert(response.error)#}
@@ -85,6 +85,7 @@
                 <img class="register_title_img" onclick="window.location.href = '/'" src="{% static "img/desktop/tomorrow_clothes(흰색).png" %}">
             </div>
             <form class="input_register" action="{% url 'test_1:register' %}" method="post">
+                {% csrf_token %}
                 <div class="input_wrapper">
                     <div class="input_data">
                         <img src="{% static 'img/desktop/로그인페이지_닉네임아이콘.png' %}">

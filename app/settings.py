@@ -28,6 +28,7 @@ SECRET_KEY = TEAM5_SECRET["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS: List[str] = ["*"]
 
@@ -183,6 +184,7 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # print(STATIC_ROOT)
+
 MEDIA_URL = "https://s3.console.aws.amazon.com/s3/buckets/team05-tomorrow-clothes?region=ap-northeast-2&tab=objects/"
 # MEDIA_ROOT = os.path.join(BASE_DIR, "/img/upload/")
 # MEDIA_URL = "/media/"
