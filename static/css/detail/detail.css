@@ -11,6 +11,22 @@
     width: 400px;
 }
 
+.content-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.content-icons-left > a > img {
+    width: 30px;
+}
+
+.content-icons-right > img {
+    width: 30px;
+}
+
+
+
 /* 전체영역 */
 body {
 	background-color: white;
