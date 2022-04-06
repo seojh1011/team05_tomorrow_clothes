@@ -58,6 +58,10 @@
     align-items: center;
 }
 
+#main {
+    width: 500px;
+}
+
 .mypage-container {
     display: flex;
     justify-content: space-between;
@@ -87,7 +91,7 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
-    /* width: 300px; */
+     width: 250px;
     margin-top: 15px;
     font-size: 13px;
 }
@@ -153,3 +157,4 @@
     width: 200px;
     height: 250px;
 }
+
