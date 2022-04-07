@@ -31,7 +31,7 @@ SECRET_KEY = TEAM5_SECRET["SECRET_KEY"]
 DEBUG = False
 
 ALLOWED_HOSTS: List[str] = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://tomorrow-weather.click/']
+# CSRF_TRUSTED_ORIGINS = ['https://tomorrow-weather.click/']
 # Application definition
 AUTH_USER_MODEL = "user_admission.User"
 
@@ -74,7 +74,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
+    # "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
