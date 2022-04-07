@@ -31,7 +31,7 @@ SECRET_KEY = TEAM5_SECRET["SECRET_KEY"]
 DEBUG = False
 
 ALLOWED_HOSTS: List[str] = ["*"]
-
+CSRF_TRUSTED_ORIGINS = ['https://tomorrow-weather.click/']
 # Application definition
 AUTH_USER_MODEL = "user_admission.User"
 
