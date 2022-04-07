@@ -242,3 +242,6 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # # CORS_ORIGIN_WHITELIST = ['http://ec2-15-164-94-71.ap-northeast-2.compute.amazonaws.com:8000','http://15.164.94.71:8000']
 # CORS_ALLOW_CREDENTIALS = True
 
+# 추가??
+SECURE_SSL_REDIRECT = True
+
