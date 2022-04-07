@@ -35,7 +35,7 @@ ALLOWED_HOSTS: List[str] = ["*"]
 # ALLOWED_HOSTS = ['IP', 'tomorrow-weather.click']
 #
 # CSRF_TRUSTED_ORIGINS = ['tomorrow-weather.click']
-CSRF_TRUSTED_ORIGINS = ['https://tomorrow-weather.click/']
+# CSRF_TRUSTED_ORIGINS = ['https://tomorrow-weather.click/']
 # Application definition
 AUTH_USER_MODEL = "user_admission.User"
 
