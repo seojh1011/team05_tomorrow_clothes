@@ -54,16 +54,16 @@ def get_update_feed_page(request: HttpRequest, feed_id: int):
         return redirect(f"/detail/{feed_id}/", {'error': '본인이 작성한 게시물이 아닙니다.'})
 
 
-@content.get("/feed/update/{feed_id}/", response=FeedSchema)
-@login_required(login_url="/login/")
-def get_update_feed_page(request: HttpRequest, feed_id: int):
-    user_id = request.user.id
-    feed_writer = Feeds.objects.get(id=feed_id).writer.id
-    if user_id == feed_writer:
-        feed = Feeds.objects.get(id=feed_id)
-        return render(request, 'add.html', {'feed': feed})
-    else:
-        return redirect(f"/detail/{feed_id}/", {'error': '본인이 작성한 게시물이 아닙니다.'})
+# @content.get("/feed/update/{feed_id}/", response=FeedSchema)
+# @login_required(login_url="/login/")
+# def get_update_feed_page(request: HttpRequest, feed_id: int):
+#     user_id = request.user.id
+#     feed_writer = Feeds.objects.get(id=feed_id).writer.id
+#     if user_id == feed_writer:
+#         feed = Feeds.objects.get(id=feed_id)
+#         return render(request, 'add.html', {'feed': feed})
+#     else:
+#         return redirect(f"/detail/{feed_id}/", {'error': '본인이 작성한 게시물이 아닙니다.'})
 
 
 # detail/feeds/<int:feed_id> 수정
@@ -109,25 +109,24 @@ def delete_feed(request: HttpRequest, feed_id: int) -> Dict[str,str]:
 def get_detail_page(request: HttpRequest, feed_id: int) -> HttpResponse:
     user_id = request.user.id
     # 로그인된 유저의 아이디값
-    print('스타트')
+
     try:
         feed = Feeds.objects.get(id=feed_id)
         # 디테일 페이지에 뿌려질 피드 객체
         check = feed.scrape.filter(id=user_id)  # type: ignore
         # 로그인된 유저의 값으로 피드에 스크랩했는지 체크
         comments = Comments.objects.filter(feed_id=feed_id).order_by("-created_at")
-        print('시작')
+
         # 피드에 달린 댓글 객체들
         if check.exists():
             # 만약 스크랩을 했다면
-            print('이프')
+
             return render(
                 request,
                 "detail.html",
                 {"feed": feed, "comments": comments, "scraped": "scraped"},
             )
         else:
-            print('엘스')
             # 스크랩을 안했다면
             return render(request, "detail.html", {"feed": feed, "comments": comments})
     except ValueError:

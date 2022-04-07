@@ -74,7 +74,7 @@
                     <div><a href="{% url 'test_1:logout' %}" class="nav-logout" style="color: darkred;">LOGOUT</a>
                     </div>
                 {% else %}
-                    <div><a href="/register/" class="nav-signin">SIGN IN</a></div>
+                    <div><a href="/register/" class="nav-signin">SIGN UP</a></div>
                     <div><a href="/login/" class="nav-login" style="color: brown;">LOGIN</a></div>
                 {% endif %}
             </div>
@@ -87,6 +87,7 @@
 
 {% block profile_body %}
     <form action="/mypage/update/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
         <div id="main">
             <div class="profile-img" id="image">
                 <img src="{{ user.pro_img_url.url }}">

@@ -27,10 +27,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = TEAM5_SECRET["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS: List[str] = ["*"]
 
+# ALLOWED_HOSTS = ['IP', 'tomorrow-weather.click']
+#
+# CSRF_TRUSTED_ORIGINS = ['tomorrow-weather.click']
+CSRF_TRUSTED_ORIGINS = ['https://tomorrow-weather.click']
 # Application definition
 AUTH_USER_MODEL = "user_admission.User"
 
@@ -56,7 +61,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.kakao",
 ]
 
-SITE_ID = 1
+SITE_ID = 4
 
 LOGIN_REDIRECT_URL = "/"  # 로그인 후 리디렉션할 페이지
 ACCOUNT_LOGOUT_REDIRECT_URL = "/login"  # 로그아웃 후 리디렉션 할 페이지
@@ -73,7 +78,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    # "django.middleware.csrf.CsrfViewMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -181,6 +186,10 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+# STATIC_ROOT = os.path.join("staticfiles")
+STATIC_ROOT = ""
+# STATIC_ROOT = "/home/ubuntu/team05_tomorrow_clothes/static"
+# print(STATIC_ROOT)
 
 MEDIA_URL = "https://s3.console.aws.amazon.com/s3/buckets/team05-tomorrow-clothes?region=ap-northeast-2&tab=objects/"
 # MEDIA_ROOT = os.path.join(BASE_DIR, "/img/upload/")
@@ -212,7 +221,7 @@ AWS_S3_OBJECT_PARAMETERS = {
     "CacheControl": "max-age=86400",
 }
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-# STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 with open(os.path.join(BASE_DIR, "config/smtp.json")) as f:
     secrets = json.loads(f.read())
@@ -233,3 +242,8 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # # CORS_ORIGIN_WHITELIST = ['http://ec2-15-164-94-71.ap-northeast-2.compute.amazonaws.com:8000','http://15.164.94.71:8000']
 # CORS_ALLOW_CREDENTIALS = True
 
+# 추가??
+# SECURE_SSL_REDIRECT = True
+
+# EMAIL_USE_SSL = True 
+# EMAIL_USE_TLS = False
