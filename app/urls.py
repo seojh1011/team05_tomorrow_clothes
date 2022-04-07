@@ -34,7 +34,7 @@ from django.contrib.auth import views as auth_views
 # version 1.0.0 >> 중요한 변경 / 중간 변경 / 최소 변경
 
 
-api = NinjaAPI(urls_namespace="test_1", version="1.0.0" , csrf=True)
+api = NinjaAPI(urls_namespace="test_1", version="1.0.0" )
 
 api.add_router("login/", login_router)
 api.add_router("register/", register_router)
