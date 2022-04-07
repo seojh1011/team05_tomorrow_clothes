@@ -182,7 +182,8 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+# STATIC_ROOT = os.path.join("staticfiles")
+STATIC_ROOT = ""
 # STATIC_ROOT = "/home/ubuntu/team05_tomorrow_clothes/static"
 # print(STATIC_ROOT)
 
@@ -216,7 +217,7 @@ AWS_S3_OBJECT_PARAMETERS = {
     "CacheControl": "max-age=86400",
 }
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-# STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
 with open(os.path.join(BASE_DIR, "config/smtp.json")) as f:
     secrets = json.loads(f.read())
