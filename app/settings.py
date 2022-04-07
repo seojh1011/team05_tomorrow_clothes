@@ -61,7 +61,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.kakao",
 ]
 
-SITE_ID = 1
+SITE_ID = 3
 
 LOGIN_REDIRECT_URL = "/"  # 로그인 후 리디렉션할 페이지
 ACCOUNT_LOGOUT_REDIRECT_URL = "/login"  # 로그아웃 후 리디렉션 할 페이지
