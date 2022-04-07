@@ -60,6 +60,7 @@ body {
 .weather {
 	width: 330px;
 	height: 150px;
+
 	background-image: url("https://mysparta6712.s3.ap-northeast-2.amazonaws.com/admin/img/weather-background.jpg");
 	background-size: cover;
 	border-radius: 10px;
