@@ -17759,3 +17759,2173 @@ Not Found: /favicon.ico
 [06/Apr/2022 16:00:23] "GET / HTTP/1.1" 200 7580
 [06/Apr/2022 16:00:53] "GET / HTTP/1.1" 200 7580
 [06/Apr/2022 16:00:53] "GET / HTTP/1.1" 200 7580
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 05:22:20 +0000] [2334] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 05:22:20 +0000] [2334] [INFO] Listening at: http://0.0.0.0:8000 (2334)
+[2022-04-07 05:22:20 +0000] [2334] [INFO] Using worker: sync
+[2022-04-07 05:22:20 +0000] [2341] [INFO] Booting worker with pid: 2341
+[2022-04-07 05:26:51 +0000] [2334] [WARNING] Worker with pid 2341 was terminated due to signal 9
+[2022-04-07 05:26:51 +0000] [2365] [INFO] Booting worker with pid: 2365
+[2022-04-07 05:27:06 +0000] [2334] [WARNING] Worker with pid 2365 was terminated due to signal 9
+[2022-04-07 05:27:06 +0000] [2369] [INFO] Booting worker with pid: 2369
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 05:27:30 +0000] [2372] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 05:27:30 +0000] [2372] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2022-04-07 05:27:30 +0000] [2372] [ERROR] Retrying in 1 second.
+[2022-04-07 05:27:31 +0000] [2372] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2022-04-07 05:27:31 +0000] [2372] [ERROR] Retrying in 1 second.
+[2022-04-07 05:27:32 +0000] [2372] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2022-04-07 05:27:32 +0000] [2372] [ERROR] Retrying in 1 second.
+[2022-04-07 05:27:33 +0000] [2372] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2022-04-07 05:27:33 +0000] [2372] [ERROR] Retrying in 1 second.
+[2022-04-07 05:27:34 +0000] [2372] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2022-04-07 05:27:34 +0000] [2372] [ERROR] Retrying in 1 second.
+[2022-04-07 05:27:35 +0000] [2372] [ERROR] Can't connect to ('0.0.0.0', 8000)
+[2022-04-07 05:50:25 +0000] [2334] [WARNING] Worker with pid 2369 was terminated due to signal 9
+[2022-04-07 05:50:25 +0000] [2450] [INFO] Booting worker with pid: 2450
+[2022-04-07 14:50:53 +0900] [2450] [INFO] Parent changed, shutting down: <Worker 2450>
+[2022-04-07 14:50:53 +0900] [2450] [INFO] Worker exiting (pid: 2450)
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 05:51:04 +0000] [2461] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 05:51:04 +0000] [2461] [INFO] Listening at: http://0.0.0.0:8000 (2461)
+[2022-04-07 05:51:04 +0000] [2461] [INFO] Using worker: sync
+[2022-04-07 05:51:04 +0000] [2468] [INFO] Booting worker with pid: 2468
+[2022-04-07 14:53:27 +0900] [2468] [INFO] Parent changed, shutting down: <Worker 2468>
+[2022-04-07 14:53:27 +0900] [2468] [INFO] Worker exiting (pid: 2468)
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 05:53:36 +0000] [2493] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 05:53:36 +0000] [2493] [INFO] Listening at: http://0.0.0.0:8000 (2493)
+[2022-04-07 05:53:36 +0000] [2493] [INFO] Using worker: sync
+[2022-04-07 05:53:36 +0000] [2500] [INFO] Booting worker with pid: 2500
+[2022-04-07 14:58:21 +0900] [2500] [INFO] Parent changed, shutting down: <Worker 2500>
+[2022-04-07 14:58:21 +0900] [2500] [INFO] Worker exiting (pid: 2500)
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+14
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 05:58:37 +0000] [2526] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 05:58:37 +0000] [2526] [INFO] Listening at: http://0.0.0.0:8000 (2526)
+[2022-04-07 05:58:37 +0000] [2526] [INFO] Using worker: sync
+[2022-04-07 05:58:37 +0000] [2533] [INFO] Booting worker with pid: 2533
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 06:00:47 +0000] [2551] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 06:00:47 +0000] [2551] [INFO] Listening at: http://0.0.0.0:8000 (2551)
+[2022-04-07 06:00:47 +0000] [2551] [INFO] Using worker: sync
+[2022-04-07 06:00:47 +0000] [2558] [INFO] Booting worker with pid: 2558
+[2022-04-07 15:18:17 +0900] [2558] [INFO] Parent changed, shutting down: <Worker 2558>
+[2022-04-07 15:18:17 +0900] [2558] [INFO] Worker exiting (pid: 2558)
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+14
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+14
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '성남시수정구' '태평4동']
+['경기도' '성남시수정구' '태평4동']
+['경기도' '성남시분당구' '분당동']
+15
+['경기도' '성남시분당구' '분당동']
+15
+['경기도' '성남시분당구' '분당동']
+['경기도' '성남시분당구' '분당동']
+15
+['경기도' '성남시분당구' '분당동']
+15
+['서울특별시' '강북구' '수유3동']
+16
+['서울특별시' '강북구' '수유3동']
+['경기도' '안성시' '안성1동']
+['경기도' '안성시' '안성1동']
+15
+['경기도' '수원시팔달구' '화서1동']
+['서울특별시' '강북구' '수유3동']
+16
+['경기도' '안성시' '보개면']
+['경기도' '성남시분당구' '분당동']
+['경기도' '성남시분당구' '분당동']
+15
+['경기도' '안성시' '보개면']
+['경기도' '안성시' '보개면']
+['경기도' '안성시' '안성1동']
+15
+['서울특별시' '강북구' '수유3동']
+['서울특별시' '강북구' '수유3동']
+16
+['경기도' '성남시분당구' '분당동']
+15
+['경기도' '성남시분당구' '분당동']
+['경기도' '성남시분당구' '분당동']
+['경기도' '안성시' '보개면']
+['경기도' '안성시' '보개면']
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 06:18:29 +0000] [2621] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 06:18:29 +0000] [2621] [INFO] Listening at: http://0.0.0.0:8000 (2621)
+[2022-04-07 06:18:29 +0000] [2621] [INFO] Using worker: sync
+[2022-04-07 06:18:29 +0000] [2628] [INFO] Booting worker with pid: 2628
+[2022-04-07 15:18:57 +0900] [2628] [INFO] Parent changed, shutting down: <Worker 2628>
+[2022-04-07 15:18:57 +0900] [2628] [INFO] Worker exiting (pid: 2628)
+['경기도' '안성시' '보개면']
+['경기도' '성남시분당구' '분당동']
+['경기도' '안성시' '보개면']
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 06:19:17 +0000] [2645] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 06:19:17 +0000] [2645] [INFO] Listening at: http://0.0.0.0:8000 (2645)
+[2022-04-07 06:19:17 +0000] [2645] [INFO] Using worker: sync
+[2022-04-07 06:19:17 +0000] [2652] [INFO] Booting worker with pid: 2652
+Not Found: /favicon.ico
+Forbidden (Origin checking failed - https://tomorrow-weather.click does not match any trusted origins.): /password_reset/
+Forbidden (Origin checking failed - https://tomorrow-weather.click does not match any trusted origins.): /password_reset/
+Forbidden (Origin checking failed - https://tomorrow-weather.click does not match any trusted origins.): /password_reset/
+[2022-04-07 06:24:47 +0000] [2645] [INFO] Handling signal: hup
+[2022-04-07 06:24:47 +0000] [2645] [INFO] Hang up: Master
+[2022-04-07 06:24:47 +0000] [2660] [INFO] Booting worker with pid: 2660
+[2022-04-07 06:24:47 +0000] [2645] [WARNING] Worker with pid 2652 was terminated due to signal 1
+[2022-04-07 15:26:11 +0900] [2660] [INFO] Parent changed, shutting down: <Worker 2660>
+[2022-04-07 15:26:11 +0900] [2660] [INFO] Worker exiting (pid: 2660)
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 06:26:18 +0000] [2761] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 06:26:18 +0000] [2761] [INFO] Listening at: http://0.0.0.0:8000 (2761)
+[2022-04-07 06:26:18 +0000] [2761] [INFO] Using worker: sync
+[2022-04-07 06:26:18 +0000] [2768] [INFO] Booting worker with pid: 2768
+Forbidden (Origin checking failed - https://tomorrow-weather.click does not match any trusted origins.): /password_reset/
+Feeds matching query does not exist.
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/ninja/operation.py", line 99, in run
+    result = self.view_func(request, **values)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/team05_tomorrow_clothes/content_post/apis/v1/detail_router.py", line 49, in get_update_feed_page
+    feed_writer = Feeds.objects.get(id=feed_id).writer.id
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+content_post.models.contents.Feeds.DoesNotExist: Feeds matching query does not exist.
+Internal Server Error: /detail/feed/update/580/
+Feeds matching query does not exist.
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/ninja/operation.py", line 99, in run
+    result = self.view_func(request, **values)
+  File "/home/ubuntu/team05_tomorrow_clothes/content_post/apis/v1/detail_router.py", line 97, in delete_feed
+    delete_feed = Feeds.objects.get(id=feed_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+content_post.models.contents.Feeds.DoesNotExist: Feeds matching query does not exist.
+Internal Server Error: /detail/feed/delete/580
+Forbidden (Origin checking failed - https://tomorrow-weather.click does not match any trusted origins.): /password_reset/
+[2022-04-07 15:31:56 +0900] [2768] [INFO] Parent changed, shutting down: <Worker 2768>
+[2022-04-07 15:31:56 +0900] [2768] [INFO] Worker exiting (pid: 2768)
+['경기도' '수원시팔달구' '화서1동']
+['서울특별시' '강북구' '수유3동']
+16
+['서울특별시' '강북구' '수유3동']
+['경기도' '수원시팔달구' '화서1동']
+['서울특별시' '강북구' '수유3동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['서울특별시' '강북구' '수유3동']
+['서울특별시' '강북구' '수유3동']
+16
+['서울특별시' '강북구' '수유3동']
+['서울특별시' '강북구' '수유3동']
+16
+['서울특별시' '강북구' '수유3동']
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 06:32:10 +0000] [3010] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 06:32:10 +0000] [3010] [INFO] Listening at: http://0.0.0.0:8000 (3010)
+[2022-04-07 06:32:10 +0000] [3010] [INFO] Using worker: sync
+[2022-04-07 06:32:10 +0000] [3017] [INFO] Booting worker with pid: 3017
+Forbidden (Origin checking failed - https://tomorrow-weather.click does not match any trusted origins.): /password_reset/
+(1366, "Incorrect string value: '\\xF0\\x9F\\x91\\x8D' for column 'feeds_comment' at row 1")
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1366, "Incorrect string value: '\\xF0\\x9F\\x91\\x8D' for column 'feeds_comment' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/ninja/operation.py", line 99, in run
+    result = self.view_func(request, **values)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/team05_tomorrow_clothes/content_post/apis/v1/detail_router.py", line 38, in post_feed
+    Feeds.objects.create(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.DataError: (1366, "Incorrect string value: '\\xF0\\x9F\\x91\\x8D' for column 'feeds_comment' at row 1")
+Internal Server Error: /detail/feed/
+(1366, "Incorrect string value: '\\xF0\\x9F\\x91\\x8D' for column 'feeds_comment' at row 1")
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1366, "Incorrect string value: '\\xF0\\x9F\\x91\\x8D' for column 'feeds_comment' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/ninja/operation.py", line 99, in run
+    result = self.view_func(request, **values)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/team05_tomorrow_clothes/content_post/apis/v1/detail_router.py", line 38, in post_feed
+    Feeds.objects.create(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/base.py", line 806, in save
+    self.save_base(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/base.py", line 857, in save_base
+    updated = self._save_table(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.DataError: (1366, "Incorrect string value: '\\xF0\\x9F\\x91\\x8D' for column 'feeds_comment' at row 1")
+Internal Server Error: /detail/feed/
+Not Found: /favicon.ico
+Forbidden (Origin checking failed - https://tomorrow-weather.click does not match any trusted origins.): /password_reset/
+[2022-04-07 15:39:21 +0900] [3017] [INFO] Parent changed, shutting down: <Worker 3017>
+[2022-04-07 15:39:21 +0900] [3017] [INFO] Worker exiting (pid: 3017)
+['경기도' '수원시팔달구' '화서1동']
+['서울특별시' '강북구' '수유3동']
+16
+['경기도' '수원시팔달구' '화서1동']
+['서울특별시' '강북구' '수유3동']
+['경기도' '고양시일산서구' '송포동']
+['서울특별시' '강북구' '수유3동']
+['경기도' '고양시일산서구' '송포동']
+['경기도' '고양시일산서구' '송포동']
+['경기도' '고양시일산서구' '송포동']
+['경기도' '고양시일산서구' '송포동']
+13
+['서울특별시' '강북구' '수유3동']
+['경기도' '성남시분당구' '분당동']
+15
+['경기도' '성남시분당구' '분당동']
+['경기도' '성남시분당구' '분당동']
+['경기도' '고양시일산서구' '송포동']
+['경기도' '고양시일산서구' '송포동']
+13
+['경기도' '고양시일산서구' '송포동']
+['경기도' '고양시일산서구' '송포동']
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 06:39:31 +0000] [3046] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 06:39:31 +0000] [3046] [INFO] Listening at: http://0.0.0.0:8000 (3046)
+[2022-04-07 06:39:31 +0000] [3046] [INFO] Using worker: sync
+[2022-04-07 06:39:31 +0000] [3053] [INFO] Booting worker with pid: 3053
+Forbidden (Origin checking failed - https://tomorrow-weather.click does not match any trusted origins.): /password_reset/
+Not Found: /owa/auth/logon.aspx
+[2022-04-07 15:43:06 +0900] [3053] [INFO] Parent changed, shutting down: <Worker 3053>
+[2022-04-07 15:43:06 +0900] [3053] [INFO] Worker exiting (pid: 3053)
+['경기도' '고양시일산서구' '송포동']
+['경기도' '수원시팔달구' '화서1동']
+['서울특별시' '강북구' '수유3동']
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 06:43:15 +0000] [3078] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 06:43:15 +0000] [3078] [INFO] Listening at: http://0.0.0.0:8000 (3078)
+[2022-04-07 06:43:15 +0000] [3078] [INFO] Using worker: sync
+[2022-04-07 06:43:15 +0000] [3085] [INFO] Booting worker with pid: 3085
+[2022-04-07 15:45:59 +0900] [3085] [INFO] Parent changed, shutting down: <Worker 3085>
+[2022-04-07 15:45:59 +0900] [3085] [INFO] Worker exiting (pid: 3085)
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 06:46:10 +0000] [3108] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 06:46:10 +0000] [3108] [INFO] Listening at: http://0.0.0.0:8000 (3108)
+[2022-04-07 06:46:10 +0000] [3108] [INFO] Using worker: sync
+[2022-04-07 06:46:10 +0000] [3115] [INFO] Booting worker with pid: 3115
+Forbidden (Origin checking failed - https://tomorrow-weather.click does not match any trusted origins.): /password_reset/
+Not Found: /12
+Not Found: /owa/auth/logon.aspx
+Not Found: /12
+Not Found: /12
+Not Found: /12
+Not Found: /12
+Not Found: /12
+Not Found: /12
+Not Found: /12
+Not Found: /12
+Not Found: /12
+Not Found: /12
+Not Found: /12
+Not Found: /12
+Forbidden (Origin checking failed - https://tomorrow-weather.click does not match any trusted origins.): /tomorrow/weather/admin/login/
+/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/ninja/openapi/schema.py:94: UserWarning: operation_id "content_post_apis_v1_detail_router_get_update_feed_page" is already used (func: <function get_update_feed_page at 0x7f7e12909430>)
+  warnings.warn(
+Method Not Allowed: /register/reduplication
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 06:55:56 +0000] [3143] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 06:55:56 +0000] [3143] [INFO] Listening at: http://0.0.0.0:8000 (3143)
+[2022-04-07 06:55:56 +0000] [3143] [INFO] Using worker: sync
+[2022-04-07 06:55:56 +0000] [3150] [INFO] Booting worker with pid: 3150
+Forbidden (Origin checking failed - https://tomorrow-weather.click does not match any trusted origins.): /password_reset/
+Not Found: /admin/login/
+Not Found: /robots.txt
+Not Found: /robots.txt
+[2022-04-07 16:02:02 +0900] [3150] [INFO] Parent changed, shutting down: <Worker 3150>
+[2022-04-07 16:02:02 +0900] [3150] [INFO] Worker exiting (pid: 3150)
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+14
+['전라북도' '전주시완산구' '삼천2동']
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 07:02:09 +0000] [3176] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 07:02:09 +0000] [3176] [INFO] Listening at: http://0.0.0.0:8000 (3176)
+[2022-04-07 07:02:09 +0000] [3176] [INFO] Using worker: sync
+[2022-04-07 07:02:09 +0000] [3183] [INFO] Booting worker with pid: 3183
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 343, in save
+    self.send_mail(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 284, in send_mail
+    email_message.send()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.9/smtplib.py", line 750, in login
+    raise last_exception
+  File "/usr/lib/python3.9/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.9/smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbt\n5.7.14 mDoxcZTI2-8XE-R3cct-iTfrkTHlZ57ka33J8QFSiSgNA_gNlNpLEwmMgNFSmEqpyiRIa\n5.7.14 YsSdNbqMw9ljdWS3jNO-K8YJjF2m5rdnuNiu_Z2GdIYS957tyDUjlmERX5MBsAC0>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 j9-20020aa78009000000b004fde2dd78b0sm16586812pfi.109 - gsmtp')
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 343, in save
+    self.send_mail(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 284, in send_mail
+    email_message.send()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.9/smtplib.py", line 750, in login
+    raise last_exception
+  File "/usr/lib/python3.9/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.9/smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbt\n5.7.14 3X645tCyHQH0aWJL9Zsj6s-lRppR6vK3LA2SRMQByJfcokeyWQZs7XWjRH5v9OYztdpFU\n5.7.14 _lB5yPSY5-WlYPy3S3CzynIeV4SswQZ81Nx8_SJJGh57_REbeHU17qH2o6U0bdOw>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 n23-20020a63a517000000b0039cc5288a6bsm1172504pgf.1 - gsmtp')
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 343, in save
+    self.send_mail(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 284, in send_mail
+    email_message.send()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.9/smtplib.py", line 750, in login
+    raise last_exception
+  File "/usr/lib/python3.9/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.9/smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 qTjH3QO1TcMV_yHCcJdk5unhwElHfGd1i5o-Gg7XRYGcIUOfePdVwKw3psgt8FnjaqToI\n5.7.14 sSlU_1Y2N6r6OMGH5iIEt0GBe7oQAuouRy1slfNzhUMNz3YgNoAaT32t9Fji9QjY>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 y26-20020a056a00181a00b004fe3a6f02cesm9039384pfa.85 - gsmtp')
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 343, in save
+    self.send_mail(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 284, in send_mail
+    email_message.send()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.9/smtplib.py", line 750, in login
+    raise last_exception
+  File "/usr/lib/python3.9/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.9/smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbs\n5.7.14 X1RMI1jjFphJ0Jf4GHn5_pQFwNCQ9KAEf-bJtdwNMAiV3Y6jFOv94V-7uvoV3DgLwefXa\n5.7.14 N22ztWvcW83w8iZ1HhuwRqAs2qEHOVLP7XcZ3AfgqNc5V35SO62nxdyMIrOkXdAt>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 s22-20020a056a00179600b004fb28a97abdsm23848916pfg.12 - gsmtp')
+Not Found: /favicon.ico
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 343, in save
+    self.send_mail(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 284, in send_mail
+    email_message.send()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.9/smtplib.py", line 750, in login
+    raise last_exception
+  File "/usr/lib/python3.9/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.9/smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 h0xmEbowcph4sSqGXb1gCq-q-VB3-LEMebQJSp8T7eFLRmX-d9bGS8Q7Xx3DLe6shSVFM\n5.7.14 4zgg9Dd2VUYyQKFN_wlocOPxjm6fRBFIfLhUsZV2KOtq7AEYptgN9MJtgUxkaGva>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 q9-20020a638c49000000b00398677b6f25sm18304977pgn.70 - gsmtp')
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 343, in save
+    self.send_mail(
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 284, in send_mail
+    email_message.send()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.9/smtplib.py", line 750, in login
+    raise last_exception
+  File "/usr/lib/python3.9/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.9/smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 rO3VYAJTQqX3ENNYCyfQr5x0hlcSTFi1ZrrNTsMmzoeWitX0SiwZoADKirDOPRROy55li\n5.7.14 mzEdxjx_tEJqYOME7VaUurVFh04JAnTojNfpHP-rp11kHl9GVTjwbWCPYF_MyJTk>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 v189-20020a622fc6000000b004fb72e95806sm20528514pfv.48 - gsmtp')
+Not Found: /favicon.ico
+[2022-04-07 07:37:40 +0000] [3176] [INFO] Handling signal: hup
+[2022-04-07 07:37:40 +0000] [3176] [INFO] Hang up: Master
+[2022-04-07 07:37:40 +0000] [3681] [INFO] Booting worker with pid: 3681
+[2022-04-07 07:37:40 +0000] [3176] [WARNING] Worker with pid 3183 was terminated due to signal 1
+Not Found: /favicon.ico
+[2022-04-07 16:44:32 +0900] [3681] [INFO] Parent changed, shutting down: <Worker 3681>
+[2022-04-07 16:44:32 +0900] [3681] [INFO] Worker exiting (pid: 3681)
+['경상남도' '창원시마산회원구' '내서읍']
+['경기도' '안성시' '안성1동']
+['경기도' '안성시' '안성1동']
+15
+['경기도' '안성시' '안성1동']
+15
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 07:44:54 +0000] [3761] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 07:44:54 +0000] [3761] [INFO] Listening at: http://0.0.0.0:8000 (3761)
+[2022-04-07 07:44:54 +0000] [3761] [INFO] Using worker: sync
+[2022-04-07 07:44:54 +0000] [3768] [INFO] Booting worker with pid: 3768
+Not Found: //password_reset_confirm/NjI/b3irxr-8006c9f7f79647b3d98fa7b5dec596bb/
+Not Found: /tf
+Not Found: /to
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 325, in save
+    current_site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 325, in save
+    current_site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Not Found: /tom
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 325, in save
+    current_site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 325, in save
+    current_site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Not Found: /apple-touch-icon-precomposed.png
+Not Found: /apple-touch-icon.png
+Not Found: /favicon.ico
+Not Found: /lo
+Internal Server Error: /accounts/kakao/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 80, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/mixins.py", line 18, in dispatch
+    return self.login(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 108, in login
+    app = provider.get_app(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/provider.py", line 30, in get_app
+    return adapter.get_app(request, self.id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/adapter.py", line 204, in get_app
+    app = SocialApp.objects.get_current(provider, request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/models.py", line 31, in get_current
+    site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Not Found: /favicon.ico
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /accounts/kakao/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 80, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/mixins.py", line 18, in dispatch
+    return self.login(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 108, in login
+    app = provider.get_app(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/provider.py", line 30, in get_app
+    return adapter.get_app(request, self.id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/adapter.py", line 204, in get_app
+    app = SocialApp.objects.get_current(provider, request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/models.py", line 31, in get_current
+    site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Not Found: /public/img/shop-logo.png
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Not Found: /pa
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /accounts/kakao/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 80, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/mixins.py", line 18, in dispatch
+    return self.login(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 108, in login
+    app = provider.get_app(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/provider.py", line 30, in get_app
+    return adapter.get_app(request, self.id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/adapter.py", line 204, in get_app
+    app = SocialApp.objects.get_current(provider, request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/models.py", line 31, in get_current
+    site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Not Found: /favicon.ico
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 325, in save
+    current_site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /accounts/kakao/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 80, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/mixins.py", line 18, in dispatch
+    return self.login(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 108, in login
+    app = provider.get_app(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/provider.py", line 30, in get_app
+    return adapter.get_app(request, self.id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/adapter.py", line 204, in get_app
+    app = SocialApp.objects.get_current(provider, request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/models.py", line 31, in get_current
+    site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 325, in save
+    current_site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Not Found: /api/v1/notices
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /accounts/kakao/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 80, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/mixins.py", line 18, in dispatch
+    return self.login(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 108, in login
+    app = provider.get_app(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/provider.py", line 30, in get_app
+    return adapter.get_app(request, self.id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/adapter.py", line 204, in get_app
+    app = SocialApp.objects.get_current(provider, request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/models.py", line 31, in get_current
+    site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Not Found: /favicon.ico
+Internal Server Error: /tomorrow/weather/admin/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 103, in get_context_data
+    current_site = get_current_site(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Not Found: /api/v1/notices
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 325, in save
+    current_site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /accounts/kakao/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 80, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/mixins.py", line 18, in dispatch
+    return self.login(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 108, in login
+    app = provider.get_app(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/provider.py", line 30, in get_app
+    return adapter.get_app(request, self.id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/adapter.py", line 204, in get_app
+    app = SocialApp.objects.get_current(provider, request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/models.py", line 31, in get_current
+    site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 325, in save
+    current_site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Not Found: /admin/login/
+Internal Server Error: /accounts/kakao/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 80, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/mixins.py", line 18, in dispatch
+    return self.login(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 108, in login
+    app = provider.get_app(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/provider.py", line 30, in get_app
+    return adapter.get_app(request, self.id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/adapter.py", line 204, in get_app
+    app = SocialApp.objects.get_current(provider, request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/models.py", line 31, in get_current
+    site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /accounts/kakao/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 80, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/mixins.py", line 18, in dispatch
+    return self.login(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 108, in login
+    app = provider.get_app(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/provider.py", line 30, in get_app
+    return adapter.get_app(request, self.id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/adapter.py", line 204, in get_app
+    app = SocialApp.objects.get_current(provider, request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/models.py", line 31, in get_current
+    site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 325, in save
+    current_site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /accounts/kakao/login/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 80, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/mixins.py", line 18, in dispatch
+    return self.login(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/oauth2/views.py", line 108, in login
+    app = provider.get_app(self.request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/providers/base/provider.py", line 30, in get_app
+    return adapter.get_app(request, self.id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/adapter.py", line 204, in get_app
+    app = SocialApp.objects.get_current(provider, request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/allauth/socialaccount/models.py", line 31, in get_current
+    site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+Internal Server Error: /password_reset/
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 232, in dispatch
+    return super().dispatch(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/views.py", line 245, in form_valid
+    form.save(**opts)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/auth/forms.py", line 325, in save
+    current_site = get_current_site(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py", line 14, in get_current_site
+    return Site.objects.get_current(request)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 59, in get_current
+    return self._get_site_by_id(site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/contrib/sites/models.py", line 30, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ubuntu/.cache/pypoetry/virtualenvs/pythonproject3-729rx-lA-py3.9/lib/python3.9/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+[2022-04-07 17:09:33 +0900] [3768] [INFO] Parent changed, shutting down: <Worker 3768>
+[2022-04-07 17:09:33 +0900] [3768] [INFO] Worker exiting (pid: 3768)
+['경기도' '수원시팔달구' '화서1동']
+['서울특별시' '강북구' '수유3동']
+['경기도' '안성시' '안성1동']
+['경기도' '안성시' '안성1동']
+15
+['서울특별시' '강북구' '수유3동']
+['경기도' '안성시' '안성1동']
+['경기도' '안성시' '안성1동']
+['서울특별시' '강남구' '역삼1동']
+['서울특별시' '강남구' '역삼1동']
+15
+['서울특별시' '강남구' '역삼1동']
+['서울특별시' '강남구' '역삼1동']
+15
+['서울특별시' '강남구' '역삼1동']
+['경기도' '수원시팔달구' '화서1동']
+['서울특별시' '강남구' '역삼1동']
+['경기도' '안성시' '안성1동']
+['서울특별시' '강남구' '역삼1동']
+['서울특별시' '강남구' '역삼1동']
+['서울특별시' '강남구' '역삼1동']
+15
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '안성시' '안성1동']
+15
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '안성시' '안성1동']
+15
+['경기도' '안성시' '안성1동']
+15
+['경기도' '안성시' '안성1동']
+15
+['경기도' '안성시' '안성1동']
+15
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '안성시' '보개면']
+['경기도' '안양시동안구' '호계2동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '안양시동안구' '호계2동']
+['경기도' '안양시동안구' '호계2동']
+['경기도' '안양시동안구' '호계2동']
+['경기도' '안양시동안구' '호계2동']
+['서울특별시' '강남구' '역삼1동']
+13
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['충청북도' '충주시' '호암.직동']
+16
+['충청북도' '충주시' '호암.직동']
+['서울특별시' '강남구' '역삼1동']
+['경기도' '수원시팔달구' '화서1동']
+['서울특별시' '강남구' '역삼1동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['충청북도' '충주시' '호암.직동']
+['경기도' '수원시팔달구' '화서1동']
+['충청북도' '충주시' '호암.직동']
+16
+['충청북도' '충주시' '호암.직동']
+['충청북도' '충주시' '호암.직동']
+['서울특별시' '강남구' '역삼1동']
+The currently activated Python version 3.8.10 is not supported by the project (^3.9).
+Trying to find and use a compatible version. 
+Using python3.9 (3.9.12)
+[2022-04-07 08:09:45 +0000] [3886] [INFO] Starting gunicorn 20.1.0
+[2022-04-07 08:09:45 +0000] [3886] [INFO] Listening at: http://0.0.0.0:8000 (3886)
+[2022-04-07 08:09:45 +0000] [3886] [INFO] Using worker: sync
+[2022-04-07 08:09:45 +0000] [3893] [INFO] Booting worker with pid: 3893
+[2022-04-07 17:12:03 +0900] [3893] [INFO] Parent changed, shutting down: <Worker 3893>
+[2022-04-07 17:12:03 +0900] [3893] [INFO] Worker exiting (pid: 3893)
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
+['경기도' '수원시팔달구' '화서1동']
