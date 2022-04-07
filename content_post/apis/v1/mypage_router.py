@@ -11,7 +11,7 @@ content = Router(tags=["MyPage"])
 
 
 
-@content.get("/")
+@content.get("/", url_name="mypage")
 def get_my_page(request: HttpRequest) -> HttpResponse:
     # user_id = '18'
     user_id = request.user.id

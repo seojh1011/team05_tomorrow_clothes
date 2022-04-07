@@ -68,7 +68,10 @@
             <img src="{% static 'img/hanger.png' %}">
         </div>
         {% if user.is_authenticated %}
-            <a class="logout_btn" href="{% url 'test_1:logout' %}">{{ user.nick_name }}님 Logout</a>
+            <div>
+            <a class="logout_btn" href="{% url 'test_1:mypage' %}">{{ user.nick_name }}님</a>
+            <a class="logout_btn" href="{% url 'test_1:logout' %}"> Logout</a>
+            </div>
         {% else %}
             <div class="header-icon" onclick="window.location.href = '/login'">
                 <img src="{% static 'img/login.png' %}">
