@@ -49,7 +49,7 @@ api.add_router("k-weather/", weather_router)
 
 urlpatterns = [
     path("tomorrow/weather/admin/", admin.site.urls),
-    path("screate/team5/api/", api.urls),
+    path("", api.urls),
     path("accounts/", include("allauth.urls")),
     path('password_reset/', auth_views.PasswordResetView.as_view(template_name='password/password_reset.html'),
          name="password_reset"),
