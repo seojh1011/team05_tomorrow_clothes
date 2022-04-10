@@ -40,7 +40,7 @@
     display: flex;
     justify-content: space-between;
     /*height: 90px;*/
-    width: 550px;
+    width: 650px;
     font-size: 20px;
     padding-top: 35px;
     font-style: normal;
@@ -70,6 +70,11 @@
 }
 
 .nav-mypage {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-member {
     padding-top: 3px;
     display: inline-block;
 }
@@ -143,14 +148,15 @@
 
 .top_icon button {
     border: none;
-    width: 45px;
+    width: 48px;
     font-size: 16px;
     font-weight: bold;
     height: 25px;
-    border-radius: 10px;
+    /* border-radius: 7px; */
     background-color: white;
-    color: #096b90;
+    color: #096B90;
     cursor: pointer;
+    font-family: 'LeferiBaseType-RegularA';
 }
 
 .desktop_label {
@@ -159,12 +165,19 @@
 }
 
 .desktop_label label {
-    background-color: #096b90;
-    padding: 10px 15px;
+    background-color: #a6c1ee;
+    padding: 15px 15px 10px;
     color: white;
-    border-radius: 10px;
-    font-weight: bold;
+    border-radius: 7px;
+    /* font-weight: bold; */
     cursor: pointer;
+    /* font-family: 'LeferiPoint-WhiteA'; */
+    font-family: 'LeferiBaseType-RegularA';
+    font-size: 16px;
+}
+
+.desktop_label label:hover {
+    background-color: #0067a3;
 }
 
 .feed_img {
@@ -181,8 +194,10 @@
 .feed_comment .comment {
     width: 250px;
     height: 260px;
-    padding: 10px;
+    padding: 20px;
     margin: 35px 15px 10px;
     border: 1px solid lightgray;
     resize: none;
+    font-family: 'SUIT-Regular';
+    line-height: 22px;
 }
