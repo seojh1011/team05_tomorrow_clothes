@@ -113,15 +113,6 @@
                     LOGIN
                 </button>
             </div>
-            {#            <div class="selection-or">OR</div>#}
-            {#            {% load socialaccount %}#}
-            {#            <div class="login_social">#}
-            {#                <a href="{% provider_login_url 'kakao' method='oauth2' %}">#}
-            {#                    <button>Sign in with Kakao</button>#}
-            {#                </a>#}
-            {#            </div>#}
-
-            {#            <div class="link-register"><a href="/register/">계정</a>이 없으신가요?</div>#}
             <div class="selection-or or_str">OR</div>
             {% load socialaccount %}
             <div class="login_social kakao_login_wrapper">
@@ -139,11 +130,3 @@
     </div>
     </div>
 {% endblock login_body %}
-
-
-{#                {% load socialaccount %}#}
-{#                <div class="login_social">#}
-{#                    <a href="{% provider_login_url 'kakao' method='oauth2' %}">카카오톡</a>#}
-{#                    <img class="kakao_login_img" src="{% static "img/fiveicon/loginpage_kakaologo.png" %}">#}
-{#                    <p class="kakao_str">Sign in with KaKao</p>#}
-{#                </div>#}

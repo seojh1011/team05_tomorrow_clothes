@@ -33,7 +33,7 @@
     display: flex;
     justify-content: space-between;
     /*height: 90px;*/
-    width: 550px;
+    width: 650px;
     font-size: 20px;
     padding-top: 35px;
     font-style: normal;
@@ -63,6 +63,11 @@
 }
 
 .nav-mypage {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-member {
     padding-top: 3px;
     display: inline-block;
 }
