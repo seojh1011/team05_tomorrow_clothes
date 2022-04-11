@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" initial-scale="1.0">
     <title>Tomorrow Clothes</title>
-
+    {#  Font Awesome  #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     {#  Mobile  #}
     {#    <link rel="stylesheet" type="text/css" href="{% static 'css/member/member.css' %}"#}
     {#          media="screen and (max-width: 500px)">#}
     {#  Desktop  #}
     <link rel="stylesheet" type="text/css" href="{% static "css/member/desktop_member.css" %}"
           media="screen and (min-width: 451px)">
+    <link rel="stylesheet" type="text/css" href="{% static "css/member/member.css" %}"
+          media="screen and (max-width: 500px)">
 
 {% endblock member_head %}
 
@@ -40,6 +43,14 @@
         </div>
     </div>
     {#      Desktop - 효정 추가(끝) #}
+    {#      Mobile - 현영 추가(시작) #}
+     <div id="header">
+        <div class="back_allow" onclick="window.history.back()">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <p>Members</p>
+    </div>
+    {#     Mobile - 현영 추가(끝) #}
 {% endblock member_header %}
 
 {% block member_body %}
@@ -51,11 +62,11 @@
                         <img src="{% static "img/desktop/멤버페이지_김윤서.jpg" %}">
                         <div class="profile-contents">
                             <h2>김윤서 <span>Leader, AI</span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit. Amet aspernatur commodi dignissimos dolore
-                                dolorem error eum excepturi fuga fugit id iusto
-                                magnam, molestiae, officiis omnis perferendis
-                                repudiandae sit temporibus velit.</p>
+                            {#                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing#}
+                            {#                                elit. Amet aspernatur commodi dignissimos dolore#}
+                            {#                                dolorem error eum excepturi fuga fugit id iusto#}
+                            {#                                magnam, molestiae, officiis omnis perferendis#}
+                            {#                                repudiandae sit temporibus velit.</p>#}
                         </div>
                     </div>
                 </a>
@@ -63,14 +74,14 @@
             <li class="team-item">
                 <a href="https://github.com/heyhyo11">
                     <div class="profile profile_beige">
-                        <img src="{% static "img/wonyoung.jpg" %}">
+                        <img src="{% static "img/desktop/멤버페이지_남효정.png" %}">
                         <div class="profile-contents">
                             <h2>남효정 <span>Front-end</span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit. Amet aspernatur commodi dignissimos dolore
-                                dolorem error eum excepturi fuga fugit id iusto
-                                magnam, molestiae, officiis omnis perferendis
-                                repudiandae sit temporibus velit.</p>
+                            {#                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing#}
+                            {#                                elit. Amet aspernatur commodi dignissimos dolore#}
+                            {#                                dolorem error eum excepturi fuga fugit id iusto#}
+                            {#                                magnam, molestiae, officiis omnis perferendis#}
+                            {#                                repudiandae sit temporibus velit.</p>#}
                         </div>
                     </div>
                 </a>
@@ -78,43 +89,47 @@
             <li class="team-item">
                 <a href="https://github.com/seojh1011">
                     <div class="profile profile_green">
-                        <img src="{% static "img/wonyoung.jpg" %}">
+                        <img src="{% static "img/desktop/멤버페이지_서지훈.jpg" %}">
                         <div class="profile-contents">
                             <h2>서지훈 <span>Back-end</span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit. Amet aspernatur commodi dignissimos dolore
-                                dolorem error eum excepturi fuga fugit id iusto
-                                magnam, molestiae, officiis omnis perferendis
-                                repudiandae sit temporibus velit.</p>
+                            {#                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing#}
+                            {#                                elit. Amet aspernatur commodi dignissimos dolore#}
+                            {#                                dolorem error eum excepturi fuga fugit id iusto#}
+                            {#                                magnam, molestiae, officiis omnis perferendis#}
+                            {#                                repudiandae sit temporibus velit.</p>#}
                         </div>
                     </div>
                 </a>
             </li>
             <li class="team-item">
-                <div class="profile profile_pink">
-                    <img src="{% static "img/wonyoung.jpg" %}">
-                    <div class="profile-contents">
-                        <h2>이성 <span>Back-end</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Amet aspernatur commodi dignissimos dolore
-                            dolorem error eum excepturi fuga fugit id iusto
-                            magnam, molestiae, officiis omnis perferendis
-                            repudiandae sit temporibus velit.</p>
+                <a href="https://github.com/Roadman-Lee">
+                    <div class="profile profile_pink">
+                        <img src="{% static "img/desktop/멤버페이지_이성.png" %}">
+                        <div class="profile-contents">
+                            <h2>이성 <span>Back-end</span></h2>
+                            {#                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing#}
+                            {#                            elit. Amet aspernatur commodi dignissimos dolore#}
+                            {#                            dolorem error eum excepturi fuga fugit id iusto#}
+                            {#                            magnam, molestiae, officiis omnis perferendis#}
+                            {#                            repudiandae sit temporibus velit.</p>#}
+                        </div>
                     </div>
-                </div>
+                </a>
             </li>
             <li class="team-item">
-                <div class="profile profile_purple">
-                    <img src="{% static "img/desktop/멤버페이지_정현영.jpg" %}">
-                    <div class="profile-contents">
-                        <h2>정현영 <span>Front-end</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Amet aspernatur commodi dignissimos dolore
-                            dolorem error eum excepturi fuga fugit id iusto
-                            magnam, molestiae, officiis omnis perferendis
-                            repudiandae sit temporibus velit.</p>
+                <a href="https://github.com/winkberry">
+                    <div class="profile profile_purple">
+                        <img src="{% static "img/desktop/멤버페이지_정현영.jpg" %}">
+                        <div class="profile-contents">
+                            <h2>정현영 <span>Front-end</span></h2>
+                            {#                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing#}
+                            {#                            elit. Amet aspernatur commodi dignissimos dolore#}
+                            {#                            dolorem error eum excepturi fuga fugit id iusto#}
+                            {#                            magnam, molestiae, officiis omnis perferendis#}
+                            {#                            repudiandae sit temporibus velit.</p>#}
+                        </div>
                     </div>
-                </div>
+                </a>
             </li>
         </ul>
     </div>
