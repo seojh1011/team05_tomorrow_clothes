@@ -143,6 +143,24 @@ header.header_register{
     object-fit: scale-down;
 }
 
+input {
+    color: white;
+}
+
+#password > p {
+    color: wheat;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#input_data > p {
+    color: wheat;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5%;
+}
+
 .input_wrapper{
     display: flex;
     flex-direction: column;
