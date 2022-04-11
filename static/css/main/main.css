@@ -42,6 +42,17 @@ body {
 .header-icons {
 
 }
+
+.two-icon {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.one {
+	margin-right: 7%;
+}
 .header-icon > img{
 	width: 23px;
 }

@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" initial-scale="1.0">
     <title>Tomorrow Clothes</title>
-
+    {#  Font Awesome  #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     {#  Mobile  #}
     {#    <link rel="stylesheet" type="text/css" href="{% static 'css/member/member.css' %}"#}
     {#          media="screen and (max-width: 500px)">#}
     {#  Desktop  #}
     <link rel="stylesheet" type="text/css" href="{% static "css/member/desktop_member.css" %}"
           media="screen and (min-width: 451px)">
+    <link rel="stylesheet" type="text/css" href="{% static "css/member/member.css" %}"
+          media="screen and (max-width: 500px)">
 
 {% endblock member_head %}
 
@@ -40,6 +43,14 @@
         </div>
     </div>
     {#      Desktop - 효정 추가(끝) #}
+    {#      Mobile - 현영 추가(시작) #}
+     <div id="header">
+        <div class="back_allow" onclick="window.history.back()">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <p>Members</p>
+    </div>
+    {#     Mobile - 현영 추가(끝) #}
 {% endblock member_header %}
 
 {% block member_body %}

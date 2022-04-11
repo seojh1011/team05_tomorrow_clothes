@@ -264,3 +264,12 @@ header.header_register{
     width: 30px;
     height: 30px;
 }
+
+.link-register {
+    margin-top: 10%;
+    color: white;
+}
+
+.link-register > a {
+    color: #71b7d5;
+}
