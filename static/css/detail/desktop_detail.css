@@ -53,7 +53,7 @@
     display: flex;
     justify-content: space-between;
     /*height: 90px;*/
-    width: 550px;
+    width: 650px;
     font-size: 20px;
     padding-top: 35px;
     font-style: normal;
@@ -83,6 +83,11 @@
 }
 
 .nav-mypage {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-member {
     padding-top: 3px;
     display: inline-block;
 }
@@ -248,12 +253,13 @@
 .comment_article {
     line-height: 23px;
     padding: 0 10px;
+    display: flex;
+    text-align: center;
 }
 
 .comment_container {
     width: 300px;
-    height: 260px;
-    margin: 0 20px;
+    height: 330px;
     overflow-y: auto;
     margin: 0 20px 10px;
 }
@@ -293,13 +299,15 @@
 
 .comment_info {
     display: inline;
+    text-align: left;
+    padding-left: 10px;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 댓글(닉네임) */
 .comment_info .user-nickname {
     font-weight: bold;
     display: inline-block;
-    padding-right: 5px;
+    /*padding-right: 5px;*/
 }
 
 .user-comments {
@@ -330,7 +338,7 @@
     font-weight: bold;
 }
 
-/* //// 내용 > 오른쪽 컨텐츠 > 유저 댓글(작성일) */
+/* 내용 > 오른쪽 컨텐츠 > 유저 댓글(작성일) */
 .user-comments-date {
     color: darkgray;
     font-size: 13px;
@@ -364,6 +372,7 @@
     width: 300px;
     margin: 10px auto;
     display: inline;
+    padding: 0 5px;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 자식댓글(답글달기) */
@@ -420,7 +429,7 @@ details .reple {
 .comment_header {
     display: flex;
     justify-content: space-between;
-    padding: 10px 15px 5px;
+    padding: 10px 15px;
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
     margin: 20px 0;
@@ -444,6 +453,7 @@ details .reple {
     border: none;
     height: 20px;
     margin: 0;
+    padding-top: 3px;
 }
 
 /* 내용 > 오른쪽 컨텐츠 > 유저 부모댓글(제출버튼) */

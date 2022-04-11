@@ -48,6 +48,7 @@
             <div class="nav">
                 <div><a class="nav-main" href="/">MAIN</a></div>
                 <div><a class="nav-weather" href="/weather/">WEATHER</a></div>
+                <div><a class="nav-member" href="/member/">MEMBERS</a></div>
                 {% if user.is_authenticated %}
                     <div><a class="nav-mypage" href="/mypage/">MYPAGE</a></div>
                     <div><a class="nav-upload" href="/detail/feed/" style="color: #0067a3;">UPLOAD</a></div>
@@ -108,7 +109,7 @@
                     <label for="upload_img">이미지 선택하기</label>
                 </div>
                 <p>코멘트 작성</p>
-                <textarea class="comment" placeholder="글 내용을 입력하세요"
+                <textarea class="comment" placeholder="당신의 패션을 보여주세요!"
                           name="feeds_comment">{{ feed.feeds_comment }}</textarea>
             </div>
         </form>
@@ -132,7 +133,7 @@
                     <label for="upload_img">이미지 선택하기</label>
                 </div>
                 <p>코멘트 작성</p>
-                <textarea class="comment" maxlength="100" placeholder="글 내용을 입력하세요" name="feeds_comment"
+                <textarea class="comment" maxlength="100" placeholder="당신의 패션을 보여주세요!" name="feeds_comment"
                           required></textarea>
             </div>
         </form>

@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'SUIT-ExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 헤더 영역 */
+/* 헤더: 전체 */
+#main-header {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    /*width: 1050px;*/
+    margin: 0 auto;
+    /*padding-left: 30px;*/
+}
+
+/* 헤더: 타이틀 */
+#main-header .title {
+    margin-top: 60px;
+}
+
+/* 헤더: 타이틀 > 로고이미지 */
+#main-header .title img {
+    width: 300px;
+    /*height: 70px;*/
+}
+
+/* 헤더: 오른쪽 상단 메뉴들 */
+#main-header .nav {
+    display: flex;
+    justify-content: space-between;
+    /*height: 90px;*/
+    width: 650px;
+    font-size: 20px;
+    padding-top: 35px;
+    font-style: normal;
+    /*font-weight: 600;*/
+    font-family: 'ChosunGu';
+}
+
+/* 헤더 > 오른쪽 상단 메뉴 링크 */
+#main-header .nav div a {
+    text-decoration-line: none;
+    /*color: #042B44;*/
+    color: white;
+}
+
+/* 헤더 > 오른쪽 상단 메뉴(hover 하면 색상변경) */
+#main-header .nav div a:hover {
+    color: #a6c1ee;
+}
+
+.nav-main {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-weather {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-mypage {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-member {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-upload {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-logout {
+    /*color: white;*/
+    /*background-color: #042b44;*/
+    border-radius: 8px;
+    width: 80px;
+    display: inline-block;
+    height: 30px;
+    padding-top: 3px;
+}
+
+.nav-signin {
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.nav-login {
+    color: white;
+    /*background-color: #0067a3;*/
+    border-radius: 8px;
+    width: 80px;
+    display: inline-block;
+    height: 30px;
+    padding-top: 3px;
+}
+
+
+
+
+body, ul, h2, p {
+    margin: 0;
+    paddig: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-color: #111;
+    color: #999;
+}
+
+.wrapper {
+    display: flex;
+    height: 65vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.team {
+    /*background-color: aqua;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-item {
+    flex-basis: 220px;
+    flex-shrink: 0;
+    margin: 0 10px;
+    transition: all .4s;
+}
+
+.team-item:hover {
+    flex-basis: 270px;
+    margin: 0 20px;
+}
+
+.team-item img {
+    width: 100%;
+}
+
+.team-item:hover .profile-contents p {
+    max-height: 200px;
+}
+
+.profile {
+    background-color: #222;
+    position: relative;
+    overflow: hidden;
+    /*height: 280px;*/
+}
+
+.profile:before {
+    content: ' ';
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.95+100 */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#f2000000', GradientType=0); /* IE6-9 */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+}
+
+.profile_red {
+    color: #ff4949;
+}
+
+.profile_beige {
+    color: beige;
+}
+
+.profile_green {
+    color: darkseagreen;
+}
+
+.profile_pink {
+    color: pink;
+}
+
+.profile_purple {
+    color: violet;
+}
+
+.profile-contents {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: white;
+}
+
+.profile-contents h2 {
+    font-size: 40px;
+    font-family: 'SUIT-ExtraBold';
+}
+
+.profile-contents h2 span {
+    display: block;
+    font-size: 25px;
+    font-family: 'SUIT-ExtraBold';
+}
+
+.profile-contents p {
+    color: white;
+    font-size: 10px;
+    min-width: 140px;
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1.2;
+    transition: all .4s;
+    opacity: 0;
+    transition-delay: .8s;
+}
+
+.team-item:hover .profile-contents p {
+    opacity: 1;
+    max-height: 6em;
+    margin-top: 0.2em;
+}
