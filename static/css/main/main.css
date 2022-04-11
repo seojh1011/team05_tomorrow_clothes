@@ -53,6 +53,10 @@ body {
 .one {
 	margin-right: 7%;
 }
+
+.two > img {
+	width: 30px;
+}
 .header-icon > img{
 	width: 23px;
 }

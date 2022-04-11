@@ -38,7 +38,7 @@ body {
 	min-width: 450px;
 	height: 54px;
 	display: flex;
-	border-bottom: 1px solid lightgray;
+	border-bottom: 1px solid dimgray;
     flex-direction: row;
     justify-content: start;
 }
@@ -74,6 +74,7 @@ li {
 
 .team {
     /*background-color: aqua;*/
+    margin-top: 12%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,6 +82,7 @@ li {
 }
 
 .team-item {
+    width: 50%;
     flex-basis: 220px;
     flex-shrink: 0;
     margin: 0 10px;
