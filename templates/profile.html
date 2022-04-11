@@ -68,6 +68,7 @@
             <div class="nav">
                 <div><a class="nav-main" href="/">MAIN</a></div>
                 <div><a class="nav-weather" href="/weather/">WEATHER</a></div>
+                <div><a class="nav-member" href="/member/">MEMBERS</a></div>
                 {% if user.is_authenticated %}
                     <div><a class="nav-mypage" href="/mypage/">MYPAGE</a></div>
                     <div><a class="nav-upload" href="/detail/feed/" style="color: #0067a3;">UPLOAD</a></div>
@@ -100,7 +101,7 @@
             <input class=img_box type="file" id="file"  style="display: none" id="upload_img" onchange="upload(event)"
                    name="feeds_img_url" >
 
-            <button id="btn-upload" onclick="onclick=document.all.file.click()" type="button">사진 업로드</button>
+            <button id="btn-upload" onclick="document.all.file.click()" type="button">사진 업로드</button>
             <button type="submit">프로필 수정완료</button>
         </div>
     </form>

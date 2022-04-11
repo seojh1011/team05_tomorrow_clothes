@@ -30,19 +30,26 @@ def create_user(
         request: HttpRequest, register_request: RegisterRequest = Form(...)
 ) -> HttpResponse:
     email = email_check(register_request.email)
+    #이메일 유효성 검사에서 석세스 or 에러를 리턴
     password = password_check(register_request.password)
+    #패스워드 유효성 검사에서 석세스 or 에러 리턴
     email = list(email.keys())[0]
     password = list(password.keys())[0]
     if email == 'success' and password == 'success':
+        #만약 둘다 석세스라면
         user = create_users(
             register_request.email, register_request.password, register_request.nick_name
         )
+        #서비스로직(빈칸체크,이메일중복체크) 통과후 유저 생성후 메세지 리턴
         new_user_msg = list(user.keys())[0]
         if new_user_msg == "error":
+            #메세지가 에러라면
             return render(request, "register.html")
         else:
+            #에러가 아니라면
             return redirect("/login")
     else:
+        #둘다 석세스가 아니라면
         return render(request, "register.html")
 
 
@@ -53,13 +60,9 @@ class Email(Schema):
 
 @account.post("/reduplication")
 def post_email_reduplication(request: HttpRequest, email: Email):
-    # print(asd)
-    # print(email.email)
-    # print(request.body)
-    # email = json.loads(request.body)['email']
 
     check = email_check(email.email)
-    # # print(type(check))
+    #이메일유효성검사 서비스로직 통과후 메세지 리턴
     return check
 
 
@@ -67,6 +70,7 @@ def post_email_reduplication(request: HttpRequest, email: Email):
 @account.post("/password")
 def post_password_reduplication(request: HttpRequest) -> object:
     password = json.loads(request.body)['password']
-
+    #받은 패스워드
     check = password_check(password)
+    #유효성검사 로직 통과후 메세지 리턴
     return check
