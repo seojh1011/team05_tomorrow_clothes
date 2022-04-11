@@ -75,6 +75,7 @@
 
 .service_title img {
     width: 360px;
+    cursor: pointer;
 }
 
 .input_wrapper {
