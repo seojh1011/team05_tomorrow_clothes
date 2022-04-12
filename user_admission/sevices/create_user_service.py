@@ -18,7 +18,7 @@ def password_check(password: str) ->object:
     # (?=.*\d) > \d 정수 검색 = 0~9 가능 하다는 뜻
     # (?=.*[$@$!%*#?&]) > [] 내의 특수문자들만 비밀번호로 사용가능 >> 이것도 틀리는 경우 오류 발생 이유를 출력해주긴 해야함
     # [A-Za-z\d$@$!%*#?&]{8,} > 앞의 값들 중 8개 이상 일치해야함 즉 8글자 이상의 비밀번호 입력해야함.
-
+#    hi hello
 
 def email_check(username: str) -> object:
     email_regex = re.compile("^[a-zA-Z0-9]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
