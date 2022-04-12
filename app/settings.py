@@ -138,10 +138,10 @@ WSGI_APPLICATION = "app.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
-
-import pymysql
-
-pymysql.install_as_MySQLdb()
+#
+# import pymysql
+#
+# pymysql.install_as_MySQLdb()
 
 DATABASES = MYSQLRDS
 
