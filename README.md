@@ -18,6 +18,8 @@
 * 페이지 구성 및 참고 자료
     - [피그마 사용](https://www.figma.com/file/HjZozkk7e49ip7vzAALCdc/%EB%82%B4%EC%9D%BC-%EB%AD%90-%EC%9E%85%EC%A7%80%3F?node-id=0%3A1)
     - <img src="https://user-images.githubusercontent.com/83229401/157348695-19cecceb-9232-4e78-ae72-8ffb8b0c744c.png" width = "200" height="400"></img> <img src="https://user-images.githubusercontent.com/83229401/157349996-acd4c1fd-329a-4a51-b0a4-fead1d98fd12.png" width = "600" height="400"></img>
+    - ![image](https://user-images.githubusercontent.com/83229401/162771669-73f6f990-5c94-455d-bf7d-fd89dc8c4cef.png)
+
    
 * 개발해야하는 기능 및 API / Data 구조설계
     - [API 구조설계](https://www.notion.so/API-f06d993e00d4487c833f6c39d4d4467d)
