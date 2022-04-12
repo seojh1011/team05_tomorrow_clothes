@@ -17,7 +17,7 @@ content = Router(tags=["test"])
 
 @content.get("plz/", url_name="plz")
 def get_img(request: HttpRequest,temp: int) -> json:
-    print(temp)
+    # print(temp)
     url = "http://3.35.11.110:8000/img/"
     params = {"temp": temp}
     res = requests.get(url, params)
