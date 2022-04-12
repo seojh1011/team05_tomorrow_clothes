@@ -167,6 +167,13 @@
                 </div>
             {% endfor %}
 
+{#    아래는 PR 테스트용입니당       #}
+            {% for p in test %}
+                <div class="image">
+                    <img src="{{ p.feeds_img_url.url }}">
+                </div>
+            {% endfor %}
+
             {#            {% for i in "x"|rjust:"10" %}#}
             {#                <div class="image"><img src="{% static 'img/chu2.jpg' %}"></div>#}
             {#                <div class="image"><img src="{% static 'img/wonyoung.jpg' %}"></div>#}
