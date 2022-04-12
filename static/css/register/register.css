@@ -143,6 +143,24 @@ header.header_register{
     object-fit: scale-down;
 }
 
+input {
+    color: white;
+}
+
+#password > p {
+    color: wheat;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.input_data > p {
+    color: wheat;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5%;
+}
+
 .input_wrapper{
     display: flex;
     flex-direction: column;
@@ -263,4 +281,13 @@ header.header_register{
 .kakao_signin_img {
     width: 30px;
     height: 30px;
+}
+
+.link-register {
+    margin-top: 10%;
+    color: white;
+}
+
+.link-register > a {
+    color: #71b7d5;
 }

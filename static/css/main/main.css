@@ -42,6 +42,21 @@ body {
 .header-icons {
 
 }
+
+.two-icon {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.one {
+	margin-right: 7%;
+}
+
+.two > img {
+	width: 30px;
+}
 .header-icon > img{
 	width: 23px;
 }
@@ -60,7 +75,7 @@ body {
 .weather {
 	width: 330px;
 	height: 150px;
-	background-image: url("/static/img/weather-background.jpg");
+	background-image: url("https://mysparta6712.s3.ap-northeast-2.amazonaws.com/admin/img/weather-background.jpg");
 	background-size: cover;
 	border-radius: 10px;
 	padding: 15px;

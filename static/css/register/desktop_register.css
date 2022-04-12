@@ -62,7 +62,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 500px;
+    height: 530px;
     z-index: 1;
 }
 
@@ -75,6 +75,7 @@
 
 .service_title img {
     width: 360px;
+    cursor: pointer;
 }
 
 .input_wrapper {
@@ -126,6 +127,10 @@
     font-family: 'Roboto';
     font-weight: lighter;
     cursor: pointer;
+}
+
+.input_wrapper button:hover {
+    background: rgba(80, 196, 231, 0.7);
 }
 
 #emailerror {
@@ -186,6 +191,27 @@
     font-weight: lighter;
     text-decoration: none;
     cursor: pointer;
+}
+
+.login_social button:hover {
+    background-color: rgba(250, 250, 15, 0.7);
+}
+
+.link-register {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "ROBOTO";
+    font-weight: lighter;
+    font-size: 17px;
+    z-index: 2;
+}
+
+.link-register a {
+    text-decoration: none;
+    font-family: "ROBOTO";
+    font-weight: bold;
+    font-size: 17px;
+    color: white;
 }
 
 .fa-eye:before {

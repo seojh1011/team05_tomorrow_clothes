@@ -64,6 +64,6 @@ class DivisionCode:
         else:
             result = add_num_2
         address = result[['1단계', '2단계', '3단계']]
-        print(address.values[0])
+        # print(address.values[0])
         division = result[['격자 Y', '격자 X', '1단계', '2단계', '3단계']]
         return division.values[0]

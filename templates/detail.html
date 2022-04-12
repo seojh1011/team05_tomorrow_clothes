@@ -49,27 +49,27 @@
         $(function () {
             $('.update_btn').click(function () {
                 let id = $(this).attr('id')
-                console.log(id)
+
                 if (state == 0) {
 
                     let p_tag = $(this).prev().prev();
                     let text = p_tag.text();
-                    console.log(text)
+
                     let test2 = p_tag.html("<input type='text' value='" + text + "' class='editDo'>");
                     var comment = $('.editDo').val()
                     state = 1
-                    console.log(comment)
+
 
                 } else if (state == 1) {
                     var comment = $('.editDo').val()
-                    console.log(comment)
+
                     $.ajax({
                         url: '/comment/update/' + id + '/',
                         type: 'post',
                         data: JSON.stringify({"comment": comment}),
                         datatype: 'json',
                         success: function (response) {
-                            console.log(response)
+
                             if (String(Object.keys(response)) === 'error') {
                                 window.location.href = '/detail/' + {{ feed.id }} +'/'
                             } else {
@@ -79,7 +79,7 @@
                         }
                     })
 
-                    console.log('수정완료');
+
                     state = 0
                 }
 
@@ -96,22 +96,22 @@
 
                     let p_tag = $(this).prev().prev();
                     let text = p_tag.text();
-                    console.log(text)
+
                     let test2 = p_tag.html("<input type='text' value='" + text + "' class='editDo'>");
                     var comment = $('.editDo').val()
                     reple_state = 1
-                    console.log(comment)
+
 
                 } else if (reple_state == 1) {
                     var comment = $('.editDo').val()
-                    console.log(comment)
+
                     $.ajax({
                         url: '/comment/reple/update/' + id + '/',
                         type: 'post',
                         data: JSON.stringify({"comment": comment}),
                         datatype: 'json',
                         success: function (response) {
-                            console.log(response)
+
                             if (String(Object.keys(response)) === 'error') {
                                 window.location.href = '/detail/' + {{ feed.id }} +'/'
                             } else {
@@ -121,7 +121,7 @@
                         }
                     })
 
-                    console.log('수정완료');
+
                     reple_state = 0
                 }
 
@@ -144,13 +144,14 @@
             <div class="nav">
                 <div><a class="nav-main" href="/">MAIN</a></div>
                 <div><a class="nav-weather" href="/weather/">WEATHER</a></div>
+                <div><a class="nav-member" href="/member/">MEMBERS</a></div>
                 {% if user.is_authenticated %}
                     <div><a class="nav-mypage" href="/mypage/">MYPAGE</a></div>
                     <div><a class="nav-upload" href="/detail/feed/">UPLOAD</a></div>
                     <div><a href="{% url 'test_1:logout' %}" class="nav-logout" style="color: darkred;">LOGOUT</a>
                     </div>
                 {% else %}
-                    <div><a href="/register/" class="nav-signin">SIGN IN</a></div>
+                    <div><a href="/register/" class="nav-signin">SIGN UP</a></div>
                     <div><a href="/login/" class="nav-login" style="color: brown;">LOGIN</a></div>
                 {% endif %}
             </div>
@@ -216,17 +217,19 @@
                 </div>
             </div>
 
-            <div class="post_comment">
-                <article>
-                    <p>{{ feed.feeds_comment }}</p>
-                </article>
-            </div>
+
             <div class="comment_container">
+                <div class="post_comment">
+                    <article>
+                        <p>{{ feed.feeds_comment }}</p>
+                    </article>
+                </div>
                 <div class="comment_header" style="align-items: center">
                     <div class="speach_bubble_wrapper">
                         <i class="far fa-comment"></i>
                     </div>
                     <form class="cmt_wrapper" method="post" action="/comment/{{ feed.id }}/">
+                        {% csrf_token %}
                         <input name="comment" maxlength="30" placeholder="댓글을 입력해주세요.">
                         <button class="cmt_btn" type="submit">등록</button>
                     </form>
@@ -276,7 +279,7 @@
                             {% for reple in comments %}
                                 {% if comment == reple.comment_num %}
                                     <div class="reple">
-                                        <div class="comment_article" style="margin-left: 25px">
+                                        <div class="comment_article">
                                             <div class="comment_img_wrapper">
                                                 <div class="comment_img">
                                                     <img src="{{ reple.comment_writer.pro_img_url.url }}" alt="">
@@ -343,7 +346,6 @@
                     },
                     datatype: 'json',
                     success: function (response) {
-                        console.log(response)
                         //302를 인식하도록
                         if (Object.keys(response) == 'error') {
                             window.location.href = '/login'
@@ -363,7 +365,7 @@
                     },
                     datatype: 'json',
                     success: function (response) {
-                        console.log(Object.keys(response))
+
                         if (Object.keys(response) == 'error') {
                             window.location.href = '/login'
                         } else {
@@ -371,25 +373,24 @@
                         }
                     }
                 })
-            }}
+            }
+        }
 
         function delete_button(feed_id) {
-            console.log(feed_id)
-            console.log('/detail/feed/delete/' + feed_id)
+
+
             $.ajax({
                 url: '/detail/feed/delete/' + feed_id,
                 type: 'POST',
                 data: {},
                 datatype: 'json',
                 success: function (response) {
-                    console.log(response)
+
                     if (String(Object.keys(response)) === 'error') {
                         alert('에러')
 
                     } else {
                         window.location.href = '/'
-
-
                     }
 
                 }
@@ -404,7 +405,7 @@
                 data: {},
                 datatype: 'json',
                 success: function (response) {
-                    console.log(response)
+
                     if (Object.keys(response) == 'error') {
                         window.location.href = '/detail/' + feed_id + '/'
                     } else {
@@ -423,7 +424,7 @@
                 data: {},
                 datatype: 'json',
                 success: function (response) {
-                    console.log(response)
+
                     if (Object.keys(response) == 'error') {
                         window.location.href = '/detail/' + feed_id + '/'
                     } else {

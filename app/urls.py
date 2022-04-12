@@ -34,7 +34,7 @@ from django.contrib.auth import views as auth_views
 # version 1.0.0 >> 중요한 변경 / 중간 변경 / 최소 변경
 
 
-api = NinjaAPI(urls_namespace="test_1", version="1.0.0")
+api = NinjaAPI(urls_namespace="test_1", version="1.0.0", docs_url=None)
 
 api.add_router("login/", login_router)
 api.add_router("register/", register_router)
@@ -48,7 +48,7 @@ api.add_router("mypage/", mypage_router)
 api.add_router("k-weather/", weather_router)
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path("tomorrow/weather/admin/", admin.site.urls),
     path("", api.urls),
     path("accounts/", include("allauth.urls")),
     path('password_reset/', auth_views.PasswordResetView.as_view(template_name='password/password_reset.html'),
@@ -57,7 +57,7 @@ urlpatterns = [
          auth_views.PasswordResetDoneView.as_view(template_name='password/password_reset_done.html'),
          name="password_reset_done"),
     path('password_reset_confirm/<uidb64>/<token>/',
-         auth_views.PasswordResetConfirmView.as_view(template_name="password/password_reset_confirm.html"),
+         auth_views.PasswordResetConfirmView.as_view(template_name='password/password_reset_confirm.html'),
          name="password_reset_confirm"),
     path('password_reset_complete/',
          auth_views.PasswordResetCompleteView.as_view(template_name='password/password_reset_complete.html'),
